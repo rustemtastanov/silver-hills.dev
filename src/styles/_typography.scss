@@ -1,0 +1,76 @@
+html {
+  font-size: 16PX;
+}
+
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+  background-color: $body-bg;
+  -webkit-text-size-adjust: none;
+  -webkit-overflow-scrolling: touch;
+  user-select: none;
+}
+
+a, label {
+  -webkit-tap-highlight-color: transparent;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+// small {
+// }
+
+// big {
+// }
+
+// strong {
+// }
+
+// blockquote {
+// }
+
+// address {
+//   font-style: normal;
+// }
+
+p {
+  margin: 0 0 $line-height-base;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: $line-height-base;
+  ul,
+  ol {
+    margin-bottom: 0;
+  }
+}
+
+.list--unstyled {
+  @include list-unstyled;
+}
+
+.list--inline {
+  @include list-unstyled;
+  margin-left: 0;
+  > li {
+    display: inline-block;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+// abbr[title],
+// abbr[data-original-title] {
+//   cursor: help;
+//   border-bottom: 1px dotted;
+// }
+
+// time {
+//   display: block;
+// }

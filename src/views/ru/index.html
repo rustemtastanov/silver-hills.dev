@@ -1,0 +1,31 @@
+{% set title = "Silver Hills" %} <!-- page title -->
+{% set description = "Жилой комплекс Silver Hills" %}
+{% set keywords = "Жилой, комплекс, Silver, Hills" %}
+{% set page = "index" %} <!-- page ID -->
+{% set lang = "ru" %}
+{% set path = "../" %}
+{% extends "layouts/default.html" %} <!-- used layout -->
+
+{% block content %}
+
+	{% include "section-main/_section-main.html" %}
+
+	{% include "section-about/_section-about.html" %}
+
+	{% include "section-order/_section-order.html" %}
+
+	{% include "section-benefits/_section-benefits.html" %}
+
+	{% include "section-gallery/_section-gallery.html" %}
+
+	{% include "section-flats/_section-flats.html" %}
+
+	{% include "section-terms/_section-terms.html" %}
+
+	{% include "section-status/_section-status.html" %}
+
+	{% include "section-commercial/_section-commercial.html" %}
+
+	{% include "section-contacts/_section-contacts.html" %}
+
+{% endblock %}

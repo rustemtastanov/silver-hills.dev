@@ -1,0 +1,18 @@
+// variables
+$font-family-base: "IBM Plex Sans", sans-serif !default;
+
+$font-size-base: 14px !default;
+$line-height-base: 20px !default;
+
+// paths
+// *************************************************************************
+$path-fonts:		"../fonts";
+$path-img:			"../img";
+
+$path-inline: 	"#{$path-img}/inline";
+//will be converted to base64
+// background-image: inline('#{$path-inline}/somepic.png');
+
+//will be converted to sprite
+// background-image: url(#{$path-sprite}/somepic.png);
+$path-sprite: 	"#{$path-img}/sprites";

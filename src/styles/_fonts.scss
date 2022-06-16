@@ -1,0 +1,43 @@
+@font-face {//light
+  font-family: "IBM Plex Sans";
+  src:  local("IBM Plex Sans Light"), local("IBMPlexSans-Light"),
+        url("#{$path-fonts}/IBMPlexSans-Light.woff2") format("woff2"),
+        url("#{$path-fonts}/IBMPlexSans-Light.woff") format("woff"),
+        url("#{$path-fonts}/IBMPlexSans-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {//light-italic
+  font-family: "IBM Plex Sans";
+  src:  local("IBM Plex Sans Light Italic"), local("IBMPlexSans-LightItalic"),
+        url("#{$path-fonts}/IBMPlexSans-LightItalic.woff2") format("woff2"),
+        url("#{$path-fonts}/IBMPlexSans-LightItalic.woff") format("woff"),
+        url("#{$path-fonts}/IBMPlexSans-LightItalic.ttf") format("truetype");
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {//bold
+  font-family: "IBM Plex Sans";
+  src: 	local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),
+  			url("#{$path-fonts}/IBMPlexSans-Bold.woff2") format("woff2"),
+  			url("#{$path-fonts}/IBMPlexSans-Bold.woff") format("woff"),
+  			url("#{$path-fonts}/IBMPlexSans-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {//bold-italic
+  font-family: "IBM Plex Sans";
+  src:  local("IBM Plex Sans Bold Italic"), local("IBMPlexSans-BoldItalic"),
+        url("#{$path-fonts}/IBMPlexSans-BoldItalic.woff2") format("woff2"),
+        url("#{$path-fonts}/IBMPlexSans-BoldItalic.woff") format("woff"),
+        url("#{$path-fonts}/IBMPlexSans-BoldItalic.ttf") format("truetype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}

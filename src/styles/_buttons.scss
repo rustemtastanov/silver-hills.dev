@@ -1,0 +1,92 @@
+button {
+  cursor: pointer;
+  outline: none !important;
+}
+
+.btn,
+.btn--unstyled {
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 0;
+  font-weight: normal;
+  touch-action: manipulation;
+  cursor: pointer;
+  outline: none !important;
+  text-decoration: none !important;
+  line-height: 1.428571428571429;
+  line-height: normal;
+  user-select: none;
+  white-space: nowrap;
+  background-image: none;
+}
+
+.btn--unstyled {
+  padding: 0;
+  border: 0;
+  background: none;
+}
+
+.btn {
+  text-align: center;
+  border: 1px solid transparent;
+  font-size: 14px;
+  transition-property: box-shadow, background-color, color;
+  transition-duration: .2s;
+  padding: 6px 12px;
+  position: relative;
+
+  &:active,
+  &.active {
+    box-shadow: inset 0 3px 5px rgba(black, .125);
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+  	pointer-events: none;
+  }
+
+}
+
+a.btn {
+  &.disabled,
+  fieldset[disabled] & {
+    pointer-events: none;
+  }
+}
+
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+input[type="submit"],
+// input[type="reset"],
+input[type="button"] {
+  &.btn--block {
+    width: 100%;
+  }
+}
+
+.btn--submit {
+  &::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 40px;
+    height: 40px;
+    background-size: 100% 100%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform .2s;
+    pointer-events: none;
+  }
+  .form--loading & {
+    > span {
+      opacity: 0;
+    }
+    &::after {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}

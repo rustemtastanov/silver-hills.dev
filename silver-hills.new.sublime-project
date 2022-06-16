@@ -1,0 +1,28 @@
+{
+	"folders": [{
+		"path": "src\\styles"
+	}, {
+		"path": "src\\scripts"
+	}, {
+		"file_include_patterns": ["*.json", "*.js", "*.md"],
+		"folder_exclude_patterns": ["*"],
+		"name": "setup",
+		"path": "//"
+	}, {
+		"folder_exclude_patterns": ["*"],
+		"path": "src\\styles\\mixins"
+	}, {
+		"path": "src\\components"
+	}, {
+		"file_include_patterns": ["*.html"],
+		"name": "pages",
+		"path": "src\\views"
+	}, {
+		"file_include_patterns": ["*.html"],
+		"folder_exclude_patterns": ["*"],
+		"path": "src\\views\\layouts"
+	}],
+	"settings": {
+		"tab_size": 2
+	}
+}
