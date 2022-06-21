@@ -1,0 +1,9 @@
+<div class="about-item about-item-{{{ item.index }}}">
+
+	<div class="value">{{{ item.value }}}</div>
+
+	{% if lang == 'ru' %}
+	<div class="text">{{{ item.text@ru|safe }}}</div>
+	{% endif %}
+
+</div>

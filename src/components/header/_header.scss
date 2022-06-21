@@ -4,6 +4,37 @@
 	left: 0;
 	right: 0;
 	top: 0;
-	background: orange;
+	background: white;
 	height: 60px;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		height: 100%;
+		border-bottom: 1px solid;
+		margin: 0 20px;
+	}
+}
+
+.header-column {
+	height: 100%;
+	display: flex;
+	align-items: flex-end;
+	position: relative;
+	top: 1px;
+}
+
+.header-left {
+	width: 30%;
+}
+
+.header-right {
+	width: 70%;
+	justify-content: flex-end;
+}
+
+.header-logo {
+	width: 243px;
+	height: 39px;
+	top: -8px;
+	position: relative;
 }

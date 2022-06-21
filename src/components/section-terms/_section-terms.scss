@@ -1,4 +1,80 @@
 .s--terms {
 	background: #e0dfdd;
 	min-height: 512px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 0 61px;
+	margin-bottom: 50px;
+}
+
+.terms-items {
+	max-width: 992px;
+	width: 100%;
+	display: flex;
+}
+
+.terms-item {
+	min-height: 350px;
+	background: white;
+	padding: 20px 22px 74px;
+	width: 25%;
+	margin-left: 20px;
+	position: relative;
+	.head {
+		min-height: 92px;
+		position: relative;
+		margin-bottom: 30px;
+		&::after {
+			content: '';
+			width: 50px;
+			border-bottom: 1px solid;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+		}
+	}
+	.title {
+		color: $brand-primary;
+		font-size: 15px;
+		line-height: 19px;
+		font-weight: bold;
+		white-space: pre-line;
+		min-height: 38px;
+		margin-bottom: 3px;
+	}
+	.value {
+		font-size: 33px;
+		line-height: 40px;
+		font-weight: 300;
+		margin-bottom: 10px;
+	}
+	.text {
+		font-size: 12px;
+		line-height: 17px;
+		font-weight: 300;
+	}
+	.btn {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	p {
+		margin-bottom: 10px;
+		white-space: pre-line;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.terms-img {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	bottom: 54px;
+	width: 256px;
+	height: 317px;
+	pointer-events: none;
 }

@@ -1,0 +1,48 @@
+<transition name="drop-form" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalHidden">
+		<div class="drop-form" v-show="ShowForm" :class="{active: appIsLoaded}">
+
+		<button type="button" class="btn btn--black btn--close" aria-label="close" @click="closeForm">
+			<i class="icon icon-close"></i>
+		</button>
+
+		<div class="drop-form-logo" data-role="lazy">
+			<img width="291" height="70" data-src="{{{ path }}}img/logo.svg" class="img--cover lazy" alt="logo" />
+		</div>
+
+		<div class="drop-form-icon" data-role="lazy">
+			<img width="54" height="52" data-src="{{{ path }}}img/logo-icon.png" data-retina="{{{ path }}}img/logo-icon@2x.png" class="img--cover lazy" alt="icon" />
+		</div>
+
+		<div class="drop-form-text" data-role="lazy">
+			<img width="8" height="150" data-src="{{{ path }}}img/text-vertical-{{{ lang }}}.svg" class="img--cover lazy" alt="text" />
+		</div>
+
+		<div class="drop-form-in" v-show="!ShowResponse">
+			<app-form :form-class="'form-call'" :form-utm="UTM" v-on:show-response="showResponse" v-on:hide-response="hideResponse" :action="'/'"></app-form>
+		</div>
+
+		<div class="drop-form-in" v-show="ShowResponse">
+			<div class="drop-form-response">
+				{% if lang == 'ru' %}
+				Спасибо!<br /> 
+				мы Вам перезвоним
+				{% endif %}
+			</div>
+		</div>
+		
+		<div class="drop-form-bg primary" data-role="lazy" v-show="!ShowResponse">
+			<picture class="lazy img--cover">
+				<data-src srcset="{{{ path }}}media/drop-form-bg-1.webp 1x, {{{ path }}}media/drop-form-bg-1@2x.webp 2x" type="image/webp"></data-src>
+				<data-img width="1326" height="407" srcset="{{{ path }}}media/drop-form-bg-1.jpg 1x, {{{ path }}}media/drop-form-bg-1@2x.jpg 2x" alt="bg"></data-img>
+			</picture>
+		</div>
+
+		<div class="drop-form-bg primary" data-role="lazy" v-show="ShowResponse">
+			<picture class="lazy img--cover">
+				<data-src srcset="{{{ path }}}media/drop-form-bg-2.webp 1x, {{{ path }}}media/drop-form-bg-2@2x.webp 2x" type="image/webp"></data-src>
+				<data-img width="1326" height="407" srcset="{{{ path }}}media/drop-form-bg-2.jpg 1x, {{{ path }}}media/drop-form-bg-2@2x.jpg 2x" alt="bg"></data-img>
+			</picture>
+		</div>
+
+	</div>
+</transition>

@@ -3,6 +3,12 @@
 	--------------------------------------
 	использованные библиотеки:
  	-------------------------------------- */
-(function() {
-
-})();
+function initTerms() {
+	Vue.component("app-terms", {
+		data() {
+			return {
+				Items: TERMS_DATA
+			}
+		}
+	});
+}

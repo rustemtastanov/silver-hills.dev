@@ -1,3 +1,110 @@
 .s--status {
+	border: 1px solid;
+	padding: 38px 60px 48px;
+	margin-bottom: 50px;
+}
 
+.status-title {
+	text-transform: uppercase;
+	color: $gray;
+	font-size: 84px;
+	line-height: 109px;
+	font-weight: 300;
+	margin-bottom: 27px;
+	position: relative;
+	left: -3px;
+}
+
+.status-items {
+	overflow: visible;
+}
+
+.status-slide {
+	padding-bottom: 48px;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .6s;
+	.img {
+		height: 300px;
+		margin-bottom: 18px;
+		background: $gray;
+	}
+	.date {
+		position: relative;
+		z-index: 1;
+		font-size: 16px;
+		line-height: 1;
+		display: flex;
+		justify-content: flex-end;
+	}
+	.month {
+		font-size: 16px;
+		color: $brand-primary;
+		position: absolute;
+		left: 30px;
+		bottom: 0;
+		transition: transform .6s;
+		transform-origin: 0 0;
+		transform: translate(0, -79px) scale(9.375);
+	}
+	.icon {
+		position: absolute;
+		pointer-events: none;
+		z-index: 2;
+		width: 50px;
+		height: 50px;
+		background: black;
+		transform: translate(-50%, -50%);
+		left: 50%;
+		top: 50%;
+		color: white;
+		font-size: 20px;
+		transition: background .3s;
+		&::before {
+			position: absolute;
+			transform: translate(-50%, -50%);
+			left: 50%;
+			top: 50%;
+		}
+	}
+	a:hover {
+		.icon {
+			background: white;
+			color: black;
+		}
+	}
+	&.book {
+		width: 234px;
+		&.active {
+			.month {
+				transform: translate(234px - 101px, 0) scale(1);
+			}
+		}
+	}
+	&.album {
+		width: 568px;
+		&.active {
+			.month {
+				transform: translate(568px - 101px, 0) scale(1);
+			}
+		}
+	}
+	&.active,
+	&.active ~ .slide {
+		opacity: 1;
+		pointer-events: all;
+	}
+	&.active {
+		.month {
+			font-size: 16px;
+			color: $text-color;
+		}
+	}
+}
+
+.status-expiry {
+	font-size: 14px;
+	line-height: 22px;
+	text-transform: uppercase;
+	font-weight: 300;
 }

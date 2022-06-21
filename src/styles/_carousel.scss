@@ -1,0 +1,55 @@
+.swiper-img {
+	position: relative;
+	&::before {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 40px;
+		height: 40px;
+		background-size: 100% 100%;
+		background-image: inline('#{$path-inline}/spinner-primary.svg');
+		z-index: 0;
+	}
+}
+
+.swiper-lazy {
+	opacity: 0;
+	transition: opacity .6s;
+	z-index: 1;
+	position: relative;
+}
+
+.swiper-lazy-loaded {
+	opacity: 1;
+}
+
+.slider-pager {
+	display: flex;
+	align-items: flex-start;
+	line-height: 1;
+	text-align: center;
+	pointer-events: none;
+	font-weight: 300;
+	.current {
+		font-size: 34px;
+		height: 48px;
+		width: 60px;
+		color: $brand-primary;
+		margin: 0;
+	}
+	.amount {
+		font-size: 11px;
+		position: relative;
+		top: -5px;
+		left: -8px;
+	}
+	.swiper-slide {
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	.active {
+		opacity: 1;
+	}
+}

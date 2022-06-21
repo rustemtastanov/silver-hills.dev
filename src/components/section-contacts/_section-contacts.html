@@ -1,4 +1,59 @@
-<section class="section s--contacts">
-	<div class="container">
-	</div>
-</section>
+<app-contacts inline-template>
+	<section class="section s--contacts" id="contacts">
+
+		<div class="contacts-column contacts-left">
+
+			<h3 class="contacts-title">
+				{% if lang == 'ru' %} Контакты {% endif %}
+			</h3>
+
+			<div class="contacts-address">
+				{% if lang == 'ru' %} Алматы, мкр. Ерменсай, переулок 5 {% endif %}
+			</div>
+
+			<div class="contacts-text">
+				{% if lang == 'ru' %} Отдел продаж находится на территории жилого комплекса {% endif %}
+			</div>
+
+			<div class="contacts-path">
+				<a href="#" target="_blank" rel="noopener">
+					{% if lang == 'ru' %} посмотреть маршрут, 2gis {% endif %}
+				</a>
+			</div>
+
+			<div class="contacts-mode">
+				<label>
+					{% if lang == 'ru' %} Режим работы {% endif %}
+				</label>
+				<div>Пн-Пт  10:00-19:00 
+					Сб-Вс  10:00-16:00</div>
+			</div>
+
+			{% include "nav-social/_nav-social.html" %}
+
+			<div class="contacts-meta contacts-copyright">
+				{% if lang == 'ru' %} © Silver Hills 2021. Все права защищены {% endif %}
+			</div>
+
+		</div>
+
+		<div class="contacts-column contacts-right">
+
+			<div class="contacts-map">
+				<div class="map" ref="mapEl"></div>
+			</div>
+
+			<div class="contacts-meta contacts-policy">
+				<a href="#" @click.prevent="showPolicy">
+					{% if lang == 'ru' %} Политика конфиденциальности {% endif %}
+				</a>
+			</div>
+
+			<div class="contacts-meta contacts-partner">
+				{% if lang == 'ru' %} Сайт разработан и продвигается ТОО MARSALES {% endif %}
+			</div>
+
+		</div>
+
+	</section>
+</app-contacts>

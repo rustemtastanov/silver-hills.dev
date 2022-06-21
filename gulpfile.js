@@ -264,6 +264,44 @@ function livereload(cb) {
 	cb();
 }
 
+const gwebp = require('gulp-webp');
+
+function webp(cb) {
+	return gulp.src("src/orig/*.+(png|jpg)")
+		.pipe(gwebp())
+		.pipe(gulp.dest("src/orig"));
+}
+
+function images(cb) {
+	return gulp.src("src/orig/*.+(png|jpg)")
+		.pipe($.imagemin([
+			$.imagemin.gifsicle({
+				interlaced: true
+			}),
+			$.imagemin.mozjpeg({
+				quality:      75, 
+				progressive:  true
+			}),
+			$.imagemin.optipng({
+				optimizationLevel: 5
+			}),
+			$.imagemin.svgo({
+				plugins: [
+					{removeViewBox: true},
+					{cleanupIDs:    false}
+				]
+			})]))
+		.pipe(gulp.dest("src/orig"));
+}
+
+exports.webp = series(
+	webp
+)
+
+exports.images = series(
+	images
+)
+
 exports.default = series(
 	parallel(htmlRu, htmlKz, styles, scripts, jquery), 
 	livereload

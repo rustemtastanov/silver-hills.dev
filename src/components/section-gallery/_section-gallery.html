@@ -1,4 +1,30 @@
-<section class="section s--gallery">
-	<div class="container">
-	</div>
-</section>
+<app-gallery inline-template>
+	<section class="section s--gallery" id="gallery">
+
+		<div class="gallery-title">
+			{% if lang == 'ru' %} Галерея {% endif %}
+		</div>
+
+		<swiper class="swiper gallery-items" ref="slider" :options="options">
+			<swiper-slide v-for="(Slide, index) in Slides" class="gallery-slide swiper-slide" :class="'gallery-slide-'+ (index+1)" :key="index">
+				<div class="img swiper-img">
+					<picture>
+						<source :data-srcset="Slide.webp +' 1x, '+ Slide.webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp"></source>
+						<img width="1326" height="650" :data-srcset="Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x'" class="swiper-lazy img--cover" alt="photo" />
+					</picture>
+				</div>
+				<div class="text" :class="Slide.pos" v-html="Slide.text"></div>
+			</swiper-slide>
+		</swiper>
+
+		<div class="gallery-controls">
+			<button type="button" class="btn--unstyled gallery-prev" aria-label="prev">
+				<i class="icon icon-prev"></i>
+			</button>
+			<button type="button" class="btn--unstyled gallery-next" aria-label="next">
+				<i class="icon icon-next"></i>
+			</button>
+		</div>
+
+	</section>
+</app-gallery>

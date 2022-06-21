@@ -1,0 +1,32 @@
+<transition name="drop-menu" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalHidden">
+	<div class="drop-menu" v-show="ShowDropMenu" :class="{active: appIsLoaded}" :style="'padding-right: '+ scrollBarOffset +'px'">
+		<div class="drop-menu-in">
+			
+			{% include "nav-main/_nav-main.html" %}
+
+			<div>
+				{% for item in [
+					{
+						notext: true
+					}
+				] -%}
+				{% include "nav-social/_nav-social.html" %}
+				{%- endfor %}
+				
+				<a href="{{{ path }}}media/SilverHills.pdf" download="presentation.pdf" class="drop-menu-download">
+					{% if lang == 'ru' %} скачать презентацию, PDF {% endif %}
+				</a>
+			</div>
+
+		</div>
+
+		<div class="drop-menu-bg primary" data-role="lazy">
+			<div>
+				<picture class="lazy img--cover">
+					<data-src srcset="{{{ path }}}media/drop-menu-bg.webp 1x, {{{ path }}}media/drop-menu-bg@2x.webp 2x" type="image/webp"></data-src>
+					<data-img width="800" height="667" srcset="{{{ path }}}media/drop-menu-bg.jpg 1x, {{{ path }}}media/drop-menu-bg@2x.jpg 2x" alt="bg"></data-img>
+				</picture>
+			</div>
+		</div>
+	</div>
+</transition>

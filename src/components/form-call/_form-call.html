@@ -1,0 +1,19 @@
+<form action="/" class="form-call" novalidate>
+
+	<div class="form-group">
+		<input type="text" class="form-control" name="name" placeholder="{% if lang == 'ru' %}Ваше имя{% endif %}" required />
+	</div>
+	
+	<div class="form-group">
+		<input type="tel" class="form-control" name="phone" placeholder="+7 (___) ___ __ __" required />
+	</div>
+
+	<div class="form-controls">
+		<button type="submit" class="btn btn--white btn--submit btn--block">
+			<span>
+				{% if lang == 'ru' %} отправить заявку {% endif %}
+			</span>
+		</button>
+	</div>
+	
+</form>

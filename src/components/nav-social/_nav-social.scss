@@ -1,0 +1,41 @@
+.nav-social {
+	font-size: 15px;
+	line-height: 21px;
+	font-weight: bold;
+	a {
+		text-decoration: none;
+		color: black;
+		&:hover span {
+			text-decoration: underline;
+		}
+	}
+	.icon {
+		font-size: 87px;
+		display: block;
+		margin-bottom: -17px;
+	}
+}
+
+.drop-menu {
+	.nav-social {
+		ul {
+			display: flex;
+    	justify-content: flex-end;
+		}
+		.icon {
+			left: 25px;
+		}
+		margin-bottom: -10px;
+	}
+}
+
+.s--contacts {
+	.nav-social {
+		position: absolute;
+		left: 60px;
+		bottom: 52px;
+		.icon {
+			left: -25px;
+		}
+	}
+}

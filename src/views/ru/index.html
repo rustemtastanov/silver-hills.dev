@@ -12,9 +12,17 @@
 
 	{% include "section-about/_section-about.html" %}
 
+	{% for item in [
+		{
+			index: 1
+		}
+	] -%}
 	{% include "section-order/_section-order.html" %}
+	{%- endfor %}
 
 	{% include "section-benefits/_section-benefits.html" %}
+
+	{% include "section-points/_section-points.html" %}
 
 	{% include "section-gallery/_section-gallery.html" %}
 
@@ -25,6 +33,14 @@
 	{% include "section-status/_section-status.html" %}
 
 	{% include "section-commercial/_section-commercial.html" %}
+
+	{% for item in [
+		{
+			index: 2
+		}
+	] -%}
+	{% include "section-order/_section-order.html" %}
+	{%- endfor %}
 
 	{% include "section-contacts/_section-contacts.html" %}
 

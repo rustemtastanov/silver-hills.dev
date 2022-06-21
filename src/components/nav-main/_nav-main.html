@@ -1,2 +1,41 @@
 <nav class="nav-main">
+	<scrollactive class="list--unstyled" active-class="active" tag="ul" :offset="scrollTopOffset">
+
+		<li>
+			<a href="#about" class="scrollactive-item" @click.prevent="closeDropMenu">
+				{% if lang == 'ru' %} О проекте {% endif %}
+			</a>
+		</li>
+
+		<li>
+			<a href="#gallery" class="scrollactive-item" @click.prevent="closeDropMenu">
+				{% if lang == 'ru' %} Галерея {% endif %}
+			</a>
+		</li>
+
+		<li>
+			<a href="#flats" class="scrollactive-item" @click.prevent="closeDropMenu">
+				{% if lang == 'ru' %} Выбрать квартиру {% endif %}
+			</a>
+		</li>
+
+		<li>
+			<a href="#status" class="scrollactive-item" @click.prevent="closeDropMenu">
+				{% if lang == 'ru' %} Ход строительства {% endif %}
+			</a>
+		</li>
+
+		<li>
+			<a href="#commerce" class="scrollactive-item" @click.prevent="closeDropMenu">
+				{% if lang == 'ru' %} Коммерция {% endif %}
+			</a>
+		</li>
+
+		<li>
+			<a href="#contacts" class="scrollactive-item" @click.prevent="closeDropMenu">
+				{% if lang == 'ru' %} Контакты {% endif %}
+			</a>
+		</li>
+
+	</scrollactive>
 </nav>

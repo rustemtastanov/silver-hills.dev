@@ -1,5 +1,32 @@
-<header class="header compensate-for-scrollbar">
+<header class="header compensate-for-scrollbar" :style="'padding-right: '+ scrollBarOffset +'px'" ref="headerEl">
 	<div class="container">
-		header
+		
+		<scrollactive class="header-column header-left" tag="div" offset="0">
+			<a href="#main" class="link--block header-logo scrollactive-item" aria-label="logo" @click.prevent="closeDropMenu">
+				<img width="243" height="39" src="{{{ path }}}img/logo-small.png" srcset="{{{ path }}}img/logo-small.png 1x, {{{ path }}}img/logo-small@2x.png 2x" class="img--cover" alt="logo" />
+			</a>
+		</scrollactive>
+
+		<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset">
+			<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item">
+				<span>
+					{% if lang == 'ru' %} выбрать квартиру {% endif %}
+				</span>
+			</a>
+			{% include "nav-lang/_nav-lang.html" %}
+			<button type="button" class="btn btn--top btn--call" @click="openForm" :class="{'toggled': ShowForm}">
+				<span class="text-default">
+					{% if lang == 'ru' %} позвонить {% endif %}
+				</span>
+				<span class="text-over">
+					{% if lang == 'ru' %} заявка {% endif %}
+				</span>
+			</button>
+			{% include "nav-contacts/_nav-contacts.html" %}
+			<button type="button" class="btn btn--top btn--nav" aria-label="menu" :class="{'toggled': ShowDropMenu}" @click="toggleDropMenu">
+				<span></span>
+			</button>
+		</scrollactive>
+
 	</div>
 </header>

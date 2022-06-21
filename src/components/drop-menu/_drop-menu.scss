@@ -1,0 +1,59 @@
+$col-left: fluid(472px, 1326px);
+
+.drop-menu {
+	position: fixed;
+	left: 20px;
+	right: 20px;
+	top: 60px;
+	z-index: 8;
+	height: calc(100vh - 60px - 20px);
+	&:not(.active) {
+		display: none;
+	}
+}
+
+.drop-menu-in {
+	background: #e0dfdd;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: space-between;
+	padding: 87px 81px 67px;
+}
+
+.drop-menu-bg {
+	@include stretch-y;
+	left: 0;
+	width: $col-left;
+	background: $gray;
+	overflow: hidden;
+	div {
+		@include stretch-y;
+		left: 50%;
+		width: 800px;
+		transform: translateX(-50%);
+	}
+}
+
+.drop-menu-download {
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 19px;
+	text-decoration: none;
+	color: black;
+	&:hover {
+		text-decoration: underline;
+		color: black;
+	}
+}
+
+.drop-menu-enter-active,
+.drop-menu-leave-active {
+  transition: transform .6s;
+}
+
+.drop-menu-enter,
+.drop-menu-leave-to {
+  transform: translateY(-100%);
+}

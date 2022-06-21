@@ -7,14 +7,40 @@ body {
 	min-width: $layout-min-width;
 }
 
-.container {
-	width: auto;
-}
-
 .content {
 	display: flex;
 	flex-direction: column;
 	overflow: hidden;
 	min-height: 100vh;
 	padding: 0 20px;
+}
+
+.lock {
+	overflow: hidden;
+}
+
+.overlay {
+	position: fixed;
+	z-index: 7;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: white;
+	&:not(.active) {
+		display: none;
+	}
+	&.top {
+		z-index: 9;
+	}
+}
+
+.overlay-enter-active,
+.overlay-leave-active {
+  transition: opacity .6s;
+}
+
+.overlay-enter,
+.overlay-leave-to {
+	opacity: 0;
 }

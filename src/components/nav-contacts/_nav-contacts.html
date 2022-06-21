@@ -1,0 +1,10 @@
+<div class="btn btn--top btn--contacts">
+	<span class="text-default">
+		<a href="#" :href="formatPhone('+7 (747) 095 05 03')">+7 (747) 095 05 03</a>
+	</span>
+	<span class="text-over">
+		<a href="#" :href="formatPhone('+7 (747) 095 05 03')">
+			{% if lang == 'ru' %} позвонить {% endif %}
+		</a>
+	</span>
+</div>

@@ -19,8 +19,3 @@ a {
   @extend .link--unstyled;
   display: block;
 }
-
-a[href^="tel"] {
-  @extend .link--unstyled;
-  cursor: default;
-}

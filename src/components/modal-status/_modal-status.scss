@@ -1,0 +1,138 @@
+$viewport-width: fluid(968px, 1366px);
+$sidebar-width: 100% - $viewport-width;
+
+.modal-status {
+	position: fixed;
+	z-index: 10;
+	top: 20px;
+	bottom: 20px;
+	left: 20px;
+	right: 20px;
+	font-weight: 300;
+	&:not(.active) {
+		display: none;
+	}
+	&::before {
+		content: '';
+		@include stretch-x;
+		top: 0;
+		height: 300px;
+		background: #e0dfdd;
+		z-index: 0;
+	}
+	div {
+		z-index: 1;
+	}
+}
+
+.modal-status-enter-active,
+.modal-status-leave-active {
+  transition: transform .6s, opacity .6s;
+}
+
+.modal-status-enter,
+.modal-status-leave-to {
+  opacity: 0;
+  transform: scale(1.2);
+  pointer-events: none;
+}
+
+.modal-status-viewport {
+	position: absolute;
+	top: 60px;
+	bottom: 53px;
+	left: 60px;
+	width: $viewport-width;
+}
+
+.modal-status-slide {
+	.img {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    align-items: center;
+		height: 100%;
+	}
+	img {
+		max-height: 100%;
+		object-fit: cover;
+		width: auto;
+		height: auto;
+	}
+}
+
+.modal-status-controls,
+.modal-status-pager {
+	width: calc(#{$sidebar-width} - 80px - 33px);
+}
+
+.modal-status-controls {
+	position: absolute;
+	right: 20px;
+	top: 345px;
+	button {
+		font-size: 120px;
+		height: 20px;
+		position: relative;
+		overflow: hidden;
+		transition: opacity .3s;
+	}
+	.icon {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	.disabled {
+		opacity: .3;
+		pointer-events: none;
+	}
+}
+
+.modal-status-prev {
+	width: 50px;
+	color: black;
+	.icon {
+		left: 0;
+	}
+}
+
+.modal-status-next {
+	width: 120px;
+	margin-left: 18px;
+	color: $brand-primary;
+	.icon {
+		right: 0;
+	}
+}
+
+.modal-status-pager {
+	position: absolute;
+	right: 41px;
+	top: 72px;
+}
+
+.modal-status-title {
+	font-size: 16px;
+	line-height: 26px;
+	text-transform: uppercase;
+	position: absolute;
+	right: 30px;
+	bottom: 201px;
+}
+
+.modal-status-month {
+	font-size: 150px;
+	line-height: 1;
+	color: $brand-primary;
+	position: absolute;
+	right: 78px;
+	bottom: 43px;
+}
+
+.modal-status-year {
+	font-size: 16px;
+	line-height: 26px;
+	position: absolute;
+	right: 30px;
+	bottom: 165px;
+}

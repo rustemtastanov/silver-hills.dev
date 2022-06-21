@@ -18,7 +18,7 @@
 	<meta name="HandheldFriendly" content="true">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta http-equiv="x-dns-prefetch-control" content="off">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, width=device-width, shrink-to-fit=no">
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, width=device-width, shrink-to-fit=no">
 	<meta name="format-detection" content="telephone=no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -27,6 +27,7 @@
 
 	{% include "page-favicon/_page-favicon.html" %}
 
+  <link rel="preload" href="{{{ path }}}fonts/icomoon.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-Light.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-LightItalic.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
@@ -48,48 +49,71 @@
 	{% include "page-resize/_page-resize.html" %}
 	#}
 
-	<main class="content" id="main">
+	<main class="content" id="app">
 		{% include "header/_header.html" %}
 
 		{% block content %}{% endblock %}
 
-		{% include "footer/_footer.html" %}
+		{% include "modal-status/_modal-status.html" %}
+
+		{% include "modal-policy/_modal-policy.html" %}
+
+		{% include "drop-menu/_drop-menu.html" %}
+
+		{% include "drop-form/_drop-form.html" %}
+
+		<transition name="overlay">
+			<div class="overlay" :class="{active: appIsLoaded}" v-show="ShowDropMenu"></div>
+		</transition>
+
+		<transition name="overlay">
+			<div class="overlay top" :class="{active: appIsLoaded}" v-show="ShowPolicy || StatusModalShow || ShowForm"></div>
+		</transition>
+
+		<div class="scroll-bar" ref="scrollBar"></div>
+
 	</main>
   
-	<!-- <span class="visible-lg" data-device="desktop"></span> -->
-	<!-- <span class="visible-md" data-device="laptop"></span> -->
-	<!-- <span class="visible-sm" data-device="tablet"></span> -->
-	<!-- <span class="visible-xs" data-device="phone"></span> -->
+	{% include "form-order/_form-order.html" %}
+	{% include "section-benefits/_scripts.html" %}
+	{% include "section-points/_scripts.html" %}
+	{% include "section-gallery/_scripts.html" %}
+	{% include "section-terms/_scripts.html" %}
+	{% include "section-status/_scripts.html" %}
+	{% include "section-commercial/_scripts.html" %}
+	{% include "section-contacts/_scripts.html" %}
 
 	<!-- build:js {{{ path }}}js/vendors.min.js async defer -->
 	<script src="/node_modules/jquery/dist/jquery.js" defer></script>
 	<script src="/node_modules/jquery-lazy/jquery.lazy.js" defer></script>
 	<script src="/node_modules/jquery-lazy/plugins/jquery.lazy.picture.js" defer></script>
-	<!-- <script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap/transition.js" defer></script> -->
-	<!-- <script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap/tab.js" defer></script> -->
-	<!-- <script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap/modal.js" defer></script> -->
-	<!-- <script src="/node_modules/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js" defer></script> -->
 	<!-- <script src="/node_modules/@fancyapps/fancybox/dist/jquery.fancybox.js" defer></script> -->
 	<!-- <script src="/node_modules/aos/dist/aos.js" defer></script> -->
 	<!-- <script src="/node_modules/skrollr/dist/skrollr.min.js" defer></script> -->
 	<script src="/js/swiper-bundle.js" defer></script>
 	<script src="/js/vue.min.js" defer></script>
+  <script src="/node_modules/vue-scrollactive/dist/vue-scrollactive.min.js" defer></script>
+	<script src="/node_modules/v-mask/dist/v-mask.js" defer></script>
 	<script src="/js/vue-awesome-swiper.js" defer></script>
 	<!-- endbuild -->
 
 	<!-- build:js {{{ path }}}js/apps.min.js defer -->
-	<script src="/js/_app.js" defer></script>
-	<script src="/components/section-main/_section-main.js" defer></script>
-	<script src="/components/section-about/_section-about.js" defer></script>
+	<!-- <script src="/components/section-main/_section-main.js" defer></script> -->
+	<!-- <script src="/components/section-about/_section-about.js" defer></script> -->
 	<script src="/components/section-order/_section-order.js" defer></script>
 	<script src="/components/section-benefits/_section-benefits.js" defer></script>
+	<script src="/components/section-points/_section-points.js" defer></script>
 	<script src="/components/section-gallery/_section-gallery.js" defer></script>
-	<script src="/components/section-flats/_section-flats.js" defer></script>
+	<!-- <script src="/components/section-flats/_section-flats.js" defer></script> -->
 	<script src="/components/section-terms/_section-terms.js" defer></script>
 	<script src="/components/section-status/_section-status.js" defer></script>
+	<script src="/components/modal-status/_modal-status.js" defer></script>
 	<script src="/components/section-commercial/_section-commercial.js" defer></script>
 	<script src="/components/section-contacts/_section-contacts.js" defer></script>
+  <script src="/components/form-order/_form-order.js" defer></script>
+	<script src="/js/_app.js" defer></script>
 	<!-- endbuild -->
 
+	<script src="https://maps.api.2gis.ru/2.0/loader.js?pkg=basic&lazy=true" defer async></script>
 </body>
 </html>

@@ -1,4 +1,39 @@
-<section class="section s--status">
-	<div class="container">
-	</div>
-</section>
+<app-status inline-template v-on:show-status="showStatus">
+	<section class="section s--status" id="status">
+
+		<h2 class="status-title">
+			{% if lang == 'ru' %} Ход строительства {% endif %}
+		</h2>
+
+		<swiper class="swiper status-items" ref="slider" :options="options">
+			<swiper-slide v-for="(Slide, index) in Slides" class="status-slide slide swiper-slide" :class="Slide.formfactor" :key="index">
+				<a href="#" class="link--block" aria-label="zoom" @click.prevent="$emit('show-status', Slide)">
+					<div class="img swiper-img">
+						<picture>
+							<source :data-srcset="Slide.photos[0].webp +' 1x, '+ Slide.photos[0].webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp"></source>
+							<img width="568" height="300" :data-srcset="Slide.photos[0].thumb +' 1x, '+ Slide.photos[0].thumb2x +' 2x'" class="swiper-lazy img--cover" alt="thumb" />
+						</picture>
+						<template v-if="Slide.photos[0].video">
+							<i class="icon icon-video"></i>
+						</template>
+						<template v-else>
+							<i class="icon icon-zoom"></i>
+						</template>
+					</div>
+				</a>
+				<div class="date">
+					<div class="month">{{ Slide.date|formatMonth }}</div>
+					<div class="year">/ {{ Slide.date|formatYear }}</div>
+				</div>
+			</swiper-slide>
+		</swiper>
+
+		<div class="status-expiry">
+			{% if lang == 'ru' %}
+			Ввод в эксплуатацию<br /> 
+			декабрь, 2022
+			{% endif %}
+		</div>
+
+	</section>
+</app-status>

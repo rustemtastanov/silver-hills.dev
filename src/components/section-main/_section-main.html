@@ -1,4 +1,31 @@
-<section class="section s--main">
-	<div class="container">
+<section class="section s--main" id="main">
+
+	<div class="main-content">
+
+		{% if lang == 'ru' %}
+		<h1 class="main-title">Престижная 
+			коллекция резиденций</h1>
+		{% endif %}
+
+		<div class="main-address">
+			{% if lang == 'ru' %} Алматы, мкр. Ерменсай, переулок 5 {% endif %}
+		</div>
+
+		<div class="main-discount">
+			<div class="value" data-role="lazy">
+				<img width="165" height="134" data-src="{{{ path }}}media/main/percent.png" data-retina="{{{ path }}}media/main/percent@2x.png" class="lazy img--cover" alt="-15%" />
+			</div>
+			<div class="text">На 
+				квартиры 
+				в <b>Silver Hills</b></div>
+		</div>
+
+	</div>
+
+	<div class="main-bg primary" data-role="lazy">
+		<picture class="lazy img--cover">
+			<data-src srcset="{{{ path }}}media/main/main-bg.webp 1x, {{{ path }}}media/main/main-bg@2x.webp 2x" type="image/webp"></data-src>
+			<data-img width="1326" height="667" srcset="{{{ path }}}media/main/main-bg.jpg 1x, {{{ path }}}media/main/main-bg@2x.jpg 2x" alt="bg"></data-img>
+		</picture>
 	</div>
 </section>

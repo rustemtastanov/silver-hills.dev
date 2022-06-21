@@ -17,11 +17,11 @@
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/text-overflow";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/reset-text";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/responsive-visibility";
 
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
 
@@ -42,8 +42,8 @@
 // @import "tabs";
 // @import "dropdowns";
 // @import "dropdowns.adaptive";
-// @import "carousel";
-// @import "carousel.adaptive";
+@import "carousel";
+@import "carousel.adaptive";
 
 @import "layout";
 @import "layout.adaptive";
@@ -53,6 +53,15 @@
 
 @import "../components/nav-main/nav-main";
 @import "../components/nav-main/nav-main.adaptive";
+
+@import "../components/nav-lang/nav-lang";
+@import "../components/nav-lang/nav-lang.adaptive";
+
+@import "../components/nav-contacts/nav-contacts";
+@import "../components/nav-contacts/nav-contacts.adaptive";
+
+@import "../components/nav-social/nav-social";
+@import "../components/nav-social/nav-social.adaptive";
 
 
 @import "../components/section/section";
@@ -66,9 +75,14 @@
 
 @import "../components/section-order/section-order";
 @import "../components/section-order/section-order.adaptive";
+@import "../components/form-order/form-order";
+@import "../components/form-order/form-order.adaptive";
 
 @import "../components/section-benefits/section-benefits";
 @import "../components/section-benefits/section-benefits.adaptive";
+
+@import "../components/section-points/section-points";
+@import "../components/section-points/section-points.adaptive";
 
 @import "../components/section-gallery/section-gallery";
 @import "../components/section-gallery/section-gallery.adaptive";
@@ -88,9 +102,19 @@
 @import "../components/section-contacts/section-contacts";
 @import "../components/section-contacts/section-contacts.adaptive";
 
+@import "../components/modal-status/modal-status";
+@import "../components/modal-status/modal-status.adaptive";
 
-@import "../components/footer/footer";
-@import "../components/footer/footer.adaptive";
+@import "../components/modal-policy/modal-policy";
+@import "../components/modal-policy/modal-policy.adaptive";
+
+@import "../components/drop-menu/drop-menu";
+@import "../components/drop-menu/drop-menu.adaptive";
+
+@import "../components/drop-form/drop-form";
+@import "../components/drop-form/drop-form.adaptive";
+@import "../components/form-call/form-call";
+@import "../components/form-call/form-call.adaptive";
 
 // @import "modal";
 // @import "modal.adaptive";
