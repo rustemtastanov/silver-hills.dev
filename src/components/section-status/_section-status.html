@@ -1,9 +1,9 @@
 <app-status inline-template v-on:show-status="showStatus">
 	<section class="section s--status" id="status">
 
-		<h2 class="status-title">
+		<h3 class="status-title">
 			{% if lang == 'ru' %} Ход строительства {% endif %}
-		</h2>
+		</h3>
 
 		<swiper class="swiper status-items" ref="slider" :options="options">
 			<swiper-slide v-for="(Slide, index) in Slides" class="status-slide slide swiper-slide" :class="Slide.formfactor" :key="index">

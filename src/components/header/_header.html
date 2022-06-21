@@ -8,7 +8,7 @@
 		</scrollactive>
 
 		<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset">
-			<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item">
+			<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item" @click="closeDropMenu">
 				<span>
 					{% if lang == 'ru' %} выбрать квартиру {% endif %}
 				</span>

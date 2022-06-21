@@ -4,6 +4,10 @@
 	margin-top: 60px;
 }
 
+.main-anchor {
+	top: 0;
+}
+
 .main-bg {
 	@include stretch;
 	z-index: 0;
@@ -25,7 +29,6 @@
 	font-size: 23px;
 	line-height: 32px;
 	font-weight: bold;
-	text-transform: uppercase;
 	color: $brand-primary;
 	margin-bottom: 11px;
 }

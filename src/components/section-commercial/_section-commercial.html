@@ -40,7 +40,7 @@
 
 			<div class="commercial-viewport" :class="{ active: ImageLoaded }" v-show="isLoaded">
 				<span v-show="!ImageLoaded" class="loader"></span>
-				<a href="#" class="link--block" aria-label="zoom" ref="fancy" data-fancybox v-show="ImageLoaded">
+				<a href="#" :href="Selected.img" class="link--block" aria-label="zoom" ref="fancy" data-fancybox v-show="ImageLoaded">
 					<div class="img">
 						<img width="400" height="400" :src="Selected.img" alt="image" />
 					</div>

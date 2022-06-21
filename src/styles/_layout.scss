@@ -44,3 +44,9 @@ body {
 .overlay-leave-to {
 	opacity: 0;
 }
+
+.anchor {
+	@include stretch-x;
+	top: -60px;
+	pointer-events: none;
+}

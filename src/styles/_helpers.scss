@@ -129,16 +129,16 @@ picture.img--cover img {
 	    background-image: inline('#{$path-inline}/spinner-primary.svg');
 		}
   }
-  &.black {
-		&::before {
-	    background-image: inline('#{$path-inline}/spinner-black.svg');
-		}
-  }
-  &.white {
-		&::before {
-	    background-image: inline('#{$path-inline}/spinner-white.svg');
-		}
-  }
+  // &.black {
+		// &::before {
+	 //    background-image: inline('#{$path-inline}/spinner-black.svg');
+		// }
+  // }
+  // &.white {
+		// &::before {
+	 //    background-image: inline('#{$path-inline}/spinner-white.svg');
+		// }
+  // }
 }
 
 .svg {
