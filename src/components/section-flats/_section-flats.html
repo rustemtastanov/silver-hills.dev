@@ -1,2 +1,128 @@
-<section class="section s--flats" id="flats">
-</section>
+<app-flats inline-template>
+	<section class="section s--flats" id="flats">
+
+		<div class="flats-column flats-left">
+
+			<h3 class="flats-title">
+				{% if lang == 'ru' %} Квартиры {% endif %}
+			</h3>
+
+			<div class="flats-rooms" v-show="isLoaded">
+				<label>
+					{% if lang == 'ru' %} Выберите комнатность {% endif %}
+				</label>
+				<ul class="list--inline">
+					<li v-for="(Room, index) in Rooms" :class="{active: SelectedRooms==Room}" :key="index">
+						<a href="#" @click.prevent="SelectRooms(Room)">{{ Room }}</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="flats-types" v-show="isLoaded">
+				<div v-for="(Type, index) in Types" :class="{active: SelectedType==Type}" @click.prevent="SelectTypes(Type)" :key="index">
+					<template v-if="Type=='penthouse'">
+						{% if lang == 'ru' %} Пентхаус {% endif %}
+					</template>
+					<template v-if="Type=='2x'">
+						{% if lang == 'ru' %} Двухуровневая {% endif %}
+					</template>
+				</div>
+			</div>
+
+			<div class="flats-levels" v-show="isLoaded">
+				<ul class="list--inline">
+					<li v-for="(Level, index) in Levels" :key="index" :class="{active: SelectedLevel==Level}">
+						<a href="#" @click.prevent="SelectLevel(Level)">
+							{{ Level }}
+							{% if lang == 'ru' %} этаж {% endif %}
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="flats-areas" v-show="isLoaded">
+				<label>
+					{% if lang == 'ru' %} Выберите площадь, m² {% endif %}
+				</label>
+				<ul class="list--inline">
+					<li v-for="(Area, index) in Areas" :key="index" :class="{active: SelectedArea==Area}">
+						<a href="#" class="link--block" @click.prevent="SelectArea(Area)">
+							<span>{{ Area }}</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<button type="button" class="btn btn--primary" @click="openForm()">
+				{% if lang == 'ru' %} отправить заявку {% endif %}
+			</button>
+
+		</div>
+
+		<div class="flats-column flats-center" v-show="isLoaded">
+
+			<div class="flats-viewport" :class="{ active: ImageLoaded }">
+				<span v-show="!ImageLoaded" class="loader"></span>
+				<a href="#" :href="SelectedView=='default' ? Flat.img : Flat.socle" class="link--block" aria-label="zoom" ref="fancy" data-fancybox v-show="ImageLoaded">
+					<div class="img">
+						<img width="400" height="400" :src="SelectedView=='default' ? Flat.img : Flat.socle" alt="image" />
+					</div>
+				</a>
+			</div>
+
+			<div class="flats-tabs" v-if="Flat.socle">
+				<ul class="list--inline">
+					<li :class="{active: SelectedView=='default'}">
+						<a href="#" @click.prevent="SelectedView='default'">
+							{% if lang == 'ru' %} План этажа {% endif %}
+						</a>
+					</li>
+					<li :class="{active: SelectedView=='socle'}">
+						<a href="#" @click.prevent="SelectedView='socle'">
+							{% if lang == 'ru' %} Цокольный этаж {% endif %}
+						</a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+		<div class="flats-column flats-right" v-show="isLoaded">
+
+			<div class="flats-subtitle">
+				{{ Flat.rooms }}
+				{% if lang == 'ru' %}-комнатная{% endif %}
+				<template v-if="Flat.type=='2x'">
+					{% if lang == 'ru' %} с террасой{% endif %}
+				</template>
+			</div>
+
+			<div class="flats-desc">
+				<div class="area">{{ Flat.area }} m²</div>
+				<div class="level">{{ Flat.level }} {% if lang == 'ru' %}этаж{% endif %}</div>
+			</div>
+
+			<div class="flats-blocks">
+				{% if lang == 'ru' %} Блок {% endif %}
+				<span>
+					<template v-for="(Block, index) in Blocks" :key="index">{{ index>0 ? ',' : ''}}{{ Block }}</template>
+				</span>
+			</div>
+
+			<div class="flats-plan">
+				<i class="icon icon-roza"></i>
+				<i class="icon icon-mountain"></i>
+				<div class="img">
+					{% include "section-flats/_level.1.html" %}
+					{% include "section-flats/_level.2.html" %}
+					{% include "section-flats/_level.3.html" %}
+					{% include "section-flats/_level.4.html" %}
+					{% include "section-flats/_level.5.html" %}
+				</div>
+				<div class="address"></div>
+			</div>
+
+		</div>
+
+	</section>
+</app-flats>

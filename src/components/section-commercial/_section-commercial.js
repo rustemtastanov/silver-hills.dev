@@ -7,17 +7,31 @@ function initCommercial() {
 	Vue.component("app-commercial", {
 		data() {
 			return {
-				Items: COMMERCIAL_DATA,
+				isLoaded: false,
+				Items: [],
 				Areas: [],
 				SelectedArea: null,
 				Selected: {},
-				ImageLoaded: false
+				ImageLoaded: false,
+				url: URLS.commerce
 			}
 		},
-		mounted() {
-			this.getAreas();
+		created() {
+			const vm = this;
+			fetch(vm.url)
+				.then((response) => {
+					return response.json();
+				})
+				.then((data) => {
+					vm.Items = data;
+					vm.init();
+				});
 		},
 		methods: {
+			init() {
+				this.isLoaded = true;
+				this.getAreas();
+			},
 			loadImage() {
 				const vm = this;
 				let image = new Image();
@@ -34,8 +48,8 @@ function initCommercial() {
 				vm.Items.forEach(function(item) {
 					if (item.status) areas.push(item.area);
 				});
-				areas = vm.unique(areas);
-				areas = vm.sort(areas, "asc");
+				areas = unique(areas);
+				areas = sort(areas, "asc");
 				vm.Areas = areas;
 				vm.selectArea(areas[0]);
 			},
@@ -50,16 +64,6 @@ function initCommercial() {
 				});
 				this.Selected = item;
 				this.loadImage();
-			},
-			unique: function(array) {
-				return array.filter(function(value, index, self) {
-					return self.indexOf(value) === index;
-				});
-			},
-			sort: function(array, dir) {
-				return array.sort(function(val1, val2) {
-					return dir=="asc" ? (val1 > val2 ? 1 : -1) : val1 < val2 ? 1 : -1;
-				});
 			}
 		}
 	});

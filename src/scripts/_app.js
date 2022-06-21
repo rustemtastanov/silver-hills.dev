@@ -1,5 +1,17 @@
 let vendorsTimer;
 
+function unique(array) {
+	return array.filter(function(value, index, self) {
+		return self.indexOf(value) === index;
+	});
+}
+
+function sort(array, dir) {
+	return array.sort(function(val1, val2) {
+		return dir=="asc" ? (val1 > val2 ? 1 : -1) : val1 < val2 ? 1 : -1;
+	});
+}
+
 function initApp() {
 
 	Vue.use(VueAwesomeSwiper);
@@ -179,6 +191,7 @@ function checkVendors() {
 		initBenefits();
 		initPoints();
 		initGallery();
+		initFlats();
 		initTerms();
 		initModalStatus();
 		initStatus();

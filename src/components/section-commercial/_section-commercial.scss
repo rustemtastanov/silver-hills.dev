@@ -6,6 +6,7 @@ $col-right: 100% - $col-left;
 	border-bottom: 0;
 	padding: 52px 60px 56px;
 	display: flex;
+	height: 663px;
 }
 
 .commercial-column {
@@ -71,6 +72,7 @@ $col-right: 100% - $col-left;
 			color: white;
 			border-color: $brand-primary;
 			background: $brand-primary;
+			pointer-events: none;
 			span {
 				top: auto;
 			}

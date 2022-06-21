@@ -74,13 +74,18 @@
 
 	</main>
   
+  <script type="text/javascript">
+  	const URLS = {
+  		"flats": "{{{ path }}}media/flats/flats.json",
+  		"commerce": "{{{ path }}}media/commerce/commerce.json"
+  	};
+  </script>
 	{% include "form-order/_form-order.html" %}
 	{% include "section-benefits/_scripts.html" %}
 	{% include "section-points/_scripts.html" %}
 	{% include "section-gallery/_scripts.html" %}
 	{% include "section-terms/_scripts.html" %}
 	{% include "section-status/_scripts.html" %}
-	{% include "section-commercial/_scripts.html" %}
 	{% include "section-contacts/_scripts.html" %}
 
 	<!-- build:js {{{ path }}}js/vendors.min.js async defer -->
@@ -104,7 +109,7 @@
 	<script src="/components/section-benefits/_section-benefits.js" defer></script>
 	<script src="/components/section-points/_section-points.js" defer></script>
 	<script src="/components/section-gallery/_section-gallery.js" defer></script>
-	<!-- <script src="/components/section-flats/_section-flats.js" defer></script> -->
+	<script src="/components/section-flats/_section-flats.js" defer></script>
 	<script src="/components/section-terms/_section-terms.js" defer></script>
 	<script src="/components/section-status/_section-status.js" defer></script>
 	<script src="/components/modal-status/_modal-status.js" defer></script>

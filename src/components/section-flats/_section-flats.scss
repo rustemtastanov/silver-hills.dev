@@ -1,3 +1,401 @@
+$col-left: fluid(360px, 1187px);
+$col-right: fluid(314px, 1187px);
+$col-center: 100% - $col-left - $col-right;
+
 .s--flats {
-	height: 700px;
+	border: 1px solid;
+	border-bottom: 0;
+	font-weight: 300;
+	padding: 42px 60px;
+	display: flex;
+}
+
+.flats-column {
+	height: 564px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.flats-left {
+	width: $col-left;
+	.btn {
+		position: absolute;
+		left: 0;
+		bottom: 12px;
+	}
+}
+
+.flats-center {
+	width: $col-center;
+	justify-content: space-between;
+	padding-right: 40px;
+}
+
+.flats-right {
+	width: $col-right;
+	padding-top: 9px;
+}
+
+.flats-title {
+	font-size: 27px;
+	line-height: 43px;
+	text-transform: uppercase;
+	font-weight: 300;
+	margin-bottom: 19px;
+}
+
+.flats-rooms {
+	display: flex;
+	align-items: baseline;
+	margin-bottom: 20px;
+	label {
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: bold;
+		font-style: italic;
+		margin-right: 4px;
+	}
+	a {
+		font-size: 18px;
+		line-height: 1;
+		color: black;
+		text-decoration: none;
+	}
+	ul {
+		display: flex;
+		margin-bottom: 0;
+	}
+	li {
+		width: 47px;
+		text-align: center;
+		position: relative;
+		&.active a {
+			font-size: 18px;
+			font-weight: bold;
+			color: $brand-primary;
+			pointer-events: none;
+		}
+	}
+	li + li {
+		&::before {
+			content: "";
+			position: absolute;
+			left: -6px;
+			top: 11px;
+			width: 10px;
+			border-top: 1px solid black;
+		}
+	}
+}
+
+.flats-types {
+	display: flex;
+	font-size: 12px;
+	line-height: 1;
+	font-weight: bold;
+	margin-bottom: 37px;
+	div {
+		cursor: pointer;
+		position: relative;
+		padding-right: 22px;
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			border-radius: 100%;
+			top: 0;
+			right: 0;
+		}
+		&::before {
+			width: 14px;
+			height: 14px;
+			border: 1px solid black;
+		}
+		&::after {
+			width: 6px;
+			height: 6px;
+			background: $red;
+			transform: translate(-4px, 4px) scale(0);
+			transform-origin: 50% 50%;
+			transition: transform .3s;
+		}
+	}
+	.active {
+		pointer-events: none;
+		&::after {
+			transform: translate(-4px, 4px) scale(1);
+		}
+	}
+	div + div {
+		margin-left: 30px;
+	}
+}
+
+.flats-levels {
+	font-size: 14px;
+	margin-bottom: 33px;
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	ul {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+	}
+	li {
+		position: relative;
+		&.active a {
+			font-size: 18px;
+			color: $brand-primary;
+			font-weight: bold;
+			pointer-events: none;
+		}
+	}
+	li + li {
+		margin-left: 28px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: -18px;
+			top: 12px;
+			width: 8px;
+			border-top: 1px solid black;
+		}
+	}
+}
+
+.flats-areas {
+	max-width: 370px;
+	label {
+		font-size: 12px;
+		line-height: 16px;
+		font-weight: bold;
+		font-style: italic;
+		margin-bottom: 14px;
+	}
+	a {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+    align-items: center;
+		width: 60px;
+		height: 32px;
+		border: 1px solid black;
+		letter-spacing: 0.02em;
+		font-size: 12px;
+		line-height: 1;
+		color: black;
+	}
+	span {
+		position: relative;
+		top: -1px;
+	}
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		margin-bottom: 0;
+	}
+	li {
+		margin: 0 10px 10px 0;
+		&.active a {
+			font-size: 14px;
+			font-weight: bold;
+			color: white;
+			background: $brand-primary;
+			border-color: $brand-primary;
+			pointer-events: none;
+			span {
+				top: auto;
+			}
+		}
+	}
+}
+
+.flats-subtitle {
+	font-size: 16px;
+	line-height: 21px;
+	font-style: italic;
+	margin-bottom: 19px;
+}
+
+.flats-desc {
+	display: flex;
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 6px;
+	.area {
+		font-weight: bold;
+	}
+	div + div {
+		position: relative;
+		margin-left: 30px;
+		&::before {
+			content: '';
+			position: absolute;
+			left: -15px;
+			top: 5px;
+			height: 16px;
+			border-left: 1px solid;
+		}
+	}
+}
+
+.flats-blocks {
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 40px;
+	span {
+		text-transform: uppercase;
+	}
+}
+
+.flats-viewport {
+	height: 500px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+  align-items: center;
+  .img {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	  align-items: center;
+	  height: 500px;
+  }
+  a {
+  	transition: opacity .3s;
+  	&:hover {
+  		opacity: .7;
+  	}
+  }
+  img {
+  	width: auto;
+  	height: auto;
+  	max-height: 100%;
+  }
+}
+
+.flats-tabs {
+	font-size: 12px;
+	padding-bottom: 1px;
+	a {
+		color: black;
+		text-decoration: none;
+	}
+	ul {
+		display: flex;
+		justify-content: center;
+		margin-bottom: 0;
+	}
+	li {
+		position: relative;
+		padding-bottom: 5px;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 50%;
+			bottom: 0;
+			width: 40px;
+			border-bottom: 1px solid black;
+			transform: translateX(-50%) scaleX(0);
+			transform-origin: 50% 50%;
+			transition: transform .3s;
+		}
+		&.active {
+			&::after {
+				transform: translateX(-50%) scaleX(1);
+			}
+			a {
+				font-weight: bold;
+				pointer-events: none;
+			}
+		}
+	}
+	li + li {
+		margin-left: 16px;
+	}
+}
+
+.flats-plan {
+	$plan-width: 290px;//3782px;
+	$plan-height: $plan-width*4171px/3782px;
+	position: relative;
+	height: 400px;
+	.address {
+		$address-width: 330px;//273px;
+		$address-height: $address-width*278px/273px;
+		width: $address-width;
+		height: $address-height;
+		left: -2px;
+		top: 19px;
+	}
+	.icon {
+		position: absolute;
+		pointer-events: none;
+	}
+	.icon-roza {
+		right: -11px;
+		top: 6px;
+		font-size: 46px;
+		color: #AABDC5;
+	}
+	.icon-mountain {
+		font-size: 105px;
+		left: 2px;
+		bottom: -49px;
+	}
+	.img {
+		position: relative;
+		width: $plan-width;
+		height: $plan-height;
+		top: 7px;
+		left: 16px;
+	}
+	svg {
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		pointer-events: none;
+	}
+	.numb {
+		fill: black;
+		pointer-events: none;
+	}
+	.cont {
+		pointer-events: none;
+		fill: black;
+	}
+	.flat {
+		cursor: pointer;
+		fill: none;
+		&.available {
+			fill: rgba($brand-primary, .05);
+			pointer-events: all;
+			&:hover {
+				fill: rgba($brand-primary, .5);
+			}
+		}
+		&.selected {
+			fill: $brand-primary;
+		}
+		&.disabled {
+			pointer-events: none;
+			fill: none;
+		}
+	}
+	.address {
+		pointer-events: none;
+		position: absolute;
+		background-size: 100% 100%;
+		#{$lang-ru} & {
+			background-image: url(#{$path-img}/flats-address-ru.svg);
+		}
+		#{$lang-kz} & {
+			background-image: url(#{$path-img}/flats-address-kz.svg);
+		}
+	}
 }

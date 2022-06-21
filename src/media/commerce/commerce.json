@@ -1,0 +1,50 @@
+[{
+	"area": 95.40,
+	"block": "б1",
+	"price": 600000,
+	"img": "../media/commerce/95-40.png",
+	"card": "../media/commerce/95-40.png",
+	"status": true
+}, {
+	"area": 128.20,
+	"block": "б1",
+	"price": 600000,
+	"img": "../media/commerce/128-20.png",
+	"card": "../media/commerce/128-20.png",
+	"status": true
+}, {
+	"area": 260.20,
+	"block": "б1",
+	"price": 450000,
+	"img": "../media/commerce/260-20.png",
+	"card": "../media/commerce/260-20.png",
+	"status": true
+}, {
+	"area": 161.10,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/commerce/161-10.png",
+	"card": "../media/commerce/161-10.png",
+	"status": true
+}, {
+	"area": 97.60,
+	"block": "б3",
+	"price": 550000,
+	"img": "../media/commerce/97-60.png",
+	"card": "../media/commerce/97-60.png",
+	"status": true
+}, {
+	"area": 343.40,
+	"block": "б3",
+	"price": 550000,
+	"img": "../media/commerce/343-40.png",
+	"card": "../media/commerce/343-40.png",
+	"status": true
+}, {
+	"area": 204.60,
+	"block": "б3",
+	"price": 450000,
+	"img": "../media/commerce/204-60.png",
+	"card": "../media/commerce/204-60.png",
+	"status": true
+}]

@@ -7,11 +7,11 @@
 				{% if lang == 'ru' %} Коммерческие<br /> помещения {% endif %}
 			</h3>
 
-			<div class="commercial-areas">
-				<label>
+			<div class="commercial-areas" v-show="isLoaded">
+				<label v-show="isLoaded">
 					{% if lang == 'ru' %} Выберите площадь, m² {% endif %}
 				</label>
-				<ul class="list--inline">
+				<ul class="list--inline" v-show="isLoaded">
 					<li v-for="(Area, index) in Areas" :key="index" :class="{ active: SelectedArea==Area }">
 						<a href="#" class="link--block" @click.prevent="selectArea(Area)">
 							<span>{{ Area }}</span>
@@ -34,9 +34,11 @@
 
 		<div class="commercial-column commercial-right">
 
+			<span v-show="!isLoaded" class="loader"></span>
+
 			<i class="icon icon-roza commercial-icon"></i>
 
-			<div class="commercial-viewport" :class="{ active: ImageLoaded }">
+			<div class="commercial-viewport" :class="{ active: ImageLoaded }" v-show="isLoaded">
 				<span v-show="!ImageLoaded" class="loader"></span>
 				<a href="#" class="link--block" aria-label="zoom" ref="fancy" data-fancybox v-show="ImageLoaded">
 					<div class="img">
