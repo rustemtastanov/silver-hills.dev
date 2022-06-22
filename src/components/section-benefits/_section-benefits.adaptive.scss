@@ -15,14 +15,70 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	.s--benefits {
+		padding: 46px 60px 0;
+	}
+
+	.benefits-tab {
+		left: 68px;
+		&:first-child,
+		&.active {
+			left: auto;
+		}
+		&:not(.active) {
+			.value {
+				margin-bottom: 9px;
+			}
+		}
+		&.active {
+			.value {
+				font-size: 110px;
+				top: 3px;
+			}
+		}
+	}
+
+	.benefits-slide {
+		.inner {
+			left: 60px;
+		}
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.s--benefits {
+		padding: 46px 40px 0;
+	}
+
+	.benefits-tab {
+		&:not(.active) {
+			.value {
+				margin-bottom: 1px;
+			}
+		}
+		&.active {
+			.value {
+				font-size: 90px;
+			}
+		}
+	}
+
+	.benefits-slide {
+		.inner {
+			left: 40px;
+		}
+	}
+
+}
 
 
 

@@ -15,14 +15,26 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	.main-content {
+		left: 66px;
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.main-content {
+		left: 46px;
+	}
+
+}
 
 
 

@@ -1,6 +1,3 @@
-$col-left: fluid(516px, $layout-max-width);
-$col-right: 100% - $col-left;
-
 .s--contacts {
 	font-weight: 300;
 	display: flex;
@@ -19,16 +16,9 @@ $col-right: 100% - $col-left;
 
 .contacts-left {
 	background: #e0dfdd;
-	width: $col-left;
-	padding: 36px 60px;
-}
-
-.contacts-right {
-	width: $col-right;
 }
 
 .contacts-title {
-	font-size: 71px;
 	line-height: 1;
 	color: white;
 	left: -6px;
@@ -87,23 +77,17 @@ $col-right: 100% - $col-left;
 
 .contacts-copyright {
 	color: #787878;
-	left: 60px;
-}
-
-.contacts-policy {
-	left: 40px;
-}
-
-.contacts-partner {
-	right: 62px;
 }
 
 .contacts-map {
 	@include stretch;
+	overflow: hidden;
 }
 
 .map {
-	@include stretch;
+	@include stretch-x;
+	top: 0;
+	bottom: -40px;
 	background: #f4f1e1;
 	&::before {
 		content: '';

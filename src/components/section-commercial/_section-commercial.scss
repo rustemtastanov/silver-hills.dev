@@ -1,24 +1,12 @@
-$col-left: fluid(500px, 1206px);
-$col-right: 100% - $col-left;
-
 .s--commercial {
 	border: 1px solid;
 	border-bottom: 0;
-	padding: 52px 60px 56px;
 	display: flex;
 	height: 663px;
 }
 
 .commercial-column {
 	position: relative;
-}
-
-.commercial-left {
-	width: $col-left;
-}
-
-.commercial-right {
-	width: $col-right;
 }
 
 .commercial-title {
@@ -29,7 +17,6 @@ $col-right: 100% - $col-left;
 }
 
 .commercial-areas {
-	max-width: 350px;
 	min-height: 187px;
 	label {
 		display: block;
@@ -116,9 +103,6 @@ $col-right: 100% - $col-left;
 }
 
 .commercial-img {
-	width: 379px;
-	height: 162px;
 	position: relative;
-	left: -38px;
 	margin-bottom: 33px;
 }

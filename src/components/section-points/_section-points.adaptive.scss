@@ -15,14 +15,56 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	.s--points {
+		padding: 0 60px;
+	}
+
+	.points-tabs {
+		right: 60px;
+		&::after {
+			width: fluid(801px, 1202px);
+		}
+	}
+
+	.points-tab + .points-tab {
+		margin-left: 40px;
+	}
+
+	.points-slide {
+		padding: 136px 30px 20px;
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.s--points {
+		padding: 0 40px;
+	}
+
+	.points-tabs {
+		right: 40px;
+		&::after {
+			width: fluid(960px, 1202px);
+		}
+	}
+
+	.points-tab + .points-tab {
+		margin-left: 20px;
+	}
+
+	.points-slide {
+		padding: 176px 30px 20px;
+	}
+
+}
 
 
 

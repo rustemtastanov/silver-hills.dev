@@ -33,7 +33,7 @@
 				<ul class="list--inline">
 					<li v-for="(Level, index) in Levels" :key="index" :class="{active: SelectedLevel==Level}">
 						<a href="#" @click.prevent="SelectLevel(Level)">
-							{{ Level }}
+							{{ Level }}<br class="visible-md" />
 							{% if lang == 'ru' %} этаж {% endif %}
 						</a>
 					</li>

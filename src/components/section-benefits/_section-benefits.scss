@@ -3,7 +3,6 @@ $col-width: (100%/3);
 .s--benefits {
 	border: 1px solid;
 	border-bottom: 0;
-	padding: 46px 60px 0;
 }
 
 .benefits-tabs {
@@ -28,7 +27,6 @@ $col-width: (100%/3);
 	font-weight: 300;
 	padding: 21px 0;
 	position: relative;
-	left: 68px;
 	.value {
 		line-height: 1;
 		color: $brand-primary;
@@ -37,14 +35,9 @@ $col-width: (100%/3);
 	.title {
 		font-style: italic;
 	}
-	&:first-child,
-	&.active {
-		left: auto;
-	}
 	&:not(.active) {
 		.value {
 			font-size: 60px;
-			margin-bottom: 9px;
 			left: -7px;
 		}
 		.text {
@@ -56,8 +49,6 @@ $col-width: (100%/3);
 		display: flex;
 		align-items: flex-end;
 		.value {
-			font-size: 110px;
-			top: 3px;
 			margin-right: 14px;
 		}
 		.title {
@@ -81,7 +72,6 @@ $col-width: (100%/3);
 }
 
 .benefits-items {
-
 }
 
 .benefits-slide {
@@ -106,7 +96,6 @@ $col-width: (100%/3);
 	.inner {
 		position: absolute;
 		z-index: 1;
-		left: 60px;
 	}
 	.title,
 	.text {

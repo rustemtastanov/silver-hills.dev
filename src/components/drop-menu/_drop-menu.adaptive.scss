@@ -15,14 +15,30 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	$col-left: fluid(472px, 1326px);
+
+	.drop-menu-bg {
+		width: $col-left;
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	$col-left: fluid(343px, 855px);
+
+	.drop-menu-bg {
+		width: $col-left;
+	}
+
+}
 
 
 

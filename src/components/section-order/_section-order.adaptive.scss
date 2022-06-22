@@ -15,14 +15,48 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	.s--order {
+		height: 300px;
+		padding: 47px 60px;
+	}
+
+	.order-logo {
+		right: 60px;
+	}
+
+	.order-img {
+		width: 569px;
+		height: 126px;
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.s--order {
+		height: 400px;
+		padding: 47px 40px 147px;
+	}
+
+	.order-logo {
+		right: 40px;
+	}
+
+	.order-img {
+		$img-width: 400px;//569px;
+		$img-height: $img-width*126px/569px;
+		width: $img-width;
+		height: $img-height;
+	}
+
+}
 
 
 

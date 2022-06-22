@@ -15,14 +15,80 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	.s--status {
+		padding: 38px 60px 48px;
+	}
+
+	.status-title {
+		font-size: 84px;
+		line-height: 109px;
+	}
+
+	.status-slide {
+		.img {
+			height: 300px;
+		}
+		&.book {
+			width: 234px;
+			&.active {
+				.month {
+					transform: translate(234px - 101px, 0) scale(1);
+				}
+			}
+		}
+		&.album {
+			width: 568px;
+			&.active {
+				.month {
+					transform: translate(568px - 101px, 0) scale(1);
+				}
+			}
+		}
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.s--status {
+		padding: 38px 40px 48px;
+	}
+
+	.status-title {
+		font-size: 54px;
+		line-height: 70px;
+	}
+
+	.status-slide {
+		.img {
+			height: 290px;
+		}
+		&.book {
+			width: 214px;
+			&.active {
+				.month {
+					transform: translate(214px - 101px, 0) scale(1);
+				}
+			}
+		}
+		&.album {
+			width: 548px;
+			&.active {
+				.month {
+					transform: translate(548px - 101px, 0) scale(1);
+				}
+			}
+		}
+	}
+
+}
 
 
 

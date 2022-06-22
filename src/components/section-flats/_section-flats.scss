@@ -1,12 +1,7 @@
-$col-left: fluid(360px, 1187px);
-$col-right: fluid(314px, 1187px);
-$col-center: 100% - $col-left - $col-right;
-
 .s--flats {
 	border: 1px solid;
 	border-bottom: 0;
 	font-weight: 300;
-	padding: 42px 60px;
 	display: flex;
 }
 
@@ -18,7 +13,6 @@ $col-center: 100% - $col-left - $col-right;
 }
 
 .flats-left {
-	width: $col-left;
 	.btn {
 		position: absolute;
 		left: 0;
@@ -27,13 +21,11 @@ $col-center: 100% - $col-left - $col-right;
 }
 
 .flats-center {
-	width: $col-center;
 	justify-content: space-between;
 	padding-right: 40px;
 }
 
 .flats-right {
-	width: $col-right;
 	padding-top: 9px;
 }
 
@@ -65,7 +57,6 @@ $col-center: 100% - $col-left - $col-right;
 		margin-bottom: 0;
 	}
 	li {
-		width: 47px;
 		text-align: center;
 		position: relative;
 		&.active a {
@@ -152,11 +143,9 @@ $col-center: 100% - $col-left - $col-right;
 		}
 	}
 	li + li {
-		margin-left: 28px;
 		&::before {
 			content: '';
 			position: absolute;
-			left: -18px;
 			top: 12px;
 			width: 8px;
 			border-top: 1px solid black;
@@ -165,7 +154,6 @@ $col-center: 100% - $col-left - $col-right;
 }
 
 .flats-areas {
-	max-width: 370px;
 	label {
 		font-size: 12px;
 		line-height: 16px;

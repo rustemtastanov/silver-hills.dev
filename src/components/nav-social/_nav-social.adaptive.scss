@@ -15,14 +15,30 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	.s--contacts {
+		.nav-social {
+			left: 60px;
+		}
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.s--contacts {
+		.nav-social {
+			left: 40px;
+		}
+	}
+
+}
 
 
 

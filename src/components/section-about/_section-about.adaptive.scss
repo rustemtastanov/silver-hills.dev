@@ -15,14 +15,53 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	.s--about {
+		height: 650px;
+	}
+
+	.about-title,
+	.about-expiry {
+		left: 60px;
+	}
+
+	.about-items {
+		right: 120px;
+	}
+
+	.about-img {
+		right: -1px;
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.s--about {
+		height: 750px;
+	}
+
+	.about-title,
+	.about-expiry {
+		left: 40px;
+	}
+
+	.about-items {
+		right: 40px;
+		margin-bottom: 100px;
+	}
+
+	.about-img {
+		left: 20px;
+	}
+
+}
 
 
 

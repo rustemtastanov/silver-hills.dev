@@ -1,11 +1,11 @@
 .s--about {
-	height: 651px;
 	border: 1px solid;
 	border-bottom: 0;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: flex-end;
 	align-items: center;
+	overflow: hidden;
 }
 
 .about-title {
@@ -13,13 +13,11 @@
 	line-height: 1;
 	color: $gray;
 	position: absolute;
-	left: 60px;
 	top: 35px;
 }
 
 .about-expiry {
 	position: absolute;
-	left: 60px;
 	bottom: 62px;
 	font-size: 19px;
 	line-height: 30px;
@@ -34,7 +32,6 @@
 	max-width: 534px;
 	position: relative;
 	top: 2px;
-	right: 120px;
 }
 
 .about-item {
@@ -83,7 +80,6 @@
 
 .about-img {
 	position: absolute;
-	right: -1px;
 	bottom: 66px;
 	pointer-events: none;
 	width: 1278px;

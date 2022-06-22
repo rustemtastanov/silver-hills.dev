@@ -15,14 +15,104 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	$col-left: fluid(360px, 1187px);
+	$col-right: fluid(314px, 1187px);
+	$col-center: 100% - $col-left - $col-right;
+
+	.s--flats {
+		padding: 42px 60px;
+	}
+
+	.flats-left {
+		width: $col-left;
+	}
+
+	.flats-center {
+		width: $col-center;
+	}
+
+	.flats-right {
+		width: $col-right;
+	}
+
+	.flats-rooms {
+		li {
+			width: 47px;
+		}
+	}
+
+	.flats-levels {
+		li + li {
+			margin-left: 28px;
+			&::before {
+				left: -18px;
+			}
+		}
+	}
+
+	.flats-areas {
+		max-width: 370px;
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	$col-left: fluid(260px, 855px);
+	$col-right: fluid(230px, 855px);
+	$col-center: 100% - $col-left - $col-right;
+
+	.s--flats {
+		padding: 42px 40px;
+	}
+
+	.flats-left {
+		width: $col-left;
+	}
+
+	.flats-center {
+		width: $col-center;
+		padding-left: 40px;
+	}
+
+	.flats-right {
+		width: $col-right;
+	}
+
+	.flats-rooms {
+		li {
+			width: 40px;
+		}
+	}
+
+	.flats-levels {
+		position: relative;
+		left: -5px;
+		a {
+			text-align: center;
+			display: block;
+			width: 50px;
+		}
+		li + li {
+			&::before {
+				left: -4px;
+			}
+		}
+	}
+
+	.flats-plan {
+		transform: scale(.75);
+		transform-origin: 0 0;
+	}
+
+}
 
 
 

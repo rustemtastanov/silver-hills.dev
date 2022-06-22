@@ -15,14 +15,74 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	$col-left: fluid(516px, $layout-max-width);
+	$col-right: 100% - $col-left;
+
+	.contacts-left {
+		width: $col-left;
+		padding: 36px 60px;
+	}
+
+	.contacts-right {
+		width: $col-right;
+	}
+
+	.contacts-title {
+		font-size: 71px;
+	}
+
+	.contacts-copyright {
+		left: 60px;
+	}
+
+	.contacts-policy {
+		left: 40px;
+	}
+
+	.contacts-partner {
+		right: 62px;
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	$col-left: fluid(350px, 855px);
+	$col-right: 100% - $col-left;
+
+	.contacts-left {
+		width: $col-left;
+		padding: 36px 40px;
+	}
+
+	.contacts-right {
+		width: $col-right;
+	}
+
+	.contacts-title {
+		font-size: 51px;
+	}
+
+	.contacts-copyright {
+		left: 40px;
+	}
+
+	.contacts-policy {
+		left: 20px;
+	}
+
+	.contacts-partner {
+		right: 20px;
+	}
+
+}
 
 
 
