@@ -14,7 +14,7 @@ $screen-sm-min:     $screen-sm !default; //** Deprecated `$screen-tablet` as of 
 $screen-tablet:     $screen-sm-min !default;
 
 // Medium screen / desktop
-$screen-md:         992px !default; //** Deprecated `$screen-md` as of v3.0.1
+$screen-md:         768px !default; //** Deprecated `$screen-md` as of v3.0.1
 $screen-md-min:     $screen-md !default; //** Deprecated `$screen-desktop` as of v3.0.1
 $screen-desktop:    $screen-md-min !default;
 

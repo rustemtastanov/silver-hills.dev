@@ -1,3 +1,10 @@
+@include respond-to("(min-width: 768px) and (max-width: 991px)") {
+	html {
+		font-size: calc(100vw*16/992 + 0PX);
+	}
+}
+
+
 /*
 	styles for Tablet and Desktops
  -------------------------------------------------------------------- */
