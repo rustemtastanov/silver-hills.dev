@@ -53,7 +53,7 @@
 				</ul>
 			</div>
 
-			<button type="button" class="btn btn--primary" @click="openForm()">
+			<button type="button" class="btn btn--primary hidden-xs" @click="openForm()">
 				{% if lang == 'ru' %} отправить заявку {% endif %}
 			</button>
 
@@ -85,11 +85,7 @@
 				</ul>
 			</div>
 
-		</div>
-
-		<div class="flats-column flats-right" v-show="isLoaded">
-
-			<div class="flats-subtitle">
+			<div class="flats-subtitle visible-xs">
 				{{ Flat.rooms }}
 				{% if lang == 'ru' %}-комнатная{% endif %}
 				<template v-if="Flat.type=='2x'">
@@ -97,12 +93,40 @@
 				</template>
 			</div>
 
-			<div class="flats-desc">
+			<div class="flats-desc hidden-sm hidden-md hidden-lg">
 				<div class="area">{{ Flat.area }} m²</div>
 				<div class="level">{{ Flat.level }} {% if lang == 'ru' %}этаж{% endif %}</div>
 			</div>
 
-			<div class="flats-blocks">
+			<div class="flats-blocks visible-xs">
+				{% if lang == 'ru' %} Блок {% endif %}
+				<span>
+					<template v-for="(Block, index) in Blocks" :key="index">{{ index>0 ? ',' : ''}}{{ Block }}</template>
+				</span>
+			</div>
+
+			<button type="button" class="btn btn--primary visible-xs" @click="openForm()">
+				{% if lang == 'ru' %} отправить заявку {% endif %}
+			</button>
+
+		</div>
+
+		<div class="flats-column flats-right" v-show="isLoaded">
+
+			<div class="flats-subtitle hidden-xs">
+				{{ Flat.rooms }}
+				{% if lang == 'ru' %}-комнатная{% endif %}
+				<template v-if="Flat.type=='2x'">
+					{% if lang == 'ru' %} с террасой{% endif %}
+				</template>
+			</div>
+
+			<div class="flats-desc hidden-xs">
+				<div class="area">{{ Flat.area }} m²</div>
+				<div class="level">{{ Flat.level }} {% if lang == 'ru' %}этаж{% endif %}</div>
+			</div>
+
+			<div class="flats-blocks hidden-xs">
 				{% if lang == 'ru' %} Блок {% endif %}
 				<span>
 					<template v-for="(Block, index) in Blocks" :key="index">{{ index>0 ? ',' : ''}}{{ Block }}</template>

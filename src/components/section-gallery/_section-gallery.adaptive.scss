@@ -8,7 +8,130 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.gallery-title {
+		font-size: 102px;
+		top: 31px;
+		right: 51px;
+	}
+
+	.gallery-slide {
+		.img {
+			z-index: 0;
+			height: 650px;
+		}
+		.text {
+			position: absolute;
+			z-index: 1;
+			background: rgba(white, .9);
+			padding: 29px 40px;
+			width: 364px;
+			min-height: 182px;
+		}
+		.left-top {
+			left: 61px;
+			top: 61px;
+		}
+		.left-bottom {
+			left: 61px;
+			bottom: 56px;
+		}
+		.right-bottom {
+			right: 61px;
+			bottom: 56px;
+		}
+	}
+
+	.gallery-slide-2 {
+		.right-bottom {
+			right: 80px;
+			bottom: 46px;
+		}
+	}
+
+	.gallery-slide-3 {
+		.left-top {
+			left: 64px;
+		}
+	}
+
+	.gallery-slide-4 {
+		.left-top {
+			left: 288px;
+			top: 93px;
+		}
+	}
+
+	.gallery-slide-5 {
+		.right-bottom {
+			right: 115px;
+			bottom: 54px;
+		}
+	}
+
+	.gallery-slide-6 {
+		.left-top {
+			left: 64px;
+			top: 60px;
+		}
+	}
+
+	.gallery-slide-7 {
+		.text {
+			width: 418px;
+			min-height: 204px;
+		}
+		.left-bottom {
+			left: 64px;
+			bottom: 51px;
+		}
+	}
+
+	.gallery-slide-8 {
+		.left-top {
+			left: 64px;
+			top: 64px;
+		}
+	}
+
+	.gallery-slide-9 {
+		.text {
+			width: 418px;
+		}
+		.right-bottom {
+			right: 97px;
+			bottom: 66px;
+		}
+	}
+
+	.gallery-controls {
+		right: 0;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		button {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+
+	.gallery-prev {
+		left: 10px;
+		&.disabled {
+			transform: translate(-100%, -50%);
+		}
+	}
+
+	.gallery-next {
+		right: 10px;
+		&.disabled {
+			transform: translate(100%, -50%);
+		}
+	}
+
+}
 
 
 
@@ -50,4 +173,55 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.s--gallery {
+		margin-top: 10px;
+		border: 1px solid;
+		border-top: 0;
+	}
+
+	.gallery-title {
+		font-size: 50px;
+		left: 30px;
+		top: 23px;
+	}
+
+	.gallery-items {
+		margin: 0 -1px;
+	}
+
+	.gallery-slide {
+		.img {
+			height: 528px;
+		}
+		.text {
+			font-size: 16px;
+			line-height: 26px;
+			padding: 28px 30px;
+			min-height: 221px;
+		}
+	}
+
+	.gallery-controls {
+		display: flex;
+		top: 474px;
+		right: -1px;
+		button {
+			position: relative;
+		}
+	}
+
+	.gallery-prev {
+		&.disabled {
+			transform: translateX(-100%);
+		}
+	}
+
+	.gallery-next {
+		&.disabled {
+			transform: translateX(100%);
+		}
+	}
+
+}

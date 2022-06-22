@@ -1,146 +1,14 @@
-$col-width: (100%/3);
-
 .s--benefits {
 	border: 1PX solid;
-	border-bottom: 0;
-}
-
-.benefits-tabs {
-	border-bottom: 1PX solid;
-	display: flex;
-	align-items: flex-end;
-	position: relative;
-	margin-bottom: 33px;
-	.line {
-		position: absolute;
-		height: 5px;
-		width: $col-width;
-		bottom: -5px;
-		transition: left .6s;
-		background: $brand-primary;
-	}
-}
-
-.benefits-tab {
-	width: $col-width;
-	cursor: pointer;
-	font-weight: 300;
-	padding: 21px 0;
-	position: relative;
-	.value {
-		line-height: 1;
-		color: $brand-primary;
-		position: relative;
-	}
-	.title {
-		font-style: italic;
-	}
-	&:not(.active) {
-		.value {
-			font-size: 60px;
-			left: -7px;
-		}
-		.text {
-			font-size: 16px;
-			line-height: 21px;
-		}
-	}
-	&.active {
-		display: flex;
-		align-items: flex-end;
-		.value {
-			margin-right: 14px;
-		}
-		.title {
-			font-size: 18px;
-			line-height: 23px;
-			white-space: pre-line;
-		}
-	}
-}
-
-.benefits-tab:nth-child(1).active ~ .line {
-	left: 0;
-}
-
-.benefits-tab:nth-child(2).active ~ .line {
-	left: $col-width;
-}
-
-.benefits-tab:nth-child(3).active ~ .line {
-	left: $col-width*2;
-}
-
-.benefits-items {
 }
 
 .benefits-slide {
 	font-weight: 300;
-	color: white;
-	overflow: hidden;
 	.img {
-		height: 458px;
-		background: black;
 		z-index: 0;
-	}
-	.title {
-		text-transform: uppercase;
-		font-size: 23px;
-		line-height: 35px;
-		margin-bottom: 17px;
-	}
-	.text {
-		font-size: 14px;
-		line-height: 24px;
-	}
-	.inner {
-		position: absolute;
-		z-index: 1;
 	}
 	.title,
 	.text {
 		white-space: pre-line;
-		opacity: 0;
-		transition: transform .6s .6s, opacity .6s;
-	}
-	.inner-top {
-		transform: translateY(40%);
-		top: 49px;
-		.title,
-		.text {
-			transform: translateY(40%);
-		}
-	}
-	.inner-bottom {
-		transform: translateY(-40%);
-		bottom: 59px;
-		.title,
-		.text {
-			transform: translateY(-40%);
-		}
-	}
-	&.active {
-		.title,
-		.text {
-			transition: transform .6s, opacity .6s;
-			transform: translateY(0);
-			opacity: 1;
-		}
-		.inner-top {
-			.title {
-				transition-delay: 1.1s;
-			}
-			.text {
-				transition-delay: 1.15s;
-			}
-		}
-		.inner-bottom {
-			.text {
-				transition-delay: 1.1s;
-			}
-			.title {
-				transition-delay: 1.25s;
-			}
-		}
 	}
 }

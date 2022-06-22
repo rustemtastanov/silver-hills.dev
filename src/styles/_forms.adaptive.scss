@@ -8,7 +8,34 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	form {
+		width: 100%;
+		max-width: 598px;
+		display: flex;
+	}
+
+	.form-control {
+	  height: 54px;
+	  padding: 6px 19px;
+	  font-size: 15px;
+	}
+
+	.form-group {
+		flex-grow: 1;
+		margin-right: -1px;
+	}
+
+	.form-controls {
+		min-width: 228px;
+	}
+
+	.form-error {
+		font-size: 12px;
+	}
+
+}
 
 
 
@@ -50,4 +77,29 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	form {
+		max-width: 260px;
+		margin: 0 auto;
+	}
+
+	.form-control {
+	  height: 66px;
+	  padding: 6px 28px;
+	  font-size: 18px;
+	}
+
+	.form-group {
+		margin-bottom: 10px;
+	}
+
+	.form-controls {
+		padding-top: 20px;
+	}
+
+	.form-error {
+		font-size: 14px;
+	}
+
+}

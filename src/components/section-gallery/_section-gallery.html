@@ -1,4 +1,4 @@
-<app-gallery inline-template>
+<app-gallery inline-template :is-phone="isPhone">
 	<section class="section s--gallery" id="gallery">
 
 		<h3 class="gallery-title">
@@ -9,11 +9,12 @@
 			<swiper-slide v-for="(Slide, index) in Slides" class="gallery-slide swiper-slide" :class="'gallery-slide-'+ (index+1)" :key="index">
 				<div class="img swiper-img">
 					<picture>
-						<source :data-srcset="Slide.webp +' 1x, '+ Slide.webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp"></source>
-						<img width="1326" height="650" :data-srcset="Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x'" class="swiper-lazy img--cover" alt="photo" />
+						<source :data-srcset="isPhone ? (Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x') : (Slide.webp +' 1x, '+ Slide.webp2x +' 2x')" class="swiper-lazy img--cover" type="image/webp"></source>
+						<img :width="isPhone ? 394 : 1326" :height="isPhone ? 528 : 650" :data-srcset="isPhone ? (Slide.thumb_phone +' 1x, '+ Slide.thumb_phone2x +' 2x') : (Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x')" class="swiper-lazy img--cover" alt="photo" />
 					</picture>
 				</div>
-				<div class="text" :class="Slide.pos" v-html="Slide.text"></div>
+				<div class="text hidden-xs" :class="Slide.pos" v-html="Slide.text"></div>
+				<div class="text visible-xs" v-html="Slide.text_phone"></div>
 			</swiper-slide>
 		</swiper>
 

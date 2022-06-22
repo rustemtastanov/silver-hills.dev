@@ -8,7 +8,29 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.header-in {
+		margin: 0 20px;
+	}
+
+	.header-left {
+		width: 30%;
+	}
+
+	.header-right {
+		width: 70%;
+	}
+
+	.header-logo {
+		background-image: url(#{$path-img}/logo-small.png);
+		@include retina('#{$path-img}/logo-small@2x.png');
+		width: 243px;
+		height: 39px;
+		top: -8px;
+	}
+
+}
 
 
 
@@ -50,4 +72,26 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.header-in {
+		margin: 0 10px;
+	}
+
+	.header-left {
+		width: 60%;
+	}
+
+	.header-right {
+		width: 40%;
+	}
+
+	.header-logo {
+		width: 206px;
+		height: 35px;
+		top: -11px;
+		background-image: url(#{$path-img}/logo-small-phone.png);
+		@include retina('#{$path-img}/logo-small-phone@2x.png');
+	}
+
+}

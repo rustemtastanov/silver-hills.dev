@@ -8,7 +8,65 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.s--about {
+		overflow: hidden;
+		border-bottom: 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.about-title {
+		font-size: 76px;
+		line-height: 1;
+		color: $gray;
+		position: absolute;
+		top: 35px;
+	}
+
+	.about-items {
+		width: 100%;
+		max-width: 534px;
+		position: relative;
+		top: 2px;
+	}
+
+	.about-item {
+		position: relative;
+		width: (100%/3);
+		min-height: 151px;
+	}
+
+	.about-item-4,
+	.about-item-5 {
+		left: 3px;
+		.value {
+			font-size: 48px;
+			margin-bottom: 13px;
+		}
+		.text {
+			font-size: 17px;
+			line-height: 20px;
+		}
+	}
+
+	.about-expiry {
+		position: absolute;
+		bottom: 62px;
+		font-size: 19px;
+		line-height: 30px;
+	}
+
+	.about-img {
+		bottom: 66px;
+		width: 1278px;
+		height: 319px;
+	}
+
+}
 
 
 
@@ -89,4 +147,89 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.s--about {
+		padding: 28px 30px 39px;
+	}
+
+	.about-logo {
+		$logo-width: 334px;//291px;
+		$logo-height: $logo-width*70px/291px;
+		width: $logo-width;
+		height: $logo-height;
+		margin: 0 auto 46px;
+	}
+
+	.order-logo-text {
+		$logo-height: 190px;//150px;
+		$logo-width: $logo-height*8px/150px;
+		position: absolute;
+		right: 19px;
+		top: 159px;
+		width: $logo-width;
+		height: $logo-height;
+	}
+
+	.about-items {
+		max-width: 278px;
+		padding-bottom: 21px;
+	}
+
+	.about-item-1,
+	.about-item-3 {
+		width: 50%;
+		margin-bottom: 31px;
+	}
+
+	.about-item-4,
+	.about-item-5 {
+		width: 100%;
+		margin-bottom: 35px;
+		.value {
+			font-size: 55px;
+			margin-bottom: 9px;
+		}
+		.text {
+			font-size: 19px;
+			line-height: 23px;
+		}
+	}
+
+	.about-item-1 {
+		order: 1;
+	}
+
+	.about-item-2 {
+		order: 3;
+		width: 100%;
+		margin-bottom: 216px;
+	}
+
+	.about-item-3 {
+		order: 2;
+	}
+
+	.about-item-4 {
+		order: 4;
+	}
+
+	.about-item-5 {
+		order: 5;
+	}
+
+	.about-expiry {
+		font-size: 24px;
+		line-height: 38px;
+	}
+
+	.about-img {
+		$img-width: 850px;//1278px;
+		$img-height: $img-width*319px/1278px;
+		width: $img-width;
+		height: $img-height;
+		top: 430px;
+		left: 28px;
+	}
+
+}

@@ -1,31 +1,3 @@
 .s--order {
 	background: $brand-secondary;
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-  align-items: flex-end;
-	margin-top: -20px;
-}
-
-.order-logo {
-	width: 291px;
-	height: 70px;
-	position: absolute;
-	top: 40px;
-}
-
-.order-text {
-	position: absolute;
-	left: 22px;
-	top: 40px;
-	width: 8px;
-	height: 150px;
-}
-
-.order-img {
-	position: absolute;
-	z-index: 0;
-	pointer-events: none;
-	left: 23px;
-	bottom: 43px;
 }

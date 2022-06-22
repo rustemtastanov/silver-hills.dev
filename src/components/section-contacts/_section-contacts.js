@@ -5,6 +5,9 @@
  	-------------------------------------- */
 function initContacts() {
 	Vue.component("app-contacts", {
+		props: {
+			isPhone: Boolean
+		},
 		data() {
 			return {
 				MapData: MAP_DATA,
@@ -51,7 +54,7 @@ function initContacts() {
 				DG.then(function() {
 					map = DG.map(vm.mapEl, {
 						center: vm.LatLng,
-						zoom: vm.MapData.zoom,
+						zoom: vm.isPhone ? vm.MapData.zoom-1 : vm.MapData.zoom,
 						fullscreenControl: false,
 						zoomControl: false,
 						scrollWheelZoom: true

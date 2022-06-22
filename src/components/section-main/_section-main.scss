@@ -1,54 +1,18 @@
 .s--main {
-	height: 100vh;
-	max-height: 667px;
 	margin-top: 60px;
 }
 
 .main-bg {
-	@include stretch;
-	z-index: 0;
 	background: $gray;
-}
-
-.main-content {
-	position: absolute;
-	z-index: 1;
-	width: 430px;
-	height: 254px;
-	background: rgba(white, .83);
-	bottom: 70px;
-	padding: 19px 29px;
+	z-index: 0;
 }
 
 .main-title {
-	font-size: 23px;
-	line-height: 32px;
 	font-weight: bold;
-	color: $brand-primary;
-	margin-bottom: 11px;
 }
 
 .main-address {
-	font-size: 15px;
-	line-height: 21px;
 	font-weight: 300;
-	margin-bottom: 9px;
 }
 
-.main-discount {
-	display: flex;
-	align-items: center;
-	.value {
-		width: 165px;
-		height: 134px;
-		left: -7px;
-		top: 4px;
-	}
-	.text {
-		text-transform: uppercase;
-		font-weight: 300;
-		font-size: 16.5px;
-		line-height: 21px;
-		white-space: pre-line;
-	}
-}
+

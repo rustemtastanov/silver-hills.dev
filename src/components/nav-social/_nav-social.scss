@@ -1,6 +1,4 @@
 .nav-social {
-	font-size: 15px;
-	line-height: 21px;
 	font-weight: bold;
 	a {
 		text-decoration: none;
@@ -10,9 +8,7 @@
 		}
 	}
 	.icon {
-		font-size: 87px;
 		display: block;
-		margin-bottom: -17px;
 	}
 }
 
@@ -29,12 +25,3 @@
 	}
 }
 
-.s--contacts {
-	.nav-social {
-		position: absolute;
-		bottom: 52px;
-		.icon {
-			left: -25px;
-		}
-	}
-}

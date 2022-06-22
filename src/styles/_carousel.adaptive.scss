@@ -8,7 +8,19 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.slider-pager {
+		.current {
+			color: $brand-primary;
+		}
+		.amount {
+			font-size: 11px;
+			left: -8px;
+		}
+	}
+
+}
 
 
 
@@ -50,4 +62,20 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.slider-pager {
+		position: relative;
+		.current {
+			left: -11px;
+		}
+		.amount {
+			font-size: 13px;
+			left: -18px;
+			span {
+				margin-right: 3px;
+			}
+		}
+	}
+
+}

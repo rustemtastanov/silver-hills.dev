@@ -38,6 +38,7 @@ function initApp() {
 	new Vue({
 		el: "#app",
 		data: {
+			isPhone: null,
 			scrollTopOffset: 0,
 			scrollBarWidth: 0,
 			scrollBarOffset: 0,
@@ -49,6 +50,13 @@ function initApp() {
 			ShowForm: false,
 			ShowResponse: false,
 			UTM: {}
+		},
+		created() {
+			const vm = this;
+			vm.checkDevice();
+			window.addEventListener("resize", function() {
+				vm.checkDevice();
+			});
 		},
 		mounted() {
 			const vm = this;
@@ -81,6 +89,13 @@ function initApp() {
 			}
 		},
 		methods: {
+			checkDevice() {
+				if (window.innerWidth<768) {
+					if (!this.isPhone) this.isPhone = true;
+				} else {
+					if (this.isPhone) this.isPhone = false;
+				}
+			},
 			lockScroll() {
 				this.scrollBarOffset = this.scrollBarWidth;
 				document.body.classList.add("lock");

@@ -1,53 +1,16 @@
 .s--flats {
-	border: 1PX solid;
-	border-bottom: 0;
 	font-weight: 300;
 	display: flex;
-}
-
-.flats-column {
-	height: 564px;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-}
-
-.flats-left {
-	.btn {
-		position: absolute;
-		left: 0;
-		bottom: 12px;
-	}
-}
-
-.flats-center {
-	justify-content: space-between;
-	padding-right: 40px;
-}
-
-.flats-right {
-	padding-top: 9px;
-}
-
-.flats-title {
-	font-size: 27px;
-	line-height: 43px;
-	margin-bottom: 19px;
 }
 
 .flats-rooms {
 	display: flex;
 	align-items: baseline;
-	margin-bottom: 20px;
 	label {
-		font-size: 12px;
-		line-height: 16px;
 		font-weight: bold;
 		font-style: italic;
-		margin-right: 4px;
 	}
 	a {
-		font-size: 18px;
 		line-height: 1;
 		color: black;
 		text-decoration: none;
@@ -60,7 +23,6 @@
 		text-align: center;
 		position: relative;
 		&.active a {
-			font-size: 18px;
 			font-weight: bold;
 			color: $brand-primary;
 			pointer-events: none;
@@ -70,9 +32,6 @@
 		&::before {
 			content: "";
 			position: absolute;
-			left: -6px;
-			top: 11px;
-			width: 10px;
 			border-top: 1PX solid black;
 		}
 	}
@@ -80,50 +39,33 @@
 
 .flats-types {
 	display: flex;
-	font-size: 12px;
 	line-height: 1;
 	font-weight: bold;
-	margin-bottom: 37px;
 	div {
 		cursor: pointer;
 		position: relative;
-		padding-right: 22px;
 		&::before,
 		&::after {
 			content: '';
 			position: absolute;
 			border-radius: 100%;
-			top: 0;
 			right: 0;
 		}
 		&::before {
-			width: 14px;
-			height: 14px;
 			border: 1PX solid black;
 		}
 		&::after {
-			width: 6px;
-			height: 6px;
 			background: $red;
-			transform: translate(-4px, 4px) scale(0);
 			transform-origin: 50% 50%;
 			transition: transform .3s;
 		}
 	}
 	.active {
 		pointer-events: none;
-		&::after {
-			transform: translate(-4px, 4px) scale(1);
-		}
-	}
-	div + div {
-		margin-left: 30px;
 	}
 }
 
 .flats-levels {
-	font-size: 14px;
-	margin-bottom: 33px;
 	a {
 		color: black;
 		text-decoration: none;
@@ -146,7 +88,6 @@
 		&::before {
 			content: '';
 			position: absolute;
-			top: 12px;
 			width: 8px;
 			border-top: 1PX solid black;
 		}
@@ -155,11 +96,8 @@
 
 .flats-areas {
 	label {
-		font-size: 12px;
-		line-height: 16px;
 		font-weight: bold;
 		font-style: italic;
-		margin-bottom: 14px;
 	}
 	a {
 		display: flex;
@@ -200,56 +138,35 @@
 }
 
 .flats-subtitle {
-	font-size: 16px;
-	line-height: 21px;
 	font-style: italic;
-	margin-bottom: 19px;
 }
 
 .flats-desc {
 	display: flex;
-	font-size: 18px;
-	line-height: 23px;
-	margin-bottom: 6px;
 	.area {
 		font-weight: bold;
 	}
 	div + div {
 		position: relative;
-		margin-left: 30px;
 		&::before {
 			content: '';
 			position: absolute;
-			left: -15px;
-			top: 5px;
-			height: 16px;
 			border-left: 1PX solid;
 		}
 	}
 }
 
 .flats-blocks {
-	font-size: 18px;
-	line-height: 23px;
-	margin-bottom: 40px;
 	span {
 		text-transform: uppercase;
 	}
 }
 
 .flats-viewport {
-	height: 500px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
   align-items: center;
-  .img {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-	  align-items: center;
-	  height: 500px;
-  }
   a {
   	transition: opacity .3s;
   	&:hover {
@@ -264,8 +181,6 @@
 }
 
 .flats-tabs {
-	font-size: 12px;
-	padding-bottom: 1px;
 	a {
 		color: black;
 		text-decoration: none;
@@ -277,13 +192,11 @@
 	}
 	li {
 		position: relative;
-		padding-bottom: 5px;
 		&::after {
 			content: '';
 			position: absolute;
 			left: 50%;
 			bottom: 0;
-			width: 40px;
 			border-bottom: 1PX solid black;
 			transform: translateX(-50%) scaleX(0);
 			transform-origin: 50% 50%;
@@ -299,45 +212,16 @@
 			}
 		}
 	}
-	li + li {
-		margin-left: 16px;
-	}
 }
 
 .flats-plan {
-	$plan-width: 290px;//3782px;
-	$plan-height: $plan-width*4171px/3782px;
 	position: relative;
-	height: 400px;
-	.address {
-		$address-width: 330px;//273px;
-		$address-height: $address-width*278px/273px;
-		width: $address-width;
-		height: $address-height;
-		left: -2px;
-		top: 19px;
-	}
 	.icon {
 		position: absolute;
 		pointer-events: none;
 	}
-	.icon-roza {
-		right: -11px;
-		top: 6px;
-		font-size: 46px;
-		color: #AABDC5;
-	}
-	.icon-mountain {
-		font-size: 105px;
-		left: 2px;
-		bottom: -49px;
-	}
 	.img {
 		position: relative;
-		width: $plan-width;
-		height: $plan-height;
-		top: 7px;
-		left: 16px;
 	}
 	svg {
 		position: absolute;

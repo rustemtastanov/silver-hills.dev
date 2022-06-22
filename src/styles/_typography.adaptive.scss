@@ -63,4 +63,10 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	html {
+		font-size: calc(100vw*16/414 + 0PX);
+	}
+
+}

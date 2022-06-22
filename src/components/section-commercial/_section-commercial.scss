@@ -1,30 +1,16 @@
 .s--commercial {
 	border: 1PX solid;
-	border-bottom: 0;
-	display: flex;
-	height: 663px;
 }
 
 .commercial-column {
 	position: relative;
 }
 
-.commercial-title {
-	font-size: 27px;
-	line-height: 38px;
-	left: -2px;
-	margin-bottom: 37px;
-}
-
 .commercial-areas {
-	min-height: 187px;
 	label {
 		display: block;
-		font-size: 12px;
-		line-height: 16px;
 		font-weight: bold;
 		font-style: italic;
-		margin-bottom: 13px;
 	}
 	a {
 		font-size: 12px;
@@ -67,21 +53,15 @@
 .commercial-icon {
 	position: absolute;
 	pointer-events: none;
-	font-size: 67px;
 	color: $brand-primary;
-	right: -18px;
-	top: 23px;
 }
 
 .commercial-viewport {
-	backface-visibility: hidden;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
   align-items: center;
-  padding: 32px 20px;
   position: relative;
-  height: 554px;
   a {
   	transition: opacity .3s;
   	&:hover {
@@ -93,7 +73,6 @@
 		flex-direction: column;
 		justify-content: center;
     align-items: center;
-		height: 490px;
 	}
 	img {
 		width: auto;
@@ -104,5 +83,4 @@
 
 .commercial-img {
 	position: relative;
-	margin-bottom: 33px;
 }

@@ -8,7 +8,59 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.s--main {
+		height: 100vh;
+		max-height: 667px;
+	}
+
+	.main-bg {
+		@include stretch;
+	}
+
+	.main-address {
+		font-size: 15px;
+		line-height: 21px;
+		margin-bottom: 9px;
+	}
+
+	.main-discount {
+		display: flex;
+		align-items: center;
+		.value {
+			width: 165px;
+			height: 134px;
+			left: -7px;
+			top: 4px;
+		}
+		.text {
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 16.5px;
+			line-height: 21px;
+			white-space: pre-line;
+		}
+	}
+
+	.main-content {
+		position: absolute;
+		z-index: 1;
+		width: 430px;
+		height: 254px;
+		background: rgba(white, .83);
+		bottom: 70px;
+		padding: 19px 29px;
+	}
+
+	.main-title {
+		font-size: 23px;
+		line-height: 32px;
+		color: $brand-primary;
+		margin-bottom: 11px;
+	}
+
+}
 
 
 
@@ -62,4 +114,64 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.s--main {
+	}
+
+	.main-bg {
+		height: 559px;
+	}
+
+	.main-title {
+		@include stretch-x(30px, 30px);
+		bottom: 23px;
+		z-index: 1;
+		font-size: 21px;
+		line-height: 29px;
+		color: white;
+		white-space: pre-line;
+	}
+
+	.main-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+    align-items: flex-end;
+		background: $brand-secondary;
+		height: 191px;
+		padding: 15px 27px 25px;
+	}
+
+	.main-address {
+		font-size: 20px;
+		line-height: 28px;
+		text-align: center;
+		width: 100%;
+	}
+
+	.main-price {
+		line-height: 1;
+		text-align: right;
+		small {
+			display: block;
+			font-size: 21px;
+			font-weight: 300;
+			position: relative;
+			top: 1px;
+		}
+		sub {
+			bottom: auto;
+			font-size: 18px;
+			letter-spacing: 0.04em;
+		}
+		strong {
+			font-size: 57px;
+			font-weight: 500;
+			letter-spacing: -0.03em;
+			color: white;
+			margin: 0 5px;
+		}
+	}
+
+}

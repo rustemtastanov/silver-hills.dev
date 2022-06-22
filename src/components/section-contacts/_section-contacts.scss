@@ -1,6 +1,5 @@
 .s--contacts {
 	font-weight: 300;
-	display: flex;
 	a {
 		color: black;
 		&:hover {
@@ -10,7 +9,6 @@
 }
 
 .contacts-column {
-	height: 650px;
 	position: relative;
 }
 
@@ -21,58 +19,24 @@
 .contacts-title {
 	line-height: 1;
 	color: white;
-	left: -6px;
-	margin-bottom: 39px;
-}
-
-.contacts-address {
-	font-size: 18px;
-	line-height: 25px;
-	margin-bottom: 12px;
 }
 
 .contacts-text {
 	white-space: pre-line;
-	font-size: 15px;
-	line-height: 21px;
-	font-style: italic;
-	margin-bottom: 20px;
 }
 
 .contacts-path {
-	font-size: 15px;
-	line-height: 21px;
 	font-style: italic;
-	margin-bottom: 42px;
-	a {
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
-	}
 }
 
 .contacts-mode {
 	label {
 		display: block;
-		font-size: 15px;
-		line-height: 22px;
 		font-weight: bold;
-		margin-bottom: 8px;
 	}
 	div {
-		font-size: 20px;
-		line-height: 32px;
 		white-space: pre-line;
 	}
-}
-
-.contacts-meta {
-	font-size: 13px;
-	line-height: 18px;
-	position: absolute;
-	z-index: 2;
-	bottom: 29px;
 }
 
 .contacts-copyright {
@@ -80,7 +44,6 @@
 }
 
 .contacts-map {
-	@include stretch;
 	overflow: hidden;
 }
 

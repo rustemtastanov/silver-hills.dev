@@ -1,4 +1,4 @@
-<app-contacts inline-template>
+<app-contacts inline-template :is-phone="isPhone">
 	<section class="section s--contacts" id="contacts">
 
 		<div class="contacts-column contacts-left">
@@ -7,13 +7,18 @@
 				{% if lang == 'ru' %} Контакты {% endif %}
 			</h3>
 
+			<div class="contacts-phone visible-xs">
+				<a href="#" :href="formatPhone('+7 (747) 095 05 03')">+7 (747) 095 05 03</a>
+			</div>
+
 			<div class="contacts-address">
 				{% if lang == 'ru' %} Алматы, мкр. Ерменсай, переулок 5 {% endif %}
 			</div>
 
-			<div class="contacts-text">
-				{% if lang == 'ru' %} Отдел продаж находится на территории жилого комплекса {% endif %}
-			</div>
+			{% if lang == 'ru' %}
+			<div class="contacts-text">Отдел продаж находится на территории 
+				жилого комплекса</div>
+			{% endif %}
 
 			<div class="contacts-path">
 				<a href="#" target="_blank" rel="noopener">
@@ -31,7 +36,7 @@
 
 			{% include "nav-social/_nav-social.html" %}
 
-			<div class="contacts-meta contacts-copyright">
+			<div class="contacts-meta contacts-copyright hidden-xs">
 				{% if lang == 'ru' %} © Silver Hills 2021. Все права защищены {% endif %}
 			</div>
 
@@ -41,6 +46,10 @@
 
 			<div class="contacts-map">
 				<div class="map" ref="mapEl"></div>
+			</div>
+
+			<div class="contacts-meta contacts-copyright visible-xs">
+				{% if lang == 'ru' %} © Silver Hills 2021. Все права защищены {% endif %}
 			</div>
 
 			<div class="contacts-meta contacts-policy">

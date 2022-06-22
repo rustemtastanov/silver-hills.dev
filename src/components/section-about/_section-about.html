@@ -1,8 +1,16 @@
 <section class="section s--about" id="about">
 
-	<h2 class="about-title">
+	<h2 class="about-title hidden-xs">
 		{% if lang == 'ru' %} О проекте {% endif %}
 	</h2>
+
+	<div class="about-logo visible-xs" data-role="lazy">
+		<img width="291" height="70" data-src="{{{ path }}}img/logo-alt.svg" class="lazy img--cover" alt="logo" />
+	</div>
+
+	<div class="order-logo-text visible-xs" data-role="lazy">
+		<img width="8" height="150" data-src="{{{ path }}}img/text-vertical-{{{ lang }}}.svg" class="img--cover lazy" alt="text" />
+	</div>
 
 	<div class="about-items">
 		{% for item in [

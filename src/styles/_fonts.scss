@@ -20,6 +20,17 @@
   font-display: swap;
 }
 
+@font-face {//medium
+  font-family: "IBM Plex Sans";
+  src: 	local("IBM Plex Sans Medium"), local("IBMPlexSans-Medium"),
+  			url("#{$path-fonts}/IBMPlexSans-Medium.woff2") format("woff2"),
+  			url("#{$path-fonts}/IBMPlexSans-Medium.woff") format("woff"),
+  			url("#{$path-fonts}/IBMPlexSans-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @font-face {//bold
   font-family: "IBM Plex Sans";
   src: 	local("IBM Plex Sans Bold"), local("IBMPlexSans-Bold"),

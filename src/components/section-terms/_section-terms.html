@@ -7,14 +7,19 @@
 					<div class="title" v-html="Item.title"></div>
 					<div class="value">{{ Item.value }}</div>
 				</div>
-				<div class="text" v-html="Item.text"></div>
-				<button type="button" class="btn btn--primary btn--block" @click="openForm">
+				<div class="text hidden-xs" v-html="Item.text"></div>
+				<div class="more visible-xs">
+					<a href="#">
+						{% if lang == 'ru' %} подробнее {% endif %}
+					</a>
+				</div>
+				<button type="button" class="btn btn--primary btn--block hidden-xs" @click="openForm">
 					{% if lang == 'ru' %} отправить заявку {% endif %}
 				</button>
 			</div>
 		</div>
 
-		<div class="terms-img">
+		<div class="terms-img hidden-xs">
 			<svg class="svg" viewBox="0 0 256 317" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<mask id="terms-img" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="256" height="317">
 					<rect width="256" height="317" fill="#c4c4c4"/>

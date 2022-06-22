@@ -1,10 +1,21 @@
 <section class="section s--main">
 	<span class="anchor main-anchor" id="main"></span>
 
+	<div class="main-bg primary visible-xs" data-role="lazy">
+		<picture class="lazy img--cover">
+			<data-src srcset="{{{ path }}}media/main/main-bg-phone.webp 1x, {{{ path }}}media/main/main-bg-phone@2x.webp 2x" type="image/webp"></data-src>
+			<data-img width="402" height="559" srcset="{{{ path }}}media/main/main-bg-phone.jpg 1x, {{{ path }}}media/main/main-bg-phone@2x.jpg 2x" alt="bg"></data-img>
+		</picture>
+		{% if lang == 'ru' %}
+		<h1 class="main-title visible-xs">Престижная 
+			коллекция резиденций</h1>
+		{% endif %}
+	</div>
+
 	<div class="main-content">
 
 		{% if lang == 'ru' %}
-		<h1 class="main-title">Престижная 
+		<h1 class="main-title hidden-xs">Престижная 
 			коллекция резиденций</h1>
 		{% endif %}
 
@@ -12,7 +23,14 @@
 			{% if lang == 'ru' %} Алматы, мкр. Ерменсай, переулок 5 {% endif %}
 		</div>
 
-		<div class="main-discount">
+		{% if lang == 'ru' %}
+		<div class="main-price visible-xs">
+			<small>тенге/м²</small>
+			<sub>от</sub> <strong>550 000</strong>
+		</div>
+		{% endif %}
+
+		<div class="main-discount hidden-xs">
 			<div class="value" data-role="lazy">
 				<img width="165" height="134" data-src="{{{ path }}}media/main/percent.png" data-retina="{{{ path }}}media/main/percent@2x.png" class="lazy img--cover" alt="-15%" />
 			</div>
@@ -23,7 +41,7 @@
 
 	</div>
 
-	<div class="main-bg primary" data-role="lazy">
+	<div class="main-bg primary hidden-xs" data-role="lazy">
 		<picture class="lazy img--cover">
 			<data-src srcset="{{{ path }}}media/main/main-bg.webp 1x, {{{ path }}}media/main/main-bg@2x.webp 2x" type="image/webp"></data-src>
 			<data-img width="1326" height="667" srcset="{{{ path }}}media/main/main-bg.jpg 1x, {{{ path }}}media/main/main-bg@2x.jpg 2x" alt="bg"></data-img>

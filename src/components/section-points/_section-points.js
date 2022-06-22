@@ -11,21 +11,46 @@ function initPoints() {
 				Selected: 0,
 				options: {
 					loop: true,
-					direction: "vertical",
 					slideActiveClass: "active",
-					speed: 1200,
 					autoHeight: true,
-					simulateTouch: false
+					lazy: {
+						loadPrevNext: true
+					},
+					breakpointsInverse: true,
+					breakpoints: {
+						0: {
+							direction: "horizontal",
+							speed: 600
+						},
+						768: {
+							simulateTouch: false,
+							direction: "vertical",
+							speed: 1200
+						}
+					}
+				},
+				optionsPager: {
+					direction: "vertical",
+					speed: 600,
+					slideActiveClass: "active"
 				}
 			}
 		},
 		computed: {
+			Pager() {
+				return this.$refs.pager;
+			},
 			Slider() {
 				return this.$refs.slider;
 			}
 		},
 		mounted() {
-			this.Selected = 1;
+			const vm = this;
+			vm.Selected = 1;
+			vm.Slider.swiper.on("slideChange", function() {
+				let index = this.realIndex;
+				vm.Pager.swiper.slideTo(index);
+			});
 		},
 		watch: {
 			Selected() {

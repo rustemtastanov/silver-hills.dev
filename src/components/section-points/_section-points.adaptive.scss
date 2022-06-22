@@ -8,7 +8,116 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.s--points {
+		border-style: solid;
+		border-width: 0 1PX;
+		overflow: hidden;
+		margin: -20px 0;
+	}
+
+	.s--points,
+	.points-items {
+		height: 540px;
+	}
+
+	.points-tabs {
+		display: flex;
+		justify-content: flex-end;
+		position: relative;
+		position: absolute;
+		left: 0;
+		top: 100px;
+		z-index: 2;
+		&::after {
+			content: '';
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			border-bottom: 1PX solid;
+		}
+	}
+
+	.points-tab {
+		text-transform: uppercase;
+		cursor: pointer;
+		font-size: 18px;
+		line-height: 1;
+		padding: 17px 0;
+		&.active {
+			display: none;
+		}
+	}
+
+	.points-slide {
+		.title {
+			margin-bottom: 32px;
+		}
+		.img {
+			right: 0;
+			bottom: 100px;
+		}
+		.title,
+		.text {
+			transition: opacity .4s;
+			opacity: 0;
+		}
+		&.active {
+			.title,
+			.text {
+				opacity: 1;
+			}
+		}
+	}
+
+	.points-slide-1,
+	.points-slide-4 {
+		path {
+			fill: black;
+		}
+	}
+
+	.points-slide-2,
+	.points-slide-3 {
+		path {
+			stroke-dashoffset: 0;
+		}
+	}
+
+	.points-slide-1 {
+		.img {
+			width: 313px;
+			height: 118px;
+			transform: translate(0, -4px);
+		}
+	}
+
+	.points-slide-2 {
+		.img {
+			width: 311px;
+			height: 183px;
+			transform: translate(1px, 13px);
+		}
+	}
+
+	.points-slide-3 {
+		.img {
+			width: 445px;
+			height: 145px;
+			transform: translate(0, -3px);
+		}
+	}
+
+	.points-slide-4 {
+		.img {
+			width: 323px;
+			height: 191px;
+			transform: translate(-8px, 1px);
+		}
+	}
+
+}
 
 
 
@@ -92,4 +201,72 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.s--points {
+		border: 1PX solid;
+		padding: 30px 0;
+	}
+
+	.points-pager {
+		margin: 0 30px;
+		padding: 9px 0;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			height: 8px;
+			width: 335px;
+			background-size: 100% 100%;
+			background-image: url(#{$path-img}/points-arrow.svg);
+		}
+	}
+
+	.points-slide {
+		padding: 23px 20px 23px 30px;
+		min-height: 502px;
+		.title {
+			margin-bottom: 19px;
+		}
+		.img {
+			bottom: 20px;
+			left: 30px;
+		}
+	}
+
+	.points-slide-1 {
+		.img {
+			width: 274px;
+			height: 103px;
+			transform: translate(-1px, 2px);
+		}
+	}
+
+	.points-slide-2 {
+		.img {
+			width: 331px;
+			height: 175px;
+			transform: translate(2px, 25px);
+		}
+	}
+
+	.points-slide-3 {
+		.img {
+			width: 346px;
+			height: 118px;
+			transform: translate(-13px, 12px);
+		}
+	}
+
+	.points-slide-4 {
+		.img {
+			width: 274px;
+			height: 162px;
+			transform: translate(-2px, 13px);
+		}
+	}
+
+}
