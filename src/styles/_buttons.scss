@@ -192,7 +192,7 @@ input[type="button"] {
 .btn--nav,
 .btn--contacts,
 .btn--call {
-	border: 1px solid black;
+	border: 1PX solid black;
 	background: white;
 	margin-left: -1px;
 }
@@ -207,7 +207,7 @@ input[type="button"] {
 		left: 50%;
 		top: 50%;
 		width: 16px;
-		border-top: 1px solid black;
+		border-top: 1PX solid black;
 		transform-origin: 50% 50%;
 		transition: all .3s;
 	}
@@ -247,7 +247,6 @@ input[type="button"] {
 		}
 		&::before,
 		&::after {
-			// transform-origin: 50% 50%;
 			width: 19px;
 		}
 		&::before {
@@ -296,7 +295,9 @@ input[type="button"] {
 	color: $brand-primary;
 	font-size: 15px;
 	margin-right: 24px;
-	&:hover {
+	&:hover,
+	&:active,
+	&:focus {
 		color: $brand-primary
 	}
 }

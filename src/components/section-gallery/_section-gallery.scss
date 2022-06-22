@@ -121,6 +121,11 @@
 		pointer-events: all;
 		font-size: 120px;
 		overflow: hidden;
+		background: rgba(white, .9);
+		&:hover {
+			background: $brand-primary;
+			color: white;
+		}
 	}
 	.icon {
 		position: absolute;
@@ -134,7 +139,6 @@
 
 .gallery-prev {
 	left: 10px;
-	background: rgba(white, .9);
 	.icon {
 		left: 13px;
 	}
@@ -142,8 +146,6 @@
 
 .gallery-next {
 	right: 10px;
-	background: $brand-primary;
-	color: white;
 	.icon {
 		right: 13px;
 	}

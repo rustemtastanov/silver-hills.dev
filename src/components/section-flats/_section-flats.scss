@@ -1,5 +1,5 @@
 .s--flats {
-	border: 1px solid;
+	border: 1PX solid;
 	border-bottom: 0;
 	font-weight: 300;
 	display: flex;
@@ -73,7 +73,7 @@
 			left: -6px;
 			top: 11px;
 			width: 10px;
-			border-top: 1px solid black;
+			border-top: 1PX solid black;
 		}
 	}
 }
@@ -99,7 +99,7 @@
 		&::before {
 			width: 14px;
 			height: 14px;
-			border: 1px solid black;
+			border: 1PX solid black;
 		}
 		&::after {
 			width: 6px;
@@ -148,7 +148,7 @@
 			position: absolute;
 			top: 12px;
 			width: 8px;
-			border-top: 1px solid black;
+			border-top: 1PX solid black;
 		}
 	}
 }
@@ -168,7 +168,7 @@
     align-items: center;
 		width: 60px;
 		height: 32px;
-		border: 1px solid black;
+		border: 1PX solid black;
 		letter-spacing: 0.02em;
 		font-size: 12px;
 		line-height: 1;
@@ -223,7 +223,7 @@
 			left: -15px;
 			top: 5px;
 			height: 16px;
-			border-left: 1px solid;
+			border-left: 1PX solid;
 		}
 	}
 }
@@ -284,7 +284,7 @@
 			left: 50%;
 			bottom: 0;
 			width: 40px;
-			border-bottom: 1px solid black;
+			border-bottom: 1PX solid black;
 			transform: translateX(-50%) scaleX(0);
 			transform-origin: 50% 50%;
 			transition: transform .3s;
