@@ -1,6 +1,3 @@
-$viewport-width: fluid(968px, 1366px);
-$sidebar-width: 100% - $viewport-width;
-
 .modal-status {
 	position: fixed;
 	z-index: 10;
@@ -41,8 +38,6 @@ $sidebar-width: 100% - $viewport-width;
 	position: absolute;
 	top: 60px;
 	bottom: 53px;
-	left: 60px;
-	width: $viewport-width;
 }
 
 .modal-status-slide {
@@ -59,11 +54,6 @@ $sidebar-width: 100% - $viewport-width;
 		width: auto;
 		height: auto;
 	}
-}
-
-.modal-status-controls,
-.modal-status-pager {
-	width: calc(#{$sidebar-width} - 80px - 33px);
 }
 
 .modal-status-controls {

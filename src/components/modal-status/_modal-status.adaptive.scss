@@ -15,14 +15,44 @@
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-large) {}
+@include respond-to($respond-large) {
+
+	$viewport-width: fluid(968px, 1366px);
+	$sidebar-width: 100% - $viewport-width;
+
+	.modal-status-viewport {
+		left: 60px;
+		width: $viewport-width;
+	}
+
+	.modal-status-controls,
+	.modal-status-pager {
+		width: calc(#{$sidebar-width} - 80px - 33px);
+	}
+
+}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	$viewport-width: fluid(650px, 992px);
+	$sidebar-width: 100% - $viewport-width;
+
+	.modal-status-viewport {
+		left: 40px;
+		width: $viewport-width;
+	}
+
+	.modal-status-controls,
+	.modal-status-pager {
+		width: calc(#{$sidebar-width} - 80px - 33px);
+	}
+
+}
 
 
 
