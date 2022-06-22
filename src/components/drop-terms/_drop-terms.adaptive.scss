@@ -8,66 +8,21 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
-
-	.drop-menu {
-		left: 20px;
-		right: 20px;
-		height: calc(100vh - 60px - 20px);
-	}
-
-	.drop-menu-in {
-		padding: 87px 81px 67px;
-	}
-
-	.drop-menu-download {
-		font-size: 16px;
-		line-height: 19px;
-	}
-
-	.drop-menu-bg {
-		@include stretch-y;
-		left: 0;
-		overflow: hidden;
-		div {
-			@include stretch-y;
-			left: 50%;
-			width: 800px;
-			transform: translateX(-50%);
-		}
-	}
-
-}
+// @include respond-to($respond-desktop-up) {}
 
 
 
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-large) {
-
-	$col-left: fluid(472px, 1326px);
-
-	.drop-menu-bg {
-		width: $col-left;
-	}
-
-}
+// @include respond-to($respond-large) {}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop) {
-
-	$col-left: fluid(343px, 855px);
-
-	.drop-menu-bg {
-		width: $col-left;
-	}
-
-}
+// @include respond-to($respond-desktop) {}
 
 
 
@@ -97,38 +52,79 @@
  -------------------------------------------------------------------- */
 @include respond-to($respond-phone) {
 
-	.drop-menu {
+	.drop-terms {
+		position: fixed;
+		z-index: 7;
 		left: 10px;
 		right: 10px;
-		height: calc(100vh - 60px);
+		top: 60px;
+		bottom: 10px;
+		background: white;
+		border: 1px solid;
+		border-top: 0;
 		overflow: auto;
 		overflow-x: hidden;
+		&:not(.active) {
+			display: none;
+		}
 	}
 
-	.drop-menu-in {
-		padding: 57px 33px 39px;
-		max-height: calc(100% - 169px);
+	.drop-terms-in {
 		min-height: 500px;
+		padding: 36px 30px;
 	}
 
-	.drop-menu-download {
-		font-size: 18px;
+	.drop-terms-head {
+		min-height: 137px;
+		margin-bottom: 25px;
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 140px;
+			border-top: 1PX solid;
+		}
+	}
+
+	.drop-terms-title {
+		color: $brand-primary;
+		font-weight: bold;
+		font-size: 24px;
+		line-height: 29px;
+		white-space: pre-line;
+	}
+
+	.drop-terms-value {
+		font-weight: 300;
+		font-size: 50px;
+		line-height: 60px;
+	}
+
+	.drop-terms-text {
+		font-size: 16px;
 		line-height: 22px;
+		font-weight: 300;
+		min-height: 119px;
+		margin-bottom: 20px;
+		p {
+			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
 	}
 
-	.drop-menu-bg {
-		height: 159px;
-		top: 10px;
+	.drop-terms-enter-active,
+	.drop-terms-leave-active {
+	  transition: transform .6s, opacity .6s;
 	}
 
-	@include respond-to("(max-height: 567px)") {
-		.drop-menu-in {
-			padding: 37px 33px 19px;
-			max-height: calc(100% - 149px);
-		}
-		.drop-menu-bg {
-			height: 139px;
-		}
+	.drop-terms-enter,
+	.drop-terms-leave-to {
+		opacity: 0;
+	  transform: translateY(-100%);
 	}
 
 }

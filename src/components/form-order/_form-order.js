@@ -11,7 +11,8 @@ function initForms() {
 		props: {
 			FormClass: String,
 			Action: String,
-			FormUtm: Object
+			FormUtm: Object,
+			Button: String
 		},
 		data() {
 			return {

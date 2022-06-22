@@ -64,6 +64,13 @@
 		}
 	}
 
+	.btn--close {
+		width: 60px;
+		height: 60px;
+		font-size: 16px;
+		padding: 0;
+	}
+
 }
 
 
@@ -120,17 +127,68 @@
 		font-size: 20px;
 		border-top: 0;
 		border-right: 0;
+		padding: 0;
 		order: 2;
 		.icon {
 			position: absolute;
 			left: 50%;
 			top: 50%;
+			transition: transform .6s, opacity .6s;
+		}
+		.icon-close {
+			opacity: 0;
+			transform: translate(-50%, -50%) rotate(360deg);
+			font-size: 14px;
+		}
+		.icon-call {
 			transform: translate(-50%, -50%);
+		}
+		&.toggled {
+			background: black;
+			.icon-call {
+				opacity: 0;
+				transform: translate(-50%, -50%) rotate(360deg);
+			}
+			.icon-close {
+				opacity: 1;
+			}
+		}
+		&.hide {
+			display: none;
 		}
 	}
 
 	.btn--nav {
 		order: 1;
+		z-index: 2;
+		transition-property: box-shadow, background, border-color, transform;
+		padding: 0;
+		&.toggled {
+			transform: translateX(100%);
+		}
+		&.hide {
+			display: none;
+		}
+	}
+
+	.btn--close {
+		width: 50px;
+		height: 50px;
+		font-size: 14px;
+		padding: 0;
+	}
+
+	.btn--close-policy,
+	.btn--close-terms {
+		bottom: 0;
+		top: auto;
+		visibility: hidden;
+		pointer-events: none;
+		z-index: 3;
+		&.toggled {
+			visibility: visible;
+			pointer-events: all;
+		}
 	}
 
 }

@@ -1,6 +1,6 @@
 <app-modal-status :selected="StatusSlides" :is-showed="StatusModalShow" v-on:hide-status="hideStatus" v-on:hidden-status="hiddenStatus" inline-template>
 	<transition name="modal-status" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalHidden">
-		<div class="modal-status" v-show="isShowed" :class="{active: isLoaded}">
+		<div class="modal-status hidden-xs" v-show="isShowed" :class="{active: isLoaded}">
 
 			<button type="button" class="btn btn--black btn--close" aria-label="close" @click="$emit('hide-status')">
 				<i class="icon icon-close"></i>

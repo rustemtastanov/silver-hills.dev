@@ -1,66 +1,25 @@
-$bg-height: fluid(407px, 707px);
-
 .drop-form {
 	position: fixed;
-	position: fixed;
-	top: 20px;
-	left: 20px;
-	right: 20px;
-	bottom: 20px;
-	z-index: 10;
 	background: $brand-secondary;
 	&:not(.active) {
 		display: none;
 	}
 }
 
-.drop-form-logo {
-	position: absolute;
-	z-index: 2;
-	top: 43px;
-}
-
-.drop-form-text {
-	position: absolute;
-	z-index: 2;
-	left: 21px;
-	top: 106px;
-	width: 8px;
-	height: 150px;
-}
-
 .drop-form-icon {
 	position: absolute;
 	z-index: 2;
-	width: 54px;
-	height: 52px;
-	left: 61px;
-	bottom: calc(#{$bg-height} - 34px);
 }
 
 .drop-form-bg {
 	@include stretch-x;
 	bottom: 0;
-	height: $bg-height;
 	background: $gray;
-}
-
-.drop-form-in {
-	display: flex;
-	justify-content: flex-end;
-  align-items: flex-end;
-	height: 100% - $bg-height;
-	padding: 47px 60px;
 }
 
 .drop-form-response {
 	font-weight: 300;
 	text-transform: uppercase;
-	font-size: 44px;
-	line-height: 62px;
-	width: fluid(668px, 1326px);
-	position: relative;
-	top: 7px;
 }
 
 .drop-form-enter-active,

@@ -8,67 +8,21 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
-
-	.nav-social {
-		font-size: 15px;
-		line-height: 21px;
-		.icon {
-			font-size: 87px;
-			margin-bottom: -17px;
-		}
-	}
-
-	.drop-menu {
-		.nav-social {
-			.icon {
-				left: 25px;
-			}
-			margin-bottom: -10px;
-		}
-	}
-
-	.s--contacts {
-		.nav-social {
-			position: absolute;
-			bottom: 52px;
-			.icon {
-				left: -25px;
-			}
-		}
-	}
-
-}
+// @include respond-to($respond-desktop-up) {}
 
 
 
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-large) {
-
-	.s--contacts {
-		.nav-social {
-			left: 60px;
-		}
-	}
-
-}
+// @include respond-to($respond-large) {}
 
 
 
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop) {
-
-	.s--contacts {
-		.nav-social {
-			left: 40px;
-		}
-	}
-
-}
+// @include respond-to($respond-desktop) {}
 
 
 
@@ -98,30 +52,14 @@
  -------------------------------------------------------------------- */
 @include respond-to($respond-phone) {
 
-	.nav-social {
-		font-size: 16px;
-		line-height: 22px;
-	}
-
-	.drop-menu {
-		.nav-social {
-			margin-bottom: -34px;
-			.icon {
-				left: 35px;
-				font-size: 106px;
-			}
-		}
-	}
-
-	.s--contacts {
-		.nav-social {
-			order: 2;
-			margin-bottom: 14px;
-			.icon {
-				left: -26px;
-				font-size: 91px;
-				margin-bottom: -20px;
-			}
+	.form-terms {
+		margin: 0;
+		.form-control {
+			&:focus {
+		    $color-rgba: rgba(red($brand-primary), green($brand-primary), blue($brand-primary), .6);
+		    border-color: $brand-primary;
+		    box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px $color-rgba;
+		  }
 		}
 	}
 

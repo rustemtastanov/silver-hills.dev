@@ -1,0 +1,20 @@
+<app-drop-terms inline-template :terms="TermsSelected">
+	<transition name="drop-terms" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalTermsHidden">
+		<div class="drop-terms hidden-sm hidden-md hidden-lg" v-show="TermsDropShow" :class="{active: appIsLoaded}">
+
+			<div class="drop-terms-in">
+
+				<div class="drop-terms-head">
+					<div class="drop-terms-title">{{ Terms.title }}</div>
+					<div class="drop-terms-value">{{ Terms.value }}</div>
+				</div>
+
+				<div class="drop-terms-text" v-html="Terms.text"></div>
+
+				<app-form :form-class="'form-terms'" :form-utm="UTM" :button="'primary'" v-on:show-response="showResponse" v-on:hide-response="hideResponse" :action="'/'"></app-form>
+
+			</div>
+
+		</div>
+	</transition>
+</app-drop-terms>

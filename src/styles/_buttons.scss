@@ -78,7 +78,7 @@ input[type="button"] {
     height: 40px;
     background-size: 100% 100%;
     transform: translate(-50%, -50%) scale(0);
-    background-image: inline('#{$path-inline}/spinner-primary.svg');
+    background-image: inline('#{$path-inline}/spinner-white.svg');
     transition: transform .2s;
     pointer-events: none;
   }
@@ -136,9 +136,6 @@ input[type="button"] {
 	z-index: 2;
 	right: 0;
 	top: 0;
-	width: 60px;
-	height: 60px;
-	font-size: 16px;
 	.icon {
 		position: absolute;
 		left: 50%;

@@ -8,7 +8,61 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	$bg-height: fluid(407px, 707px);
+
+	.drop-form {
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		z-index: 10;
+	}
+
+	.drop-form-logo {
+		position: absolute;
+		z-index: 2;
+		top: 43px;
+	}
+
+	.drop-form-icon {
+		width: 54px;
+		height: 52px;
+		left: 61px;
+		bottom: calc(#{$bg-height} - 34px);
+	}
+
+	.drop-form-text {
+		position: absolute;
+		z-index: 2;
+		left: 21px;
+		top: 106px;
+		width: 8px;
+		height: 150px;
+	}
+
+	.drop-form-bg {
+		height: $bg-height;
+	}
+
+	.drop-form-in {
+		display: flex;
+		justify-content: flex-end;
+	  align-items: flex-end;
+		padding: 47px 60px;
+		height: 100% - $bg-height;
+	}
+
+	.drop-form-response {
+		position: relative;
+		font-size: 44px;
+		line-height: 62px;
+		width: fluid(668px, 1326px);
+		top: 7px;
+	}
+
+}
 
 
 
@@ -68,4 +122,63 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	$bg-height: fluid(190px, 740px);
+
+	.drop-form {
+		top: 60px;
+		left: 10px;
+		right: 10px;
+		z-index: 8;
+		display: flex;
+		flex-direction: column;
+		height: calc(100vh - 60px - 10px);
+		overflow: auto;
+		overflow-x: hidden;
+	}
+
+	.drop-form-logo {
+		$logo-width: 334px;//291px;
+		$logo-height: $logo-width*70px/291px;
+		width: $logo-width;
+		height: $logo-height;
+		margin: 0 auto 53px;
+	}
+
+	.drop-form-icon {
+		width: 61px;
+		height: 58px;
+		right: 30px;
+		top: -87px;
+	}
+
+	.drop-form-bg-wrapper {
+		order: 1;
+		min-height: 100px;
+		height: $bg-height;
+		position: relative;
+		margin-bottom: 52px;
+	}
+
+	.drop-form-bg {
+		top: 0;
+	}
+
+	.drop-form-in {
+		order: 2;
+		position: relative;
+		min-height: 400px;
+	}
+
+	.drop-form-response {
+		font-size: 37px;
+		line-height: 52px;
+		padding: 0 51px 2px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		height: 238px;
+	}
+
+}

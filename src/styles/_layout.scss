@@ -20,7 +20,7 @@ body {
 
 .overlay {
 	position: fixed;
-	z-index: 7;
+	z-index: 6;
 	left: 0;
 	right: 0;
 	top: 0;
@@ -28,9 +28,6 @@ body {
 	background: white;
 	&:not(.active) {
 		display: none;
-	}
-	&.top {
-		z-index: 9;
 	}
 }
 

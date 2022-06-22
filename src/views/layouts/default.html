@@ -33,6 +33,8 @@
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{{ path }}}css/style.css" as="style">
+	<link rel="preload" href="{{{ path }}}media/main/main-bg-phone.webp" imagesrcset="{{{ path }}}media/main/main-bg-phone.webp 1x, {{{ path }}}media/main/main-bg-phone@2x.webp 2x" as="image">
 
 	<!-- build:css {{{ path }}}css/style.min.css media="screen" -->
 	<link rel="stylesheet" href="/css/style.css" />
@@ -63,12 +65,14 @@
 
 		{% include "drop-form/_drop-form.html" %}
 
+		{% include "drop-terms/_drop-terms.html" %}
+
 		<transition name="overlay">
 			<div class="overlay" :class="{active: appIsLoaded}" v-show="ShowDropMenu"></div>
 		</transition>
 
 		<transition name="overlay">
-			<div class="overlay top" :class="{active: appIsLoaded}" v-show="ShowPolicy || StatusModalShow || ShowForm"></div>
+			<div class="overlay top" :class="{active: appIsLoaded}" v-show="ShowPolicy || StatusModalShow || ShowForm || TermsDropShow"></div>
 		</transition>
 
 		<div class="scroll-bar" ref="scrollBar"></div>
@@ -112,6 +116,7 @@
 	<script src="/components/section-gallery/_section-gallery.js" defer></script>
 	<script src="/components/section-flats/_section-flats.js" defer></script>
 	<script src="/components/section-terms/_section-terms.js" defer></script>
+  <script src="/components/drop-terms/_drop-terms.js" defer></script>
 	<script src="/components/section-status/_section-status.js" defer></script>
 	<script src="/components/modal-status/_modal-status.js" defer></script>
 	<script src="/components/section-commercial/_section-commercial.js" defer></script>

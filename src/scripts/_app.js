@@ -44,6 +44,8 @@ function initApp() {
 			scrollBarOffset: 0,
 			StatusSlides: [],
 			StatusModalShow: false,
+			TermsSelected: {},
+			TermsDropShow: false,
 			appIsLoaded: false,
 			ShowDropMenu: false,
 			ShowPolicy: false,
@@ -72,6 +74,7 @@ function initApp() {
 					if (vm.StatusModalShow) vm.hideStatus();
 					if (vm.ShowPolicy) vm.hidePolicy();
 					if (vm.ShowForm) vm.closeForm();
+					if (vm.TermsDropShow) vm.closeTerms();
 				}
 			});
 		},
@@ -144,7 +147,10 @@ function initApp() {
 				this.ShowDropMenu = !this.ShowDropMenu;
 			},
 			closeDropMenu() {
+				this.ShowForm = false;
+				this.ShowResponse = false;
 				this.ShowDropMenu = false;
+				this.ShowPolicy = false;
 			},
 			modalShow() {
 				this.lockScroll();
@@ -157,6 +163,11 @@ function initApp() {
 					this.unLockScroll();
 				}
 				this.ShowResponse = false;
+			},
+			modalTermsHidden() {
+				if (!this.ShowForm && !this.ShowDropMenu) {
+					this.unLockScroll();
+				}
 			},
 			showStatus(slides) {
 				this.StatusSlides = slides;
@@ -174,6 +185,9 @@ function initApp() {
 			hidePolicy() {
 				this.ShowPolicy = false;
 			},
+			toggleForm() {
+				this.ShowForm = !this.ShowForm;
+			},
 			openForm() {
 				if (this.ShowDropMenu) {
 					this.ShowDropMenu = false;
@@ -186,6 +200,7 @@ function initApp() {
 			showResponse() {
 				const vm = this;
 				vm.ShowResponse = true;
+				if (vm.TermsDropShow) vm.TermsDropShow = false;
 				if (!vm.ShowForm) vm.ShowForm = true;
 				setTimeout(function() {
 					vm.initLazy();
@@ -193,6 +208,14 @@ function initApp() {
 			},
 			hideResponse() {
 				this.ShowResponse = false;
+				this.ShowForm = false;
+			},
+			openTerms(Terms) {
+				this.TermsSelected = Terms;
+				this.TermsDropShow = true;
+			},
+			closeTerms() {
+				this.TermsDropShow = false;
 			}
 		}
 	});
@@ -213,6 +236,7 @@ function checkVendors() {
 		initCommercial();
 		initContacts();
 		initForms();
+		initDropTerms();
 		initApp();
 	}
 }

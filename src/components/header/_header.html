@@ -21,8 +21,14 @@
 				</span>
 			</button>
 			{% include "nav-contacts/_nav-contacts.html" %}
-			<button type="button" class="btn btn--top btn--nav" aria-label="menu" :class="{'toggled': ShowDropMenu}" @click="toggleDropMenu">
+			<button type="button" class="btn btn--top btn--nav" aria-label="menu" :class="{'toggled': ShowDropMenu, 'hide': ShowForm || ShowPolicy || TermsDropShow}" @click="toggleDropMenu">
 				<span></span>
+			</button>
+			<button type="button" class="btn btn--black btn--close btn--close-policy visible-xs" :class="{'toggled': ShowPolicy}" @click="hidePolicy">
+				<i class="icon icon-close"></i>
+			</button>
+			<button type="button" class="btn btn--black btn--close btn--close-terms visible-xs" :class="{'toggled': TermsDropShow}" @click="closeTerms">
+				<i class="icon icon-close"></i>
 			</button>
 		</scrollactive>
 

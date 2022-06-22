@@ -1,4 +1,4 @@
-<app-terms inline-template>
+<app-terms inline-template v-on:open-terms="openTerms">
 	<section class="section s--terms">
 
 		<div class="terms-items">
@@ -9,7 +9,7 @@
 				</div>
 				<div class="text hidden-xs" v-html="Item.text"></div>
 				<div class="more visible-xs">
-					<a href="#">
+					<a href="#" @click.prevent="$emit('open-terms', Item)">
 						{% if lang == 'ru' %} подробнее {% endif %}
 					</a>
 				</div>

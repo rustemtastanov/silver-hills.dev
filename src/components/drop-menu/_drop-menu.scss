@@ -1,10 +1,7 @@
 .drop-menu {
 	position: fixed;
-	left: 20px;
-	right: 20px;
 	top: 60px;
 	z-index: 8;
-	height: calc(100vh - 60px - 20px);
 	&:not(.active) {
 		display: none;
 	}
@@ -17,26 +14,14 @@
 	flex-direction: column;
 	align-items: flex-end;
 	justify-content: space-between;
-	padding: 87px 81px 67px;
 }
 
 .drop-menu-bg {
-	@include stretch-y;
-	left: 0;
 	background: $gray;
-	overflow: hidden;
-	div {
-		@include stretch-y;
-		left: 50%;
-		width: 800px;
-		transform: translateX(-50%);
-	}
 }
 
 .drop-menu-download {
 	font-weight: 300;
-	font-size: 16px;
-	line-height: 19px;
 	text-decoration: none;
 	color: black;
 	&:hover {

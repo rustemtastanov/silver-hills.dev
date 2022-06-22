@@ -8,7 +8,72 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.modal-policy {
+		top: 20px;
+		left: 20px;
+		right: 20px;
+		bottom: 20px;
+		z-index: 10;
+		&::before,
+		&::after {
+			content: '';
+			@include stretch-x;
+			background-color: red;
+			z-index: 1;
+			pointer-events: none;
+			height: 80px;
+		}
+		&::before {
+			top: 0;
+			background: linear-gradient(to bottom, white, rgba(white, .5));
+		}
+		&::after {
+			bottom: 0;
+			background: linear-gradient(to top, white, rgba(white, .5));
+		}
+		h2 {
+			font-size: 36px;
+			line-height: 50px;
+			margin-bottom: 49px;
+		}
+		h3, h4 {
+			font-size: 24px;
+			line-height: 38px;
+		}
+		p + h3,
+		p + h4 {
+			margin-top: 46px;
+		}
+	}
+
+	.modal-policy-in {
+		padding: 172px 60px 127px 244px;
+		height: calc(100vh - 40px - 2px);
+		> * {
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 690px;
+		}
+	}
+
+	.modal-policy-logo {
+		position: absolute;
+		z-index: 2;
+		top: 43px;
+	}
+
+	.modal-policy-text {
+		position: absolute;
+		z-index: 2;
+		left: 21px;
+		top: 106px;
+		width: 8px;
+		height: 150px;
+	}
+
+}
 
 
 
@@ -68,4 +133,33 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.modal-policy {
+		top: 60px;
+		left: 10px;
+		right: 10px;
+		bottom: 10px;
+		z-index: 8;
+		border-top: 0;
+		h2 {
+			font-size: 22px;
+			line-height: 31px;
+			margin-bottom: 30px;
+		}
+		h3, h4 {
+			font-size: 16px;
+			line-height: 26px;
+		}
+		p + h3,
+		p + h4 {
+			margin-top: 26px;
+		}
+	}
+
+	.modal-policy-in {
+		padding: 40px 20px 60px;
+		height: calc(100vh - 60px - 10px);
+	}
+
+}
