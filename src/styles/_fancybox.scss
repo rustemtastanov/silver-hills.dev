@@ -1,0 +1,29 @@
+body.flats--photo {
+	.fancybox-bg {
+		background: white;
+	}
+	.fancybox-is-open .fancybox-bg {
+		opacity: 1;
+	}
+}
+
+.fancybox-infobar,
+.fancybox-navigation,
+.fancybox-caption {
+	display: none;
+}
+
+.fancybox-button--close {
+	background: black;
+	padding: 0;
+	color: white;
+	&::before {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+	}
+	svg {
+		display: none;
+	}
+}

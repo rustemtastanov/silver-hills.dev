@@ -33,6 +33,33 @@ function initGallery() {
 					}
 				}
 			}
+		},
+		mounted() {
+			this.initFancy();
+		},
+		computed: {
+			Slider() {
+				return this.$refs.slider;
+			}
+		},
+		methods: {
+			initFancy() {
+				const vm = this;
+				$(vm.$refs.fancy).fancybox({
+					hash: false,
+					protect: true,
+					transitionEffect: "slide",
+					transitionDuration: 800,
+					animationDuration: 800,
+					clickSlide: false,
+					buttons: [
+						"close"
+					],
+					beforeShow: function(current, previous) {
+						if (vm.Slider) vm.Slider.swiper.slideTo(current.currIndex);
+					}
+				});
+			}
 		}
 	});
 }

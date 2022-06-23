@@ -11,7 +11,8 @@
   font-display: swap;
 }
 
-.icon {
+.icon,
+.fancybox-button {
 	position: relative;
   font-family: 'icomoon' !important;
   speak: none;
@@ -36,7 +37,8 @@
   content: "\e902";
 }
 
-.icon-close::before {
+.icon-close::before,
+.fancybox-button--close::before {
   content: "\e903";
 }
 

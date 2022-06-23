@@ -17,9 +17,15 @@
 	}
 
 	.gallery-slide {
+		.link--zoom {
+			pointer-events: none;
+		}
+		.link--zoom,
+		.img {
+			height: 650px;
+		}
 		.img {
 			z-index: 0;
-			height: 650px;
 		}
 		.text {
 			position: absolute;

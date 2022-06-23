@@ -121,6 +121,26 @@ function initFlats() {
 				this.Flats = items;
 				this.Flat  = items[0];
 				this.loadImage();
+				this.initFancy();
+			},
+			initFancy() {
+				$(this.$refs.fancy).fancybox({
+					hash: false,
+					protect: true,
+					transitionEffect: "slide",
+					transitionDuration: 800,
+					animationDuration: 800,
+					clickSlide: false,
+					buttons: [
+						"close"
+					],
+					beforeShow: function() {
+						document.body.classList.add("flats--photo");
+					},
+					afterClose: function() {
+						document.body.classList.remove("flats--photo");
+					}
+				});
 			},
 			loadImage() {
 				const vm = this;

@@ -8,7 +8,19 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop-up) {}
+@include respond-to($respond-desktop-up) {
+
+	.fancybox-button--close {
+		width: 60px;
+		height: 60px;
+		font-size: 16px;
+	}
+
+	.fancybox-slide--image {
+		padding: 80px;
+	}
+
+}
 
 
 
@@ -50,4 +62,16 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-// @include respond-to($respond-phone) {}
+@include respond-to($respond-phone) {
+
+	.fancybox-button--close {
+		width: 50px;
+		height: 50px;
+		font-size: 16px;
+	}
+
+	.fancybox-slide--image {
+		padding: 70px 10px;
+	}
+
+}
