@@ -3,6 +3,8 @@
 	color: white;
 	position: absolute;
 	z-index: 1;
+	text-transform: uppercase;
+	font-weight: 300;
 }
 
 .gallery-items {
@@ -28,11 +30,12 @@
 		pointer-events: all;
 		font-size: 120px;
 		overflow: hidden;
-		transition: opacity .3s, transform .3s;
+		transition: opacity .3s, transform .3s, background .3s;
 		&::before {
 			content: '';
 			@include stretch;
 			z-index: 0;
+			border: 1px solid transparent;
 		}
 	}
 	.icon {
@@ -48,23 +51,49 @@
 }
 
 .gallery-prev {
-	background: rgba(white, .9);
-	color: black;
-	&::before {
-		border: 1px solid black;
-	}
 	.icon {
 		left: 13px;
 	}
 }
 
 .gallery-next {
-	background: $brand-primary;
-	color: white;
-	&::before {
-		border: 1px solid $brand-primary;
-	}
 	.icon {
 		right: 13px;
+	}
+}
+
+[data-dir="prev"],
+[data-dir="end"] {
+	.gallery-prev {
+		background: $brand-primary;
+		color: white;
+		&::before {
+			border-color: $brand-primary;
+		}
+	}
+	.gallery-next {
+		background: rgba(white, .9);
+		color: black;
+		&::before {
+			border-color: black;
+		}
+	}
+}
+
+[data-dir="next"],
+[data-dir="start"] {
+	.gallery-prev {
+		background: rgba(white, .9);
+		color: black;
+		&::before {
+			border-color: black;
+		}
+	}
+	.gallery-next {
+		background: $brand-primary;
+		color: white;
+		&::before {
+			border-color: $brand-primary;
+		}
 	}
 }

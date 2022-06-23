@@ -33,8 +33,17 @@
 			@include stretch-y;
 			left: 50%;
 			width: 800px;
-			transform: translateX(-50%);
+			transform: translateX(-30%);
 		}
+		.drop-menu-bg-enter,
+		.drop-menu-bg-leave-to {
+		  transform: translateX(-70%);
+		}
+	}
+
+	.drop-menu-bg-enter-active,
+	.drop-menu-bg-leave-active {
+	  transition: transform 20s;
 	}
 
 }

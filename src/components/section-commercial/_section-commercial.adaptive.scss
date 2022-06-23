@@ -48,6 +48,12 @@
 
 	.commercial-img {
 		margin-bottom: 33px;
+		path {
+			transition: all 1.5s;
+		}
+		&.aos-animate path {
+			stroke-dashoffset: 0;
+		}
 	}
 
 }
@@ -194,6 +200,9 @@
 		height: $img-height;
 		left: -32px;
 		margin-bottom: 27px;
+		path {
+			stroke-dashoffset: 0;
+		}
 	}
 
 }

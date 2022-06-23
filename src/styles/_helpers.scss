@@ -170,3 +170,15 @@ picture.img--cover img {
 	background-image: inline('#{$path-inline}/spinner-primary.svg');
 	pointer-events: none;
 }
+
+.counter {
+	position: relative;
+	.orig {
+		visibility: hidden;
+	}
+	.coun {
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+}

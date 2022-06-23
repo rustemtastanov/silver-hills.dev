@@ -42,7 +42,10 @@
 		height: 150px;
 	}
 
-	.drop-form-bg {
+	.drop-form-bg-wrapper {
+		@include stretch-x;
+		bottom: 0;
+		overflow: hidden;
 		height: $bg-height;
 	}
 
@@ -159,10 +162,6 @@
 		height: $bg-height;
 		position: relative;
 		margin-bottom: 52px;
-	}
-
-	.drop-form-bg {
-		top: 0;
 	}
 
 	.drop-form-in {

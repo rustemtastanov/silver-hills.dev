@@ -1,9 +1,9 @@
 <app-gallery inline-template :is-phone="isPhone">
 	<section class="section s--gallery" id="gallery">
 
-		<h4 class="gallery-title">
+		<div class="gallery-title">
 			{% if lang == 'ru' %} Галерея {% endif %}
-		</h4>
+		</div>
 
 		<swiper class="swiper gallery-items" ref="slider" :options="options">
 			<swiper-slide v-for="(Slide, index) in Slides" class="gallery-slide swiper-slide" :class="'gallery-slide-'+ (index+1)" :key="index">
@@ -20,7 +20,7 @@
 			</swiper-slide>
 		</swiper>
 
-		<div class="gallery-controls">
+		<div class="gallery-controls" :data-dir="Direction">
 			<button type="button" class="btn--unstyled gallery-prev" aria-label="prev">
 				<i class="icon icon-prev"></i>
 			</button>

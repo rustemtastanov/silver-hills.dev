@@ -11,6 +11,7 @@ function initGallery() {
 		data() {
 			return {
 				Slides: GALLERY_DATA,
+				Direction: "start",
 				options: {
 					autoHeight: true,
 					direction: "horizontal",
@@ -35,7 +36,21 @@ function initGallery() {
 			}
 		},
 		mounted() {
-			this.initFancy();
+			const vm = this;
+			vm.initFancy();
+			vm.Slider.swiper
+				.on("slideNextTransitionStart", function() {
+					vm.Direction = this.realIndex+1==vm.Slides.length ? "end" : "next";
+				})
+				.on("slidePrevTransitionStart", function() {
+					vm.Direction = this.realIndex==0 ? "start" : "prev";
+				})
+				.on("reachBeginning", function() {
+					vm.Direction = "start";
+				})
+				.on("reachEnd", function() {
+					vm.Direction = "end";
+				});
 		},
 		computed: {
 			Slider() {

@@ -14,7 +14,7 @@
 		border-style: solid;
 		border-width: 0 1PX;
 		overflow: hidden;
-		margin: -20px 0;
+		margin: -20px 0 -10px;
 	}
 
 	.s--points,
@@ -50,45 +50,63 @@
 		}
 	}
 
+	.points-items {
+		position: relative;
+	}
+
 	.points-slide {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		left: 0;
+		top: 0;
 		.title {
 			margin-bottom: 32px;
+		}
+		path,
+		polygon,
+		polyline {
+			transition: all 1s;
 		}
 		.img {
 			right: 0;
 			bottom: 100px;
-		}
-		.title,
-		.text {
-			transition: opacity .4s;
 			opacity: 0;
-		}
-		&.active {
-			.title,
-			.text {
+			&.active {
 				opacity: 1;
 			}
 		}
 	}
 
-	.points-slide-1,
-	.points-slide-4 {
-		path {
-			fill: black;
-		}
-	}
-
-	.points-slide-2,
-	.points-slide-3 {
-		path {
+	.points-items:not(.changed) [data-aos="img-1"].aos-animate,
+	.points-items.changed [data-aos="img-1"].active,
+	[data-aos="img-2"] .active,
+	[data-aos="img-3"] .active,
+	[data-aos="img-4"] .active {
+		path,
+		polygon,
+		polyline {
 			stroke-dashoffset: 0;
 		}
 	}
 
+	.points-slide-enter-active,
+	.points-slide-leave-active {
+	  transition: transform .6s, opacity .4s;
+	}
+
+	.points-slide-enter,
+	.points-slide-leave-to {
+		opacity: 0;
+	  transform: translateY(-100%);
+	}
+
 	.points-slide-1 {
+		$img-width: 313px;//973px;
+		$img-height: $img-width*366px/973px;
 		.img {
-			width: 313px;
-			height: 118px;
+			width: $img-width;
+			height: $img-height;
 			transform: translate(0, -4px);
 		}
 	}
@@ -110,9 +128,11 @@
 	}
 
 	.points-slide-4 {
+		$img-width: 323px;//1005px;
+		$img-height: $img-width*595px/1005px;
 		.img {
-			width: 323px;
-			height: 191px;
+			width: $img-width;
+			height: $img-height;
 			transform: translate(-8px, 1px);
 		}
 	}

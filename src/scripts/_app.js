@@ -51,6 +51,7 @@ function initApp() {
 			ShowPolicy: false,
 			ShowForm: false,
 			ShowResponse: false,
+			parallax: false,
 			UTM: {}
 		},
 		created() {
@@ -77,6 +78,8 @@ function initApp() {
 					if (vm.TermsDropShow) vm.closeTerms();
 				}
 			});
+			if (!vm.isPhone && !vm.parallax) vm.initParallax();
+			vm.initAos();
 		},
 		computed: {
 			headerEl() {
@@ -89,6 +92,11 @@ function initApp() {
 		watch: {
 			scrollBarOffset() {
 				document.body.style.paddingRight = this.scrollBarOffset + "px";
+			},
+			isPhone() {
+				if (!this.isPhone && !this.parallax) this.initParallax();
+				if (this.isPhone && this.parallax) this.destroyParallax();
+				this.initLazy();
 			}
 		},
 		methods: {
@@ -216,6 +224,23 @@ function initApp() {
 			},
 			closeTerms() {
 				this.TermsDropShow = false;
+			},
+			initAos() {
+				AOS.init({
+					disable: "mobile",
+					once: true
+				});
+			},
+			initParallax() {
+				this.parallax = skrollr.init({
+					smoothScrolling: false,
+					mobileDeceleration: 0.004,
+					forceHeight: false
+				});
+			},
+			destroyParallax() {
+				this.parallax.destroy();
+				this.parallax = false;
 			}
 		}
 	});
@@ -237,6 +262,7 @@ function checkVendors() {
 		initContacts();
 		initForms();
 		initDropTerms();
+		initCounters();
 		initApp();
 	}
 }

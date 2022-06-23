@@ -21,12 +21,14 @@
 		</div>
 
 		<div class="drop-menu-bg primary hidden-xs" data-role="lazy">
-			<div>
-				<picture class="lazy img--cover">
-					<data-src srcset="{{{ path }}}media/drop-menu-bg.webp 1x, {{{ path }}}media/drop-menu-bg@2x.webp 2x" type="image/webp"></data-src>
-					<data-img width="800" height="667" srcset="{{{ path }}}media/drop-menu-bg.jpg 1x, {{{ path }}}media/drop-menu-bg@2x.jpg 2x" alt="bg"></data-img>
-				</picture>
-			</div>
+			<transition name="drop-menu-bg">
+				<div v-show="ShowDropMenu">
+					<picture class="lazy img--cover">
+						<data-src srcset="{{{ path }}}media/drop-menu-bg.webp 1x, {{{ path }}}media/drop-menu-bg@2x.webp 2x" type="image/webp"></data-src>
+						<data-img width="800" height="667" srcset="{{{ path }}}media/drop-menu-bg.jpg 1x, {{{ path }}}media/drop-menu-bg@2x.jpg 2x" alt="bg"></data-img>
+					</picture>
+				</div>
+			</transition>
 		</div>
 
 		<div class="drop-menu-bg primary visible-xs" data-role="lazy">

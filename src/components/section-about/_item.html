@@ -1,6 +1,14 @@
-<div class="about-item about-item-{{{ item.index }}}">
+<div class="about-item about-item-{{{ item.index }}}" 
+	data-aos="fade-up"
+	data-aos-anchor=".s--about" 
+	data-aos-offset="300" 
+	data-aos-duration="800" 
+	data-aos-easing="ease-out-cubic">
 
-	<div class="value">{{{ item.value }}}</div>
+	<div class="value">
+		<app-counter :value="{{{ item.value }}}"></app-counter>
+		<span class="visible-xs-inline">{{{ item.value }}}</span>
+	</div>
 
 	{% if lang == 'ru' %}
 	<div class="text">{{{ item.text@ru|safe }}}</div>

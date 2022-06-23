@@ -3,7 +3,10 @@
 
 		<div class="benefits-tabs hidden-xs">
 			<div class="benefits-tab" v-for="(Slide, index) in Slides" :key="index" :class="{'active': Selected==index}" @click.prevent="Selected=index">
-				<div class="value">{{ Slide.value }}</div>
+				<div class="value">
+					<app-counter :value="Slide.value"></app-counter>
+					<span class="visible-xs-inline">{{ Slide.value }}</span>
+				</div>
 				<div class="title" v-html="Slide.title"></div>
 			</div>
 			<div class="line"></div>

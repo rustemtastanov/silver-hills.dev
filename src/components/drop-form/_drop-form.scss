@@ -12,8 +12,7 @@
 }
 
 .drop-form-bg {
-	@include stretch-x;
-	bottom: 0;
+	@include stretch;
 	background: $gray;
 }
 

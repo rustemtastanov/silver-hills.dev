@@ -127,9 +127,7 @@ function initFlats() {
 				$(this.$refs.fancy).fancybox({
 					hash: false,
 					protect: true,
-					transitionEffect: "slide",
-					transitionDuration: 800,
-					animationDuration: 800,
+					animationDuration: 400,
 					clickSlide: false,
 					buttons: [
 						"close"

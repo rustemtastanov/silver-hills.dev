@@ -24,6 +24,12 @@
 		pointer-events: none;
 		left: 23px;
 		bottom: 43px;
+		path {
+			transition: all 1.5s;
+		}
+		&.aos-animate path {
+			stroke-dashoffset: 0;
+		}
 	}
 	
 	.order-logo {
