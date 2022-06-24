@@ -1211,15 +1211,15 @@ form {
 .points-items.changed [data-aos="img-1"].active path,
 .points-items.changed [data-aos="img-1"].active polygon,
 .points-items.changed [data-aos="img-1"].active polyline,
-[data-aos="img-2"] .active path,
-[data-aos="img-2"] .active polygon,
-[data-aos="img-2"] .active polyline,
-[data-aos="img-3"] .active path,
-[data-aos="img-3"] .active polygon,
-[data-aos="img-3"] .active polyline,
-[data-aos="img-4"] .active path,
-[data-aos="img-4"] .active polygon,
-[data-aos="img-4"] .active polyline {
+[data-aos="img-2"].active path,
+[data-aos="img-2"].active polygon,
+[data-aos="img-2"].active polyline,
+[data-aos="img-3"].active path,
+[data-aos="img-3"].active polygon,
+[data-aos="img-3"].active polyline,
+[data-aos="img-4"].active path,
+[data-aos="img-4"].active polygon,
+[data-aos="img-4"].active polyline {
   stroke-dashoffset: 0;
 }
 

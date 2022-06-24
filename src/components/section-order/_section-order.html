@@ -2,9 +2,9 @@
 	<section class="section s--order s--order-{{{ item.index }}}">
 
 		<div class="order-bg visible-xs primary" data-role="lazy">
-			<picture class="lazy img--cover">
-				<data-src srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.webp 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.webp 2x" type="image/webp"></data-src>
-				<data-img width="394" height="250" srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.jpg 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.jpg 2x" alt="bg"></data-img>
+			<picture>
+				<source data-srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.webp 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.webp 2x" type="image/webp" />
+				<img width="394" height="250" data-srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.jpg 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.jpg 2x" alt="bg" class="lazy img--cover" />
 			</picture>
 		</div>
 

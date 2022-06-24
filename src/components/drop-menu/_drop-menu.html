@@ -20,21 +20,21 @@
 
 		</div>
 
-		<div class="drop-menu-bg primary hidden-xs" data-role="lazy">
+		<div class="drop-menu-bg primary hidden-xs">
 			<transition name="drop-menu-bg">
-				<div v-show="ShowDropMenu">
-					<picture class="lazy img--cover">
-						<data-src srcset="{{{ path }}}media/drop-menu-bg.webp 1x, {{{ path }}}media/drop-menu-bg@2x.webp 2x" type="image/webp"></data-src>
-						<data-img width="800" height="667" srcset="{{{ path }}}media/drop-menu-bg.jpg 1x, {{{ path }}}media/drop-menu-bg@2x.jpg 2x" alt="bg"></data-img>
+				<div v-show="ShowDropMenu" data-role="lazy">
+					<picture>
+						<source data-srcset="{{{ path }}}media/drop-menu-bg.webp 1x, {{{ path }}}media/drop-menu-bg@2x.webp 2x" type="image/webp" />
+						<img width="800" height="667" data-srcset="{{{ path }}}media/drop-menu-bg.jpg 1x, {{{ path }}}media/drop-menu-bg@2x.jpg 2x" alt="bg" class="lazy img--cover" />
 					</picture>
 				</div>
 			</transition>
 		</div>
 
 		<div class="drop-menu-bg primary visible-xs" data-role="lazy">
-			<picture class="lazy img--cover">
-				<data-src srcset="{{{ path }}}media/drop-menu-bg-phone.webp 1x, {{{ path }}}media/drop-menu-bg-phone@2x.webp 2x" type="image/webp"></data-src>
-				<data-img width="394" height="159" srcset="{{{ path }}}media/drop-menu-bg-phone.jpg 1x, {{{ path }}}media/drop-menu-bg-phone@2x.jpg 2x" alt="bg"></data-img>
+			<picture>
+				<source data-srcset="{{{ path }}}media/drop-menu-bg-phone.webp 1x, {{{ path }}}media/drop-menu-bg-phone@2x.webp 2x" type="image/webp" />
+				<img width="394" height="159" data-srcset="{{{ path }}}media/drop-menu-bg-phone.jpg 1x, {{{ path }}}media/drop-menu-bg-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
 			</picture>
 		</div>
 	</div>

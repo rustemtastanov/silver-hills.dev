@@ -1012,7 +1012,8 @@ function initApp() {
       ShowForm: false,
       ShowResponse: false,
       parallax: false,
-      UTM: {}
+      UTM: {},
+      lazyLoadInstance: null
     },
     created: function created() {
       var vm = this;
@@ -1056,7 +1057,7 @@ function initApp() {
       isPhone: function isPhone() {
         if (!this.isPhone && !this.parallax) this.initParallax();
         if (this.isPhone && this.parallax) this.destroyParallax();
-        this.initLazy();
+        this.updateLazy();
       }
     },
     methods: {
@@ -1102,14 +1103,13 @@ function initApp() {
         this.scrollBarWidth = this.scrollBar.offsetWidth - this.scrollBar.clientWidth;
         this.scrollBar.classList.add("done");
       },
+      updateLazy: function updateLazy() {
+        this.lazyLoadInstance.update();
+      },
       initLazy: function initLazy() {
-        $(this["$el"]).find('[data-role="lazy"]').filter(":not(.loaded)").find(".lazy").Lazy({
-          scrollDirection: "vertical",
-          enableThrottle: true,
-          chainable: false,
-          visibleOnly: true,
-          afterLoad: function afterLoad(element) {
-            $(element).parents('[data-role="lazy"]').addClass("loaded");
+        this.lazyLoadInstance = new LazyLoad({
+          callback_loaded: function callback_loaded(element) {
+            element.closest("div").classList.add("loaded");
           }
         });
       },
@@ -1126,7 +1126,7 @@ function initApp() {
         this.lockScroll();
       },
       modalShowed: function modalShowed() {
-        this.initLazy();
+        this.updateLazy();
       },
       modalHidden: function modalHidden() {
         if (!this.ShowForm && !this.ShowDropMenu) {
@@ -1173,7 +1173,7 @@ function initApp() {
         if (vm.TermsDropShow) vm.TermsDropShow = false;
         if (!vm.ShowForm) vm.ShowForm = true;
         setTimeout(function () {
-          vm.initLazy();
+          vm.updateLazy();
         }, 100);
       },
       hideResponse: function hideResponse() {

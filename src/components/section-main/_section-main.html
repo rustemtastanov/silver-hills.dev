@@ -2,9 +2,9 @@
 	<span class="anchor main-anchor" id="main"></span>
 
 	<div class="main-bg primary visible-xs" data-role="lazy">
-		<picture class="lazy img--cover">
-			<data-src srcset="{{{ path }}}media/main/main-bg-phone.webp 1x, {{{ path }}}media/main/main-bg-phone@2x.webp 2x" type="image/webp"></data-src>
-			<data-img width="402" height="559" srcset="{{{ path }}}media/main/main-bg-phone.jpg 1x, {{{ path }}}media/main/main-bg-phone@2x.jpg 2x" alt="bg"></data-img>
+		<picture>
+			<source media="(max-width: 768px)" data-srcset="{{{ path }}}media/main/main-bg-phone.webp 1x, {{{ path }}}media/main/main-bg-phone@2x.webp 2x" type="image/webp" />
+			<img width="402" height="559" data-srcset="{{{ path }}}media/main/main-bg-phone.jpg 1x, {{{ path }}}media/main/main-bg-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
 		</picture>
 		{% if lang == 'ru' %}
 		<h1 class="main-title visible-xs">Престижная 
@@ -46,9 +46,9 @@
 		data-anchor-target=".s--main" 
 		data-top="transform: translate3d(0, 0%, 0);" 
 		data-top-bottom="transform: translate3d(0, 50%, 0);">
-		<picture class="lazy img--cover">
-			<data-src srcset="{{{ path }}}media/main/main-bg.webp 1x, {{{ path }}}media/main/main-bg@2x.webp 2x" type="image/webp"></data-src>
-			<data-img width="1326" height="667" srcset="{{{ path }}}media/main/main-bg.jpg 1x, {{{ path }}}media/main/main-bg@2x.jpg 2x" alt="bg"></data-img>
+		<picture>
+			<source data-srcset="{{{ path }}}media/main/main-bg.webp 1x, {{{ path }}}media/main/main-bg@2x.webp 2x" type="image/webp" />
+			<img width="1326" height="667" data-srcset="{{{ path }}}media/main/main-bg.jpg 1x, {{{ path }}}media/main/main-bg@2x.jpg 2x" alt="bg" class="lazy img--cover" />
 		</picture>
 	</div>
 </section>

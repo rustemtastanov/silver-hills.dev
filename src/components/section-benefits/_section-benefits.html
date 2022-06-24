@@ -16,7 +16,7 @@
 			<swiper-slide v-for="(Slide, index) in Slides" class="benefits-slide swiper-slide" :key="index">
 				<div class="img swiper-img">
 					<picture>
-						<source :data-srcset="Slide.webp +' 1x, '+ Slide.webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp"></source>
+						<source :data-srcset="Slide.webp +' 1x, '+ Slide.webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp" />
 						<img width="1204" height="458" :data-srcset="Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x'" class="swiper-lazy img--cover" alt="photo" />
 					</picture>
 				</div>
@@ -30,9 +30,9 @@
 		<div class="benefits-items visible-xs">
 			<div class="benefits-slide" v-for="(Slide, index) in Slides" :key="index">
 				<div class="img primary" data-role="lazy">
-					<picture class="lazy img--cover">
-						<data-src :srcset="Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x'" type="image/webp"></data-src>
-						<data-img width="394" height="220" :srcset="Slide.thumb_phone +' 1x, '+ Slide.thumb_phone2x +' 2x'" alt="photo"></data-img>
+					<picture>
+						<source :data-srcset="Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x'" type="image/webp" />
+						<img width="394" height="220" :data-srcset="Slide.thumb_phone +' 1x, '+ Slide.thumb_phone2x +' 2x'" alt="photo" class="lazy img--cover" />
 					</picture>
 				</div>
 				<div class="head">

@@ -15,7 +15,7 @@
 						</template>
 						<template v-else>
 							<picture>
-								<source :data-srcset="Slide.photos[0].webp +' 1x, '+ Slide.photos[0].webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp"></source>
+								<source :data-srcset="Slide.photos[0].webp +' 1x, '+ Slide.photos[0].webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp" />
 								<img :width="Slide.formfactor=='album' ? 568 : 234" height="300" :data-srcset="Slide.photos[0].thumb +' 1x, '+ Slide.photos[0].thumb2x +' 2x'" class="swiper-lazy img--cover" alt="thumb" />
 							</picture>
 							<i class="icon icon-zoom"></i>

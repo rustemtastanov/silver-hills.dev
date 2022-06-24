@@ -57,7 +57,8 @@ function initApp() {
 			ShowForm: false,
 			ShowResponse: false,
 			parallax: false,
-			UTM: {}
+			UTM: {},
+			lazyLoadInstance: null
 		},
 		created() {
 			const vm = this;
@@ -101,7 +102,7 @@ function initApp() {
 			isPhone() {
 				if (!this.isPhone && !this.parallax) this.initParallax();
 				if (this.isPhone && this.parallax) this.destroyParallax();
-				this.initLazy();
+				this.updateLazy();
 			}
 		},
 		methods: {
@@ -145,14 +146,13 @@ function initApp() {
 				this.scrollBarWidth = this.scrollBar.offsetWidth - this.scrollBar.clientWidth;
 				this.scrollBar.classList.add("done");
 			},
+			updateLazy() {
+				this.lazyLoadInstance.update();
+			},
 			initLazy() {
-				$(this["$el"]).find('[data-role="lazy"]').filter(":not(.loaded)").find(".lazy").Lazy({
-					scrollDirection: "vertical",
-					enableThrottle: true,
-					chainable: false,
-					visibleOnly: true,
-					afterLoad: function(element) {
-						$(element).parents('[data-role="lazy"]').addClass("loaded");
+				this.lazyLoadInstance = new LazyLoad({
+					callback_loaded: function(element) {
+						element.closest("div").classList.add("loaded");
 					}
 				});
 			},
@@ -169,7 +169,7 @@ function initApp() {
 				this.lockScroll();
 			},
 			modalShowed() {
-				this.initLazy();
+				this.updateLazy();
 			},
 			modalHidden() {
 				if (!this.ShowForm && !this.ShowDropMenu) {
@@ -214,7 +214,7 @@ function initApp() {
 				if (vm.TermsDropShow) vm.TermsDropShow = false;
 				if (!vm.ShowForm) vm.ShowForm = true;
 				setTimeout(function() {
-					vm.initLazy();
+					vm.updateLazy();
 				}, 100);
 			},
 			hideResponse() {

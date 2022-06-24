@@ -1,11 +1,11 @@
 <header class="header compensate-for-scrollbar" :style="'padding-right: '+ scrollBarOffset +'px'" ref="headerEl">
 	<div class="container header-in">
 		
-		<scrollactive class="header-column header-left" tag="div" offset="0">
+		<scrollactive class="header-column header-left" tag="div" offset="0" :modify-url="false">
 			<a href="#main" class="link--block header-logo scrollactive-item" aria-label="logo" @click.prevent="closeDropMenu"></a>
 		</scrollactive>
 
-		<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset">
+		<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset" :modify-url="false">
 			<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item hidden-xs" @click="closeDropMenu">
 				<span>
 					{% if lang == 'ru' %} выбрать квартиру {% endif %}
