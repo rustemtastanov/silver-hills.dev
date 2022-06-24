@@ -443,6 +443,12 @@ function initStatus() {
           spaceBetween: 56
         }
       };
+    },
+    methods: {
+      getPoster: function getPoster(url) {
+        var id = getYoutubeId(url);
+        return "https://i3.ytimg.com/vi/" + id + "/hqdefault.jpg";
+      }
     }
   });
 }
@@ -478,15 +484,21 @@ function initModalStatus() {
           direction: "vertical",
           speed: 600,
           slideActiveClass: "active"
-        }
+        },
+        player: false,
+        playing: false
       };
     },
     watch: {
       Selected: function Selected() {
         var vm = this;
-        setTimeout(function () {
-          vm.initPager();
-        }, 100);
+
+        if (typeof vm.Selected.photos != "undefined") {
+          setTimeout(function () {
+            vm.initPager();
+            vm.initVideo();
+          }, 100);
+        } else vm.checkPlayer();
       }
     },
     created: function created() {
@@ -498,6 +510,44 @@ function initModalStatus() {
       }
     },
     methods: {
+      initVideo: function initVideo() {
+        var vm = this;
+        var slider = vm.$refs.modalStatusSlider;
+        vm.checkVideo();
+        slider.swiper.on("slideChange", function () {
+          vm.checkVideo();
+        });
+      },
+      checkPlayer: function checkPlayer() {
+        if (this.playing) {
+          this.player.stopVideo();
+          this.playing = false;
+        }
+      },
+      checkVideo: function checkVideo() {
+        var vm = this;
+        var slider = vm.$refs.modalStatusSlider;
+        var id = vm.Selected.id;
+        var index = slider.swiper.realIndex;
+        var videoUrl = vm.Selected.photos[index].video;
+        var videoId = "video-" + id + "-" + index;
+        vm.checkPlayer();
+
+        if (typeof videoUrl != "undefined") {
+          var youtubeId = getYoutubeId(videoUrl);
+          new YT.Player(videoId, {
+            videoId: youtubeId,
+            events: {
+              "onReady": function onReady(event) {
+                vm.player = event.target;
+              },
+              "onStateChange": function onStateChange(event) {
+                if (event.data === 1) vm.playing = true;else vm.playing = false;
+              }
+            }
+          });
+        }
+      },
       initPager: function initPager() {
         var vm = this;
         var slider = vm.$refs.modalStatusSlider;
@@ -506,6 +556,9 @@ function initModalStatus() {
           var index = this.realIndex;
           pager.swiper.slideTo(index);
         });
+      },
+      getYoutubeSrc: function getYoutubeSrc(url) {
+        return "https://www.youtube.com/embed/" + getYoutubeId(url);
       }
     }
   });
@@ -844,6 +897,61 @@ function initCounters() {
   });
 }
 
+if (!window['YT']) {
+  var YT = {
+    loading: 0,
+    loaded: 0
+  };
+}
+
+if (!window['YTConfig']) {
+  var YTConfig = {
+    'host': 'http://www.youtube.com'
+  };
+}
+
+if (!YT.loading) {
+  YT.loading = 1;
+
+  (function () {
+    var l = [];
+
+    YT.ready = function (f) {
+      if (YT.loaded) {
+        f();
+      } else {
+        l.push(f);
+      }
+    };
+
+    window.onYTReady = function () {
+      YT.loaded = 1;
+
+      for (var i = 0; i < l.length; i++) {
+        try {
+          l[i]();
+        } catch (e) {}
+      }
+    };
+
+    YT.setConfig = function (c) {
+      for (var k in c) {
+        if (c.hasOwnProperty(k)) {
+          YTConfig[k] = c[k];
+        }
+      }
+    };
+
+    var a = document.createElement('script');
+    a.type = 'text/javascript';
+    a.id = 'www-widgetapi-script';
+    a.src = 'https://s.ytimg.com/yts/jsbin/www-widgetapi-vflkvQ6Kw/www-widgetapi.js';
+    a.async = true;
+    var b = document.getElementsByTagName('script')[0];
+    b.parentNode.insertBefore(a, b);
+  })();
+}
+
 var vendorsTimer;
 
 function unique(array) {
@@ -856,6 +964,11 @@ function sort(array, dir) {
   return array.sort(function (val1, val2) {
     return dir == "asc" ? val1 > val2 ? 1 : -1 : val1 < val2 ? 1 : -1;
   });
+}
+
+function getYoutubeId(url) {
+  url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+  return url[2] !== undefined ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[0];
 }
 
 function initApp() {
@@ -1014,6 +1127,7 @@ function initApp() {
         }
 
         this.ShowResponse = false;
+        this.StatusSlides = {};
       },
       modalTermsHidden: function modalTermsHidden() {
         if (!this.ShowForm && !this.ShowDropMenu) {
@@ -1026,9 +1140,6 @@ function initApp() {
       },
       hideStatus: function hideStatus() {
         this.StatusModalShow = false;
-      },
-      hiddenStatus: function hiddenStatus() {
-        this.StatusSlides = {};
       },
       showPolicy: function showPolicy() {
         this.ShowPolicy = true;

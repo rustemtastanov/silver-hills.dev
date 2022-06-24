@@ -12,6 +12,11 @@ function sort(array, dir) {
 	});
 }
 
+function getYoutubeId(url) {
+	url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+	return (url[2] !== undefined) ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[0];
+}
+
 function initApp() {
 
 	Vue.use(VueAwesomeSwiper);
@@ -171,6 +176,7 @@ function initApp() {
 					this.unLockScroll();
 				}
 				this.ShowResponse = false;
+				this.StatusSlides = {};
 			},
 			modalTermsHidden() {
 				if (!this.ShowForm && !this.ShowDropMenu) {
@@ -183,9 +189,6 @@ function initApp() {
 			},
 			hideStatus() {
 				this.StatusModalShow = false;
-			},
-			hiddenStatus() {
-				this.StatusSlides = {};
 			},
 			showPolicy() {
 				this.ShowPolicy = true;

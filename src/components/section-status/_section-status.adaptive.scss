@@ -120,9 +120,12 @@
 		}
 		&.book {
 			width: 234px;
+			.month {
+				left: 0;
+			}
 			&.active {
 				.month {
-					transform: translate(234px - 101px, 0) scale(1);
+					transform: translate(234px - 101px + 30px, 0) scale(1);
 				}
 			}
 		}
@@ -160,9 +163,12 @@
 		}
 		&.book {
 			width: 214px;
+			.month {
+				left: 0;
+			}
 			&.active {
 				.month {
-					transform: translate(214px - 101px, 0) scale(1);
+					transform: translate(214px - 101px + 30px, 0) scale(1);
 				}
 			}
 		}

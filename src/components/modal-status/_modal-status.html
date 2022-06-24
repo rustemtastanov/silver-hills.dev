@@ -1,4 +1,4 @@
-<app-modal-status :selected="StatusSlides" :is-showed="StatusModalShow" v-on:hide-status="hideStatus" v-on:hidden-status="hiddenStatus" inline-template>
+<app-modal-status :selected="StatusSlides" :is-showed="StatusModalShow" v-on:hide-status="hideStatus" inline-template>
 	<transition name="modal-status" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalHidden">
 		<div class="modal-status hidden-xs" v-show="isShowed" :class="{active: isLoaded}">
 
@@ -9,7 +9,14 @@
 			<swiper class="swiper modal-status-viewport" ref="modalStatusSlider" :options="options" :key="Selected.id">
 				<swiper-slide v-for="(Slide, index) in Selected.photos" class="modal-status-slide swiper-slide" :key="index">
 					<div class="img swiper-img">
-						<img width="940" height="594" :data-src="Slide.photo" class="swiper-lazy" alt="photo" />
+						<template v-if="Slide.video">
+							<div class="ratio">
+								<div :id="'video-'+ Selected.id + '-' + index"></div>
+							</div>
+						</template>
+						<template v-else>
+							<img width="940" height="594" :data-src="Slide.photo" class="swiper-lazy" alt="photo" />
+						</template>
 					</div>
 				</swiper-slide>
 			</swiper>

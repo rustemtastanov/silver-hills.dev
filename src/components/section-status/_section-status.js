@@ -21,6 +21,12 @@ function initStatus() {
 					spaceBetween: 56
 				}
 			}
+		},
+		methods: {
+			getPoster(url) {
+				let id = getYoutubeId(url);
+				return "https://i3.ytimg.com/vi/"+ id +"/hqdefault.jpg";
+			}
 		}
 	});
 }

@@ -28,15 +28,20 @@ function initModalStatus() {
 					direction: "vertical",
 					speed: 600,
 					slideActiveClass: "active"
-				}
+				},
+				player: false,
+				playing: false
 			}
 		},
 		watch: {
 			Selected() {
 				const vm = this;
-				setTimeout(function() {
-					vm.initPager();
-				}, 100);
+				if (typeof vm.Selected.photos!="undefined") {
+					setTimeout(function() {
+						vm.initPager();
+						vm.initVideo();
+					}, 100);
+				} else vm.checkPlayer();
 			}
 		},
 		created() {
@@ -48,6 +53,43 @@ function initModalStatus() {
 			}
 		},
 		methods: {
+			initVideo() {
+				const vm = this;
+				let slider = vm.$refs.modalStatusSlider;
+				vm.checkVideo();
+				slider.swiper.on("slideChange", function() {
+					vm.checkVideo();
+				});
+			},
+			checkPlayer() {
+				if (this.playing) {
+					this.player.stopVideo();
+					this.playing = false;
+				}
+			},
+			checkVideo() {
+				const vm = this;
+				let slider 		= vm.$refs.modalStatusSlider;
+				let id 				= vm.Selected.id;
+				let index 		= slider.swiper.realIndex;
+				let videoUrl 	= vm.Selected.photos[index].video;
+				let videoId 	= "video-" + id + "-" + index;
+				vm.checkPlayer();
+				if (typeof videoUrl!="undefined") {
+					let youtubeId = getYoutubeId(videoUrl);
+					new YT.Player(videoId, {
+						videoId: youtubeId,
+						events: {
+							"onReady": function(event) {
+								vm.player = event.target;
+							},
+							"onStateChange": function(event) {
+								if (event.data===1) vm.playing = true; else vm.playing = false;
+							}
+						}
+					});
+				}
+			},
 			initPager() {
 				const vm = this;
 				let slider = vm.$refs.modalStatusSlider;
@@ -56,6 +98,9 @@ function initModalStatus() {
 					let index = this.realIndex;
 					pager.swiper.slideTo(index);
 				});
+			},
+			getYoutubeSrc(url) {
+				return "https://www.youtube.com/embed/" + getYoutubeId(url);
 			}
 		}
 	});

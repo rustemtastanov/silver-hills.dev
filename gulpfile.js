@@ -344,7 +344,8 @@ exports.build = series(
 							cssnano({
 								autoprefixer: false,
 								minifyFontValues: false,
-								discardUnused: false
+								discardUnused: false,
+								zindex: false
 							})
 						]))
 					.pipe(gulp.dest(APP["dst"]["styles"]));

@@ -978,10 +978,17 @@
 					<swiper-slide v-for="(Slide, index) in Slides" class="status-slide slide swiper-slide" :class="Slide.formfactor" :key="index">
 						<a href="#" class="link--block" aria-label="zoom" @click.prevent="$emit('show-status', Slide)">
 							<div class="img swiper-img">
-								<picture>
-									<source :data-srcset="Slide.photos[0].webp +' 1x, '+ Slide.photos[0].webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp"></source>
-									<img width="568" height="300" :data-srcset="Slide.photos[0].thumb +' 1x, '+ Slide.photos[0].thumb2x +' 2x'" class="swiper-lazy img--cover" alt="thumb" />
-								</picture>
+								<template v-if="Slide.photos[0].video">
+									<i class="icon icon-video"></i>
+									<img :width="Slide.formfactor=='album' ? 568 : 234" height="300" :data-src="getPoster(Slide.photos[0].video)" class="swiper-lazy img--cover" alt="thumb" />
+								</template>
+								<template v-else>
+									<picture>
+										<source :data-srcset="Slide.photos[0].webp +' 1x, '+ Slide.photos[0].webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp"></source>
+										<img :width="Slide.formfactor=='album' ? 568 : 234" height="300" :data-srcset="Slide.photos[0].thumb +' 1x, '+ Slide.photos[0].thumb2x +' 2x'" class="swiper-lazy img--cover" alt="thumb" />
+									</picture>
+									<i class="icon icon-zoom"></i>
+								</template>
 								<template v-if="Slide.photos[0].video">
 									<i class="icon icon-video"></i>
 								</template>
@@ -1110,7 +1117,7 @@
 			</section>
 		</app-contacts>
 
-		<app-modal-status :selected="StatusSlides" :is-showed="StatusModalShow" v-on:hide-status="hideStatus" v-on:hidden-status="hiddenStatus" inline-template>
+		<app-modal-status :selected="StatusSlides" :is-showed="StatusModalShow" v-on:hide-status="hideStatus" inline-template>
 			<transition name="modal-status" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalHidden">
 				<div class="modal-status hidden-xs" v-show="isShowed" :class="{active: isLoaded}">
 					<button type="button" class="btn btn--black btn--close" aria-label="close" @click="$emit('hide-status')">
@@ -1119,7 +1126,14 @@
 					<swiper class="swiper modal-status-viewport" ref="modalStatusSlider" :options="options" :key="Selected.id">
 						<swiper-slide v-for="(Slide, index) in Selected.photos" class="modal-status-slide swiper-slide" :key="index">
 							<div class="img swiper-img">
-								<img width="940" height="594" :data-src="Slide.photo" class="swiper-lazy" alt="photo" />
+								<template v-if="Slide.video">
+									<div class="ratio">
+										<div :id="'video-'+ Selected.id + '-' + index"></div>
+									</div>
+								</template>
+								<template v-else>
+									<img width="940" height="594" :data-src="Slide.photo" class="swiper-lazy" alt="photo" />
+								</template>
 							</div>
 						</swiper-slide>
 					</swiper>
@@ -1586,9 +1600,11 @@
 		const STATUS_DATA = [
 			{
 				"id": 1,
-				"date": "01.04.2022",
+				"date": "01.06.2022",
 				"formfactor": "album",
 				"photos": [{
+					"video": "https://www.youtube.com/watch?v=kPyByGtkjFA"
+				}, {
 					"thumb": "../media/status/2022-06/thumb-1.jpg",
 					"thumb2x": "../media/status/2022-06/thumb-1@2x.jpg",
 					"webp": "../media/status/2022-06/thumb-1.webp",
