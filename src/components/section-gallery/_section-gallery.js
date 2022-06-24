@@ -37,7 +37,7 @@ function initGallery() {
 		},
 		mounted() {
 			const vm = this;
-			vm.initFancy();
+			vm.initLightbox();
 			vm.Slider.swiper
 				.on("slideNextTransitionStart", function() {
 					vm.Direction = this.realIndex+1==vm.Slides.length ? "end" : "next";
@@ -58,21 +58,13 @@ function initGallery() {
 			}
 		},
 		methods: {
-			initFancy() {
+			initLightbox() {
 				const vm = this;
-				$(vm.$refs.fancy).fancybox({
-					hash: false,
-					protect: true,
-					transitionEffect: "slide",
-					transitionDuration: 800,
-					animationDuration: 800,
-					clickSlide: false,
-					buttons: [
-						"close"
-					],
-					beforeShow: function(current, previous) {
-						if (vm.Slider) vm.Slider.swiper.slideTo(current.currIndex);
-					}
+				let lightBox = GLightbox({
+					selector: ".gallery-zoom"
+				});
+				lightBox.on("slide_changed", function(obj) {
+					if (vm.Slider) vm.Slider.swiper.slideTo(obj.current.index);
 				});
 			}
 		}

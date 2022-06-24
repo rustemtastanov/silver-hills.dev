@@ -56,7 +56,7 @@
 
 	<main class="content" id="app">
 
-		<header class="header compensate-for-scrollbar" :style="'padding-right: '+ scrollBarOffset +'px'" ref="headerEl">
+		<header class="header gscrollbar-fixer" :style="'padding-right: '+ scrollBarOffset +'px'" ref="headerEl">
 			<div class="container header-in">
 				<scrollactive class="header-column header-left" tag="div" offset="0" :modify-url="false">
 					<a href="#main" class="link--block header-logo scrollactive-item" aria-label="logo" @click.prevent="closeDropMenu"></a>
@@ -341,7 +341,7 @@
 				<swiper class="swiper gallery-items" ref="slider" :options="options">
 					<swiper-slide v-for="(Slide, index) in Slides" class="gallery-slide swiper-slide" :class="'gallery-slide-'+ (index+1)" :key="index">
 						<div class="img swiper-img">
-							<a href="#" :href="Slide.photo" class="link--block link--zoom" aria-label="zoom" ref="fancy" data-fancybox="gallery-photos">
+							<a href="#" :href="Slide.photo" class="link--block gallery-zoom" aria-label="zoom" data-gallery="photos">
 								<picture>
 									<source :data-srcset="isPhone ? (Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x') : (Slide.webp +' 1x, '+ Slide.webp2x +' 2x')" class="swiper-lazy img--cover" type="image/webp" />
 									<img :width="isPhone ? 394 : 1326" :height="isPhone ? 528 : 650" :data-srcset="isPhone ? (Slide.thumb_phone +' 1x, '+ Slide.thumb_phone2x +' 2x') : (Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x')" class="swiper-lazy img--cover" alt="photo" />
@@ -403,7 +403,7 @@
 				<div class="flats-column flats-center" v-show="isLoaded">
 					<div class="flats-viewport" :class="{ active: ImageLoaded }">
 						<span v-show="!ImageLoaded" class="loader"></span>
-						<a href="#" :href="SelectedView=='default' ? Flat.img : Flat.socle" class="link--block" aria-label="zoom" ref="fancy" v-show="ImageLoaded">
+						<a href="#" :href="SelectedView=='default' ? Flat.img : Flat.socle" class="link--block flats-zoom" aria-label="zoom" v-show="ImageLoaded">
 							<div class="img">
 								<img width="400" height="400" :src="SelectedView=='default' ? Flat.img : Flat.socle" alt="image" />
 							</div>
@@ -1038,7 +1038,7 @@
 					<i class="icon icon-roza commercial-icon"></i>
 					<div class="commercial-viewport" :class="{ active: ImageLoaded }" v-show="isLoaded">
 						<span v-show="!ImageLoaded" class="loader"></span>
-						<a href="#" :href="Selected.img" class="link--block" aria-label="zoom" ref="fancy" v-show="ImageLoaded">
+						<a href="#" :href="Selected.img" class="link--block commercial-zoom" aria-label="zoom" v-show="ImageLoaded">
 							<div class="img">
 								<img width="400" height="400" :src="Selected.img" alt="image" />
 							</div>

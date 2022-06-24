@@ -1,4 +1,5 @@
 [{
+	"id": 1,
 	"area": 95.40,
 	"block": "б1",
 	"price": 600000,
@@ -6,6 +7,7 @@
 	"card": "../media/commerce/95-40.png",
 	"status": true
 }, {
+	"id": 2,
 	"area": 128.20,
 	"block": "б1",
 	"price": 600000,
@@ -13,6 +15,7 @@
 	"card": "../media/commerce/128-20.png",
 	"status": true
 }, {
+	"id": 3,
 	"area": 260.20,
 	"block": "б1",
 	"price": 450000,
@@ -20,6 +23,7 @@
 	"card": "../media/commerce/260-20.png",
 	"status": true
 }, {
+	"id": 4,
 	"area": 161.10,
 	"block": "б2",
 	"price": 500000,
@@ -27,6 +31,7 @@
 	"card": "../media/commerce/161-10.png",
 	"status": true
 }, {
+	"id": 5,
 	"area": 97.60,
 	"block": "б3",
 	"price": 550000,
@@ -34,6 +39,7 @@
 	"card": "../media/commerce/97-60.png",
 	"status": true
 }, {
+	"id": 6,
 	"area": 343.40,
 	"block": "б3",
 	"price": 550000,
@@ -41,6 +47,7 @@
 	"card": "../media/commerce/343-40.png",
 	"status": true
 }, {
+	"id": 7,
 	"area": 204.60,
 	"block": "б3",
 	"price": 450000,

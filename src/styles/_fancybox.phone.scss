@@ -1,12 +1,24 @@
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-.fancybox-button--close {
+.glightbox-clean .gclose {
 	width: 50px;
 	height: 50px;
 	font-size: 16px;
+	right: 10px;
+	top: 10px;
+	background: white;
+	color: black;
 }
 
-.fancybox-slide--image {
-	padding: 70px 10px;
+.gslide-image img {
+  max-height: calc(100vh - 180px);
+  max-width: calc(100% - 20px);
+}
+
+body.flats--photo {
+	.glightbox-clean .gclose {
+		background: black;
+		color: white;
+	}
 }

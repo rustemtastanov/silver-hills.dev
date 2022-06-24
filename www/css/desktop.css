@@ -1329,11 +1329,11 @@ form {
   right: 3.1875rem;
 }
 
-.gallery-slide .link--zoom {
+.gallery-slide .link--block {
   pointer-events: none;
 }
 
-.gallery-slide .link--zoom,
+.gallery-slide .link--block,
 .gallery-slide .img {
   height: 40.625rem;
 }
@@ -2945,14 +2945,29 @@ form {
 /*
 	styles for Tablet
  -------------------------------------------------------------------- */
-.fancybox-button--close {
+.glightbox-clean .gslide-media {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.gslide-image img {
+  max-height: calc(100vh - 5rem);
+  max-width: calc(100% - 5rem);
+}
+
+.glightbox-clean .gclose {
+  right: 0;
+  top: 0;
+}
+
+.glightbox-clean .gclose:hover {
+  background: black;
+}
+
+.glightbox-clean .gclose {
   width: 3.75rem;
   height: 3.75rem;
   font-size: 1rem;
-}
-
-.fancybox-slide--image {
-  padding: 5rem;
 }
 
 /*
@@ -2961,6 +2976,13 @@ form {
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .glightbox-clean .gclose {
+    right: 0;
+    top: 0;
+  }
+}
+
 /*
 	styles for Desktop and Small
  -------------------------------------------------------------------- */

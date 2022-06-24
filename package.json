@@ -44,10 +44,8 @@
     "postcss-sprites": "^3.1.0"
   },
   "dependencies": {
-    "@fancyapps/fancybox": "3.5.2",
     "aos": "^2.3.4",
     "bootstrap-sass": "^3.3.7",
-    "jquery": "^3.3.1",
     "normalize-css": "^2.3.1",
     "skrollr": "^0.6.26",
     "swiper": "^7.3.0",

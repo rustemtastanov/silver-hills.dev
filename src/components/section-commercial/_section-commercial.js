@@ -13,7 +13,8 @@ function initCommercial() {
 				SelectedArea: null,
 				Selected: {},
 				ImageLoaded: false,
-				url: URLS.commerce
+				url: URLS.commerce,
+				LightBox: null
 			}
 		},
 		created() {
@@ -64,23 +65,22 @@ function initCommercial() {
 				});
 				this.Selected = item;
 				this.loadImage();
-				this.initFancy();
+				const vm = this;
+				setTimeout(function() {
+					vm.initLightbox();
+				}, 100);
 			},
-			initFancy() {
-				$(this.$refs.fancy).fancybox({
-					hash: false,
-					protect: true,
-					animationDuration: 400,
-					clickSlide: false,
-					buttons: [
-						"close"
-					],
-					beforeShow: function() {
-						document.body.classList.add("flats--photo");
-					},
-					afterClose: function() {
-						document.body.classList.remove("flats--photo");
-					}
+			initLightbox() {
+				if (this.LightBox) this.LightBox.destroy();
+				this.LightBox = GLightbox({
+					selector: ".commercial-zoom",
+					height: "100vh"
+				});
+				this.LightBox.on("open", function() {
+					document.body.classList.add("flats--photo");
+				});
+				this.LightBox.on("close", function() {
+					document.body.classList.remove("flats--photo");
 				});
 			}
 		}

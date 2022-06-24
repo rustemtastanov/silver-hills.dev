@@ -1,12 +1,26 @@
-.fancybox-button--close {
+.glightbox-clean .gslide-media {
+  box-shadow: none;
+}
+
+.gslide-image img {
+  max-height: calc(100vh - 80px);
+  max-width: calc(100% - 80px);
+}
+
+.glightbox-clean .gclose {
+	right: 0;
+	top: 0;
+	&:hover {
+		background: black;
+	}
+}
+
+.glightbox-clean .gclose {
 	width: 60px;
 	height: 60px;
 	font-size: 16px;
 }
 
-.fancybox-slide--image {
-	padding: 80px;
-}
 
 
 
@@ -20,7 +34,14 @@
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-// @include respond-to($respond-desktop) {}
+@include respond-to($respond-desktop) {
+
+	.glightbox-clean .gclose {
+		right: 0;
+		top: 0;
+	}
+
+}
 
 
 

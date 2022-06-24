@@ -1,20 +1,21 @@
 body.flats--photo {
-	.fancybox-bg {
+	.goverlay {
 		background: white;
 	}
-	.fancybox-is-open .fancybox-bg {
-		opacity: 1;
-	}
 }
 
-.fancybox-infobar,
-.fancybox-navigation,
-.fancybox-caption {
-	display: none;
+.goverlay,
+.glightbox-mobile .goverlay {
+	background: rgba(black, .95);
 }
 
-.fancybox-button--close {
+.glightbox-clean .gclose {
+	opacity: 1;
 	background: black;
+	border-radius: 0;
+}
+
+.gclose {
 	padding: 0;
 	color: white;
 	&::before {
@@ -26,4 +27,9 @@ body.flats--photo {
 	svg {
 		display: none;
 	}
+}
+
+.gprev,
+.gnext {
+	display: none;
 }

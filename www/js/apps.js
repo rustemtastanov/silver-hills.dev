@@ -178,7 +178,7 @@ function initGallery() {
     },
     mounted: function mounted() {
       var vm = this;
-      vm.initFancy();
+      vm.initLightbox();
       vm.Slider.swiper.on("slideNextTransitionStart", function () {
         vm.Direction = this.realIndex + 1 == vm.Slides.length ? "end" : "next";
       }).on("slidePrevTransitionStart", function () {
@@ -195,19 +195,13 @@ function initGallery() {
       }
     },
     methods: {
-      initFancy: function initFancy() {
+      initLightbox: function initLightbox() {
         var vm = this;
-        $(vm.$refs.fancy).fancybox({
-          hash: false,
-          protect: true,
-          transitionEffect: "slide",
-          transitionDuration: 800,
-          animationDuration: 800,
-          clickSlide: false,
-          buttons: ["close"],
-          beforeShow: function beforeShow(current, previous) {
-            if (vm.Slider) vm.Slider.swiper.slideTo(current.currIndex);
-          }
+        var lightBox = GLightbox({
+          selector: ".gallery-zoom"
+        });
+        lightBox.on("slide_changed", function (obj) {
+          if (vm.Slider) vm.Slider.swiper.slideTo(obj.current.index);
         });
       }
     }
@@ -241,7 +235,8 @@ function initFlats() {
         SelectedArea: null,
         SelectedView: "default",
         SelectedFlat: false,
-        ImageLoaded: false
+        ImageLoaded: false,
+        LightBox: null
       };
     },
     created: function created() {
@@ -337,21 +332,22 @@ function initFlats() {
         this.Flats = items;
         this.Flat = items[0];
         this.loadImage();
-        this.initFancy();
+        var vm = this;
+        setTimeout(function () {
+          vm.initLightbox();
+        }, 100);
       },
-      initFancy: function initFancy() {
-        $(this.$refs.fancy).fancybox({
-          hash: false,
-          protect: true,
-          animationDuration: 400,
-          clickSlide: false,
-          buttons: ["close"],
-          beforeShow: function beforeShow() {
-            document.body.classList.add("flats--photo");
-          },
-          afterClose: function afterClose() {
-            document.body.classList.remove("flats--photo");
-          }
+      initLightbox: function initLightbox() {
+        if (this.LightBox) this.LightBox.destroy();
+        this.LightBox = GLightbox({
+          selector: ".flats-zoom",
+          height: "100vh"
+        });
+        this.LightBox.on("open", function () {
+          document.body.classList.add("flats--photo");
+        });
+        this.LightBox.on("close", function () {
+          document.body.classList.remove("flats--photo");
         });
       },
       loadImage: function loadImage() {
@@ -580,7 +576,8 @@ function initCommercial() {
         SelectedArea: null,
         Selected: {},
         ImageLoaded: false,
-        url: URLS.commerce
+        url: URLS.commerce,
+        LightBox: null
       };
     },
     created: function created() {
@@ -630,21 +627,22 @@ function initCommercial() {
         });
         this.Selected = item;
         this.loadImage();
-        this.initFancy();
+        var vm = this;
+        setTimeout(function () {
+          vm.initLightbox();
+        }, 100);
       },
-      initFancy: function initFancy() {
-        $(this.$refs.fancy).fancybox({
-          hash: false,
-          protect: true,
-          animationDuration: 400,
-          clickSlide: false,
-          buttons: ["close"],
-          beforeShow: function beforeShow() {
-            document.body.classList.add("flats--photo");
-          },
-          afterClose: function afterClose() {
-            document.body.classList.remove("flats--photo");
-          }
+      initLightbox: function initLightbox() {
+        if (this.LightBox) this.LightBox.destroy();
+        this.LightBox = GLightbox({
+          selector: ".commercial-zoom",
+          height: "100vh"
+        });
+        this.LightBox.on("open", function () {
+          document.body.classList.add("flats--photo");
+        });
+        this.LightBox.on("close", function () {
+          document.body.classList.remove("flats--photo");
         });
       }
     }

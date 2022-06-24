@@ -12,7 +12,7 @@
 }
 
 .icon,
-.fancybox-button {
+.gclose {
 	position: relative;
   font-family: 'icomoon' !important;
   speak: none;
@@ -38,7 +38,7 @@
 }
 
 .icon-close::before,
-.fancybox-button--close::before {
+.gclose::before {
   content: "\e903";
 }
 

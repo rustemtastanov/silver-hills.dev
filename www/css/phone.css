@@ -1301,12 +1301,22 @@ form {
 /*
 	styles for Phone
  -------------------------------------------------------------------- */
-.fancybox-button--close {
+.glightbox-clean .gclose {
   width: 3.125rem;
   height: 3.125rem;
   font-size: 1rem;
+  right: 0.625rem;
+  top: 0.625rem;
+  background: white;
+  color: black;
 }
 
-.fancybox-slide--image {
-  padding: 4.375rem 0.625rem;
+.gslide-image img {
+  max-height: calc(100vh - 11.25rem);
+  max-width: calc(100% - 1.25rem);
+}
+
+body.flats--photo .glightbox-clean .gclose {
+  background: black;
+  color: white;
 }
