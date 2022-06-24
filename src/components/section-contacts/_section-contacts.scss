@@ -64,3 +64,37 @@
 		background-image: inline('#{$path-inline}/spinner-primary.svg');
 	}
 }
+
+.map-marker {
+	position: relative;
+}
+
+.map-marker-img {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 91px;
+	height: 47px;
+	.leaflet-zoom-anim & {
+		opacity: 0;
+		transition: opacity .3s;
+	}
+	img {
+		transform-origin: 50% 50%;
+		[data-zoom="15"] & {
+			transform: scale(.3);
+		}
+		[data-zoom="16"] & {
+			transform: scale(.6);
+		}
+		[data-zoom="18"] & {
+			transform: scale(2);
+		}
+	}
+}
+
+.leaflet-marker-icon.leaflet-interactive {
+	background: none;
+	border: 0;
+}
