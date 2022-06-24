@@ -38,6 +38,11 @@
 	<link rel="preload" href="{{{ path }}}css/desktop.css" as="style">
 	<link rel="preload" href="{{{ path }}}media/main/main-bg-phone.webp" imagesrcset="{{{ path }}}media/main/main-bg-phone.webp 1x, {{{ path }}}media/main/main-bg-phone@2x.webp 2x" as="image">
 
+	{#
+	<!-- build:css {{{ path }}}css/loader.min.css media="screen" -->
+	<link rel="stylesheet" href="/css/loader.css" />
+	#}
+	<!-- endbuild -->
 	<!-- build:css {{{ path }}}css/style.min.css media="screen" -->
 	<link rel="stylesheet" href="/css/style.css" />
 	<!-- endbuild -->
@@ -60,6 +65,10 @@
 
 	{#
 	{% include "page-resize/_page-resize.html" %}
+	#}
+
+	{#
+	{% include "page-loader/_page-loader.html" %}
 	#}
 
 	<main class="content" id="app">

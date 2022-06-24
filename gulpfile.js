@@ -180,6 +180,15 @@ function jquery(cb) {
 	cb();
 }
 
+function pace(cb) {
+  if (!jqueryInside) {
+    return gulp.src(APP["src"]["scripts"] + "/pace.min.js")
+      .pipe(gulp.dest(APP["dst"]["scripts"]))
+      .pipe(reload({ stream: true }));
+  }
+  cb();
+}
+
 function renderRu(cb) {
 	return gulp.src(APP["tmp"]["path"] + "/ru/*.html")
 		.pipe(
@@ -310,7 +319,7 @@ exports.default = series(
 exports.build = series(
 	clean,
 	series(
-		parallel(htmlRu, htmlKz, styles, scripts, jquery), 
+		parallel(htmlRu, htmlKz, styles, scripts, jquery, pace), 
 		renderRu,
 		renderKz,
 		parallel(

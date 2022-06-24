@@ -1,0 +1,22 @@
+<div class="page-loader"></div>
+
+<script type="text/javascript">
+	window.paceOptions = {
+		target: ".page-loader",
+		ajax: false,
+		document: true,
+		eventLag: true,
+		restartOnPushState: false
+	};
+</script>
+
+<script type="text/javascript" src="{{{ path }}}js/pace.min.js"></script>
+
+<script type="text/javascript">
+	Pace.on("done", function() {
+		checkVendors();
+		setTimeout(function() {
+			document.body.classList.add("page-loaded");
+		}, 600);
+  });
+</script>
