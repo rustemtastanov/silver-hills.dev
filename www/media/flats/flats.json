@@ -1,0 +1,1862 @@
+[{
+	"area": 89.70,
+	"rooms": 2,
+	"level": 1,
+	"block": "а1",
+	"price": 500000,
+	"img": "../media/flats/sh_2a_89-7_a1_1.png",
+	"card": "../media/flats/sh_2a_89-7_a1_1_card.png",
+	"status": 0
+}, {
+	"area": 92.00,
+	"rooms": 2,
+	"level": 1,
+	"block": "а1",
+	"price": 500000,
+	"img": "../media/flats/sh_2b_92-0_a1_1.png",
+	"card": "../media/flats/sh_2b_92-0_a1_1_card.png",
+	"status": 1
+}, {
+	"area": 88.10,
+	"rooms": 2,
+	"level": 2,
+	"block": "а1",
+	"price": 520000,
+	"img": "../media/flats/sh_2g_88-1_a1_2-4.png",
+	"card": "../media/flats/sh_2g_88-1_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 88.10,
+	"rooms": 2,
+	"level": 3,
+	"block": "а1",
+	"price": 530000,
+	"img": "../media/flats/sh_2g_88-1_a1_2-4.png",
+	"card": "../media/flats/sh_2g_88-1_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 88.10,
+	"rooms": 2,
+	"level": 4,
+	"block": "а1",
+	"price": 540000,
+	"img": "../media/flats/sh_2g_88-1_a1_2-4.png",
+	"card": "../media/flats/sh_2g_88-1_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 100.00,
+	"rooms": 2,
+	"level": 2,
+	"block": "а1",
+	"price": 520000,
+	"img": "../media/flats/sh_2h_100-0_a1_2-4.png",
+	"card": "../media/flats/sh_2h_100-0_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 100.00,
+	"rooms": 2,
+	"level": 3,
+	"block": "а1",
+	"price": 530000,
+	"img": "../media/flats/sh_2h_100-0_a1_2-4.png",
+	"card": "../media/flats/sh_2h_100-0_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 100.00,
+	"rooms": 2,
+	"level": 4,
+	"block": "а1",
+	"price": 540000,
+	"img": "../media/flats/sh_2h_100-0_a1_2-4.png",
+	"card": "../media/flats/sh_2h_100-0_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 132.40,
+	"rooms": 3,
+	"level": 2,
+	"block": "а1",
+	"price": 530000,
+	"img": "../media/flats/sh_3b_132-4_a1_2-4.png",
+	"card": "../media/flats/sh_3b_132-4_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 132.40,
+	"rooms": 3,
+	"level": 4,
+	"block": "а1",
+	"price": 550000,
+	"img": "../media/flats/sh_3b_132-4_a1_2-4.png",
+	"card": "../media/flats/sh_3b_132-4_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 128.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "а1",
+	"price": 530000,
+	"img": "../media/flats/sh_3a_128-6_a1_2-4.png",
+	"card": "../media/flats/sh_3a_128-6_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 128.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "а1",
+	"price": 540000,
+	"img": "../media/flats/sh_3a_128-6_a1_2-4.png",
+	"card": "../media/flats/sh_3a_128-6_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 128.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "а1",
+	"price": 550000,
+	"img": "../media/flats/sh_3a_128-6_a1_2-4.png",
+	"card": "../media/flats/sh_3a_128-6_a1_2-4_card.png",
+	"status": 1
+}, {
+	"area": 248.90,
+	"rooms": 6,
+	"type": "2x",
+	"level": 1,
+	"block": "а1",
+	"price": 485000,
+	"img": "../media/flats/sh_t1_248-9_a1_0_1.png",
+	"card": "../media/flats/sh_t1_248-9_a1_0_1_card.png",
+	"socle": "../media/flats/sh_t1_248-9_a1_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 202.40,
+	"rooms": 3,
+	"type": "2x",
+	"level": 1,
+	"block": "а1",
+	"price": 485000,
+	"img": "../media/flats/sh_t2_202-4_a1_0_1.png",
+	"card": "../media/flats/sh_t2_202-4_a1_0_1_card.png",
+	"socle": "../media/flats/sh_t2_202-4_a1_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 88.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "а2",
+	"price": 500000,
+	"img": "../media/flats/sh_2c_88-9_a2-a5_1.png",
+	"card": "../media/flats/sh_2c_88-9_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 88.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "а3",
+	"price": 500000,
+	"img": "../media/flats/sh_2c_88-9_a2-a5_1.png",
+	"card": "../media/flats/sh_2c_88-9_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 88.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "а4",
+	"price": 500000,
+	"img": "../media/flats/sh_2c_88-9_a2-a5_1.png",
+	"card": "../media/flats/sh_2c_88-9_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 88.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "а5",
+	"price": 500000,
+	"img": "../media/flats/sh_2c_88-9_a2-a5_1.png",
+	"card": "../media/flats/sh_2c_88-9_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 92.00,
+	"rooms": 2,
+	"level": 1,
+	"block": "а2",
+	"price": 500000,
+	"img": "../media/flats/sh_2d_92-0_a2-a5_1.png",
+	"card": "../media/flats/sh_2d_92-0_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 92.00,
+	"rooms": 2,
+	"level": 1,
+	"block": "а3",
+	"price": 500000,
+	"img": "../media/flats/sh_2d_92-0_a2-a5_1.png",
+	"card": "../media/flats/sh_2d_92-0_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 92.00,
+	"rooms": 2,
+	"level": 1,
+	"block": "а4",
+	"price": 500000,
+	"img": "../media/flats/sh_2d_92-0_a2-a5_1.png",
+	"card": "../media/flats/sh_2d_92-0_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 92.00,
+	"rooms": 2,
+	"level": 1,
+	"block": "а5",
+	"price": 500000,
+	"img": "../media/flats/sh_2d_92-0_a2-a5_1.png",
+	"card": "../media/flats/sh_2d_92-0_a2-a5_1_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 2,
+	"block": "а2",
+	"price": 520000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 3,
+	"block": "а2",
+	"price": 530000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 4,
+	"block": "а2",
+	"price": 540000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 5,
+	"block": "а2",
+	"price": 550000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 2,
+	"block": "а3",
+	"price": 520000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 3,
+	"block": "а3",
+	"price": 530000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 4,
+	"block": "а3",
+	"price": 540000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 5,
+	"block": "а3",
+	"price": 550000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 2,
+	"block": "а4",
+	"price": 520000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 3,
+	"block": "а4",
+	"price": 530000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 4,
+	"block": "а4",
+	"price": 540000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 5,
+	"block": "а4",
+	"price": 550000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 2,
+	"block": "а5",
+	"price": 520000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 3,
+	"block": "а5",
+	"price": 530000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 4,
+	"block": "а5",
+	"price": 540000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 5,
+	"block": "а5",
+	"price": 550000,
+	"img": "../media/flats/sh_2i_91-5_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2i_91-5_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 2,
+	"block": "а2",
+	"price": 520000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 3,
+	"block": "а2",
+	"price": 530000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 4,
+	"block": "а2",
+	"price": 540000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 5,
+	"block": "а2",
+	"price": 550000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 2,
+	"block": "а3",
+	"price": 520000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 3,
+	"block": "а3",
+	"price": 530000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 4,
+	"block": "а3",
+	"price": 540000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 5,
+	"block": "а3",
+	"price": 550000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 2,
+	"block": "а4",
+	"price": 520000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 3,
+	"block": "а4",
+	"price": 530000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 4,
+	"block": "а4",
+	"price": 540000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 5,
+	"block": "а4",
+	"price": 550000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 2,
+	"block": "а5",
+	"price": 520000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 3,
+	"block": "а5",
+	"price": 530000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 4,
+	"block": "а5",
+	"price": 540000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 101.90,
+	"rooms": 2,
+	"level": 5,
+	"block": "а5",
+	"price": 550000,
+	"img": "../media/flats/sh_2j_101-9_a2-a5_2-5.png",
+	"card": "../media/flats/sh_2j_101-9_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 2,
+	"block": "а2",
+	"price": 530000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 3,
+	"block": "а2",
+	"price": 540000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 4,
+	"block": "а2",
+	"price": 550000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 5,
+	"block": "а2",
+	"price": 560000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 2,
+	"block": "а3",
+	"price": 530000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 3,
+	"block": "а3",
+	"price": 540000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 4,
+	"block": "а3",
+	"price": 550000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 5,
+	"block": "а3",
+	"price": 560000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 2,
+	"block": "а4",
+	"price": 530000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 3,
+	"block": "а4",
+	"price": 540000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 4,
+	"block": "а4",
+	"price": 550000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 5,
+	"block": "а4",
+	"price": 560000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 2,
+	"block": "а5",
+	"price": 530000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 3,
+	"block": "а5",
+	"price": 540000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 4,
+	"block": "а5",
+	"price": 550000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 126.10,
+	"rooms": 3,
+	"level": 5,
+	"block": "а5",
+	"price": 560000,
+	"img": "../media/flats/sh_3c_126-1_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3c_126-1_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "а2",
+	"price": 530000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "а2",
+	"price": 540000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "а2",
+	"price": 550000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 5,
+	"block": "а2",
+	"price": 560000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "а3",
+	"price": 530000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "а3",
+	"price": 540000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "а3",
+	"price": 550000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 5,
+	"block": "а3",
+	"price": 560000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "а4",
+	"price": 530000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "а4",
+	"price": 540000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "а4",
+	"price": 550000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 5,
+	"block": "а4",
+	"price": 560000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "а5",
+	"price": 530000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "а5",
+	"price": 540000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "а5",
+	"price": 550000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 130.60,
+	"rooms": 3,
+	"level": 5,
+	"block": "а5",
+	"price": 560000,
+	"img": "../media/flats/sh_3d_130-6_a2-a5_2-5.png",
+	"card": "../media/flats/sh_3d_130-6_a2-a5_2-5_card.png",
+	"status": 1
+}, {
+	"area": 244.70,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а2",
+	"price": 485000,
+	"img": "../media/flats/sh_t3_244-7_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t3_244-7_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t3_244-7_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 244.70,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а3",
+	"price": 485000,
+	"img": "../media/flats/sh_t3_244-7_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t3_244-7_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t3_244-7_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 244.70,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а4",
+	"price": 485000,
+	"img": "../media/flats/sh_t3_244-7_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t3_244-7_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t3_244-7_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 244.70,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а5",
+	"price": 485000,
+	"img": "../media/flats/sh_t3_244-7_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t3_244-7_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t3_244-7_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 202.20,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а2",
+	"price": 485000,
+	"img": "../media/flats/sh_t4_202-2_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t4_202-2_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t4_202-2_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 202.20,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а3",
+	"price": 485000,
+	"img": "../media/flats/sh_t4_202-2_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t4_202-2_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t4_202-2_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 202.20,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а4",
+	"price": 485000,
+	"img": "../media/flats/sh_t4_202-2_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t4_202-2_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t4_202-2_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 202.20,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а5",
+	"price": 485000,
+	"img": "../media/flats/sh_t4_202-2_a2-a5_0_1.png",
+	"card": "../media/flats/sh_t4_202-2_a2-a5_0_1_card.png",
+	"socle": "../media/flats/sh_t4_202-2_a2-a5_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 91.80,
+	"rooms": 2,
+	"level": 1,
+	"block": "а6",
+	"price": 500000,
+	"img": "../media/flats/sh_2f_91-8_a6_1.png",
+	"card": "../media/flats/sh_2f_91-8_a6_1_card.png",
+	"status": 0
+}, {
+	"area": 102.20,
+	"rooms": 2,
+	"level": 2,
+	"block": "а6",
+	"price": 520000,
+	"img": "../media/flats/sh_2l_102-20_a6_2-5.png",
+	"card": "../media/flats/sh_2l_102-20_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 102.20,
+	"rooms": 2,
+	"level": 3,
+	"block": "а6",
+	"price": 530000,
+	"img": "../media/flats/sh_2l_102-20_a6_2-5.png",
+	"card": "../media/flats/sh_2l_102-20_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 102.20,
+	"rooms": 2,
+	"level": 4,
+	"block": "а6",
+	"price": 540000,
+	"img": "../media/flats/sh_2l_102-20_a6_2-5.png",
+	"card": "../media/flats/sh_2l_102-20_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 102.20,
+	"rooms": 2,
+	"level": 5,
+	"block": "а6",
+	"price": 550000,
+	"img": "../media/flats/sh_2l_102-20_a6_2-5.png",
+	"card": "../media/flats/sh_2l_102-20_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 88.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "а6",
+	"price": 500000,
+	"img": "../media/flats/sh_2e_88-9_a6_1.png",
+	"card": "../media/flats/sh_2e_88-9_a6_1_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 2,
+	"block": "а6",
+	"price": 520000,
+	"img": "../media/flats/sh_2k_91-5_a6_2-5.png",
+	"card": "../media/flats/sh_2k_91-5_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 3,
+	"block": "а6",
+	"price": 530000,
+	"img": "../media/flats/sh_2k_91-5_a6_2-5.png",
+	"card": "../media/flats/sh_2k_91-5_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 4,
+	"block": "а6",
+	"price": 540000,
+	"img": "../media/flats/sh_2k_91-5_a6_2-5.png",
+	"card": "../media/flats/sh_2k_91-5_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 91.50,
+	"rooms": 2,
+	"level": 5,
+	"block": "а6",
+	"price": 550000,
+	"img": "../media/flats/sh_2k_91-5_a6_2-5.png",
+	"card": "../media/flats/sh_2k_91-5_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 4,
+	"block": "а6",
+	"price": 550000,
+	"img": "../media/flats/sh_3f_128-5_a6_4-5.png",
+	"card": "../media/flats/sh_3f_128-5_a6_4-5_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 5,
+	"block": "а6",
+	"price": 560000,
+	"img": "../media/flats/sh_3f_128-5_a6_4-5.png",
+	"card": "../media/flats/sh_3f_128-5_a6_4-5_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 2,
+	"block": "а6",
+	"price": 530000,
+	"img": "../media/flats/sh_3f_128-5_a6_b3_2-3.png",
+	"card": "../media/flats/sh_3f_128-5_a6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 3,
+	"block": "а6",
+	"price": 540000,
+	"img": "../media/flats/sh_3f_128-5_a6_b3_2-3.png",
+	"card": "../media/flats/sh_3f_128-5_a6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 2,
+	"block": "в3",
+	"price": 530000,
+	"img": "../media/flats/sh_3f_128-5_a6_b3_2-3.png",
+	"card": "../media/flats/sh_3f_128-5_a6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 3,
+	"block": "в3",
+	"price": 540000,
+	"img": "../media/flats/sh_3f_128-5_a6_b3_2-3.png",
+	"card": "../media/flats/sh_3f_128-5_a6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 125.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "а6",
+	"price": 530000,
+	"img": "../media/flats/sh_3e_125-60_a6_2-5.png",
+	"card": "../media/flats/sh_3e_125-60_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 125.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "а6",
+	"price": 540000,
+	"img": "../media/flats/sh_3e_125-60_a6_2-5.png",
+	"card": "../media/flats/sh_3e_125-60_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 125.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "а6",
+	"price": 550000,
+	"img": "../media/flats/sh_3e_125-60_a6_2-5.png",
+	"card": "../media/flats/sh_3e_125-60_a6_2-5_card.png",
+	"status": 1
+}, {
+	"area": 125.60,
+	"rooms": 3,
+	"level": 5,
+	"block": "а6",
+	"price": 560000,
+	"img": "../media/flats/sh_3e_125-60_a6_2-5.png",
+	"card": "../media/flats/sh_3e_125-60_a6_2-5_card.png",
+	"status": 0
+}, {
+	"area": 244.50,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а6",
+	"price": 485000,
+	"img": "../media/flats/sh_t5_244-5_a6_0_1.png",
+	"card": "../media/flats/sh_t5_244-5_a6_0_1_card.png",
+	"socle": "../media/flats/sh_t5_244-5_a6_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 199.30,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "а6",
+	"price": 485000,
+	"img": "../media/flats/sh_t6_199-3_a6_0_1.png",
+	"card": "../media/flats/sh_t6_199-3_a6_0_1_card.png",
+	"socle": "../media/flats/sh_t6_199-3_a6_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 128.40,
+	"rooms": 3,
+	"level": 1,
+	"block": "б1",
+	"price": 510000,
+	"img": "../media/flats/sh_3a_128-4_b1_1.png",
+	"card": "../media/flats/sh_3a_128-4_b1_1_card.png",
+	"status": 1
+}, {
+	"area": 138.30,
+	"rooms": 3,
+	"level": 2,
+	"block": "б1",
+	"price": 530000,
+	"img": "../media/flats/sh_3g_138-3_b1_2-3.png",
+	"card": "../media/flats/sh_3g_138-3_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 138.30,
+	"rooms": 3,
+	"level": 3,
+	"block": "б1",
+	"price": 540000,
+	"img": "../media/flats/sh_3g_138-3_b1_2-3.png",
+	"card": "../media/flats/sh_3g_138-3_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 2,
+	"block": "б1",
+	"price": 530000,
+	"img": "../media/flats/sh_3h_128-5_b1_2-3.png",
+	"card": "../media/flats/sh_3h_128-5_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 3,
+	"block": "б1",
+	"price": 540000,
+	"img": "../media/flats/sh_3h_128-5_b1_2-3.png",
+	"card": "../media/flats/sh_3h_128-5_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 185.00,
+	"rooms": 3,
+	"level": 2,
+	"block": "б1",
+	"price": 530000,
+	"img": "../media/flats/sh_3i_185-0_b1_2-3.png",
+	"card": "../media/flats/sh_3i_185-0_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 185.00,
+	"rooms": 3,
+	"level": 3,
+	"block": "б1",
+	"price": 540000,
+	"img": "../media/flats/sh_3i_185-0_b1_2-3.png",
+	"card": "../media/flats/sh_3i_185-0_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 117.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "б1",
+	"price": 550000,
+	"img": "../media/flats/sh_3n_117-6_b1_4.png",
+	"card": "../media/flats/sh_3n_117-6_b1_4_card.png",
+	"status": 1
+}, {
+	"area": 100.40,
+	"rooms": 3,
+	"level": 4,
+	"block": "б1",
+	"price": 550000,
+	"img": "../media/flats/sh_3s_100-4_b1_4-5.png",
+	"card": "../media/flats/sh_3s_100-4_b1_4-5_card.png",
+	"status": 1
+}, {
+	"area": 106.20,
+	"rooms": 3,
+	"level": 4,
+	"block": "б1",
+	"price": 560000,
+	"img": "../media/flats/sh_3t_106-2_b1_4-5.png",
+	"card": "../media/flats/sh_3t_106-2_b1_4-5_card.png",
+	"status": 1
+}, {
+	"area": 224.90,
+	"rooms": 4,
+	"level": 4,
+	"block": "б1",
+	"price": 500000,
+	"img": "../media/flats/sh_4n_224-9_b1_4.png",
+	"card": "../media/flats/sh_4n_224-9_b1_4_card.png",
+	"status": 1
+}, {
+	"area": 201.70,
+	"rooms": 4,
+	"type": "penthouse",
+	"level": 5,
+	"block": "б1",
+	"price": 500000,
+	"img": "../media/flats/sh_p3_201-7-1_b1_5.png",
+	"card": "../media/flats/sh_p3_201-7-1_b1_5_card.png",
+	"status": 1
+}, {
+	"area": 411.50,
+	"rooms": 4,
+	"type": "2x",
+	"level": 1,
+	"block": "б1",
+	"price": 485000,
+	"img": "../media/flats/sh_t2_411-5_b1_0_1.png",
+	"card": "../media/flats/sh_t2_411-5_b1_0_1_card.png",
+	"socle": "../media/flats/sh_t2_411-5_b1_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 210.70,
+	"rooms": 3,
+	"level": 1,
+	"block": "б2",
+	"price": 510000,
+	"img": "../media/flats/sh_3c_210-7_b2_1.png",
+	"card": "../media/flats/sh_3c_210-7_b2_1_card.png",
+	"status": 1
+}, {
+	"area": 209.50,
+	"rooms": 3,
+	"level": 1,
+	"block": "б2",
+	"price": 510000,
+	"img": "../media/flats/sh_3b_209-5_b2_1.png",
+	"card": "../media/flats/sh_3b_209-5_b2_1_card.png",
+	"status": 1
+}, {
+	"area": 231.40,
+	"rooms": 4,
+	"level": 2,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_4a_231-4_b2_2-3.png",
+	"card": "../media/flats/sh_4a_231-4_b2_2-3_card.png",
+	"status": 1
+}, {
+	"area": 231.40,
+	"rooms": 4,
+	"level": 3,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_4a_231-4_b2_2-3.png",
+	"card": "../media/flats/sh_4a_231-4_b2_2-3_card.png",
+	"status": 1
+}, {
+	"area": 229.70,
+	"rooms": 4,
+	"level": 2,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_4b_229-7_b2_2-3.png",
+	"card": "../media/flats/sh_4b_229-7_b2_2-3_card.png",
+	"status": 1
+}, {
+	"area": 229.70,
+	"rooms": 4,
+	"level": 3,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_4b_229-7_b2_2-3.png",
+	"card": "../media/flats/sh_4b_229-7_b2_2-3_card.png",
+	"status": 1
+}, {
+	"area": 229.80,
+	"rooms": 4,
+	"level": 4,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_4l_229-8-1_b2_4.png",
+	"card": "../media/flats/sh_4l_229-8-1_b2_4_card.png",
+	"status": 1
+}, {
+	"area": 233.10,
+	"rooms": 4,
+	"level": 4,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_4m_233-1_b2_4.png",
+	"card": "../media/flats/sh_4m_233-1_b2_4_card.png",
+	"status": 1
+}, {
+	"area": 209.90,
+	"rooms": 4,
+	"type": "penthouse",
+	"level": 5,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_p4_209-9_b2_5.png",
+	"card": "../media/flats/sh_p4_209-9_b2_5_card.png",
+	"status": 1
+}, {
+	"area": 206.80,
+	"rooms": 4,
+	"type": "penthouse",
+	"level": 5,
+	"block": "б2",
+	"price": 500000,
+	"img": "../media/flats/sh_p5_206-8_b2_5.png",
+	"card": "../media/flats/sh_p5_206-8_b2_5_card.png",
+	"status": 1
+}, {
+	"area": 198.60,
+	"rooms": 3,
+	"level": 1,
+	"block": "б3",
+	"price": 510000,
+	"img": "../media/flats/sh_3d_198-6_b3_1.png",
+	"card": "../media/flats/sh_3d_198-6_b3_1_card.png",
+	"status": 1
+}, {
+	"area": 128.40,
+	"rooms": 3,
+	"level": 1,
+	"block": "б3",
+	"price": 510000,
+	"img": "../media/flats/sh_3e_128-4_b3_1.png",
+	"card": "../media/flats/sh_3e_128-4_b3_1_card.png",
+	"status": 1
+}, {
+	"area": 122.90,
+	"rooms": 3,
+	"level": 1,
+	"block": "б3",
+	"price": 510000,
+	"img": "../media/flats/sh_3f_122-9_b3_1.png",
+	"card": "../media/flats/sh_3f_122-9_b3_1_card.png",
+	"status": 1
+}, {
+	"area": 198.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "б3",
+	"price": 530000,
+	"img": "../media/flats/sh_3j_198-6_b3_2-3.png",
+	"card": "../media/flats/sh_3j_198-6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 198.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "б3",
+	"price": 540000,
+	"img": "../media/flats/sh_3j_198-6_b3_2-3.png",
+	"card": "../media/flats/sh_3j_198-6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 2,
+	"block": "б3",
+	"price": 530000,
+	"img": "../media/flats/sh_3k_128-5_b3_2-3.png",
+	"card": "../media/flats/sh_3k_128-5_b3_2-3_card.png",
+	"status": 0
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 3,
+	"block": "б3",
+	"price": 540000,
+	"img": "../media/flats/sh_3k_128-5_b3_2-3.png",
+	"card": "../media/flats/sh_3k_128-5_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 123.20,
+	"rooms": 3,
+	"level": 2,
+	"block": "б3",
+	"price": 530000,
+	"img": "../media/flats/sh_3l_123-2_b3_2-3.png",
+	"card": "../media/flats/sh_3l_123-2_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 123.20,
+	"rooms": 3,
+	"level": 3,
+	"block": "б3",
+	"price": 540000,
+	"img": "../media/flats/sh_3l_123-2_b3_2-3.png",
+	"card": "../media/flats/sh_3l_123-2_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 108.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "б3",
+	"price": 550000,
+	"img": "../media/flats/sh_3p_108-6_b3_4.png",
+	"card": "../media/flats/sh_3p_108-6_b3_4_card.png",
+	"status": 1
+}, {
+	"area": 115.40,
+	"rooms": 3,
+	"level": 4,
+	"block": "б3",
+	"price": 550000,
+	"img": "../media/flats/sh_3r_115-4_b3_4.png",
+	"card": "../media/flats/sh_3r_115-4_b3_4_card.png",
+	"status": 0
+}, {
+	"area": 97.30,
+	"rooms": 3,
+	"level": 5,
+	"block": "б3",
+	"price": 560000,
+	"img": "../media/flats/sh_3u_97-3_b3_5.png",
+	"card": "../media/flats/sh_3u_97-3_b3_5_card.png",
+	"status": 0
+}, {
+	"area": 104.00,
+	"rooms": 3,
+	"level": 5,
+	"block": "б3",
+	"price": 560000,
+	"img": "../media/flats/sh_3v_104-0_b3_5.png",
+	"card": "../media/flats/sh_3v_104-0_b3_5_card.png",
+	"status": 0
+}, {
+	"area": 231.30,
+	"rooms": 4,
+	"level": 4,
+	"block": "б3",
+	"price": 500000,
+	"img": "../media/flats/sh_4y_231-3-1_b3_4.png",
+	"card": "../media/flats/sh_4y_231-3-1_b3_4_card.png",
+	"status": 1
+}, {
+	"area": 208.60,
+	"rooms": 3,
+	"type": "penthouse",
+	"level": 5,
+	"block": "б3",
+	"price": 500000,
+	"img": "../media/flats/sh_p6_208-6_b3_5.png",
+	"card": "../media/flats/sh_p6_208-6_b3_5_card.png",
+	"status": 1
+}, {
+	"area": 89.50,
+	"rooms": 2,
+	"level": 1,
+	"block": "в1",
+	"price": 500000,
+	"img": "../media/flats/sh_2a_89-5_b1_1.png",
+	"card": "../media/flats/sh_2a_89-5_b1_1_card.png",
+	"status": 0
+}, {
+	"area": 92.00,
+	"rooms": 2,
+	"level": 1,
+	"block": "в1",
+	"price": 500000,
+	"img": "../media/flats/sh_2b_92-0_b1_1.png",
+	"card": "../media/flats/sh_2b_92-0_b1_1_card.png",
+	"status": 0
+}, {
+	"area": 88.50,
+	"rooms": 2,
+	"level": 2,
+	"block": "в1",
+	"price": 520000,
+	"img": "../media/flats/sh_2g_88-5_b1_2-3.png",
+	"card": "../media/flats/sh_2g_88-5_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 88.50,
+	"rooms": 2,
+	"level": 3,
+	"block": "в1",
+	"price": 530000,
+	"img": "../media/flats/sh_2g_88-5_b1_2-3.png",
+	"card": "../media/flats/sh_2g_88-5_b1_2-3_card.png",
+	"status": 0
+}, {
+	"area": 100.00,
+	"rooms": 2,
+	"level": 2,
+	"block": "в1",
+	"price": 520000,
+	"img": "../media/flats/sh_2h_100-0_b1_2-3.png",
+	"card": "../media/flats/sh_2h_100-0_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 100.00,
+	"rooms": 2,
+	"level": 3,
+	"block": "в1",
+	"price": 530000,
+	"img": "../media/flats/sh_2h_100-0_b1_2-3.png",
+	"card": "../media/flats/sh_2h_100-0_b1_2-3_card.png",
+	"status": 1
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 2,
+	"block": "в1",
+	"price": 530000,
+	"img": "../media/flats/sh_3a_128-5_v1_2-3.png",
+	"card": "../media/flats/sh_3a_128-5_v1_2-3_card.png",
+	"status": 0
+}, {
+	"area": 128.50,
+	"rooms": 3,
+	"level": 3,
+	"block": "в1",
+	"price": 540000,
+	"img": "../media/flats/sh_3a_128-5_v1_2-3.png",
+	"card": "../media/flats/sh_3a_128-5_v1_2-3_card.png",
+	"status": 0
+}, {
+	"area": 132.40,
+	"rooms": 3,
+	"level": 2,
+	"block": "в1",
+	"price": 530000,
+	"img": "../media/flats/sh_3b_132-4_b1_2.png",
+	"card": "../media/flats/sh_3b_132-4_b1_2_card.png",
+	"status": 1
+}, {
+	"area": 111.80,
+	"rooms": 3,
+	"level": 4,
+	"block": "в1",
+	"price": 550000,
+	"img": "../media/flats/sh_3g_111-8_b1_4.png",
+	"card": "../media/flats/sh_3g_111-8_b1_4_card.png",
+	"status": 1
+}, {
+	"area": 117.60,
+	"rooms": 3,
+	"level": 4,
+	"block": "в1",
+	"price": 550000,
+	"img": "../media/flats/sh_3h_117-6_b1_4.png",
+	"card": "../media/flats/sh_3h_117-6_b1_4_card.png",
+	"status": 1
+}, {
+	"area": 100.30,
+	"rooms": 3,
+	"level": 5,
+	"block": "в1",
+	"price": 560000,
+	"img": "../media/flats/sh_3l_100-3_b1_5.png",
+	"card": "../media/flats/sh_3l_100-3_b1_5_card.png",
+	"status": 0
+}, {
+	"area": 106.40,
+	"rooms": 3,
+	"level": 5,
+	"block": "в1",
+	"price": 560000,
+	"img": "../media/flats/sh_3m_106-4_b1_5.png",
+	"card": "../media/flats/sh_3m_106-4_b1_5_card.png",
+	"status": 0
+}, {
+	"area": 193.50,
+	"rooms": 4,
+	"type": "penthouse",
+	"level": 4,
+	"block": "в1",
+	"price": 500000,
+	"img": "../media/flats/sh_p2_193-5_b1_4_5.png",
+	"card": "../media/flats/sh_p2_193-5_b1_4_5_card.png",
+	"status": 1
+}, {
+	"area": 210.60,
+	"rooms": 4,
+	"type": "penthouse",
+	"level": 4,
+	"block": "в1",
+	"price": 500000,
+	"img": "../media/flats/sh_p4_210-6_b1_4_5.png",
+	"card": "../media/flats/sh_p4_210-6_b1_4_5_card.png",
+	"status": 1
+}, {
+	"area": 251.10,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "в1",
+	"price": 485000,
+	"img": "../media/flats/sh_t1_251-1_b1_0_1.png",
+	"card": "../media/flats/sh_t1_251-1_b1_0_1_card.png",
+	"socle": "../media/flats/sh_t1_251-1_b1_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 204.40,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "в2",
+	"price": 485000,
+	"img": "../media/flats/sh_t2_204-4_b1_0_1.png",
+	"card": "../media/flats/sh_t2_204-4_b1_0_1_card.png",
+	"socle": "../media/flats/sh_t2_204-4_b1_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 88.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "в2",
+	"price": 500000,
+	"img": "../media/flats/sh_2c_88-9_b2_1.png",
+	"card": "../media/flats/sh_2c_88-9_b2_1_card.png",
+	"status": 0
+}, {
+	"area": 91.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "в2",
+	"price": 500000,
+	"img": "../media/flats/sh_2c_91-9_b2_1.png",
+	"card": "../media/flats/sh_2c_91-9_b2_1_card.png",
+	"status": 0
+}, {
+	"area": 91.90,
+	"rooms": 2,
+	"level": 2,
+	"block": "в2",
+	"price": 530000,
+	"img": "../media/flats/sh_2i_91-9_b2_2-4.png",
+	"card": "../media/flats/sh_2i_91-9_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 91.90,
+	"rooms": 2,
+	"level": 3,
+	"block": "в2",
+	"price": 540000,
+	"img": "../media/flats/sh_2i_91-9_b2_2-4.png",
+	"card": "../media/flats/sh_2i_91-9_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 91.90,
+	"rooms": 2,
+	"level": 4,
+	"block": "в2",
+	"price": 540000,
+	"img": "../media/flats/sh_2i_91-9_b2_2-4.png",
+	"card": "../media/flats/sh_2i_91-9_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 101.80,
+	"rooms": 2,
+	"level": 2,
+	"block": "в2",
+	"price": 520000,
+	"img": "../media/flats/sh_2j_101-8_b2_2-4.png",
+	"card": "../media/flats/sh_2j_101-8_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 101.80,
+	"rooms": 2,
+	"level": 3,
+	"block": "в2",
+	"price": 530000,
+	"img": "../media/flats/sh_2j_101-8_b2_2-4.png",
+	"card": "../media/flats/sh_2j_101-8_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 101.80,
+	"rooms": 2,
+	"level": 4,
+	"block": "в2",
+	"price": 540000,
+	"img": "../media/flats/sh_2j_101-8_b2_2-4.png",
+	"card": "../media/flats/sh_2j_101-8_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 126.20,
+	"rooms": 3,
+	"level": 2,
+	"block": "в2",
+	"price": 530000,
+	"img": "../media/flats/sh_3c_126-2_b2_2-4.png",
+	"card": "../media/flats/sh_3c_126-2_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 126.20,
+	"rooms": 3,
+	"level": 3,
+	"block": "в2",
+	"price": 540000,
+	"img": "../media/flats/sh_3c_126-2_b2_2-4.png",
+	"card": "../media/flats/sh_3c_126-2_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 126.20,
+	"rooms": 3,
+	"level": 4,
+	"block": "в2",
+	"price": 550000,
+	"img": "../media/flats/sh_3c_126-2_b2_2-4.png",
+	"card": "../media/flats/sh_3c_126-2_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 130.20,
+	"rooms": 3,
+	"level": 2,
+	"block": "в2",
+	"price": 530000,
+	"img": "../media/flats/sh_3d_130-2_b2_2-4.png",
+	"card": "../media/flats/sh_3d_130-2_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 130.20,
+	"rooms": 3,
+	"level": 3,
+	"block": "в2",
+	"price": 540000,
+	"img": "../media/flats/sh_3d_130-2_b2_2-4.png",
+	"card": "../media/flats/sh_3d_130-2_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 130.20,
+	"rooms": 3,
+	"level": 4,
+	"block": "в2",
+	"price": 550000,
+	"img": "../media/flats/sh_3d_130-2_b2_2-4.png",
+	"card": "../media/flats/sh_3d_130-2_b2_2-4_card.png",
+	"status": 1
+}, {
+	"area": 246.80,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "в2",
+	"price": 485000,
+	"img": "../media/flats/sh_t3_246-8_b2_0_1.png",
+	"card": "../media/flats/sh_t3_246-8_b2_0_1_card.png",
+	"socle": "../media/flats/sh_t3_246-8_b2_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 88.90,
+	"rooms": 2,
+	"level": 1,
+	"block": "в3",
+	"price": 500000,
+	"img": "../media/flats/sh_2e_88-9_b3_1.png",
+	"card": "../media/flats/sh_2e_88-9_b3_1_card.png",
+	"status": 1
+}, {
+	"area": 91.30,
+	"rooms": 2,
+	"level": 1,
+	"block": "в3",
+	"price": 500000,
+	"img": "../media/flats/sh_2f_91-3_b3_1.png",
+	"card": "../media/flats/sh_2f_91-3_b3_1_card.png",
+	"status": 0
+}, {
+	"area": 91.80,
+	"rooms": 2,
+	"level": 2,
+	"block": "в3",
+	"price": 520000,
+	"img": "../media/flats/sh_2k_91-8_b3_2-3.png",
+	"card": "../media/flats/sh_2k_91-8_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 91.80,
+	"rooms": 2,
+	"level": 3,
+	"block": "в3",
+	"price": 530000,
+	"img": "../media/flats/sh_2k_91-8_b3_2-3.png",
+	"card": "../media/flats/sh_2k_91-8_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 102.20,
+	"rooms": 2,
+	"level": 2,
+	"block": "в3",
+	"price": 520000,
+	"img": "../media/flats/sh_2l_102-20_b3_2-3.png",
+	"card": "../media/flats/sh_2l_102-20_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 102.20,
+	"rooms": 2,
+	"level": 3,
+	"block": "в3",
+	"price": 530000,
+	"img": "../media/flats/sh_2l_102-20_b3_2-3.png",
+	"card": "../media/flats/sh_2l_102-20_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 125.60,
+	"rooms": 3,
+	"level": 2,
+	"block": "в3",
+	"price": 530000,
+	"img": "../media/flats/sh_3e_125-6_b3_2-3.png",
+	"card": "../media/flats/sh_3e_125-6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 125.60,
+	"rooms": 3,
+	"level": 3,
+	"block": "в3",
+	"price": 540000,
+	"img": "../media/flats/sh_3e_125-6_b3_2-3.png",
+	"card": "../media/flats/sh_3e_125-6_b3_2-3_card.png",
+	"status": 1
+}, {
+	"area": 108.90,
+	"rooms": 3,
+	"level": 4,
+	"block": "в3",
+	"price": 550000,
+	"img": "../media/flats/sh_3j_108-9_b3_4.png",
+	"card": "../media/flats/sh_3j_108-9_b3_4_card.png",
+	"status": 1
+}, {
+	"area": 115.30,
+	"rooms": 3,
+	"level": 4,
+	"block": "в3",
+	"price": 550000,
+	"img": "../media/flats/sh_3k_115-3_b3_4.png",
+	"card": "../media/flats/sh_3k_115-3_b3_4_card.png",
+	"status": 1
+}, {
+	"area": 97.20,
+	"rooms": 3,
+	"level": 5,
+	"block": "в3",
+	"price": 560000,
+	"img": "../media/flats/sh_3n_97-2_b3_5.png",
+	"card": "../media/flats/sh_3n_97-2_b3_5_card.png",
+	"status": 0
+}, {
+	"area": 104.10,
+	"rooms": 3,
+	"level": 5,
+	"block": "в3",
+	"price": 560000,
+	"img": "../media/flats/sh_3p_104-1_b3_5.png",
+	"card": "../media/flats/sh_3p_104-1_b3_5_card.png",
+	"status": 1
+}, {
+	"area": 202.70,
+	"rooms": 4,
+	"type": "penthouse",
+	"level": 4,
+	"block": "в3",
+	"price": 500000,
+	"img": "../media/flats/sh_p9_202-7_b3_4_5.png",
+	"card": "../media/flats/sh_p9_202-7_b3_4_5_card.png",
+	"status": 1
+}, {
+	"area": 246.70,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "в3",
+	"price": 485000,
+	"img": "../media/flats/sh_t5_246-7_b3_0_1.png",
+	"card": "../media/flats/sh_t5_246-7_b3_0_1_card.png",
+	"socle": "../media/flats/sh_t5_246-7_b3_0_1_socle.png",
+	"status": 1
+}, {
+	"area": 205.40,
+	"rooms": 5,
+	"type": "2x",
+	"level": 1,
+	"block": "в3",
+	"price": 485000,
+	"img": "../media/flats/sh_t6_205-4_b3_0_1.png",
+	"card": "../media/flats/sh_t6_205-4_b3_0_1_card.png",
+	"socle": "../media/flats/sh_t6_205-4_b3_0_1_socle.png",
+	"status": 1
+}]

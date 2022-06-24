@@ -21,6 +21,8 @@
 		"file_include_patterns": ["*.html"],
 		"folder_exclude_patterns": ["*"],
 		"path": "src\\views\\layouts"
+	}, {
+		"path": "www"
 	}],
 	"settings": {
 		"tab_size": 2
