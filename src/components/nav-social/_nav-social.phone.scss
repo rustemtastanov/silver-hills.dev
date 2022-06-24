@@ -1,0 +1,31 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.nav-social {
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.drop-menu {
+	.nav-social {
+		margin-bottom: -34px;
+		.icon {
+			left: 35px;
+			font-size: 106px;
+		}
+	}
+}
+
+.s--contacts {
+	.nav-social {
+		order: 2;
+		margin-bottom: 14px;
+		.icon {
+			left: -26px;
+			font-size: 91px;
+			margin-bottom: -20px;
+		}
+	}
+}
+

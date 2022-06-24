@@ -8,15 +8,13 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.nav-main {
-		font-size: 32px;
-		padding-bottom: 62px;
-		max-height: 409px;
-	}
-
+.nav-main {
+	font-size: 32px;
+	padding-bottom: 62px;
+	max-height: 409px;
 }
+
 
 
 
@@ -55,14 +53,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.nav-main {
-		font-size: 30px;
-		max-height: 270px;
-	}
-
-}

@@ -1,0 +1,60 @@
+/*!
+ * rustemtastanov@gmail.com, 2022
+ * for AddBroker
+ */
+
+@import "variables";
+@import "variables-responsive";
+@import "variables-colours";
+
+@import "mixins/text";
+@import "mixins/utils";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/clearfix";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/text-overflow";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/reset-text";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/image";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid-framework";
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/grid";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins/responsive-visibility";
+
+@import "typography.phone";
+@import "icons.phone";
+@import "links.phone";
+@import "buttons.phone";
+@import "forms.phone";
+@import "helpers.phone";
+// @import "dropdowns.phone";
+@import "carousel.phone";
+
+@import "layout.phone";
+
+@import "../components/header/header.phone";
+@import "../components/nav-main/nav-main.phone";
+@import "../components/nav-lang/nav-lang.phone";
+@import "../components/nav-contacts/nav-contacts.phone";
+@import "../components/nav-social/nav-social.phone";
+
+@import "../components/section/section.phone";
+@import "../components/section-main/section-main.phone";
+@import "../components/section-about/section-about.phone";
+@import "../components/section-order/section-order.phone";
+@import "../components/form-order/form-order.phone";
+@import "../components/section-benefits/section-benefits.phone";
+@import "../components/section-points/section-points.phone";
+@import "../components/section-gallery/section-gallery.phone";
+@import "../components/section-flats/section-flats.phone";
+@import "../components/section-terms/section-terms.phone";
+@import "../components/section-status/section-status.phone";
+@import "../components/section-commercial/section-commercial.phone";
+@import "../components/section-contacts/section-contacts.phone";
+@import "../components/modal-status/modal-status.phone";
+@import "../components/modal-policy/modal-policy.phone";
+@import "../components/drop-menu/drop-menu.phone";
+@import "../components/drop-form/drop-form.phone";
+@import "../components/form-call/form-call.phone";
+@import "../components/drop-terms/drop-terms.phone";
+@import "../components/form-terms/form-terms.phone";
+
+// @import "modal.phone";
+
+@import "fancybox.phone";

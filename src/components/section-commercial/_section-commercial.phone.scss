@@ -1,0 +1,57 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.s--commercial {
+	padding: 62px 20px 38px;
+	overflow: hidden;
+}
+
+.commercial-left {
+	display: flex;
+	flex-direction: column;
+}
+
+.commercial-title {
+	font-size: 36px;
+	line-height: 48px;
+	margin-bottom: 38px;
+	order: 2;
+}
+
+.commercial-areas {
+	order: 3;
+	label {
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 18px;
+	}
+}
+
+.commercial-icon {
+	font-size: 58px;
+	right: 0;
+	top: -5px;
+}
+
+.commercial-viewport {
+  padding: 65px 20px 20px;
+  height: 560px;
+	.img {
+		height: 480px;
+	}
+}
+
+.commercial-img {
+	order: 1;
+	$img-width: 326px;//379px;
+	$img-height: $img-width*162px/379px;
+	width: $img-width;
+	height: $img-height;
+	left: -32px;
+	margin-bottom: 27px;
+	path {
+		stroke-dashoffset: 0;
+	}
+}
+

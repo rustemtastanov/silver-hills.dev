@@ -1,80 +1,66 @@
-/*
-	styles for Tablet and Desktops
- -------------------------------------------------------------------- */
-// @include respond-to($respond-tablet-up) {}
+.btn {
+  font-size: 15px;
+  padding: 14px 30px 18px;
+  min-width: 228px;
+}
 
+.btn--block,
+.btn--close,
+.btn--top {
+  min-width: unset;
+}
 
-
-/*
-	styles for Desktop and Large Desktops
- -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
-
-	.btn {
-	  font-size: 15px;
-	  padding: 14px 30px 18px;
-	  min-width: 228px;
+.btn--contacts {
+	width: 202px;
+	font-style: normal;
+	.text-default {
+		@include stretch-x;
+		top: 0;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
-
-	.btn--block,
-	.btn--close,
-	.btn--top {
-	  min-width: unset;
+	a {
+		display: block;
+		text-decoration: none;
+		color: black;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		top: -2px;
 	}
+}
 
-	.btn--contacts {
-		width: 202px;
-		font-style: normal;
-		.text-default {
-			@include stretch-x;
-			top: 0;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-		}
-		a {
-			display: block;
-			text-decoration: none;
-			color: black;
-			width: 100%;
-			height: 100%;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			align-items: center;
-			position: relative;
-			top: -2px;
-		}
+.btn--call,
+.btn--contacts {
+	&:hover {
+		background: $brand-secondary;
+		border-color: $brand-secondary;
+		border-bottom-color: black;
 	}
+}
 
-	.btn--call,
-	.btn--contacts {
-		&:hover {
-			background: $brand-secondary;
-			border-color: $brand-secondary;
-			border-bottom-color: black;
-		}
+.btn--contacts {
+	&:hover {
+		border-left-color: black;
 	}
+}
 
-	.btn--contacts {
-		&:hover {
-			border-left-color: black;
-		}
-	}
+.btn--nav {
+	padding: 0;
+}
 
-	.btn--nav {
-		padding: 0;
-	}
-
-	.btn--close {
-		width: 60px;
-		height: 60px;
-		font-size: 16px;
-		padding: 0;
-	}
-
+.btn--close {
+	width: 60px;
+	height: 60px;
+	font-size: 16px;
+	padding: 0;
 }
 
 
@@ -114,85 +100,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.btn {
-	  font-size: 18px;
-	  padding: 17px 30px 23px;
-	}
-
-	.btn--contacts {
-		width: 51px;
-		background: $red;
-		color: white;
-		font-size: 20px;
-		border-top: 0;
-		border-right: 0;
-		padding: 0;
-		order: 2;
-		.icon {
-			position: absolute;
-			left: 50%;
-			top: 50%;
-			transition: transform .6s, opacity .6s;
-		}
-		.icon-close {
-			opacity: 0;
-			transform: translate(-50%, -50%) rotate(360deg);
-			font-size: 14px;
-		}
-		.icon-call {
-			transform: translate(-50%, -50%);
-		}
-		&.toggled {
-			background: black;
-			.icon-call {
-				opacity: 0;
-				transform: translate(-50%, -50%) rotate(360deg);
-			}
-			.icon-close {
-				opacity: 1;
-			}
-		}
-		&.hide {
-			display: none;
-		}
-	}
-
-	.btn--nav {
-		order: 1;
-		z-index: 2;
-		transition-property: box-shadow, background, border-color, transform;
-		padding: 0;
-		&.toggled {
-			transform: translateX(100%);
-		}
-		&.hide {
-			display: none;
-		}
-	}
-
-	.btn--close {
-		width: 50px;
-		height: 50px;
-		font-size: 14px;
-		padding: 0;
-	}
-
-	.btn--close-policy,
-	.btn--close-terms {
-		bottom: 0;
-		top: auto;
-		visibility: hidden;
-		pointer-events: none;
-		z-index: 3;
-		&.toggled {
-			visibility: visible;
-			pointer-events: all;
-		}
-	}
-
-}

@@ -1,0 +1,55 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.benefits-slide {
+	position: relative;
+	&::before {
+		content: '';
+		display: block;
+		height: 5px;
+		background: $brand-primary;
+		margin: -1px -1px 0;
+	}
+	.img {
+		height: 220px;
+		background: $brand-secondary;
+		margin: 0 -1px;
+	}
+	.head {
+		@include stretch-x;
+		top: 45px;
+		z-index: 1;
+		padding: 0 30px;
+	}
+	.value {
+		font-size: 80px;
+		line-height: 104px;
+		color: $brand-primary;
+		margin-bottom: 2px;
+		position: relative;
+		left: -5px;
+	}
+	.title {
+		font-size: 20px;
+		line-height: 26px;
+		font-style: italic;
+		color: white;
+	}
+	.inner {
+		padding: 24px 30px;
+		min-height: 375px;
+	}
+	.subtitle {
+		color: $brand-primary;
+		font-size: 26px;
+		line-height: 36px;
+		margin-bottom: 13px;
+		text-transform: uppercase;
+	}
+	.text {
+		font-size: 16px;
+		line-height: 27px;
+	}
+}
+

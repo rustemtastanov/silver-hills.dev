@@ -1,0 +1,53 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.s--gallery {
+	margin-top: 10px;
+	border: 1px solid;
+	border-top: 0;
+}
+
+.gallery-title {
+	font-size: 50px;
+	left: 30px;
+	top: 23px;
+}
+
+.gallery-items {
+	margin: 0 -1px;
+}
+
+.gallery-slide {
+	.img {
+		height: 528px;
+	}
+	.text {
+		font-size: 16px;
+		line-height: 26px;
+		padding: 28px 30px;
+		min-height: 221px;
+	}
+}
+
+.gallery-controls {
+	display: flex;
+	top: 474px;
+	right: -1px;
+	button {
+		position: relative;
+	}
+}
+
+.gallery-prev {
+	&.disabled {
+		transform: translateX(-100%);
+	}
+}
+
+.gallery-next {
+	&.disabled {
+		transform: translateX(100%);
+	}
+}
+

@@ -47,20 +47,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.form-terms {
-		margin: 0;
-		.form-control {
-			&:focus {
-		    $color-rgba: rgba(red($brand-primary), green($brand-primary), blue($brand-primary), .6);
-		    border-color: $brand-primary;
-		    box-shadow: inset 0 1px 1px rgba(black, .075), 0 0 8px $color-rgba;
-		  }
-		}
-	}
-
-}

@@ -1,0 +1,31 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.modal-policy {
+	top: 60px;
+	left: 10px;
+	right: 10px;
+	bottom: 10px;
+	z-index: 8;
+	border-top: 0;
+	h2 {
+		font-size: 22px;
+		line-height: 31px;
+		margin-bottom: 30px;
+	}
+	h3, h4 {
+		font-size: 16px;
+		line-height: 26px;
+	}
+	p + h3,
+	p + h4 {
+		margin-top: 26px;
+	}
+}
+
+.modal-policy-in {
+	padding: 40px 20px 60px;
+	height: calc(100vh - 60px - 10px);
+}
+

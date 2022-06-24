@@ -1,0 +1,24 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.header-in {
+	margin: 0 10px;
+}
+
+.header-left {
+	width: 60%;
+}
+
+.header-right {
+	width: 40%;
+}
+
+.header-logo {
+	width: 206px;
+	height: 35px;
+	top: -11px;
+	background-image: url(#{$path-img}/logo-small-phone.png);
+	@include retina('#{$path-img}/logo-small-phone@2x.png');
+}
+

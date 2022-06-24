@@ -8,192 +8,190 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.s--flats {
-		border: 1PX solid;
-		border-bottom: 0;
+.s--flats {
+	border: 1PX solid;
+	border-bottom: 0;
+}
+
+.flats-column {
+	height: 564px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.flats-left {
+	.btn {
+		position: absolute;
+		left: 0;
+		bottom: 12px;
 	}
+}
 
-	.flats-column {
-		height: 564px;
+.flats-center {
+	justify-content: space-between;
+	padding-right: 40px;
+}
+
+.flats-right {
+	padding-top: 9px;
+}
+
+.flats-title {
+	font-size: 27px;
+	line-height: 43px;
+	margin-bottom: 19px;
+}
+
+.flats-rooms {
+	margin-bottom: 20px;
+	label {
+		font-size: 12px;
+		line-height: 16px;
+		margin-right: 4px;
+	}
+	a {
+		font-size: 18px;
+	}
+	li + li {
+		&::before {
+			left: -6px;
+			top: 11px;
+			width: 10px;
+		}
+	}
+}
+
+.flats-types {
+	font-size: 12px;
+	margin-bottom: 37px;
+	div {
+		padding-right: 22px;
+		&::before,
+		&::after {
+			top: 0;
+		}
+		&::before {
+			width: 14px;
+			height: 14px;
+		}
+		&::after {
+			width: 6px;
+			height: 6px;
+			transform: translate(-4px, 4px) scale(0);
+		}
+	}
+	.active {
+		&::after {
+			transform: translate(-4px, 4px) scale(1);
+		}
+	}
+	div + div {
+		margin-left: 30px;
+	}
+}
+
+.flats-levels {
+	font-size: 14px;
+	margin-bottom: 33px;
+	li + li {
+		&::before {
+			top: 12px;
+		}
+	}
+}
+
+.flats-areas {
+	label {
+		font-size: 12px;
+		line-height: 16px;
+		margin-bottom: 14px;
+	}
+}
+
+.flats-viewport {
+	height: 500px;
+  .img {
 		display: flex;
 		flex-direction: column;
-		position: relative;
-	}
-
-	.flats-left {
-		.btn {
-			position: absolute;
-			left: 0;
-			bottom: 12px;
-		}
-	}
-
-	.flats-center {
-		justify-content: space-between;
-		padding-right: 40px;
-	}
-
-	.flats-right {
-		padding-top: 9px;
-	}
-
-	.flats-title {
-		font-size: 27px;
-		line-height: 43px;
-		margin-bottom: 19px;
-	}
-
-	.flats-rooms {
-		margin-bottom: 20px;
-		label {
-			font-size: 12px;
-			line-height: 16px;
-			margin-right: 4px;
-		}
-		a {
-			font-size: 18px;
-		}
-		li + li {
-			&::before {
-				left: -6px;
-				top: 11px;
-				width: 10px;
-			}
-		}
-	}
-
-	.flats-types {
-		font-size: 12px;
-		margin-bottom: 37px;
-		div {
-			padding-right: 22px;
-			&::before,
-			&::after {
-				top: 0;
-			}
-			&::before {
-				width: 14px;
-				height: 14px;
-			}
-			&::after {
-				width: 6px;
-				height: 6px;
-				transform: translate(-4px, 4px) scale(0);
-			}
-		}
-		.active {
-			&::after {
-				transform: translate(-4px, 4px) scale(1);
-			}
-		}
-		div + div {
-			margin-left: 30px;
-		}
-	}
-
-	.flats-levels {
-		font-size: 14px;
-		margin-bottom: 33px;
-		li + li {
-			&::before {
-				top: 12px;
-			}
-		}
-	}
-
-	.flats-areas {
-		label {
-			font-size: 12px;
-			line-height: 16px;
-			margin-bottom: 14px;
-		}
-	}
-
-	.flats-viewport {
-		height: 500px;
-	  .img {
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-		  align-items: center;
-		  height: 500px;
-	  }
-	}
-
-	.flats-tabs {
-		font-size: 12px;
-		padding-bottom: 1px;
-		li {
-			padding-bottom: 5px;
-			&::after {
-				width: 40px;
-			}
-		}
-		li + li {
-			margin-left: 16px;
-		}
-	}
-
-	.flats-subtitle {
-		font-size: 16px;
-		line-height: 21px;
-		margin-bottom: 19px;
-	}
-
-	.flats-desc {
-		font-size: 18px;
-		line-height: 23px;
-		margin-bottom: 6px;
-		div + div {
-			margin-left: 30px;
-			&::before {
-				left: -15px;
-				top: 5px;
-				height: 16px;
-			}
-		}
-	}
-
-	.flats-blocks {
-		font-size: 18px;
-		line-height: 23px;
-		margin-bottom: 40px;
-	}
-
-	.flats-plan {
-		$plan-width: 290px;//3782px;
-		$plan-height: $plan-width*4171px/3782px;
-		height: 400px;
-		.address {
-			$address-width: 330px;//273px;
-			$address-height: $address-width*278px/273px;
-			width: $address-width;
-			height: $address-height;
-			left: -2px;
-			top: 19px;
-		}
-		.icon-roza {
-			color: #AABDC5;
-			right: -11px;
-			top: 6px;
-			font-size: 46px;
-		}
-		.icon-mountain {
-			font-size: 105px;
-			left: 2px;
-			bottom: -49px;
-		}
-		.img {
-			width: $plan-width;
-			height: $plan-height;
-			top: 7px;
-			left: 16px;
-		}
-	}
-
+		justify-content: center;
+	  align-items: center;
+	  height: 500px;
+  }
 }
+
+.flats-tabs {
+	font-size: 12px;
+	padding-bottom: 1px;
+	li {
+		padding-bottom: 5px;
+		&::after {
+			width: 40px;
+		}
+	}
+	li + li {
+		margin-left: 16px;
+	}
+}
+
+.flats-subtitle {
+	font-size: 16px;
+	line-height: 21px;
+	margin-bottom: 19px;
+}
+
+.flats-desc {
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 6px;
+	div + div {
+		margin-left: 30px;
+		&::before {
+			left: -15px;
+			top: 5px;
+			height: 16px;
+		}
+	}
+}
+
+.flats-blocks {
+	font-size: 18px;
+	line-height: 23px;
+	margin-bottom: 40px;
+}
+
+.flats-plan {
+	$plan-width: 290px;//3782px;
+	$plan-height: $plan-width*4171px/3782px;
+	height: 400px;
+	.address {
+		$address-width: 330px;//273px;
+		$address-height: $address-width*278px/273px;
+		width: $address-width;
+		height: $address-height;
+		left: -2px;
+		top: 19px;
+	}
+	.icon-roza {
+		color: #AABDC5;
+		right: -11px;
+		top: 6px;
+		font-size: 46px;
+	}
+	.icon-mountain {
+		font-size: 105px;
+		left: 2px;
+		bottom: -49px;
+	}
+	.img {
+		width: $plan-width;
+		height: $plan-height;
+		top: 7px;
+		left: 16px;
+	}
+}
+
 
 
 
@@ -322,187 +320,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.s--flats {
-		padding: 41px 27px 35px;
-		flex-direction: column;
-		.btn {
-			min-width: 260px;
-		}
-	}
-
-	.flats-left {
-		order: 1;
-	}
-
-	.flats-center {
-		order: 3;
-	}
-
-	.flats-right {
-		order: 2;
-	}
-
-	.flats-title {
-		font-size: 36px;
-		line-height: 58px;
-		margin-bottom: 24px;
-		left: -3px;
-	}
-
-	.flats-rooms {
-		margin-bottom: 30px;
-		label {
-			font-size: 14px;
-			line-height: 18px;
-			margin-right: 6px;
-		}
-		a {
-			font-size: 22px;
-		}
-		li {
-			width: 58px;
-		}
-		li + li {
-			&::before {
-				left: -5px;
-				top: 13px;
-				width: 12px;
-			}
-		}
-	}
-
-	.flats-types {
-		font-size: 14px;
-		margin-bottom: 49px;
-		div {
-			padding-right: 33px;
-			margin-right: 34px;
-			&:nth-child(1) {
-				order: 2;
-			}
-			&:nth-child(2) {
-				order: 1;
-			}
-			&::before,
-			&::after {
-				top: -1px;
-			}
-			&::before {
-				width: 20px;
-				height: 20px;
-			}
-			&::after {
-				width: 8px;
-				height: 8px;
-				transform: translate(-6px, 6px) scale(0);
-			}
-		}
-		.active {
-			&::after {
-				transform: translate(-6px, 6px) scale(1);
-			}
-		}
-	}
-
-	.flats-levels {
-		font-size: 15px;
-		margin: 0 -20px 45px 0;
-		li + li {
-			margin-left: 23px;
-			&::before {
-				top: 13px;
-				left: -15px;
-			}
-		}
-	}
-
-	.flats-areas {
-		margin-bottom: 40px;
-		label {
-			font-size: 14px;
-			line-height: 18px;
-			margin-bottom: 18px;
-		}
-	}
-
-	.flats-viewport {
-		margin-bottom: 20px;
-	}
-
-	.flats-tabs {
-		font-size: 16px;
-		margin-bottom: 47px;
-		li {
-			padding-bottom: 14px;
-			&::after {
-				width: 54px;
-			}
-		}
-		li + li {
-			margin-left: 44px;
-		}
-	}
-
-	.flats-subtitle {
-		font-size: 21px;
-		line-height: 27px;
-		margin-bottom: 19px;
-	}
-
-	.flats-desc {
-		font-size: 26px;
-		line-height: 34px;
-		margin-bottom: 7px;
-		div + div {
-			margin-left: 44px;
-			&::before {
-				left: -22px;
-				top: 8px;
-				height: 24px;
-			}
-		}
-	}
-
-	.flats-blocks {
-		font-size: 26px;
-		line-height: 34px;
-		margin-bottom: 42px;
-	}
-
-	.flats-plan {
-		$plan-width: 315px;//3782px;
-		$plan-height: $plan-width*4171px/3782px;
-		height: 480px;
-		.address {
-			$address-width: 364px;//273px;
-			$address-height: $address-width*278px/273px;
-			width: $address-width;
-			height: $address-height;
-			left: -7px;
-			top: 18px;
-		}
-		.icon-roza {
-			right: -14px;
-			top: 0;
-			font-size: 58px;
-			color: #718892;
-		}
-		.icon-mountain {
-			font-size: 115px;
-			left: 0;
-			bottom: 3px;
-		}
-		.img {
-			width: $plan-width;
-			height: $plan-height;
-			top: 5px;
-			left: 17px;
-		}
-	}
-
-}

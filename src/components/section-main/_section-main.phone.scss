@@ -1,0 +1,58 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+.main-bg {
+	height: 559px;
+}
+
+.main-title {
+	@include stretch-x(30px, 30px);
+	bottom: 23px;
+	z-index: 1;
+	font-size: 21px;
+	line-height: 29px;
+	color: white;
+	white-space: pre-line;
+}
+
+.main-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+  align-items: flex-end;
+	background: $brand-secondary;
+	height: 191px;
+	padding: 15px 27px 25px;
+}
+
+.main-address {
+	font-size: 20px;
+	line-height: 28px;
+	text-align: center;
+	width: 100%;
+}
+
+.main-price {
+	line-height: 1;
+	text-align: right;
+	small {
+		display: block;
+		font-size: 21px;
+		font-weight: 300;
+		position: relative;
+		top: 1px;
+	}
+	sub {
+		bottom: auto;
+		font-size: 18px;
+		letter-spacing: 0.04em;
+	}
+	strong {
+		font-size: 57px;
+		font-weight: 500;
+		letter-spacing: -0.03em;
+		color: white;
+		margin: 0 5px;
+	}
+}
+

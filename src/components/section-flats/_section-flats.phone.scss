@@ -1,0 +1,182 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.s--flats {
+	padding: 41px 27px 35px;
+	flex-direction: column;
+	.btn {
+		min-width: 260px;
+	}
+}
+
+.flats-left {
+	order: 1;
+}
+
+.flats-center {
+	order: 3;
+}
+
+.flats-right {
+	order: 2;
+}
+
+.flats-title {
+	font-size: 36px;
+	line-height: 58px;
+	margin-bottom: 24px;
+	left: -3px;
+}
+
+.flats-rooms {
+	margin-bottom: 30px;
+	label {
+		font-size: 14px;
+		line-height: 18px;
+		margin-right: 6px;
+	}
+	a {
+		font-size: 22px;
+	}
+	li {
+		width: 58px;
+	}
+	li + li {
+		&::before {
+			left: -5px;
+			top: 13px;
+			width: 12px;
+		}
+	}
+}
+
+.flats-types {
+	font-size: 14px;
+	margin-bottom: 49px;
+	div {
+		padding-right: 33px;
+		margin-right: 34px;
+		&:nth-child(1) {
+			order: 2;
+		}
+		&:nth-child(2) {
+			order: 1;
+		}
+		&::before,
+		&::after {
+			top: -1px;
+		}
+		&::before {
+			width: 20px;
+			height: 20px;
+		}
+		&::after {
+			width: 8px;
+			height: 8px;
+			transform: translate(-6px, 6px) scale(0);
+		}
+	}
+	.active {
+		&::after {
+			transform: translate(-6px, 6px) scale(1);
+		}
+	}
+}
+
+.flats-levels {
+	font-size: 15px;
+	margin: 0 -20px 45px 0;
+	li + li {
+		margin-left: 23px;
+		&::before {
+			top: 13px;
+			left: -15px;
+		}
+	}
+}
+
+.flats-areas {
+	margin-bottom: 40px;
+	label {
+		font-size: 14px;
+		line-height: 18px;
+		margin-bottom: 18px;
+	}
+}
+
+.flats-viewport {
+	margin-bottom: 20px;
+}
+
+.flats-tabs {
+	font-size: 16px;
+	margin-bottom: 47px;
+	li {
+		padding-bottom: 14px;
+		&::after {
+			width: 54px;
+		}
+	}
+	li + li {
+		margin-left: 44px;
+	}
+}
+
+.flats-subtitle {
+	font-size: 21px;
+	line-height: 27px;
+	margin-bottom: 19px;
+}
+
+.flats-desc {
+	font-size: 26px;
+	line-height: 34px;
+	margin-bottom: 7px;
+	div + div {
+		margin-left: 44px;
+		&::before {
+			left: -22px;
+			top: 8px;
+			height: 24px;
+		}
+	}
+}
+
+.flats-blocks {
+	font-size: 26px;
+	line-height: 34px;
+	margin-bottom: 42px;
+}
+
+.flats-plan {
+	$plan-width: 315px;//3782px;
+	$plan-height: $plan-width*4171px/3782px;
+	height: 480px;
+	.address {
+		$address-width: 364px;//273px;
+		$address-height: $address-width*278px/273px;
+		width: $address-width;
+		height: $address-height;
+		left: -7px;
+		top: 18px;
+	}
+	.icon-roza {
+		right: -14px;
+		top: 0;
+		font-size: 58px;
+		color: #718892;
+	}
+	.icon-mountain {
+		font-size: 115px;
+		left: 0;
+		bottom: 3px;
+	}
+	.img {
+		width: $plan-width;
+		height: $plan-height;
+		top: 5px;
+		left: 17px;
+	}
+}
+

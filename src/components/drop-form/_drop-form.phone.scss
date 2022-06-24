@@ -1,0 +1,57 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+$bg-height: fluid(190px, 740px);
+
+.drop-form {
+	top: 60px;
+	left: 10px;
+	right: 10px;
+	z-index: 8;
+	display: flex;
+	flex-direction: column;
+	height: calc(100vh - 60px - 10px);
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.drop-form-logo {
+	$logo-width: 334px;//291px;
+	$logo-height: $logo-width*70px/291px;
+	width: $logo-width;
+	height: $logo-height;
+	margin: 0 auto 53px;
+}
+
+.drop-form-icon {
+	width: 61px;
+	height: 58px;
+	right: 30px;
+	top: -87px;
+}
+
+.drop-form-bg-wrapper {
+	order: 1;
+	min-height: 100px;
+	height: $bg-height;
+	position: relative;
+	margin-bottom: 52px;
+}
+
+.drop-form-in {
+	order: 2;
+	position: relative;
+	min-height: 400px;
+}
+
+.drop-form-response {
+	font-size: 37px;
+	line-height: 52px;
+	padding: 0 51px 2px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	height: 238px;
+}
+

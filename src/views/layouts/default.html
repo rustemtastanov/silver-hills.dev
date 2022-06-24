@@ -33,12 +33,22 @@
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="{{{ path }}}fonts/IBMPlexSans-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="{{{ path }}}css/style.css" as="style">
+	<link rel="preload" href="{{{ path }}}css/style.css" as="style">
+	<link rel="preload" href="{{{ path }}}css/phone.css" as="style">
+	<link rel="preload" href="{{{ path }}}css/desktop.css" as="style">
 	<link rel="preload" href="{{{ path }}}media/main/main-bg-phone.webp" imagesrcset="{{{ path }}}media/main/main-bg-phone.webp 1x, {{{ path }}}media/main/main-bg-phone@2x.webp 2x" as="image">
 
 	<!-- build:css {{{ path }}}css/style.min.css media="screen" -->
 	<link rel="stylesheet" href="/css/style.css" />
 	<!-- endbuild -->
+	<!-- build:css {{{ path }}}css/phone.min.css media="screen and (max-width: 768px)" -->
+	<link rel="stylesheet" href="/css/phone.css" media="screen and (max-width: 768px)" />
+	<!-- endbuild -->
+	<!-- build:css {{{ path }}}css/desktop.min.css media="screen and (min-width: 769px)" -->
+	<link rel="stylesheet" href="/css/desktop.css" media="screen and (min-width: 769px)" />
+	<!-- endbuild -->
+
+	<link rel="preconnect" href="https://maps.googleapis.com">
 </head>
 
 <body>

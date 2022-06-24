@@ -1,0 +1,93 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.s--contacts {
+	padding-bottom: 6px;
+}
+
+.contacts-left {
+	padding: 16px 30px 34px;
+	display: flex;
+	flex-direction: column;
+}
+
+.contacts-title {
+	font-size: 60px;
+	order: 1;
+	left: -6px;
+	margin-bottom: 38px;
+}
+
+.contacts-phone {
+	font-size: 30px;
+	line-height: 36px;
+	margin-bottom: 7px;
+	order: 3;
+	a {
+		color: black;
+		text-decoration: none;
+	}
+}
+
+.contacts-address {
+	font-size: 19px;
+	line-height: 27px;
+	margin-bottom: 16px;
+	order: 4;
+}
+
+.contacts-text {
+	font-size: 16px;
+	line-height: 21px;
+	margin-bottom: 20px;
+	order: 5;
+}
+
+.contacts-path {
+	font-size: 18px;
+	line-height: 22px;
+	margin-bottom: 50px;
+	order: 6;
+}
+
+.contacts-mode {
+	order: 7;
+	label {
+		font-size: 18px;
+		line-height: 27px;
+		margin-bottom: 7px;
+	}
+	div {
+		font-size: 23px;
+		line-height: 34px;
+	}
+}
+
+.contacts-map {
+	position: relative;
+	height: 480px;
+	margin-bottom: 15px;
+}
+
+.contacts-meta {
+	font-size: 15px;
+	line-height: 22px;
+	color: #787878;
+	margin-left: 9px;
+	a {
+		color: inherit;
+		&:hover {
+			color: black;
+		}
+	}
+}
+
+.contacts-copyright {
+	margin-bottom: 2px;
+}
+
+.contacts-policy {
+	margin-bottom: 51px;
+}
+

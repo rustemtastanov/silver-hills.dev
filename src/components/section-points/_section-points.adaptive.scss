@@ -8,136 +8,134 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.s--points {
-		border-style: solid;
-		border-width: 0 1PX;
-		overflow: hidden;
-		margin: -20px 0 -10px;
-	}
-
-	.s--points,
-	.points-items {
-		height: 540px;
-	}
-
-	.points-tabs {
-		display: flex;
-		justify-content: flex-end;
-		position: relative;
-		position: absolute;
-		left: 0;
-		top: 100px;
-		z-index: 2;
-		&::after {
-			content: '';
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			border-bottom: 1PX solid;
-		}
-	}
-
-	.points-tab {
-		text-transform: uppercase;
-		cursor: pointer;
-		font-size: 18px;
-		line-height: 1;
-		padding: 17px 0;
-		&.active {
-			display: none;
-		}
-	}
-
-	.points-items {
-		position: relative;
-	}
-
-	.points-slide {
-		position: absolute;
-		height: 100%;
-		width: 100%;
-		left: 0;
-		top: 0;
-		.title {
-			margin-bottom: 32px;
-		}
-		path,
-		polygon,
-		polyline {
-			transition: all 1s;
-		}
-		.img {
-			right: 0;
-			bottom: 100px;
-			opacity: 0;
-			&.active {
-				opacity: 1;
-			}
-		}
-	}
-
-	.points-items:not(.changed) [data-aos="img-1"].aos-animate,
-	.points-items.changed [data-aos="img-1"].active,
-	[data-aos="img-2"] .active,
-	[data-aos="img-3"] .active,
-	[data-aos="img-4"] .active {
-		path,
-		polygon,
-		polyline {
-			stroke-dashoffset: 0;
-		}
-	}
-
-	.points-slide-enter-active,
-	.points-slide-leave-active {
-	  transition: transform .6s, opacity .4s;
-	}
-
-	.points-slide-enter,
-	.points-slide-leave-to {
-		opacity: 0;
-	  transform: translateY(-100%);
-	}
-
-	.points-slide-1 {
-		$img-width: 313px;//973px;
-		$img-height: $img-width*366px/973px;
-		.img {
-			width: $img-width;
-			height: $img-height;
-			transform: translate(0, -4px);
-		}
-	}
-
-	.points-slide-2 {
-		.img {
-			width: 311px;
-			height: 183px;
-			transform: translate(1px, 13px);
-		}
-	}
-
-	.points-slide-3 {
-		.img {
-			width: 445px;
-			height: 145px;
-			transform: translate(0, -3px);
-		}
-	}
-
-	.points-slide-4 {
-		$img-width: 323px;//1005px;
-		$img-height: $img-width*595px/1005px;
-		.img {
-			width: $img-width;
-			height: $img-height;
-			transform: translate(-8px, 1px);
-		}
-	}
-
+.s--points {
+	border-style: solid;
+	border-width: 0 1PX;
+	overflow: hidden;
+	margin: -20px 0 -10px;
 }
+
+.s--points,
+.points-items {
+	height: 540px;
+}
+
+.points-tabs {
+	display: flex;
+	justify-content: flex-end;
+	position: relative;
+	position: absolute;
+	left: 0;
+	top: 100px;
+	z-index: 2;
+	&::after {
+		content: '';
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		border-bottom: 1PX solid;
+	}
+}
+
+.points-tab {
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: 18px;
+	line-height: 1;
+	padding: 17px 0;
+	&.active {
+		display: none;
+	}
+}
+
+.points-items {
+	position: relative;
+}
+
+.points-slide {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	.title {
+		margin-bottom: 32px;
+	}
+	path,
+	polygon,
+	polyline {
+		transition: all 1s;
+	}
+	.img {
+		right: 0;
+		bottom: 100px;
+		opacity: 0;
+		&.active {
+			opacity: 1;
+		}
+	}
+}
+
+.points-items:not(.changed) [data-aos="img-1"].aos-animate,
+.points-items.changed [data-aos="img-1"].active,
+[data-aos="img-2"] .active,
+[data-aos="img-3"] .active,
+[data-aos="img-4"] .active {
+	path,
+	polygon,
+	polyline {
+		stroke-dashoffset: 0;
+	}
+}
+
+.points-slide-enter-active,
+.points-slide-leave-active {
+  transition: transform .6s, opacity .4s;
+}
+
+.points-slide-enter,
+.points-slide-leave-to {
+	opacity: 0;
+  transform: translateY(-100%);
+}
+
+.points-slide-1 {
+	$img-width: 313px;//973px;
+	$img-height: $img-width*366px/973px;
+	.img {
+		width: $img-width;
+		height: $img-height;
+		transform: translate(0, -4px);
+	}
+}
+
+.points-slide-2 {
+	.img {
+		width: 311px;
+		height: 183px;
+		transform: translate(1px, 13px);
+	}
+}
+
+.points-slide-3 {
+	.img {
+		width: 445px;
+		height: 145px;
+		transform: translate(0, -3px);
+	}
+}
+
+.points-slide-4 {
+	$img-width: 323px;//1005px;
+	$img-height: $img-width*595px/1005px;
+	.img {
+		width: $img-width;
+		height: $img-height;
+		transform: translate(-8px, 1px);
+	}
+}
+
 
 
 
@@ -218,75 +216,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.s--points {
-		border: 1PX solid;
-		padding: 30px 0;
-	}
-
-	.points-pager {
-		margin: 0 30px;
-		padding: 9px 0;
-		position: relative;
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			height: 8px;
-			width: 335px;
-			background-size: 100% 100%;
-			background-image: url(#{$path-img}/points-arrow.svg);
-		}
-	}
-
-	.points-slide {
-		padding: 23px 20px 23px 30px;
-		min-height: 502px;
-		.title {
-			margin-bottom: 19px;
-		}
-		.img {
-			bottom: 20px;
-			left: 30px;
-		}
-	}
-
-	.points-slide-1 {
-		.img {
-			width: 274px;
-			height: 103px;
-			transform: translate(-1px, 2px);
-		}
-	}
-
-	.points-slide-2 {
-		.img {
-			width: 331px;
-			height: 175px;
-			transform: translate(2px, 25px);
-		}
-	}
-
-	.points-slide-3 {
-		.img {
-			width: 346px;
-			height: 118px;
-			transform: translate(-13px, 12px);
-		}
-	}
-
-	.points-slide-4 {
-		.img {
-			width: 274px;
-			height: 162px;
-			transform: translate(-2px, 13px);
-		}
-	}
-
-}

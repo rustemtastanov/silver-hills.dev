@@ -136,19 +136,19 @@ function styles(cb) {
 						}
 					}
 				}),
-				// pxtorem({
-				// 	propWhiteList: [
-				// 		"font", "font-size", "line-height",
-				// 		"margin", "margin-top", "margin-right", "margin-bottom", "margin-left",
-				// 		"padding", "padding-top", "padding-right", "padding-bottom", "padding-left",
-				// 		"left", "right", "top", "bottom",
-				// 		"width", "height", "min-width", "max-width", "max-height", "min-height",
-				// 		"border-radius", "border-top-left-radius", "border-top-right-radius", "border-bottom-left-radius", "border-bottom-right-radius",
-				// 		"border-width", "border-left-width", "border-right-width", "border-top-width", "border-bottom-width", "border",
-				// 		"transform", "transform-origin",
-				// 		"background-size", "background-position"
-				// 	],
-				// }),
+				pxtorem({
+					propWhiteList: [
+						"font", "font-size", "line-height",
+						"margin", "margin-top", "margin-right", "margin-bottom", "margin-left",
+						"padding", "padding-top", "padding-right", "padding-bottom", "padding-left",
+						"left", "right", "top", "bottom",
+						"width", "height", "min-width", "max-width", "max-height", "min-height",
+						"border-radius", "border-top-left-radius", "border-top-right-radius", "border-bottom-left-radius", "border-bottom-right-radius",
+						"border-width", "border-left-width", "border-right-width", "border-top-width", "border-bottom-width", "border",
+						"transform", "transform-origin",
+						"background-size", "background-position"
+					],
+				}),
 				autoprefixer(),
 			]))
 		// .pipe($.sourcemaps.write())
@@ -227,7 +227,7 @@ function livereload(cb) {
 	browserSync({
 		notify: false,
 		port: 9000,
-		tunnel: true,
+		// tunnel: true,
 		ghostMode: false,
 		server: {
 			baseDir: [APP["tmp"]["path"], APP["src"]["path"]],
@@ -344,7 +344,7 @@ exports.build = series(
 
 			//минификация JS
 			series(function(cb) {
-				return gulp.src([APP["dst"]["scripts"] + "/interface.min.js", APP["dst"]["scripts"] + "/forms.min.js"])
+				return gulp.src([APP["dst"]["scripts"] + "/vendors.min.js", APP["dst"]["scripts"] + "/apps.min.js"])
 					.pipe(babel({
 						presets: ["@babel/env"]
 					}))
@@ -356,7 +356,7 @@ exports.build = series(
 					.pipe(gulp.dest(APP["dst"]["scripts"]));
 				cb();
 			}, function(cb) {
-				return gulp.src([APP["dst"]["scripts"] + "/interface.min.js", APP["dst"]["scripts"] + "/forms.min.js"])
+				return gulp.src([APP["dst"]["scripts"] + "/vendors.min.js", APP["dst"]["scripts"] + "/apps.min.js"])
 					.pipe($.uglify())
 					// .pipe(uglify())
 					.pipe(gulp.dest(APP["dst"]["scripts"]));

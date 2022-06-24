@@ -1,0 +1,70 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.s--points {
+	border: 1PX solid;
+	padding: 30px 0;
+}
+
+.points-pager {
+	margin: 0 30px;
+	padding: 9px 0;
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 8px;
+		width: 335px;
+		background-size: 100% 100%;
+		background-image: url(#{$path-img}/points-arrow.svg);
+	}
+}
+
+.points-slide {
+	padding: 23px 20px 23px 30px;
+	min-height: 502px;
+	.title {
+		margin-bottom: 19px;
+	}
+	.img {
+		bottom: 20px;
+		left: 30px;
+	}
+}
+
+.points-slide-1 {
+	.img {
+		width: 274px;
+		height: 103px;
+		transform: translate(-1px, 2px);
+	}
+}
+
+.points-slide-2 {
+	.img {
+		width: 331px;
+		height: 175px;
+		transform: translate(2px, 25px);
+	}
+}
+
+.points-slide-3 {
+	.img {
+		width: 346px;
+		height: 118px;
+		transform: translate(-13px, 12px);
+	}
+}
+
+.points-slide-4 {
+	.img {
+		width: 274px;
+		height: 162px;
+		transform: translate(-2px, 13px);
+	}
+}
+

@@ -8,13 +8,11 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.section {
-		margin-bottom: 20px;
-	}
-
+.section {
+	margin-bottom: 20px;
 }
+
 
 
 
@@ -53,13 +51,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.section {
-		margin-bottom: 10px;
-	}
-
-}

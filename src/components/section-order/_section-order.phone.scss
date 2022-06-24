@@ -1,0 +1,32 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.s--order {
+	padding-bottom: 67px;
+}
+
+.order-logo {
+	$logo-width: 334px;//291px;
+	$logo-height: $logo-width*70px/291px;
+	width: $logo-width;
+	height: $logo-height;
+	margin: 0 auto 63px;
+}
+
+.order-icon {
+	width: 61px;
+	height: 58px;
+	position: absolute;
+	right: 29px;
+	top: 215px;
+	z-index: 1;
+}
+
+.order-bg {
+	height: 250px;
+	margin-bottom: 51px;
+	z-index: 0;
+	background: $gray;
+}
+

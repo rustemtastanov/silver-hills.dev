@@ -8,37 +8,35 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.nav-social {
-		font-size: 15px;
-		line-height: 21px;
-		.icon {
-			font-size: 87px;
-			margin-bottom: -17px;
-		}
+.nav-social {
+	font-size: 15px;
+	line-height: 21px;
+	.icon {
+		font-size: 87px;
+		margin-bottom: -17px;
 	}
-
-	.drop-menu {
-		.nav-social {
-			.icon {
-				left: 25px;
-			}
-			margin-bottom: -10px;
-		}
-	}
-
-	.s--contacts {
-		.nav-social {
-			position: absolute;
-			bottom: 52px;
-			.icon {
-				left: -25px;
-			}
-		}
-	}
-
 }
+
+.drop-menu {
+	.nav-social {
+		.icon {
+			left: 25px;
+		}
+		margin-bottom: -10px;
+	}
+}
+
+.s--contacts {
+	.nav-social {
+		position: absolute;
+		bottom: 52px;
+		.icon {
+			left: -25px;
+		}
+	}
+}
+
 
 
 
@@ -93,36 +91,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.nav-social {
-		font-size: 16px;
-		line-height: 22px;
-	}
-
-	.drop-menu {
-		.nav-social {
-			margin-bottom: -34px;
-			.icon {
-				left: 35px;
-				font-size: 106px;
-			}
-		}
-	}
-
-	.s--contacts {
-		.nav-social {
-			order: 2;
-			margin-bottom: 14px;
-			.icon {
-				left: -26px;
-				font-size: 91px;
-				margin-bottom: -20px;
-			}
-		}
-	}
-
-}

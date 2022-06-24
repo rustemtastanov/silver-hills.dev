@@ -1,0 +1,16 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+.slider-pager {
+	position: relative;
+	.current {
+		left: -11px;
+	}
+	.amount {
+		font-size: 13px;
+		left: -18px;
+		span {
+			margin-right: 3px;
+		}
+	}
+}

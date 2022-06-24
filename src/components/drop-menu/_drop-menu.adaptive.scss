@@ -8,45 +8,43 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.drop-menu {
-		left: 20px;
-		right: 20px;
-		height: calc(100vh - 60px - 20px);
-	}
-
-	.drop-menu-in {
-		padding: 87px 81px 67px;
-	}
-
-	.drop-menu-download {
-		font-size: 16px;
-		line-height: 19px;
-	}
-
-	.drop-menu-bg {
-		@include stretch-y;
-		left: 0;
-		overflow: hidden;
-		div {
-			@include stretch-y;
-			left: 50%;
-			width: 800px;
-			transform: translateX(-30%);
-		}
-		.drop-menu-bg-enter,
-		.drop-menu-bg-leave-to {
-		  transform: translateX(-70%);
-		}
-	}
-
-	.drop-menu-bg-enter-active,
-	.drop-menu-bg-leave-active {
-	  transition: transform 20s;
-	}
-
+.drop-menu {
+	left: 20px;
+	right: 20px;
+	height: calc(100vh - 60px - 20px);
 }
+
+.drop-menu-in {
+	padding: 87px 81px 67px;
+}
+
+.drop-menu-download {
+	font-size: 16px;
+	line-height: 19px;
+}
+
+.drop-menu-bg {
+	@include stretch-y;
+	left: 0;
+	overflow: hidden;
+	div {
+		@include stretch-y;
+		left: 50%;
+		width: 800px;
+		transform: translateX(-30%);
+	}
+	.drop-menu-bg-enter,
+	.drop-menu-bg-leave-to {
+	  transform: translateX(-70%);
+	}
+}
+
+.drop-menu-bg-enter-active,
+.drop-menu-bg-leave-active {
+  transition: transform 20s;
+}
+
 
 
 
@@ -101,43 +99,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.drop-menu {
-		left: 10px;
-		right: 10px;
-		height: calc(100vh - 60px);
-		overflow: auto;
-		overflow-x: hidden;
-	}
-
-	.drop-menu-in {
-		padding: 57px 33px 39px;
-		max-height: calc(100% - 169px);
-		min-height: 500px;
-	}
-
-	.drop-menu-download {
-		font-size: 18px;
-		line-height: 22px;
-	}
-
-	.drop-menu-bg {
-		height: 159px;
-		top: 10px;
-	}
-
-	@include respond-to("(max-height: 567px)") {
-		.drop-menu-in {
-			padding: 37px 33px 19px;
-			max-height: calc(100% - 149px);
-		}
-		.drop-menu-bg {
-			height: 139px;
-		}
-	}
-
-}

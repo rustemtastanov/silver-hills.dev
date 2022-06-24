@@ -8,18 +8,15 @@
 /*
 	styles for Desktop
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.content {
-		padding: 0 20px;
+.content {
+	padding: 0 20px;
+}
+
+.overlay {
+	&.top {
+		z-index: 9;
 	}
-
-	.overlay {
-		&.top {
-			z-index: 9;
-		}
-	}
-
 }
 
 
@@ -45,13 +42,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.content {
-		padding: 0 10px;
-	}
-
-}

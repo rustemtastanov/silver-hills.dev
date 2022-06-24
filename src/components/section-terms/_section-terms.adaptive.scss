@@ -8,101 +8,99 @@
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
-@include respond-to($respond-desktop-up) {
 
-	.s--terms {
-		margin: -20px 0 50px;
-		background: #e0dfdd;
-		min-height: 512px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: flex-end;
+.s--terms {
+	margin: -20px 0 50px;
+	background: #e0dfdd;
+	min-height: 512px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-end;
+}
+
+.terms-items {
+	width: 100%;
+	display: flex;
+}
+
+.terms-item {
+	min-height: 350px;
+	background: white;
+	padding: 20px 22px 74px;
+	margin-left: 20px;
+	position: relative;
+	&:nth-child(1) {
+		transition-delay: .2s;
 	}
-
-	.terms-items {
-		width: 100%;
-		display: flex;
+	&:nth-child(2) {
+		transition-delay: .25s;
 	}
-
-	.terms-item {
-		min-height: 350px;
-		background: white;
-		padding: 20px 22px 74px;
-		margin-left: 20px;
+	&:nth-child(3) {
+		transition-delay: .3s;
+	}
+	&:nth-child(4) {
+		transition-delay: .35s;
+	}
+	.head {
+		min-height: 92px;
+		margin-bottom: 30px;
 		position: relative;
-		&:nth-child(1) {
-			transition-delay: .2s;
-		}
-		&:nth-child(2) {
-			transition-delay: .25s;
-		}
-		&:nth-child(3) {
-			transition-delay: .3s;
-		}
-		&:nth-child(4) {
-			transition-delay: .35s;
-		}
-		.head {
-			min-height: 92px;
-			margin-bottom: 30px;
-			position: relative;
-			&::after {
-				content: '';
-				border-bottom: 1PX solid;
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 50px;
-			}
-		}
-		.title {
-			font-size: 15px;
-			line-height: 19px;
-			min-height: 38px;
-			margin-bottom: 3px;
-		}
-		.value {
-			font-size: 33px;
-			line-height: 40px;
-			margin-bottom: 10px;
-		}
-		.text {
-			font-size: 12px;
-			line-height: 17px;
-			font-weight: 300;
-		}
-		.btn {
+		&::after {
+			content: '';
+			border-bottom: 1PX solid;
 			position: absolute;
 			left: 0;
 			bottom: 0;
-		}
-		p {
-			margin-bottom: 10px;
-			white-space: pre-line;
-			&:last-child {
-				margin-bottom: 0;
-			}
+			width: 50px;
 		}
 	}
-
-	.terms-img {
+	.title {
+		font-size: 15px;
+		line-height: 19px;
+		min-height: 38px;
+		margin-bottom: 3px;
+	}
+	.value {
+		font-size: 33px;
+		line-height: 40px;
+		margin-bottom: 10px;
+	}
+	.text {
+		font-size: 12px;
+		line-height: 17px;
+		font-weight: 300;
+	}
+	.btn {
 		position: absolute;
-		z-index: 0;
 		left: 0;
-		bottom: 54px;
-		width: 256px;
-		height: 317px;
-		pointer-events: none;
-		path {
-			transition: all 1.5s;
-		}
-		&.aos-animate path {
-			stroke-dashoffset: 0;
+		bottom: 0;
+	}
+	p {
+		margin-bottom: 10px;
+		white-space: pre-line;
+		&:last-child {
+			margin-bottom: 0;
 		}
 	}
-
 }
+
+.terms-img {
+	position: absolute;
+	z-index: 0;
+	left: 0;
+	bottom: 54px;
+	width: 256px;
+	height: 317px;
+	pointer-events: none;
+	path {
+		transition: all 1.5s;
+	}
+	&.aos-animate path {
+		stroke-dashoffset: 0;
+	}
+}
+
 
 
 
@@ -171,50 +169,3 @@
 
 
 
-/*
-	styles for Phone
- -------------------------------------------------------------------- */
-@include respond-to($respond-phone) {
-
-	.s--terms {
-		padding: 0 30px 51px;
-	}
-
-	.terms-items {
-	}
-
-	.terms-item {
-		&:not(:last-child) {
-			border-bottom: 1PX solid;
-			margin-bottom: 32px;
-			padding-bottom: 17px;
-		}
-		.head {
-			min-height: 97px;
-			margin-bottom: 17px;
-		}
-		.title {
-			font-size: 24px;
-			line-height: 29px;
-			margin-bottom: 1px;
-		}
-		.value {
-			font-size: 50px;
-			line-height: 60px;
-			margin-bottom: 24px;
-		}
-		.more {
-			font-size: 18px;
-			line-height: 22px;
-			font-style: italic;
-			a {
-				color: $red;
-				text-decoration: none;
-				&:hover {
-					text-decoration: underline;
-				}
-			}
-		}
-	}
-
-}

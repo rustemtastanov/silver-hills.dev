@@ -1,0 +1,38 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.drop-menu {
+	left: 10px;
+	right: 10px;
+	height: calc(100vh - 60px);
+	overflow: auto;
+	overflow-x: hidden;
+}
+
+.drop-menu-in {
+	padding: 57px 33px 39px;
+	max-height: calc(100% - 169px);
+	min-height: 500px;
+}
+
+.drop-menu-download {
+	font-size: 18px;
+	line-height: 22px;
+}
+
+.drop-menu-bg {
+	height: 159px;
+	top: 10px;
+}
+
+@include respond-to("(max-height: 567px)") {
+	.drop-menu-in {
+		padding: 37px 33px 19px;
+		max-height: calc(100% - 149px);
+	}
+	.drop-menu-bg {
+		height: 139px;
+	}
+}
+

@@ -1,0 +1,42 @@
+/*
+	styles for Phone
+ -------------------------------------------------------------------- */
+
+.s--terms {
+	padding: 0 30px 51px;
+}
+
+.terms-item {
+	&:not(:last-child) {
+		border-bottom: 1PX solid;
+		margin-bottom: 32px;
+		padding-bottom: 17px;
+	}
+	.head {
+		min-height: 97px;
+		margin-bottom: 17px;
+	}
+	.title {
+		font-size: 24px;
+		line-height: 29px;
+		margin-bottom: 1px;
+	}
+	.value {
+		font-size: 50px;
+		line-height: 60px;
+		margin-bottom: 24px;
+	}
+	.more {
+		font-size: 18px;
+		line-height: 22px;
+		font-style: italic;
+		a {
+			color: $red;
+			text-decoration: none;
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
