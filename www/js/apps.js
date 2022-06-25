@@ -1040,7 +1040,6 @@ function initApp() {
       ShowPolicy: false,
       ShowForm: false,
       ShowResponse: false,
-      parallax: false,
       UTM: {},
       lazyLoadInstance: null
     },
@@ -1068,7 +1067,7 @@ function initApp() {
           if (vm.TermsDropShow) vm.closeTerms();
         }
       });
-      if (!vm.isPhone && !vm.parallax) vm.initParallax();
+      vm.initParallax();
       vm.initAnimations();
     },
     computed: {
@@ -1084,8 +1083,6 @@ function initApp() {
         document.body.style.paddingRight = this.scrollBarOffset + "px";
       },
       isPhone: function isPhone() {
-        if (!this.isPhone && !this.parallax) this.initParallax();
-        if (this.isPhone && this.parallax) this.destroyParallax();
         this.updateLazy();
       }
     },
@@ -1241,15 +1238,14 @@ function initApp() {
         });
       },
       initParallax: function initParallax() {
-        this.parallax = skrollr.init({
-          smoothScrolling: false,
-          mobileDeceleration: 0.004,
-          forceHeight: false
-        });
-      },
-      destroyParallax: function destroyParallax() {
-        this.parallax.destroy();
-        this.parallax = false;
+        var el = document.getElementById("parallax-main");
+
+        window.onscroll = function (e) {
+          var y = document.documentElement.scrollTop || document.body.scrollTop;
+          var h = window.innerHeight;
+          var percent = y * 100 / h / 2;
+          el.style.transform = "translate3d(0, " + percent + "% ,0)";
+        };
       }
     }
   });
