@@ -170,23 +170,12 @@ function scripts(cb) {
 	cb();
 }
 
-function jquery(cb) {
-	if (!jqueryInside) {
-		return gulp.src("node_modules/jquery/dist/jquery.min.js")
-			.pipe(gulp.dest(APP["tmp"]["scripts"]))
-			.pipe(gulp.dest(APP["dst"]["scripts"]))
-			.pipe(reload({ stream: true }));
-	}
+function pwa(cb) {
+	return gulp.src([APP["src"]["path"] + "/manifest.json", APP["src"]["path"] + "/sw.js"])
+		.pipe(gulp.dest(APP["tmp"]["path"]))
+		.pipe(gulp.dest(APP["dst"]["path"]))
+		.pipe(reload({ stream: true }));
 	cb();
-}
-
-function pace(cb) {
-  if (!jqueryInside) {
-    return gulp.src(APP["src"]["scripts"] + "/pace.min.js")
-      .pipe(gulp.dest(APP["dst"]["scripts"]))
-      .pipe(reload({ stream: true }));
-  }
-  cb();
 }
 
 function renderRu(cb) {
@@ -262,6 +251,7 @@ function livereload(cb) {
 	gulp.watch([APP["src"]["components"] + "/**/*.js", APP["src"]["scripts"] + "/*.js"], scripts);
   gulp.watch([APP["src"]["views"] + "/ru/*.html", APP["src"]["views"] + "/layouts/*.html", APP["src"]["components"] + "/**/*.html"], htmlRu);
   gulp.watch([APP["src"]["views"] + "/kz/*.html", APP["src"]["views"] + "/layouts/*.html", APP["src"]["components"] + "/**/*.html"], htmlKz);
+  gulp.watch([APP["src"]["path"] + "/manifest.json"], pwa);
 
 	gulp.watch([
 		APP["src"]["scripts"] + "/*.js",
@@ -303,6 +293,10 @@ function images(cb) {
 		.pipe(gulp.dest("src/orig"));
 }
 
+exports.pwa = series(
+	pwa
+)
+
 exports.webp = series(
 	webp
 )
@@ -312,14 +306,14 @@ exports.images = series(
 )
 
 exports.default = series(
-	parallel(htmlRu, htmlKz, styles, scripts, jquery), 
+	parallel(htmlRu, htmlKz, styles, scripts, pwa), 
 	livereload
 );
 
 exports.build = series(
 	clean,
 	series(
-		parallel(htmlRu, htmlKz, styles, scripts, jquery, pace), 
+		parallel(htmlRu, htmlKz, styles, scripts, pwa), 
 		renderRu,
 		renderKz,
 		parallel(

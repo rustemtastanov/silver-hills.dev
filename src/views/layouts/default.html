@@ -12,16 +12,25 @@
 	<!-- End Google Tag Manager -->
 	#}
 
+	<link rel="manifest" href="{{{ path }}}manifest.json">
+
 	<meta charset="utf-8">
-	<meta name="description" content="{{{ description }}}">
-	<meta name="keywords" content="{{{ keywords }}}">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="SilverHills">
+	<meta name="apple-mobile-web-app-title" content="SilverHills">
+	<meta name="theme-color" content="#03abbf">
+	<meta name="msapplication-navbutton-color" content="#03abbf">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="/">
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, width=device-width, shrink-to-fit=no">
 	<meta name="HandheldFriendly" content="true">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta http-equiv="x-dns-prefetch-control" content="off">
-	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, width=device-width, shrink-to-fit=no">
 	<meta name="format-detection" content="telephone=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="description" content="{{{ description }}}">
+	<meta name="keywords" content="{{{ keywords }}}">
 
 	<title>{{{ title }}}</title>
 
@@ -37,6 +46,7 @@
 	<link rel="preload" href="{{{ path }}}css/phone.css" as="style">
 	<link rel="preload" href="{{{ path }}}css/desktop.css" as="style">
 	<link rel="preload" href="{{{ path }}}media/main/main-bg-phone.webp" imagesrcset="{{{ path }}}media/main/main-bg-phone.webp 1x, {{{ path }}}media/main/main-bg-phone@2x.webp 2x" as="image">
+	<link rel="preload" href="{{{ path }}}sw.js" as="script">
 
 	{#
 	<!-- build:css {{{ path }}}css/loader.min.css media="screen" -->
@@ -53,7 +63,18 @@
 	<link rel="stylesheet" href="/css/desktop.css" media="screen and (min-width: 769px)" />
 	<!-- endbuild -->
 
-	<link rel="preconnect" href="https://maps.googleapis.com">
+	<!-- <link rel="preconnect" href="https://maps.googleapis.com"> -->
+
+	<script type="text/javascript" src="{{{ path }}}sw.js"></script>
+	<script>
+		if ("serviceWorker" in navigator) {
+			window.addEventListener("load", function() {  
+				navigator.serviceWorker.register("{{{ path }}}sw.js").then(
+					function(registration) {},
+					function(err) {});
+			});
+		}
+	</script>
 </head>
 
 <body>

@@ -221,7 +221,6 @@ function initGallery() {
     },
     watch: {
       inView: function inView() {
-        console.log(this.inView);
         if (this.inView) this.init();
       }
     },
@@ -296,7 +295,6 @@ function initFlats() {
     },
     watch: {
       inView: function inView() {
-        console.log(this.inView, "flats");
         if (this.inView) this.load();
       }
     },

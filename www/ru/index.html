@@ -2,37 +2,58 @@
 <html lang="ru">
 
 <head>
+	<link rel="manifest" href="../manifest.json">
 
 	<meta charset="utf-8">
-	<meta name="description" content="Жилой комплекс Silver Hills">
-	<meta name="keywords" content="Жилой, комплекс, Silver, Hills">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="SilverHills">
+	<meta name="apple-mobile-web-app-title" content="SilverHills">
+	<meta name="theme-color" content="#03abbf">
+	<meta name="msapplication-navbutton-color" content="#03abbf">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="msapplication-starturl" content="/">
+	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, width=device-width, shrink-to-fit=no">
 	<meta name="HandheldFriendly" content="true">
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta http-equiv="x-dns-prefetch-control" content="off">
-	<meta name="viewport" content="initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0, width=device-width, shrink-to-fit=no">
 	<meta name="format-detection" content="telephone=no">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+	<meta name="description" content="Жилой комплекс Silver Hills">
+	<meta name="keywords" content="Жилой, комплекс, Silver, Hills">
 
 	<title>Silver Hills</title>
 
+	<link rel="icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
 	<link rel="apple-touch-icon" sizes="57x57" href="../img/favicon/apple-icon-57x57.png">
+	<link rel="icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
 	<link rel="apple-touch-icon" sizes="60x60" href="../img/favicon/apple-icon-60x60.png">
+	<link rel="icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="../img/favicon/apple-icon-72x72.png">
+	<link rel="icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png">
 	<link rel="apple-touch-icon" sizes="76x76" href="../img/favicon/apple-icon-76x76.png">
+	<link rel="icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="../img/favicon/apple-icon-114x114.png">
+	<link rel="icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png">
 	<link rel="apple-touch-icon" sizes="120x120" href="../img/favicon/apple-icon-120x120.png">
+	<link rel="icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png">
 	<link rel="apple-touch-icon" sizes="144x144" href="../img/favicon/apple-icon-144x144.png">
+	<link rel="icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png">
 	<link rel="apple-touch-icon" sizes="152x152" href="../img/favicon/apple-icon-152x152.png">
+	<link rel="icon" sizes="180x180" href="../img/favicon/apple-icon-180x180.png">
 	<link rel="apple-touch-icon" sizes="180x180" href="../img/favicon/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192" href="../img/favicon/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="../img/favicon/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon/favicon-16x16.png">
-	<link rel="manifest" href="../img/favicon/manifest.json">
+	<link rel="icon" sizes="192x192" href="../img/favicon/android-icon-192x192.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="../img/favicon/android-icon-192x192.png">
+	<link rel="icon" sizes="512x512" href="../img/favicon/android-icon-512x512.png">
+	<link rel="apple-touch-icon" sizes="512x512" href="../img/favicon/android-icon-512x512.png">
+	<link rel="icon" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+	<link rel="apple-touch-icon" sizes="32x32" href="../img/favicon/favicon-32x32.png">
+	<link rel="icon" sizes="96x96" href="../img/favicon/favicon-96x96.png">
+	<link rel="apple-touch-icon" sizes="96x96" href="../img/favicon/favicon-96x96.png">
+	<link rel="icon" sizes="16x16" href="../img/favicon/favicon-16x16.png">
+	<link rel="apple-touch-icon" sizes="16x16" href="../img/favicon/favicon-16x16.png">
 	<meta name="msapplication-TileColor" content="#03abbf">
 	<meta name="msapplication-TileImage" content="../img/favicon/ms-icon-144x144.png">
-	<meta name="theme-color" content="#03abbf">
 
 	<link rel="preload" href="../fonts/icomoon.ttf" as="font" type="font/ttf" crossorigin>
 	<link rel="preload" href="../fonts/IBMPlexSans-Light.woff2" as="font" type="font/woff2" crossorigin>
@@ -40,16 +61,28 @@
 	<link rel="preload" href="../fonts/IBMPlexSans-Medium.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="../fonts/IBMPlexSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="preload" href="../fonts/IBMPlexSans-BoldItalic.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="../css/style.css" as="style">
-	<link rel="preload" href="../css/phone.css" as="style">
-	<link rel="preload" href="../css/desktop.css" as="style">
+	<link rel="preload" href="../css/style.min.css" as="style">
+	<link rel="preload" href="../css/phone.min.css" as="style">
+	<link rel="preload" href="../css/desktop.min.css" as="style">
 	<link rel="preload" href="../media/main/main-bg-phone.webp" imagesrcset="../media/main/main-bg-phone.webp 1x, ../media/main/main-bg-phone@2x.webp 2x" as="image">
+	<link rel="preload" href="../sw.js" as="script">
 
 	<link rel="stylesheet" href="../css/style.min.css" media="screen">
 	<link rel="stylesheet" href="../css/phone.min.css" media="screen and (max-width: 768px)">
 	<link rel="stylesheet" href="../css/desktop.min.css" media="screen and (min-width: 769px)">
 
-	<link rel="preconnect" href="https://maps.googleapis.com">
+	<!-- <link rel="preconnect" href="https://maps.googleapis.com"> -->
+
+	<script type="text/javascript" src="../sw.js"></script>
+	<script>
+		if ("serviceWorker" in navigator) {
+			window.addEventListener("load", function() {  
+				navigator.serviceWorker.register("../sw.js").then(
+					function(registration) {},
+					function(err) {});
+			});
+		}
+	</script>
 </head>
 
 <body>
