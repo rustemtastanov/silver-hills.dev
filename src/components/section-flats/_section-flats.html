@@ -1,5 +1,5 @@
-<app-flats inline-template>
-	<section class="section s--flats" id="flats">
+<app-flats inline-template :in-view="inView.flats">
+	<section class="section s--flats inview" data-inview="flats" id="flats" :class="{'ready': isLoaded}">
 
 		<div class="flats-column flats-left">
 

@@ -1,6 +1,25 @@
 .s--flats {
 	font-weight: 300;
 	display: flex;
+	&:not(.ready) {
+		&::before {
+			content: '';
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+			width: 40px;
+			height: 40px;
+			background-size: 100% 100%;
+			background-image: inline('#{$path-inline}/spinner-primary.svg');
+		}
+		.flats-left > div,
+		.flats-center,
+		.flats-right {
+			visibility: hidden;
+			pointer-events: none;
+		}
+	}
 }
 
 .flats-rooms {

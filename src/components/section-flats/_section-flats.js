@@ -5,6 +5,9 @@
  	-------------------------------------- */
 function initFlats() {
 	Vue.component("app-flats", {
+		props: {
+			inView: Boolean
+		},
 		data() {
 			return {
 				isLoaded: false,
@@ -28,18 +31,23 @@ function initFlats() {
 				LightBox: null
 			}
 		},
-		created() {
-			const vm = this;
-			fetch(vm.url)
-				.then((response) => {
-					return response.json();
-				})
-				.then((data) => {
-					vm.ItemsAll = data;
-					vm.init();
-				});
+		watch: {
+			inView() {
+				if (this.inView) this.load();
+			}
 		},
 		methods: {
+			load() {
+				const vm = this;
+				fetch(vm.url)
+					.then((response) => {
+						return response.json();
+					})
+					.then((data) => {
+						vm.ItemsAll = data;
+						vm.init();
+					});
+			},
 			init() {
 				let rooms = [];
 				let types = [];

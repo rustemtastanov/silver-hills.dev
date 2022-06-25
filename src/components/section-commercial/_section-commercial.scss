@@ -62,6 +62,10 @@
 	justify-content: center;
   align-items: center;
   position: relative;
+  &:not(.ready) {
+  	visibility: hidden;
+  	pointer-events: none;
+  }
   a {
   	transition: opacity .3s;
   	&:hover {

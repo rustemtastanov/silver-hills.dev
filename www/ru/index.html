@@ -363,8 +363,8 @@
 			</section>
 		</app-gallery>
 
-		<app-flats inline-template>
-			<section class="section s--flats" id="flats">
+		<app-flats inline-template :in-view="inView.flats">
+			<section class="section s--flats inview" data-inview="flats" id="flats" :class="{'ready': isLoaded}">
 				<div class="flats-column flats-left">
 					<h2 class="flats-title">Квартиры</h2>
 					<div class="flats-rooms" v-show="isLoaded">
@@ -1010,8 +1010,8 @@
 			</section>
 		</app-status>
 
-		<app-commercial inline-template>
-			<section class="section s--commercial" id="commerce">
+		<app-commercial inline-template :in-view="inView.commercial">
+			<section class="section s--commercial inview" data-inview="commercial" id="commerce">
 				<div class="commercial-column commercial-left">
 					<h3 class="commercial-title">
 						Коммерческие<br /> помещения
@@ -1036,7 +1036,7 @@
 				<div class="commercial-column commercial-right">
 					<span v-show="!isLoaded" class="loader"></span>
 					<i class="icon icon-roza commercial-icon"></i>
-					<div class="commercial-viewport" :class="{ active: ImageLoaded }" v-show="isLoaded">
+					<div class="commercial-viewport" :class="{ active: ImageLoaded, 'ready': isLoaded }" v-show="isLoaded">
 						<span v-show="!ImageLoaded" class="loader"></span>
 						<a href="#" :href="Selected.img" class="link--block commercial-zoom" aria-label="zoom" v-show="ImageLoaded">
 							<div class="img">
@@ -1074,8 +1074,8 @@
 			</section>
 		</app-order>
 
-		<app-contacts inline-template :is-phone="isPhone">
-			<section class="section s--contacts" id="contacts">
+		<app-contacts inline-template :is-phone="isPhone" :in-view="inView.contacts">
+			<section class="section s--contacts inview" data-inview="contacts" id="contacts">
 				<div class="contacts-column contacts-left">
 					<h3 class="contacts-title">Контакты</h3>
 					<div class="contacts-phone visible-xs">

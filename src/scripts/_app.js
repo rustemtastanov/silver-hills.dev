@@ -57,7 +57,12 @@ function initApp() {
 			ShowForm: false,
 			ShowResponse: false,
 			UTM: {},
-			lazyLoadInstance: null
+			lazyLoadInstance: null,
+			inView: {
+				contacts: false,
+				flats: false,
+				commercial: false
+			}
 		},
 		created() {
 			const vm = this;
@@ -83,6 +88,7 @@ function initApp() {
 					if (vm.TermsDropShow) vm.closeTerms();
 				}
 			});
+			vm.initInView();
 			vm.initParallax();
 			vm.initAnimations();
 		},
@@ -224,6 +230,24 @@ function initApp() {
 			},
 			closeTerms() {
 				this.TermsDropShow = false;
+			},
+			initInView() {
+				const vm = this;
+				document.querySelectorAll(".inview").forEach(function(el) {
+					const section = el.getAttribute("data-inview");
+					let isEntered;
+					const observer = new IntersectionObserver(function(entries, observer) {
+						entries.forEach(function(entry) {
+							let isEnter = entry.isIntersecting;
+							if (isEnter && !isEntered) {
+								isEntered = true;
+								vm.inView[section] = true;
+								console.log("enter",section,vm.inView);
+							}
+						});
+					});
+					observer.observe(el);
+				});
 			},
 			initAnimations() {
 				document.querySelectorAll(".anim").forEach(function(el) {

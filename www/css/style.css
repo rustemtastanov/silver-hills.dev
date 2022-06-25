@@ -2430,6 +2430,26 @@ body {
   display: flex;
 }
 
+.s--flats:not(.ready)::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-size: 100% 100%;
+  background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22margin%3A%20auto%3B%20background%3A%20none%3B%20display%3A%20block%3B%20shape-rendering%3A%20auto%3B%22%20width%3D%22200px%22%20height%3D%22200px%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20stroke-width%3D%225%22%20stroke%3D%22%2303abbf%22%20stroke-dasharray%3D%2262.83185307179586%2062.83185307179586%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221s%22%20keyTimes%3D%220%3B1%22%20values%3D%220%2050%2050%3B360%2050%2050%22%3E%3C%2FanimateTransform%3E%0A%3C%2Fcircle%3E%0A%3C%2Fsvg%3E');
+}
+
+.s--flats:not(.ready) .flats-left > div,
+.s--flats:not(.ready) .flats-center,
+.s--flats:not(.ready) .flats-right {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .flats-rooms {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2876,6 +2896,11 @@ body {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
+}
+
+.commercial-viewport:not(.ready) {
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .commercial-viewport a {

@@ -6,7 +6,8 @@
 function initContacts() {
 	Vue.component("app-contacts", {
 		props: {
-			isPhone: Boolean
+			isPhone: Boolean,
+			inView: Boolean
 		},
 		data() {
 			return {
@@ -15,14 +16,6 @@ function initContacts() {
 				timer: null,
 				map: null
 			}
-		},
-		mounted() {
-			const vm = this;
-			vm.timer = setInterval(function() {
-				vm.check();
-			}, 4000);
-				MapZoom: MAP_DATA.zoom,
-				vm.MapZoom = vm.isPhone ? vm.MapData.zoom-1 : vm.MapData.zoom;
 		},
 		computed: {
 			LatLng() {
@@ -38,21 +31,35 @@ function initContacts() {
 				return this.$refs.mapEl;
 			}
 		},
+		watch: {
+			inView() {
+				if (this.inView) this.init();
+			}
+		},
 		methods: {
+			init() {
+				const vm = this;
+				vm.timer = setInterval(function() {
+					vm.check();
+				}, 2000);
+				MapZoom: MAP_DATA.zoom,
+				vm.MapZoom = vm.isPhone ? vm.MapData.zoom-1 : vm.MapData.zoom;
+			},
 			check() {
+				const vm = this;
 				if (typeof DG!="undefined") {
-					clearInterval(this.timer);
-					this.render();
+					clearInterval(vm.timer);
+					vm.render();
 				}
 			},
 			render() {
 				const vm = this;
 				let map;
 
-				let width 	= vm.Sizes[0];
-				let height 	= vm.Sizes[1];
-				let x 			= vm.Offset[0];
-				let y 			= vm.Offset[1];
+				const width 	= vm.Sizes[0];
+				const height 	= vm.Sizes[1];
+				const x 			= vm.Offset[0];
+				const y 			= vm.Offset[1];
 
 				DG.then(function() {
 					map = DG.map(vm.mapEl, {
@@ -65,7 +72,7 @@ function initContacts() {
 						scrollWheelZoom: true
 					});
 
-					let icon = DG.divIcon({
+					const icon = DG.divIcon({
 						html: "<div class='map-marker'>" +
 										"<div class='map-marker-img'>" +
 											"<img src='" + vm.MapData.marker + "' class='img--cover' alt='icon' />" +
@@ -73,7 +80,7 @@ function initContacts() {
 									"</div>"
 					});
 
-					let marker = DG.marker(vm.LatLng, {
+					const marker = DG.marker(vm.LatLng, {
 						icon: icon,
 						riseOnHover: false,
 						alt: "pin"

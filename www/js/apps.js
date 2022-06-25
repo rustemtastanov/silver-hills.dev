@@ -239,6 +239,9 @@ function initGallery() {
 
 function initFlats() {
   Vue.component("app-flats", {
+    props: {
+      inView: Boolean
+    },
     data: function data() {
       return {
         isLoaded: false,
@@ -262,16 +265,21 @@ function initFlats() {
         LightBox: null
       };
     },
-    created: function created() {
-      var vm = this;
-      fetch(vm.url).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        vm.ItemsAll = data;
-        vm.init();
-      });
+    watch: {
+      inView: function inView() {
+        if (this.inView) this.load();
+      }
     },
     methods: {
+      load: function load() {
+        var vm = this;
+        fetch(vm.url).then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          vm.ItemsAll = data;
+          vm.init();
+        });
+      },
       init: function init() {
         var rooms = [];
         var types = [];
@@ -591,6 +599,9 @@ function initModalStatus() {
 
 function initCommercial() {
   Vue.component("app-commercial", {
+    props: {
+      inView: Boolean
+    },
     data: function data() {
       return {
         isLoaded: false,
@@ -603,16 +614,21 @@ function initCommercial() {
         LightBox: null
       };
     },
-    created: function created() {
-      var vm = this;
-      fetch(vm.url).then(function (response) {
-        return response.json();
-      }).then(function (data) {
-        vm.Items = data;
-        vm.init();
-      });
+    watch: {
+      inView: function inView() {
+        if (this.inView) this.load();
+      }
     },
     methods: {
+      load: function load() {
+        var vm = this;
+        fetch(vm.url).then(function (response) {
+          return response.json();
+        }).then(function (data) {
+          vm.Items = data;
+          vm.init();
+        });
+      },
       init: function init() {
         this.isLoaded = true;
         this.getAreas();
@@ -681,7 +697,8 @@ function initCommercial() {
 function initContacts() {
   Vue.component("app-contacts", {
     props: {
-      isPhone: Boolean
+      isPhone: Boolean,
+      inView: Boolean
     },
     data: function data() {
       return {
@@ -690,14 +707,6 @@ function initContacts() {
         timer: null,
         map: null
       };
-    },
-    mounted: function mounted() {
-      var vm = this;
-      vm.timer = setInterval(function () {
-        vm.check();
-      }, 4000);
-
-      MapZoom: MAP_DATA.zoom, vm.MapZoom = vm.isPhone ? vm.MapData.zoom - 1 : vm.MapData.zoom;
     },
     computed: {
       LatLng: function LatLng() {
@@ -713,11 +722,26 @@ function initContacts() {
         return this.$refs.mapEl;
       }
     },
+    watch: {
+      inView: function inView() {
+        if (this.inView) this.init();
+      }
+    },
     methods: {
+      init: function init() {
+        var vm = this;
+        vm.timer = setInterval(function () {
+          vm.check();
+        }, 2000);
+
+        MapZoom: MAP_DATA.zoom, vm.MapZoom = vm.isPhone ? vm.MapData.zoom - 1 : vm.MapData.zoom;
+      },
       check: function check() {
+        var vm = this;
+
         if (typeof DG != "undefined") {
-          clearInterval(this.timer);
-          this.render();
+          clearInterval(vm.timer);
+          vm.render();
         }
       },
       render: function render() {
@@ -1041,7 +1065,12 @@ function initApp() {
       ShowForm: false,
       ShowResponse: false,
       UTM: {},
-      lazyLoadInstance: null
+      lazyLoadInstance: null,
+      inView: {
+        contacts: false,
+        flats: false,
+        commercial: false
+      }
     },
     created: function created() {
       var vm = this;
@@ -1067,6 +1096,7 @@ function initApp() {
           if (vm.TermsDropShow) vm.closeTerms();
         }
       });
+      vm.initInView();
       vm.initParallax();
       vm.initAnimations();
     },
@@ -1212,6 +1242,25 @@ function initApp() {
       },
       closeTerms: function closeTerms() {
         this.TermsDropShow = false;
+      },
+      initInView: function initInView() {
+        var vm = this;
+        document.querySelectorAll(".inview").forEach(function (el) {
+          var section = el.getAttribute("data-inview");
+          var isEntered;
+          var observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+              var isEnter = entry.isIntersecting;
+
+              if (isEnter && !isEntered) {
+                isEntered = true;
+                vm.inView[section] = true;
+                console.log("enter", section, vm.inView);
+              }
+            });
+          });
+          observer.observe(el);
+        });
       },
       initAnimations: function initAnimations() {
         document.querySelectorAll(".anim").forEach(function (el) {

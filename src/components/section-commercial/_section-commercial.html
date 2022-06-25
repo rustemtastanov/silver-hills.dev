@@ -1,5 +1,5 @@
-<app-commercial inline-template>
-	<section class="section s--commercial" id="commerce">
+<app-commercial inline-template :in-view="inView.commercial">
+	<section class="section s--commercial inview" data-inview="commercial" id="commerce">
 
 		<div class="commercial-column commercial-left">
 
@@ -39,7 +39,7 @@
 
 			<i class="icon icon-roza commercial-icon"></i>
 
-			<div class="commercial-viewport" :class="{ active: ImageLoaded }" v-show="isLoaded">
+			<div class="commercial-viewport" :class="{ active: ImageLoaded, 'ready': isLoaded }" v-show="isLoaded">
 				<span v-show="!ImageLoaded" class="loader"></span>
 				<a href="#" :href="Selected.img" class="link--block commercial-zoom" aria-label="zoom" v-show="ImageLoaded">
 					<div class="img">

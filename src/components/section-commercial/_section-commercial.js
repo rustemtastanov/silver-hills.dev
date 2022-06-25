@@ -5,6 +5,9 @@
  	-------------------------------------- */
 function initCommercial() {
 	Vue.component("app-commercial", {
+		props: {
+			inView: Boolean
+		},
 		data() {
 			return {
 				isLoaded: false,
@@ -17,18 +20,23 @@ function initCommercial() {
 				LightBox: null
 			}
 		},
-		created() {
-			const vm = this;
-			fetch(vm.url)
-				.then((response) => {
-					return response.json();
-				})
-				.then((data) => {
-					vm.Items = data;
-					vm.init();
-				});
+		watch: {
+			inView() {
+				if (this.inView) this.load();
+			}
 		},
 		methods: {
+			load() {
+				const vm = this;
+				fetch(vm.url)
+					.then((response) => {
+						return response.json();
+					})
+					.then((data) => {
+						vm.Items = data;
+						vm.init();
+					});
+				},
 			init() {
 				this.isLoaded = true;
 				this.getAreas();
