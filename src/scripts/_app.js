@@ -85,7 +85,7 @@ function initApp() {
 				}
 			});
 			if (!vm.isPhone && !vm.parallax) vm.initParallax();
-			vm.initAos();
+			vm.initAnimations();
 		},
 		computed: {
 			headerEl() {
@@ -228,10 +228,26 @@ function initApp() {
 			closeTerms() {
 				this.TermsDropShow = false;
 			},
-			initAos() {
-				AOS.init({
-					disable: "mobile",
-					once: true
+			initAnimations() {
+				document.querySelectorAll(".anim").forEach(function(el) {
+					const threshold = el.getAttribute("data-threshold");
+					let isEntered;
+					const observer = new IntersectionObserver(function(entries, observer) {
+						entries.forEach(function(entry) {
+							let isEnter = entry.isIntersecting;
+							if (isEnter && !isEntered) {
+								el.classList.add("animated");
+								isEntered = true;
+							}
+							if (!isEnter && isEntered && entry.boundingClientRect.y>=0) {
+								el.classList.remove("animated");
+								isEntered = false;
+							}
+						});
+					}, {
+						threshold: threshold
+					});
+					observer.observe(el);
 				});
 			},
 			initParallax() {

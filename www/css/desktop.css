@@ -650,6 +650,19 @@ form {
   position: relative;
   width: 33.3333333333%;
   min-height: 9.4375rem;
+  opacity: 0;
+  -webkit-transform: translateY(40%);
+          transform: translateY(40%);
+  -webkit-transition: opacity .3s, -webkit-transform .6s;
+  transition: opacity .3s, -webkit-transform .6s;
+  transition: transform .6s, opacity .3s;
+  transition: transform .6s, opacity .3s, -webkit-transform .6s;
+}
+
+.about-item.animated {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
 }
 
 .about-item:nth-child(1) {
@@ -712,7 +725,7 @@ form {
   transition: all 1.5s;
 }
 
-.about-img.aos-animate path {
+.about-img.animated path {
   stroke-dashoffset: 0;
 }
 
@@ -800,7 +813,7 @@ form {
   transition: all 1.5s;
 }
 
-.order-img.aos-animate path {
+.order-img.animated path {
   stroke-dashoffset: 0;
 }
 
@@ -1205,21 +1218,12 @@ form {
   opacity: 1;
 }
 
-.points-items:not(.changed) [data-aos="img-1"].aos-animate path,
-.points-items:not(.changed) [data-aos="img-1"].aos-animate polygon,
-.points-items:not(.changed) [data-aos="img-1"].aos-animate polyline,
-.points-items.changed [data-aos="img-1"].active path,
-.points-items.changed [data-aos="img-1"].active polygon,
-.points-items.changed [data-aos="img-1"].active polyline,
-[data-aos="img-2"].active path,
-[data-aos="img-2"].active polygon,
-[data-aos="img-2"].active polyline,
-[data-aos="img-3"].active path,
-[data-aos="img-3"].active polygon,
-[data-aos="img-3"].active polyline,
-[data-aos="img-4"].active path,
-[data-aos="img-4"].active polygon,
-[data-aos="img-4"].active polyline {
+.points-items:not(.changed) .anim.active.animated path,
+.points-items:not(.changed) .anim.active.animated polygon,
+.points-items:not(.changed) .anim.active.animated polyline,
+.points-items.changed .anim.active path,
+.points-items.changed .anim.active polygon,
+.points-items.changed .anim.active polyline {
   stroke-dashoffset: 0;
 }
 
@@ -1791,6 +1795,19 @@ form {
   padding: 1.25rem 1.375rem 4.625rem;
   margin-left: 1.25rem;
   position: relative;
+  opacity: 0;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, -webkit-transform .6s;
+  transition: opacity .6s, transform .6s;
+  transition: opacity .6s, transform .6s, -webkit-transform .6s;
+}
+
+.terms-item.animated {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .terms-item:nth-child(1) {
@@ -1877,7 +1894,7 @@ form {
   transition: all 1.5s;
 }
 
-.terms-img.aos-animate path {
+.terms-img.animated path {
   stroke-dashoffset: 0;
 }
 
@@ -2167,7 +2184,7 @@ form {
   transition: all 1.5s;
 }
 
-.commercial-img.aos-animate path {
+.commercial-img.animated path {
   stroke-dashoffset: 0;
 }
 

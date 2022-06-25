@@ -30,6 +30,13 @@
 	padding: 20px 22px 74px;
 	margin-left: 20px;
 	position: relative;
+	opacity: 0;
+	transform: translateX(50%);
+	transition: opacity .6s, transform .6s;
+	&.animated {
+		opacity: 1;
+		transform: translateX(0);
+	}
 	&:nth-child(1) {
 		transition-delay: .2s;
 	}
@@ -96,7 +103,7 @@
 	path {
 		transition: all 1.5s;
 	}
-	&.aos-animate path {
+	&.animated path {
 		stroke-dashoffset: 0;
 	}
 }

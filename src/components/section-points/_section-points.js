@@ -42,6 +42,27 @@ function initPoints() {
 				let index = this.realIndex;
 				vm.Pager.swiper.slideTo(index);
 			});
+			vm.initObserver();
+		},
+		methods: {
+			initObserver() {
+				const vm = this;
+				const el = vm.$el;
+				let isEntered;
+				const observer = new IntersectionObserver(function(entries, observer) {
+					entries.forEach(function(entry) {
+						let isEnter = entry.isIntersecting;
+						if (isEnter && !isEntered) {
+							isEntered = true;
+						}
+						if (!isEnter && isEntered && entry.boundingClientRect.y>=0 && !vm.isStart) {
+							isEntered = false;
+							vm.isStart = true;
+						}
+					});
+				});
+				observer.observe(el);
+			}
 		}
 	});
 }

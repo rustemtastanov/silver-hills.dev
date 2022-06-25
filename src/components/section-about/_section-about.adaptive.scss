@@ -37,6 +37,13 @@
 	position: relative;
 	width: (100%/3);
 	min-height: 151px;
+	opacity: 0;
+	transform: translateY(40%);
+	transition: transform .6s, opacity .3s;
+	&.animated {
+		opacity: 1;
+		transform: translateY(0);
+	}
 	&:nth-child(1) {
 		transition-delay: .2s;
 	}
@@ -81,7 +88,7 @@
 	path {
 		transition: all 1.5s;
 	}
-	&.aos-animate path {
+	&.animated path {
 		stroke-dashoffset: 0;
 	}
 }

@@ -77,11 +77,8 @@
 	}
 }
 
-.points-items:not(.changed) [data-aos="img-1"].aos-animate,
-.points-items.changed [data-aos="img-1"].active,
-[data-aos="img-2"].active,
-[data-aos="img-3"].active,
-[data-aos="img-4"].active {
+.points-items:not(.changed) .anim.active.animated,
+.points-items.changed .anim.active {
 	path,
 	polygon,
 	polyline {

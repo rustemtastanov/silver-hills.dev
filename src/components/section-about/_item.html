@@ -1,9 +1,5 @@
-<div class="about-item about-item-{{{ item.index }}}" 
-	data-aos="fade-up"
-	data-aos-anchor=".s--about" 
-	data-aos-offset="300" 
-	data-aos-duration="800" 
-	data-aos-easing="ease-out-cubic">
+<div class="about-item about-item-{{{ item.index }}} anim" 
+	data-threshold="0.2">
 
 	<div class="value">
 		<app-counter :value="{{{ item.value }}}"></app-counter>

@@ -134,6 +134,29 @@ function initPoints() {
         var index = this.realIndex;
         vm.Pager.swiper.slideTo(index);
       });
+      vm.initObserver();
+    },
+    methods: {
+      initObserver: function initObserver() {
+        var vm = this;
+        var el = vm.$el;
+        var isEntered;
+        var observer = new IntersectionObserver(function (entries, observer) {
+          entries.forEach(function (entry) {
+            var isEnter = entry.isIntersecting;
+
+            if (isEnter && !isEntered) {
+              isEntered = true;
+            }
+
+            if (!isEnter && isEntered && entry.boundingClientRect.y >= 0 && !vm.isStart) {
+              isEntered = false;
+              vm.isStart = true;
+            }
+          });
+        });
+        observer.observe(el);
+      }
     }
   });
 }
@@ -853,27 +876,35 @@ function initCounters() {
     },
     data: function data() {
       return {
-        Counter: 1,
-        Played: false,
-        Duration: 1000,
-        From: 1
+        Counter: 0,
+        Duration: 1000
       };
     },
     mounted: function mounted() {
       var vm = this;
       var el = vm.$el;
-      window.addEventListener("scroll", function () {
-        var y = window.pageYOffset;
-        var o = el.getBoundingClientRect().y;
-        if (y >= o && !vm.Played) vm.Play();
+      var isEntered;
+      var observer = new IntersectionObserver(function (entries, observer) {
+        entries.forEach(function (entry) {
+          var isEnter = entry.isIntersecting;
+
+          if (isEnter && !isEntered) {
+            vm.Play();
+            isEntered = true;
+          }
+
+          if (!isEnter && isEntered && entry.boundingClientRect.y >= 0 && !vm.isStart) {
+            isEntered = false;
+          }
+        });
       });
+      observer.observe(el);
     },
     methods: {
       Play: function Play() {
         var _this = this;
 
-        this.Played = true;
-        var from = this.From;
+        var from = 0;
         var to = this.Value;
         var frameDuration = 1000 / 60;
         var totalFrames = Math.round(this.Duration / frameDuration);
@@ -1038,7 +1069,7 @@ function initApp() {
         }
       });
       if (!vm.isPhone && !vm.parallax) vm.initParallax();
-      vm.initAos();
+      vm.initAnimations();
     },
     computed: {
       headerEl: function headerEl() {
@@ -1185,10 +1216,28 @@ function initApp() {
       closeTerms: function closeTerms() {
         this.TermsDropShow = false;
       },
-      initAos: function initAos() {
-        AOS.init({
-          disable: "mobile",
-          once: true
+      initAnimations: function initAnimations() {
+        document.querySelectorAll(".anim").forEach(function (el) {
+          var threshold = el.getAttribute("data-threshold");
+          var isEntered;
+          var observer = new IntersectionObserver(function (entries, observer) {
+            entries.forEach(function (entry) {
+              var isEnter = entry.isIntersecting;
+
+              if (isEnter && !isEntered) {
+                el.classList.add("animated");
+                isEntered = true;
+              }
+
+              if (!isEnter && isEntered && entry.boundingClientRect.y >= 0) {
+                el.classList.remove("animated");
+                isEntered = false;
+              }
+            });
+          }, {
+            threshold: threshold
+          });
+          observer.observe(el);
         });
       },
       initParallax: function initParallax() {
