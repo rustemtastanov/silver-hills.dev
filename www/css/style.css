@@ -1499,12 +1499,16 @@ input[type="button"].btn--block {
   background-size: 100% 100%;
   -webkit-transform: translate(-50%, -50%) scale(0);
           transform: translate(-50%, -50%) scale(0);
-  background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22margin%3A%20auto%3B%20background%3A%20none%3B%20display%3A%20block%3B%20shape-rendering%3A%20auto%3B%22%20width%3D%22200px%22%20height%3D%22200px%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20stroke-width%3D%225%22%20stroke%3D%22%23ffffff%22%20stroke-dasharray%3D%2262.83185307179586%2062.83185307179586%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221s%22%20keyTimes%3D%220%3B1%22%20values%3D%220%2050%2050%3B360%2050%2050%22%3E%3C%2FanimateTransform%3E%0A%3C%2Fcircle%3E%0A%3C%2Fsvg%3E');
+  background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22margin%3A%20auto%3B%20background%3A%20none%3B%20display%3A%20block%3B%20shape-rendering%3A%20auto%3B%22%20width%3D%22200px%22%20height%3D%22200px%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20stroke-width%3D%225%22%20stroke%3D%22%2303abbf%22%20stroke-dasharray%3D%2262.83185307179586%2062.83185307179586%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221s%22%20keyTimes%3D%220%3B1%22%20values%3D%220%2050%2050%3B360%2050%2050%22%3E%3C%2FanimateTransform%3E%0A%3C%2Fcircle%3E%0A%3C%2Fsvg%3E');
   -webkit-transition: -webkit-transform .2s;
   transition: -webkit-transform .2s;
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s;
   pointer-events: none;
+}
+
+.btn--submit:active::after, .btn--submit:focus::after, .btn--submit:hover::after {
+  background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22margin%3A%20auto%3B%20background%3A%20none%3B%20display%3A%20block%3B%20shape-rendering%3A%20auto%3B%22%20width%3D%22200px%22%20height%3D%22200px%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20stroke-width%3D%225%22%20stroke%3D%22%23ffffff%22%20stroke-dasharray%3D%2262.83185307179586%2062.83185307179586%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221s%22%20keyTimes%3D%220%3B1%22%20values%3D%220%2050%2050%3B360%2050%2050%22%3E%3C%2FanimateTransform%3E%0A%3C%2Fcircle%3E%0A%3C%2Fsvg%3E');
 }
 
 [data-loading="true"] .btn--submit > span {
@@ -1587,12 +1591,23 @@ input[type="button"].btn--block {
 }
 
 .btn--top span {
-  position: relative;
-  top: -0.125rem;
   -webkit-transition: opacity .3s, -webkit-transform .3s;
   transition: opacity .3s, -webkit-transform .3s;
   transition: transform .3s, opacity .3s;
   transition: transform .3s, opacity .3s, -webkit-transform .3s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .btn--top .text-over {
@@ -1725,6 +1740,8 @@ input[type="button"].btn--block {
   color: #03abbf;
   font-size: 0.9375rem;
   margin-right: 1.5rem;
+  top: -0.125rem;
+  position: relative;
 }
 
 .btn--flats:hover, .btn--flats:active, .btn--flats:focus {
@@ -1752,7 +1769,7 @@ label {
   line-height: normal;
   color: black;
   background: none;
-  border: 0.0625rem solid black;
+  border: 1PX solid black;
   border-radius: 0;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -2299,6 +2316,7 @@ body {
 
 .benefits-slide .img {
   z-index: 0;
+  display: block;
 }
 
 .benefits-slide .title,
@@ -2640,10 +2658,6 @@ body {
   pointer-events: none;
 }
 
-.flats-areas li.active a span {
-  top: auto;
-}
-
 .flats-subtitle {
   font-style: italic;
 }
@@ -2889,10 +2903,6 @@ body {
   border-color: #03abbf;
   background: #03abbf;
   pointer-events: none;
-}
-
-.commercial-areas li.active a span {
-  top: auto;
 }
 
 .commercial-icon {

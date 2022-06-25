@@ -78,9 +78,14 @@ input[type="button"] {
     height: 40px;
     background-size: 100% 100%;
     transform: translate(-50%, -50%) scale(0);
-    background-image: inline('#{$path-inline}/spinner-white.svg');
+    background-image: inline('#{$path-inline}/spinner-primary.svg');
     transition: transform .2s;
     pointer-events: none;
+  }
+  &:active::after,
+  &:focus::after,
+  &:hover::after {
+    background-image: inline('#{$path-inline}/spinner-white.svg');
   }
   [data-loading="true"] & {
     > span {
@@ -153,9 +158,11 @@ input[type="button"] {
 	align-items: center;
 	overflow: hidden;
 	span {
-		position: relative;
-		top: -2px;
 		transition: transform .3s, opacity .3s;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 	}
 	.text-over {
 		@include stretch-x;
@@ -259,6 +266,8 @@ input[type="button"] {
 	color: $brand-primary;
 	font-size: 15px;
 	margin-right: 24px;
+	top: -2px;
+	position: relative;
 	&:hover,
 	&:active,
 	&:focus {

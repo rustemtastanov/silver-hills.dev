@@ -6,11 +6,8 @@
 		<div class="drop-form-in">
 
 			<img width="291" height="70" data-src="{{{ path }}}img/logo.svg" class="img--cover lazy drop-form-logo" alt="logo" data-role="lazyimg" />
-
 			<img width="54" height="52" data-src="{{{ path }}}img/logo-icon.png" data-retina="{{{ path }}}img/logo-icon@2x.png" class="img--cover lazy drop-form-icon hidden-xs" alt="icon" data-role="lazyimg" />
-
 			<img width="108" height="104" data-src="{{{ path }}}img/logo-icon.png" data-retina="{{{ path }}}img/logo-icon@2x.png" class="img--cover lazy drop-form-icon visible-xs" alt="icon" data-role="lazyimg" />
-
 			<img width="8" height="150" data-src="{{{ path }}}img/text-vertical-{{{ lang }}}.svg" class="img--cover lazy drop-form-text hidden-xs" alt="text" data-role="lazyimg" />
 
 			<div v-show="!ShowResponse">
@@ -29,33 +26,25 @@
 		</div>
 
 		<div class="drop-form-bg-wrapper" v-show="!ShowResponse">
-			<div class="drop-form-bg primary hidden-xs" data-role="lazy">
-				<picture>
-					<source data-srcset="{{{ path }}}media/drop-form-bg-1.webp 1x, {{{ path }}}media/drop-form-bg-1@2x.webp 2x" type="image/webp" />
-					<img width="1326" height="407" data-srcset="{{{ path }}}media/drop-form-bg-1.jpg 1x, {{{ path }}}media/drop-form-bg-1@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-				</picture>
-			</div>
-			<div class="drop-form-bg primary visible-xs" data-role="lazy">
-				<picture>
-					<source data-srcset="{{{ path }}}media/drop-form-bg-1-phone.webp 1x, {{{ path }}}media/drop-form-bg-1-phone@2x.webp 2x" type="image/webp" />
-					<img width="394" height="190" data-srcset="{{{ path }}}media/drop-form-bg-1-phone.jpg 1x, {{{ path }}}media/drop-form-bg-1-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-				</picture>
-			</div>
+			<picture class="drop-form-bg primary hidden-xs" data-role="lazy">
+				<source data-srcset="{{{ path }}}media/drop-form-bg-1.webp 1x, {{{ path }}}media/drop-form-bg-1@2x.webp 2x" type="image/webp" />
+				<img width="1326" height="407" data-srcset="{{{ path }}}media/drop-form-bg-1.jpg 1x, {{{ path }}}media/drop-form-bg-1@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+			</picture>
+			<picture class="drop-form-bg primary visible-xs" data-role="lazy">
+				<source data-srcset="{{{ path }}}media/drop-form-bg-1-phone.webp 1x, {{{ path }}}media/drop-form-bg-1-phone@2x.webp 2x" type="image/webp" />
+				<img width="394" height="190" data-srcset="{{{ path }}}media/drop-form-bg-1-phone.jpg 1x, {{{ path }}}media/drop-form-bg-1-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+			</picture>
 		</div>
 
 		<div class="drop-form-bg-wrapper" v-show="ShowResponse">
-			<div class="drop-form-bg primary hidden-xs" data-role="lazy">
-				<picture>
-					<source data-srcset="{{{ path }}}media/drop-form-bg-2.webp 1x, {{{ path }}}media/drop-form-bg-2@2x.webp 2x" type="image/webp" />
-					<img width="1326" height="407" data-srcset="{{{ path }}}media/drop-form-bg-2.jpg 1x, {{{ path }}}media/drop-form-bg-2@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-				</picture>
-			</div>
-			<div class="drop-form-bg primary visible-xs" data-role="lazy">
-				<picture>
-					<source data-srcset="{{{ path }}}media/drop-form-bg-2-phone.webp 1x, {{{ path }}}media/drop-form-bg-2-phone@2x.webp 2x" type="image/webp" />
-					<img width="394" height="190" data-srcset="{{{ path }}}media/drop-form-bg-2-phone.jpg 1x, {{{ path }}}media/drop-form-bg-2-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-				</picture>
-			</div>
+			<picture class="drop-form-bg primary hidden-xs" data-role="lazy">
+				<source data-srcset="{{{ path }}}media/drop-form-bg-2.webp 1x, {{{ path }}}media/drop-form-bg-2@2x.webp 2x" type="image/webp" />
+				<img width="1326" height="407" data-srcset="{{{ path }}}media/drop-form-bg-2.jpg 1x, {{{ path }}}media/drop-form-bg-2@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+			</picture>
+			<picture class="drop-form-bg primary visible-xs" data-role="lazy">
+				<source data-srcset="{{{ path }}}media/drop-form-bg-2-phone.webp 1x, {{{ path }}}media/drop-form-bg-2-phone@2x.webp 2x" type="image/webp" />
+				<img width="394" height="190" data-srcset="{{{ path }}}media/drop-form-bg-2-phone.jpg 1x, {{{ path }}}media/drop-form-bg-2-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+			</picture>
 		</div>
 
 	</div>

@@ -12,6 +12,7 @@ $bg-height: fluid(190px, 740px);
 	display: flex;
 	flex-direction: column;
 	height: calc(100vh - 60px - 10px);
+	height: calc(var(--vh, 1vh) * 100 - 60px - 10px);
 	overflow: auto;
 	overflow-x: hidden;
 }

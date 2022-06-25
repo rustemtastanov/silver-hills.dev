@@ -28,7 +28,7 @@
 	@include stretch-y;
 	left: 0;
 	overflow: hidden;
-	div {
+	> * {
 		@include stretch-y;
 		left: 50%;
 		width: 800px;

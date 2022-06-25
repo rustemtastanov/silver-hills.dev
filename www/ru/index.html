@@ -54,6 +54,17 @@
 
 <body>
 
+	<script type="text/javascript">
+		function getScale() {
+			var vh = window["innerHeight"] * .01;
+			document["documentElement"]["style"].setProperty("--vh", vh + "px");
+		};
+		window.onresize = function(event) {
+			getScale();
+		};
+		getScale();
+	</script>
+
 	<main class="content" id="app">
 
 		<header class="header gscrollbar-fixer" :style="'padding-right: '+ scrollBarOffset +'px'" ref="headerEl">
@@ -120,12 +131,10 @@
 						в <b>Silver Hills</b></div>
 				</div>
 			</div>
-			<div class="main-bg primary hidden-xs" data-role="lazy" id="parallax-main">
-				<picture>
-					<source data-srcset="../media/main/main-bg.webp 1x, ../media/main/main-bg@2x.webp 2x" type="image/webp" />
-					<img width="1326" height="667" data-srcset="../media/main/main-bg.jpg 1x, ../media/main/main-bg@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-				</picture>
-			</div>
+			<picture class="main-bg primary hidden-xs" data-role="lazy" id="parallax-main">
+				<source data-srcset="../media/main/main-bg.webp 1x, ../media/main/main-bg@2x.webp 2x" type="image/webp" />
+				<img width="1326" height="667" data-srcset="../media/main/main-bg.jpg 1x, ../media/main/main-bg@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+			</picture>
 		</section>
 
 		<section class="section s--about" id="about">
@@ -182,12 +191,10 @@
 
 		<app-order inline-template :index="1">
 			<section class="section s--order s--order-1">
-				<div class="order-bg visible-xs primary" data-role="lazy">
-					<picture>
-						<source data-srcset="../media/order-bg-1.webp 1x, ../media/order-bg-1@2x.webp 2x" type="image/webp" />
-						<img width="394" height="250" data-srcset="../media/order-bg-1.jpg 1x, ../media/order-bg-1@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-					</picture>
-				</div>
+				<picture class="order-bg visible-xs primary" data-role="lazy">
+					<source data-srcset="../media/order-bg-1.webp 1x, ../media/order-bg-1@2x.webp 2x" type="image/webp" />
+					<img width="394" height="250" data-srcset="../media/order-bg-1.jpg 1x, ../media/order-bg-1@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+				</picture>
 				<img width="8" height="150" data-src="../img/text-vertical-ru.svg" class="lazy img--cover order-text hidden-xs" alt="text" data-role="lazyimg" />
 				<img width="291" height="70" data-src="../img/logo.svg" class="lazy img--cover order-logo" alt="logo" data-role="lazyimg" />
 				<img width="108" height="104" data-src="../img/logo-icon.png" data-retina="../img/logo-icon@2x.png" class="img--cover lazy order-icon visible-xs" alt="icon" data-role="lazyimg" />
@@ -212,12 +219,10 @@
 				</div>
 				<swiper class="swiper benefits-items hidden-xs" ref="slider" :options="options">
 					<swiper-slide v-for="(Slide, index) in Slides" class="benefits-slide swiper-slide" :key="index">
-						<div class="img swiper-img">
-							<picture>
-								<source :data-srcset="Slide.webp +' 1x, '+ Slide.webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp" />
-								<img width="1204" height="458" :data-srcset="Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x'" class="swiper-lazy img--cover" alt="photo" />
-							</picture>
-						</div>
+						<picture class="img swiper-img">
+							<source :data-srcset="Slide.webp +' 1x, '+ Slide.webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp" />
+							<img width="1204" height="458" :data-srcset="Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x'" class="swiper-lazy img--cover" alt="photo" />
+						</picture>
 						<div class="inner" :class="'inner-' + Slide.pos">
 							<div class="title" v-html="Slide.subtitle"></div>
 							<div class="text" v-html="Slide.text"></div>
@@ -226,12 +231,10 @@
 				</swiper>
 				<div class="benefits-items visible-xs">
 					<div class="benefits-slide" v-for="(Slide, index) in Slides" :key="index">
-						<div class="img primary" data-role="lazy">
-							<picture>
-								<source :data-srcset="Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x'" type="image/webp" />
-								<img width="394" height="220" :data-srcset="Slide.thumb_phone +' 1x, '+ Slide.thumb_phone2x +' 2x'" alt="photo" class="lazy img--cover" />
-							</picture>
-						</div>
+						<picture class="img primary" data-role="lazy">
+							<source :data-srcset="Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x'" type="image/webp" />
+							<img width="394" height="220" :data-srcset="Slide.thumb_phone +' 1x, '+ Slide.thumb_phone2x +' 2x'" alt="photo" class="lazy img--cover" />
+						</picture>
 						<div class="head">
 							<div class="value">{{ Slide.value }}</div>
 							<div class="title" v-html="Slide.title"></div>
@@ -1197,20 +1200,16 @@
 				</div>
 				<div class="drop-menu-bg primary hidden-xs">
 					<transition name="drop-menu-bg">
-						<div v-show="ShowDropMenu" data-role="lazy">
-							<picture>
-								<source data-srcset="../media/drop-menu-bg.webp 1x, ../media/drop-menu-bg@2x.webp 2x" type="image/webp" />
-								<img width="800" height="667" data-srcset="../media/drop-menu-bg.jpg 1x, ../media/drop-menu-bg@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-							</picture>
-						</div>
+						<picture v-show="ShowDropMenu" data-role="lazy">
+							<source data-srcset="../media/drop-menu-bg.webp 1x, ../media/drop-menu-bg@2x.webp 2x" type="image/webp" />
+							<img width="800" height="667" data-srcset="../media/drop-menu-bg.jpg 1x, ../media/drop-menu-bg@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+						</picture>
 					</transition>
 				</div>
-				<div class="drop-menu-bg primary visible-xs" data-role="lazy">
-					<picture>
-						<source data-srcset="../media/drop-menu-bg-phone.webp 1x, ../media/drop-menu-bg-phone@2x.webp 2x" type="image/webp" />
-						<img width="394" height="159" data-srcset="../media/drop-menu-bg-phone.jpg 1x, ../media/drop-menu-bg-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-					</picture>
-				</div>
+				<picture class="drop-menu-bg primary visible-xs" data-role="lazy">
+					<source data-srcset="../media/drop-menu-bg-phone.webp 1x, ../media/drop-menu-bg-phone@2x.webp 2x" type="image/webp" />
+					<img width="394" height="159" data-srcset="../media/drop-menu-bg-phone.jpg 1x, ../media/drop-menu-bg-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+				</picture>
 			</div>
 		</transition>
 
@@ -1233,32 +1232,24 @@
 					</div>
 				</div>
 				<div class="drop-form-bg-wrapper" v-show="!ShowResponse">
-					<div class="drop-form-bg primary hidden-xs" data-role="lazy">
-						<picture>
-							<source data-srcset="../media/drop-form-bg-1.webp 1x, ../media/drop-form-bg-1@2x.webp 2x" type="image/webp" />
-							<img width="1326" height="407" data-srcset="../media/drop-form-bg-1.jpg 1x, ../media/drop-form-bg-1@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-						</picture>
-					</div>
-					<div class="drop-form-bg primary visible-xs" data-role="lazy">
-						<picture>
-							<source data-srcset="../media/drop-form-bg-1-phone.webp 1x, ../media/drop-form-bg-1-phone@2x.webp 2x" type="image/webp" />
-							<img width="394" height="190" data-srcset="../media/drop-form-bg-1-phone.jpg 1x, ../media/drop-form-bg-1-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-						</picture>
-					</div>
+					<picture class="drop-form-bg primary hidden-xs" data-role="lazy">
+						<source data-srcset="../media/drop-form-bg-1.webp 1x, ../media/drop-form-bg-1@2x.webp 2x" type="image/webp" />
+						<img width="1326" height="407" data-srcset="../media/drop-form-bg-1.jpg 1x, ../media/drop-form-bg-1@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+					</picture>
+					<picture class="drop-form-bg primary visible-xs" data-role="lazy">
+						<source data-srcset="../media/drop-form-bg-1-phone.webp 1x, ../media/drop-form-bg-1-phone@2x.webp 2x" type="image/webp" />
+						<img width="394" height="190" data-srcset="../media/drop-form-bg-1-phone.jpg 1x, ../media/drop-form-bg-1-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+					</picture>
 				</div>
 				<div class="drop-form-bg-wrapper" v-show="ShowResponse">
-					<div class="drop-form-bg primary hidden-xs" data-role="lazy">
-						<picture>
-							<source data-srcset="../media/drop-form-bg-2.webp 1x, ../media/drop-form-bg-2@2x.webp 2x" type="image/webp" />
-							<img width="1326" height="407" data-srcset="../media/drop-form-bg-2.jpg 1x, ../media/drop-form-bg-2@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-						</picture>
-					</div>
-					<div class="drop-form-bg primary visible-xs" data-role="lazy">
-						<picture>
-							<source data-srcset="../media/drop-form-bg-2-phone.webp 1x, ../media/drop-form-bg-2-phone@2x.webp 2x" type="image/webp" />
-							<img width="394" height="190" data-srcset="../media/drop-form-bg-2-phone.jpg 1x, ../media/drop-form-bg-2-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-						</picture>
-					</div>
+					<picture class="drop-form-bg primary hidden-xs" data-role="lazy">
+						<source data-srcset="../media/drop-form-bg-2.webp 1x, ../media/drop-form-bg-2@2x.webp 2x" type="image/webp" />
+						<img width="1326" height="407" data-srcset="../media/drop-form-bg-2.jpg 1x, ../media/drop-form-bg-2@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+					</picture>
+					<picture class="drop-form-bg primary visible-xs" data-role="lazy">
+						<source data-srcset="../media/drop-form-bg-2-phone.webp 1x, ../media/drop-form-bg-2-phone@2x.webp 2x" type="image/webp" />
+						<img width="394" height="190" data-srcset="../media/drop-form-bg-2-phone.jpg 1x, ../media/drop-form-bg-2-phone@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+					</picture>
 				</div>
 			</div>
 		</transition>

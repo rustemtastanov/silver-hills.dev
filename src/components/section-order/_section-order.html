@@ -1,12 +1,10 @@
 <app-order inline-template :index="{{{ item.index }}}">
 	<section class="section s--order s--order-{{{ item.index }}}">
 
-		<div class="order-bg visible-xs primary" data-role="lazy">
-			<picture>
-				<source data-srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.webp 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.webp 2x" type="image/webp" />
-				<img width="394" height="250" data-srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.jpg 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.jpg 2x" alt="bg" class="lazy img--cover" />
-			</picture>
-		</div>
+		<picture class="order-bg visible-xs primary" data-role="lazy">
+			<source data-srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.webp 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.webp 2x" type="image/webp" />
+			<img width="394" height="250" data-srcset="{{{ path }}}media/order-bg-{{{ item.index }}}.jpg 1x, {{{ path }}}media/order-bg-{{{ item.index }}}@2x.jpg 2x" alt="bg" class="lazy img--cover" />
+		</picture>
 
 		<img width="8" height="150" data-src="{{{ path }}}img/text-vertical-{{{ lang }}}.svg" class="lazy img--cover order-text hidden-xs" alt="text" data-role="lazyimg" />
 

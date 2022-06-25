@@ -140,8 +140,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  position: relative;
-  top: -0.125rem;
 }
 
 .btn--call:hover,
@@ -380,7 +378,7 @@ form {
   font-weight: 300;
   margin-right: 2.0625rem;
   position: relative;
-  top: -0.125rem;
+  top: -0.0625rem;
 }
 
 .nav-lang a {
@@ -2748,7 +2746,7 @@ form {
   overflow: hidden;
 }
 
-.drop-menu-bg div {
+.drop-menu-bg > * {
   position: absolute;
   top: 0;
   bottom: 0;

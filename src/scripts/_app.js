@@ -156,6 +156,7 @@ function initApp() {
 				this.lazyLoadInstance = new LazyLoad({
 					callback_loaded: function(el) {
 						if (el.closest("div")!=null) el.closest("div").classList.add("loaded");
+						if (el.closest("picture")!=null) el.closest("picture").classList.add("loaded");
 					}
 				});
 			},

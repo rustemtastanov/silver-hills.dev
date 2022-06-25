@@ -6,6 +6,7 @@
 	left: 10px;
 	right: 10px;
 	height: calc(100vh - 60px);
+	height: calc(var(--vh, 1vh) * 100 - 60px);
 	overflow: auto;
 	overflow-x: hidden;
 }
