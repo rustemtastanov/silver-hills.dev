@@ -141,6 +141,14 @@ picture.img--cover img {
   // }
 }
 
+[data-role="lazyimg"] {
+	opacity: 0;
+	transition: opacity .5s;
+	&.loaded {
+		opacity: 1;
+	}
+}
+
 .svg {
 	position: absolute;
 	left: 0;

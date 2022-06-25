@@ -1585,7 +1585,7 @@ form {
   height: 31.25rem;
 }
 
-.flats-viewport .img {
+.flats-viewport a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1804,7 +1804,7 @@ form {
   transition: opacity .6s, transform .6s, -webkit-transform .6s;
 }
 
-.terms-item.animated {
+.animated .terms-item {
   opacity: 1;
   -webkit-transform: translateX(0);
           transform: translateX(0);
@@ -2171,7 +2171,7 @@ form {
   height: 34.625rem;
 }
 
-.commercial-viewport .img {
+.commercial-viewport a {
   height: 30.625rem;
 }
 
@@ -2278,25 +2278,26 @@ form {
   font-size: 0.9375rem;
   line-height: 1.3125rem;
   margin-bottom: 2.625rem;
-}
-
-.contacts-path a {
   text-decoration: none;
 }
 
-.contacts-path a:hover {
+.contacts-path:hover {
   text-decoration: underline;
 }
 
-.contacts-mode label {
+.contacts-mode {
   font-size: 0.9375rem;
   line-height: 1.375rem;
-  margin-bottom: 0.5rem;
 }
 
 .contacts-mode div {
+  margin-top: 0.5rem;
   font-size: 1.25rem;
   line-height: 2rem;
+}
+
+.contacts-mode div + div {
+  margin-top: 0;
 }
 
 .contacts-map {
@@ -2505,7 +2506,7 @@ form {
   transition: opacity .3s;
 }
 
-.modal-status-controls .icon {
+.modal-status-controls button::before {
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -2522,7 +2523,7 @@ form {
   color: black;
 }
 
-.modal-status-prev .icon {
+.modal-status-prev::before {
   left: 0;
 }
 
@@ -2532,7 +2533,7 @@ form {
   color: #03abbf;
 }
 
-.modal-status-next .icon {
+.modal-status-next::before {
   right: 0;
 }
 

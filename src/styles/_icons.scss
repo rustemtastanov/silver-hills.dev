@@ -12,7 +12,12 @@
 }
 
 .icon,
-.gclose {
+.gclose,
+.btn--close::before,
+.gallery-prev::before,
+.gallery-next::before,
+.modal-status-prev::before,
+.modal-status-next::before {
 	position: relative;
   font-family: 'icomoon' !important;
   speak: none;
@@ -38,15 +43,20 @@
 }
 
 .icon-close::before,
+.btn--close::before,
 .gclose::before {
   content: "\e903";
 }
 
-.icon-next::before {
+.icon-next::before,
+.gallery-next::before,
+.modal-status-next::before {
   content: "\e904";
 }
 
-.icon-prev::before {
+.icon-prev::before,
+.gallery-prev::before,
+.modal-status-prev::before {
   content: "\e905";
 }
 

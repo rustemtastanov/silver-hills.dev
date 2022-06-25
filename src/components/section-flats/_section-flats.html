@@ -20,12 +20,7 @@
 
 			<div class="flats-types" v-show="isLoaded">
 				<div v-for="(Type, index) in Types" :class="{active: SelectedType==Type}" @click.prevent="SelectTypes(Type)" :key="index">
-					<template v-if="Type=='penthouse'">
-						{% if lang == 'ru' %} Пентхаус {% endif %}
-					</template>
-					<template v-if="Type=='2x'">
-						{% if lang == 'ru' %} Двухуровневая {% endif %}
-					</template>
+					{% if lang == 'ru' %} {{ Type=='penthouse' ? 'Пентхаус' : Type=='2x' ? 'Двухуровневая' : '' }} {% endif %}
 				</div>
 			</div>
 
@@ -64,9 +59,7 @@
 			<div class="flats-viewport" :class="{ active: ImageLoaded }">
 				<span v-show="!ImageLoaded" class="loader"></span>
 				<a href="#" :href="SelectedView=='default' ? Flat.img : Flat.socle" class="link--block flats-zoom" aria-label="zoom" v-show="ImageLoaded">
-					<div class="img">
-						<img width="400" height="400" :src="SelectedView=='default' ? Flat.img : Flat.socle" alt="image" />
-					</div>
+					<img width="400" height="400" :src="SelectedView=='default' ? Flat.img : Flat.socle" alt="image" />
 				</a>
 			</div>
 
@@ -87,10 +80,7 @@
 
 			<div class="flats-subtitle visible-xs">
 				{{ Flat.rooms }}
-				{% if lang == 'ru' %}-комнатная{% endif %}
-				<template v-if="Flat.type=='2x'">
-					{% if lang == 'ru' %} с террасой{% endif %}
-				</template>
+				{% if lang == 'ru' %}-комнатная {{ Flat.type=='2x' ? 'с террасой' : '' }} {% endif %}
 			</div>
 
 			<div class="flats-desc hidden-sm hidden-md hidden-lg">
@@ -115,10 +105,7 @@
 
 			<div class="flats-subtitle hidden-xs">
 				{{ Flat.rooms }}
-				{% if lang == 'ru' %}-комнатная{% endif %}
-				<template v-if="Flat.type=='2x'">
-					{% if lang == 'ru' %} с террасой{% endif %}
-				</template>
+				{% if lang == 'ru' %}-комнатная {{ Flat.type=='2x' ? 'с террасой' : '' }} {% endif %}
 			</div>
 
 			<div class="flats-desc hidden-xs">

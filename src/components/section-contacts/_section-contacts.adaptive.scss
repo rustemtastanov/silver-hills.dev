@@ -39,23 +39,22 @@
 	font-size: 15px;
 	line-height: 21px;
 	margin-bottom: 42px;
-	a {
-		text-decoration: none;
-		&:hover {
-			text-decoration: underline;
-		}
+	text-decoration: none;
+	&:hover {
+		text-decoration: underline;
 	}
 }
 
 .contacts-mode {
-	label {
-		font-size: 15px;
-		line-height: 22px;
-		margin-bottom: 8px;
-	}
+	font-size: 15px;
+	line-height: 22px;
 	div {
+		margin-top: 8px;
 		font-size: 20px;
 		line-height: 32px;
+	}
+	div + div {
+		margin-top: 0;
 	}
 }
 

@@ -102,11 +102,11 @@
 		position: relative;
 		overflow: hidden;
 		transition: opacity .3s;
-	}
-	.icon {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
+		&::before {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+		}
 	}
 	.disabled {
 		opacity: .3;
@@ -117,7 +117,7 @@
 .modal-status-prev {
 	width: 50px;
 	color: black;
-	.icon {
+	&::before {
 		left: 0;
 	}
 }
@@ -126,7 +126,7 @@
 	width: 120px;
 	margin-left: 18px;
 	color: $brand-primary;
-	.icon {
+	&::before {
 		right: 0;
 	}
 }

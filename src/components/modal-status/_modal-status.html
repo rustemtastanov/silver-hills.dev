@@ -2,9 +2,7 @@
 	<transition name="modal-status" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalHidden">
 		<div class="modal-status hidden-xs" v-show="isShowed" :class="{active: isLoaded}">
 
-			<button type="button" class="btn btn--black btn--close" aria-label="close" @click="$emit('hide-status')">
-				<i class="icon icon-close"></i>
-			</button>
+			<button type="button" class="btn btn--black btn--close" aria-label="close" @click="$emit('hide-status')"></button>
 
 			<swiper class="swiper modal-status-viewport" ref="modalStatusSlider" :options="options" :key="Selected.id">
 				<swiper-slide v-for="(Slide, index) in Selected.photos" class="modal-status-slide swiper-slide" :key="index">
@@ -31,12 +29,8 @@
 			</div>
 
 			<div class="modal-status-controls">
-				<button type="button" class="btn--unstyled modal-status-prev" aria-label="prev">
-					<i class="icon icon-prev"></i>
-				</button>
-				<button type="button" class="btn--unstyled modal-status-next" aria-label="next">
-					<i class="icon icon-next"></i>
-				</button>
+				<button type="button" class="btn--unstyled modal-status-prev" aria-label="prev"></button>
+				<button type="button" class="btn--unstyled modal-status-next" aria-label="next"></button>
 			</div>
 
 			<div class="modal-status-title">

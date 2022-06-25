@@ -154,8 +154,8 @@ function initApp() {
 			},
 			initLazy() {
 				this.lazyLoadInstance = new LazyLoad({
-					callback_loaded: function(element) {
-						element.closest("div").classList.add("loaded");
+					callback_loaded: function(el) {
+						if (el.closest("div")!=null) el.closest("div").classList.add("loaded");
 					}
 				});
 			},
@@ -242,7 +242,6 @@ function initApp() {
 							if (isEnter && !isEntered) {
 								isEntered = true;
 								vm.inView[section] = true;
-								console.log("enter",section,vm.inView);
 							}
 						});
 					});

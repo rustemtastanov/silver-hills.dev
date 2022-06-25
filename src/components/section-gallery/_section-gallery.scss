@@ -32,17 +32,17 @@
 		overflow: hidden;
 		transition: opacity .3s, transform .3s, background .3s;
 		&::before {
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		&::after {
 			content: '';
 			@include stretch;
 			z-index: 0;
 			border: 1px solid transparent;
 		}
-	}
-	.icon {
-		position: absolute;
-		z-index: 1;
-		top: 50%;
-		transform: translateY(-50%);
 	}
 	.disabled {
 		pointer-events: none;
@@ -51,13 +51,13 @@
 }
 
 .gallery-prev {
-	.icon {
+	&::before {
 		left: 13px;
 	}
 }
 
 .gallery-next {
-	.icon {
+	&::before {
 		right: 13px;
 	}
 }
@@ -67,14 +67,14 @@
 	.gallery-prev {
 		background: $brand-primary;
 		color: white;
-		&::before {
+		&::after {
 			border-color: $brand-primary;
 		}
 	}
 	.gallery-next {
 		background: rgba(white, .9);
 		color: black;
-		&::before {
+		&::after {
 			border-color: black;
 		}
 	}
@@ -85,14 +85,14 @@
 	.gallery-prev {
 		background: rgba(white, .9);
 		color: black;
-		&::before {
+		&::after {
 			border-color: black;
 		}
 	}
 	.gallery-next {
 		background: $brand-primary;
 		color: white;
-		&::before {
+		&::after {
 			border-color: $brand-primary;
 		}
 	}

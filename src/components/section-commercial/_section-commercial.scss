@@ -68,16 +68,14 @@
   }
   a {
   	transition: opacity .3s;
-  	&:hover {
-  		opacity: .7;
-  	}
-  }
-	.img {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
     align-items: center;
-	}
+  	&:hover {
+  		opacity: .7;
+  	}
+  }
 	img {
 		width: auto;
 		height: auto;

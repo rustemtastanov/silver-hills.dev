@@ -33,7 +33,7 @@
 	opacity: 0;
 	transform: translateX(50%);
 	transition: opacity .6s, transform .6s;
-	&.animated {
+	.animated & {
 		opacity: 1;
 		transform: translateX(0);
 	}

@@ -1164,8 +1164,8 @@ function initApp() {
       },
       initLazy: function initLazy() {
         this.lazyLoadInstance = new LazyLoad({
-          callback_loaded: function callback_loaded(element) {
-            element.closest("div").classList.add("loaded");
+          callback_loaded: function callback_loaded(el) {
+            if (el.closest("div") != null) el.closest("div").classList.add("loaded");
           }
         });
       },
@@ -1255,7 +1255,6 @@ function initApp() {
               if (isEnter && !isEntered) {
                 isEntered = true;
                 vm.inView[section] = true;
-                console.log("enter", section, vm.inView);
               }
             });
           });

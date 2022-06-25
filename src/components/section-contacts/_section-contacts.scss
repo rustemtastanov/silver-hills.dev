@@ -27,14 +27,13 @@
 
 .contacts-path {
 	font-style: italic;
+	display: inline-block;
 }
 
 .contacts-mode {
-	label {
-		display: block;
-		font-weight: bold;
-	}
+	font-weight: bold;
 	div {
+		font-weight: 300;
 		white-space: pre-line;
 	}
 }
