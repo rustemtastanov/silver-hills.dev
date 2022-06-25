@@ -1344,7 +1344,8 @@ ol ol {
 .gallery-prev::before,
 .gallery-next::before,
 .modal-status-prev::before,
-.modal-status-next::before {
+.modal-status-next::before,
+.link-instagram::before {
   position: relative;
   font-family: 'icomoon' !important;
   speak: none;
@@ -1365,7 +1366,8 @@ ol ol {
   content: "\e901";
 }
 
-.icon-instagram::before {
+.icon-instagram::before,
+.link-instagram::before {
   content: "\e902";
 }
 
@@ -1511,8 +1513,8 @@ input[type="button"].btn--block {
   background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22margin%3A%20auto%3B%20background%3A%20none%3B%20display%3A%20block%3B%20shape-rendering%3A%20auto%3B%22%20width%3D%22200px%22%20height%3D%22200px%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20stroke-width%3D%225%22%20stroke%3D%22%23ffffff%22%20stroke-dasharray%3D%2262.83185307179586%2062.83185307179586%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221s%22%20keyTimes%3D%220%3B1%22%20values%3D%220%2050%2050%3B360%2050%2050%22%3E%3C%2FanimateTransform%3E%0A%3C%2Fcircle%3E%0A%3C%2Fsvg%3E');
 }
 
-[data-loading="true"] .btn--submit > span {
-  opacity: 0;
+[data-loading="true"] .btn--submit {
+  color: transparent;
 }
 
 [data-loading="true"] .btn--submit::after {
@@ -1532,6 +1534,10 @@ input[type="button"].btn--block {
   color: white;
 }
 
+[data-loading="true"] .btn--primary:hover, [data-loading="true"] .btn--primary:active, [data-loading="true"] .btn--primary:focus {
+  color: transparent;
+}
+
 .btn--white {
   background: white;
   border-color: white;
@@ -1542,6 +1548,10 @@ input[type="button"].btn--block {
   background: #d01b14;
   border-color: #d01b14;
   color: white;
+}
+
+[data-loading="true"] .btn--white:hover, [data-loading="true"] .btn--white:active, [data-loading="true"] .btn--white:focus {
+  color: transparent;
 }
 
 .btn--black {
@@ -1983,10 +1993,7 @@ picture.img--cover img {
 
 .counter {
   position: relative;
-}
-
-.counter .orig {
-  visibility: hidden;
+  color: transparent;
 }
 
 .counter .coun {
@@ -2171,11 +2178,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   height: 100%;
-}
-
-.nav-main ul {
-  height: 100%;
-  margin-bottom: 0;
+  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2215,11 +2218,11 @@ body {
   text-decoration: underline;
 }
 
-.nav-social .icon {
+.nav-social a::before {
   display: block;
 }
 
-.drop-menu .nav-social ul {
+.drop-menu .nav-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2276,6 +2279,10 @@ body {
   letter-spacing: 0.02em;
   position: relative;
   left: -0.1875rem;
+}
+
+.about-item .coun {
+  color: #03abbf;
 }
 
 .about-item .text {
@@ -2495,9 +2502,6 @@ body {
   -webkit-box-align: baseline;
       -ms-flex-align: baseline;
           align-items: baseline;
-}
-
-.flats-rooms label {
   font-weight: bold;
   font-style: italic;
 }
@@ -2509,6 +2513,8 @@ body {
 }
 
 .flats-rooms ul {
+  font-weight: 300;
+  font-style: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2603,7 +2609,7 @@ body {
   border-top: 1PX solid black;
 }
 
-.flats-areas label {
+.flats-areas {
   font-weight: bold;
   font-style: italic;
 }
@@ -2631,12 +2637,9 @@ body {
   color: black;
 }
 
-.flats-areas span {
-  position: relative;
-  top: -0.0625rem;
-}
-
 .flats-areas ul {
+  font-weight: 300;
+  font-style: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2849,8 +2852,7 @@ body {
   position: relative;
 }
 
-.commercial-areas label {
-  display: block;
+.commercial-areas {
   font-weight: bold;
   font-style: italic;
 }
@@ -2878,12 +2880,9 @@ body {
   height: 2rem;
 }
 
-.commercial-areas span {
-  position: relative;
-  top: -0.0625rem;
-}
-
 .commercial-areas ul {
+  font-weight: 300;
+  font-style: normal;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

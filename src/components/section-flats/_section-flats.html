@@ -8,9 +8,7 @@
 			</h2>
 
 			<div class="flats-rooms" v-show="isLoaded">
-				<label>
-					{% if lang == 'ru' %} Выберите комнатность {% endif %}
-				</label>
+				{% if lang == 'ru' %} Выберите комнатность {% endif %}
 				<ul class="list--inline">
 					<li v-for="(Room, index) in Rooms" :class="{active: SelectedRooms==Room}" :key="index">
 						<a href="#" @click.prevent="SelectRooms(Room)">{{ Room }}</a>
@@ -36,14 +34,10 @@
 			</div>
 
 			<div class="flats-areas" v-show="isLoaded">
-				<label>
-					{% if lang == 'ru' %} Выберите площадь, m² {% endif %}
-				</label>
+				{% if lang == 'ru' %} Выберите площадь, m² {% endif %}
 				<ul class="list--inline">
 					<li v-for="(Area, index) in Areas" :key="index" :class="{active: SelectedArea==Area}">
-						<a href="#" class="link--block" @click.prevent="SelectArea(Area)">
-							<span>{{ Area }}</span>
-						</a>
+						<a href="#" class="link--block" @click.prevent="SelectArea(Area)">{{ Area }}</a>
 					</li>
 				</ul>
 			</div>

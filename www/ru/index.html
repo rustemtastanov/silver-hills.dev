@@ -73,9 +73,7 @@
 					<a href="#main" class="link--block header-logo scrollactive-item" aria-label="logo" @click.prevent="closeDropMenu"></a>
 				</scrollactive>
 				<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset" :modify-url="false">
-					<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item hidden-xs" @click="closeDropMenu">
-						<span>выбрать квартиру</span>
-					</a>
+					<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item hidden-xs" @click="closeDropMenu">выбрать квартиру</a>
 					<div class="btn--top nav-lang hidden-xs">
 						<a href="#">kz</a>
 					</div>
@@ -347,7 +345,7 @@
 				<div class="flats-column flats-left">
 					<h2 class="flats-title">Квартиры</h2>
 					<div class="flats-rooms" v-show="isLoaded">
-						<label>Выберите комнатность</label>
+						Выберите комнатность
 						<ul class="list--inline">
 							<li v-for="(Room, index) in Rooms" :class="{active: SelectedRooms==Room}" :key="index">
 								<a href="#" @click.prevent="SelectRooms(Room)">{{ Room }}</a>
@@ -367,12 +365,10 @@
 						</ul>
 					</div>
 					<div class="flats-areas" v-show="isLoaded">
-						<label>Выберите площадь, m²</label>
+						Выберите площадь, m²
 						<ul class="list--inline">
 							<li v-for="(Area, index) in Areas" :key="index" :class="{active: SelectedArea==Area}">
-								<a href="#" class="link--block" @click.prevent="SelectArea(Area)">
-									<span>{{ Area }}</span>
-								</a>
+								<a href="#" class="link--block" @click.prevent="SelectArea(Area)">{{ Area }}</a>
 							</li>
 						</ul>
 					</div>
@@ -990,12 +986,10 @@
 						Коммерческие<br /> помещения
 					</h3>
 					<div class="commercial-areas" v-show="isLoaded">
-						<label v-show="isLoaded">Выберите площадь, m²</label>
+						Выберите площадь, m²
 						<ul class="list--inline" v-show="isLoaded">
 							<li v-for="(Area, index) in Areas" :key="index" :class="{ active: SelectedArea==Area }">
-								<a href="#" class="link--block" @click.prevent="selectArea(Area)">
-									<span>{{ Area }}</span>
-								</a>
+								<a href="#" class="link--block" @click.prevent="selectArea(Area)">{{ Area }}</a>
 							</li>
 						</ul>
 					</div>
@@ -1049,16 +1043,13 @@
 						<div>Пн-Пт 10:00–19:00 
 							Сб-Вс 10:00–16:00</div>
 					</div>
-					<div class="nav-social">
-						<ul class="list--inline">
-							<li>
-								<a href="https://www.instagram.com/silverhills_almaty/" target="_blank" rel="noopener" aria-label="instagram">
-									<i class="icon icon-instagram"></i>
-									<span>silverhills_almaty</span>
-								</a>
-							</li>
-						</ul>
-					</div>
+					<ul class="nav-social list--inline">
+						<li>
+							<a href="https://www.instagram.com/silverhills_almaty/" class="link-instagram" target="_blank" rel="noopener" aria-label="instagram">
+								<span>silverhills_almaty</span>
+							</a>
+						</li>
+					</ul>
 					<div class="contacts-meta contacts-copyright hidden-xs">© Silver Hills 2021. Все права защищены</div>
 				</div>
 				<div class="contacts-column contacts-right">
@@ -1175,26 +1166,20 @@
 		<transition name="drop-menu" @enter="modalShow" @after-enter="modalShowed" @after-leave="modalHidden">
 			<div class="drop-menu" v-show="ShowDropMenu" :class="{active: appIsLoaded}" :style="'padding-right: '+ scrollBarOffset +'px'">
 				<div class="drop-menu-in">
-					<nav class="nav-main">
-						<scrollactive class="list--unstyled" active-class="active" tag="ul" :offset="scrollTopOffset" :modify-url="false">
-							<li><a href="#about" class="scrollactive-item" @click.prevent="closeDropMenu">О проекте</a></li>
-							<li><a href="#gallery" class="scrollactive-item" @click.prevent="closeDropMenu">Галерея</a></li>
-							<li><a href="#flats" class="scrollactive-item" @click.prevent="closeDropMenu">Выбрать квартиру</a></li>
-							<li class="hidden-xs"><a href="#status" class="scrollactive-item" @click.prevent="closeDropMenu">Ход строительства</a></li>
-							<li><a href="#commerce" class="scrollactive-item" @click.prevent="closeDropMenu">Коммерция</a></li>
-							<li><a href="#contacts" class="scrollactive-item" @click.prevent="closeDropMenu">Контакты</a></li>
-						</scrollactive>
-					</nav>
+					<scrollactive class="nav-main" active-class="active" tag="nav" :offset="scrollTopOffset" :modify-url="false">
+						<li><a href="#about" class="scrollactive-item" @click.prevent="closeDropMenu">О проекте</a></li>
+						<li><a href="#gallery" class="scrollactive-item" @click.prevent="closeDropMenu">Галерея</a></li>
+						<li><a href="#flats" class="scrollactive-item" @click.prevent="closeDropMenu">Выбрать квартиру</a></li>
+						<li class="hidden-xs"><a href="#status" class="scrollactive-item" @click.prevent="closeDropMenu">Ход строительства</a></li>
+						<li><a href="#commerce" class="scrollactive-item" @click.prevent="closeDropMenu">Коммерция</a></li>
+						<li><a href="#contacts" class="scrollactive-item" @click.prevent="closeDropMenu">Контакты</a></li>
+					</scrollactive>
 					<div>
-						<div class="nav-social">
-							<ul class="list--inline">
-								<li>
-									<a href="https://www.instagram.com/silverhills_almaty/" target="_blank" rel="noopener" aria-label="instagram">
-										<i class="icon icon-instagram"></i>
-									</a>
-								</li>
-							</ul>
-						</div>
+						<ul class="nav-social list--inline">
+							<li>
+								<a href="https://www.instagram.com/silverhills_almaty/" class="link-instagram" target="_blank" rel="noopener" aria-label="instagram"></a>
+							</li>
+						</ul>
 						<a href="../media/SilverHills.pdf" download="presentation.pdf" class="drop-menu-download">скачать презентацию, PDF</a>
 					</div>
 				</div>
@@ -1296,9 +1281,7 @@
 				<div class="form-error" :class="{active: ErrorPhone}">Заполните поле</div>
 			</div>
 			<div class="form-controls">
-				<button type="submit" class="btn btn--submit btn--block" :class="'btn--'+ Button">
-					<span>отправить заявку</span>
-				</button>
+				<button type="submit" class="btn btn--submit btn--block" :class="'btn--'+ Button">отправить заявку</button>
 			</div>
 		</form>
 	</script>

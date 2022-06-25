@@ -88,9 +88,7 @@ input[type="button"] {
     background-image: inline('#{$path-inline}/spinner-white.svg');
   }
   [data-loading="true"] & {
-    > span {
-      opacity: 0;
-    }
+  	color: transparent;
     &::after {
       transform: translate(-50%, -50%) scale(1);
     }
@@ -107,6 +105,9 @@ input[type="button"] {
 		background: $red;
 		border-color: $red;
 		color: white;
+	  [data-loading="true"] & {
+	  	color: transparent;
+	  }
 	}
 }
 
@@ -120,6 +121,9 @@ input[type="button"] {
 		background: $red;
 		border-color: $red;
 		color: white;
+	  [data-loading="true"] & {
+	  	color: transparent;
+	  }
 	}
 }
 

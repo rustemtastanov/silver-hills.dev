@@ -9,8 +9,8 @@
 
 .drop-menu {
 	.nav-social {
-		margin-bottom: -34px;
-		.icon {
+		margin-bottom: -12px;
+		a::before {
 			left: 35px;
 			font-size: 106px;
 		}
@@ -20,8 +20,8 @@
 .s--contacts {
 	.nav-social {
 		order: 2;
-		margin-bottom: 14px;
-		.icon {
+		margin-bottom: 36px;
+		a::before {
 			left: -26px;
 			font-size: 91px;
 			margin-bottom: -20px;

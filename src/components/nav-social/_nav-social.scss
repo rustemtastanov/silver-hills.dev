@@ -6,18 +6,16 @@
 		&:hover span {
 			text-decoration: underline;
 		}
-	}
-	.icon {
-		display: block;
+		&::before {
+			display: block;
+		}
 	}
 }
 
 .drop-menu {
 	.nav-social {
-		ul {
-			display: flex;
-    	justify-content: flex-end;
-		}
+		display: flex;
+  	justify-content: flex-end;
 	}
 }
 

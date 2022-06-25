@@ -31,13 +31,13 @@
 
 .flats-rooms {
 	margin-bottom: 30px;
-	label {
-		font-size: 14px;
-		line-height: 18px;
-		margin-right: 6px;
-	}
+	font-size: 14px;
+	line-height: 18px;
 	a {
 		font-size: 22px;
+	}
+	ul {
+		margin-left: 6px;
 	}
 	li {
 		width: 58px;
@@ -98,10 +98,10 @@
 
 .flats-areas {
 	margin-bottom: 40px;
-	label {
-		font-size: 14px;
-		line-height: 18px;
-		margin-bottom: 18px;
+	font-size: 14px;
+	line-height: 18px;
+	ul {
+		margin-top: 18px;
 	}
 }
 

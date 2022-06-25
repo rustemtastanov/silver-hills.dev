@@ -46,13 +46,13 @@
 
 .flats-rooms {
 	margin-bottom: 20px;
-	label {
-		font-size: 12px;
-		line-height: 16px;
-		margin-right: 4px;
-	}
+	font-size: 12px;
+	line-height: 16px;
 	a {
 		font-size: 18px;
+	}
+	ul {
+		margin-left: 4px;
 	}
 	li + li {
 		&::before {
@@ -103,10 +103,10 @@
 }
 
 .flats-areas {
-	label {
-		font-size: 12px;
-		line-height: 16px;
-		margin-bottom: 14px;
+	font-size: 12px;
+	line-height: 16px;
+	ul {
+		margin-top: 14px;
 	}
 }
 

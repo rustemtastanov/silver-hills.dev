@@ -894,7 +894,7 @@ function initForms() {
 
 function initCounters() {
   Vue.component("app-counter", {
-    template: "<template>\n\t\t\t\t\t\t\t\t<div class=\"counter hidden-xs\">\n\t\t\t\t\t\t\t\t\t<span class=\"orig\">{{ Value }}</span>\n\t\t\t\t\t\t\t\t\t<span class=\"coun\">{{ Counter }}</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</template>",
+    template: "<template>\n\t\t\t\t\t\t\t\t<div class=\"counter hidden-xs\">\n\t\t\t\t\t\t\t\t\t{{ Value }}\n\t\t\t\t\t\t\t\t\t<span class=\"coun\">{{ Counter }}</span>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</template>",
     props: {
       Value: Number
     },

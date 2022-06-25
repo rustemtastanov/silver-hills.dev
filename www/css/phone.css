@@ -211,10 +211,10 @@ form {
 }
 
 .drop-menu .nav-social {
-  margin-bottom: -2.125rem;
+  margin-bottom: -0.75rem;
 }
 
-.drop-menu .nav-social .icon {
+.drop-menu .nav-social a::before {
   left: 2.1875rem;
   font-size: 6.625rem;
 }
@@ -223,10 +223,10 @@ form {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
           order: 2;
-  margin-bottom: 0.875rem;
+  margin-bottom: 2.25rem;
 }
 
-.s--contacts .nav-social .icon {
+.s--contacts .nav-social a::before {
   left: -1.625rem;
   font-size: 5.6875rem;
   margin-bottom: -1.25rem;
@@ -666,16 +666,16 @@ form {
 
 .flats-rooms {
   margin-bottom: 1.875rem;
-}
-
-.flats-rooms label {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  margin-right: 0.375rem;
 }
 
 .flats-rooms a {
   font-size: 1.375rem;
+}
+
+.flats-rooms ul {
+  margin-left: 0.375rem;
 }
 
 .flats-rooms li {
@@ -747,12 +747,12 @@ form {
 
 .flats-areas {
   margin-bottom: 2.5rem;
-}
-
-.flats-areas label {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  margin-bottom: 1.125rem;
+}
+
+.flats-areas ul {
+  margin-top: 1.125rem;
 }
 
 .flats-viewport {
@@ -911,12 +911,12 @@ form {
   -webkit-box-ordinal-group: 4;
       -ms-flex-order: 3;
           order: 3;
-}
-
-.commercial-areas label {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  margin-bottom: 1.125rem;
+}
+
+.commercial-areas ul {
+  margin-top: 1.125rem;
 }
 
 .commercial-icon {

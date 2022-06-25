@@ -17,7 +17,8 @@
 .gallery-prev::before,
 .gallery-next::before,
 .modal-status-prev::before,
-.modal-status-next::before {
+.modal-status-next::before,
+.link-instagram::before {
 	position: relative;
   font-family: 'icomoon' !important;
   speak: none;
@@ -38,7 +39,8 @@
   content: "\e901";
 }
 
-.icon-instagram::before {
+.icon-instagram::before,
+.link-instagram::before {
   content: "\e902";
 }
 

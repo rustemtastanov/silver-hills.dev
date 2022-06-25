@@ -8,14 +8,10 @@
 			</h3>
 
 			<div class="commercial-areas" v-show="isLoaded">
-				<label v-show="isLoaded">
-					{% if lang == 'ru' %} Выберите площадь, m² {% endif %}
-				</label>
+				{% if lang == 'ru' %} Выберите площадь, m² {% endif %}
 				<ul class="list--inline" v-show="isLoaded">
 					<li v-for="(Area, index) in Areas" :key="index" :class="{ active: SelectedArea==Area }">
-						<a href="#" class="link--block" @click.prevent="selectArea(Area)">
-							<span>{{ Area }}</span>
-						</a>
+						<a href="#" class="link--block" @click.prevent="selectArea(Area)">{{ Area }}</a>
 					</li>
 				</ul>
 			</div>

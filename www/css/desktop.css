@@ -439,16 +439,16 @@ form {
   line-height: 1.3125rem;
 }
 
-.nav-social .icon {
+.nav-social a::before {
   font-size: 5.4375rem;
   margin-bottom: -1.0625rem;
 }
 
 .drop-menu .nav-social {
-  margin-bottom: -0.625rem;
+  margin-bottom: 0.75rem;
 }
 
-.drop-menu .nav-social .icon {
+.drop-menu .nav-social a::before {
   left: 1.5625rem;
 }
 
@@ -457,7 +457,7 @@ form {
   bottom: 3.25rem;
 }
 
-.s--contacts .nav-social .icon {
+.s--contacts .nav-social a::before {
   left: -1.5625rem;
 }
 
@@ -941,6 +941,10 @@ form {
   line-height: 1;
   color: #03abbf;
   position: relative;
+}
+
+.benefits-tab .coun {
+  color: #03abbf;
 }
 
 .benefits-tab .title {
@@ -1512,16 +1516,16 @@ form {
 
 .flats-rooms {
   margin-bottom: 1.25rem;
-}
-
-.flats-rooms label {
   font-size: 0.75rem;
   line-height: 1rem;
-  margin-right: 0.25rem;
 }
 
 .flats-rooms a {
   font-size: 1.125rem;
+}
+
+.flats-rooms ul {
+  margin-left: 0.25rem;
 }
 
 .flats-rooms li + li::before {
@@ -1573,10 +1577,13 @@ form {
   top: 0.75rem;
 }
 
-.flats-areas label {
+.flats-areas {
   font-size: 0.75rem;
   line-height: 1rem;
-  margin-bottom: 0.875rem;
+}
+
+.flats-areas ul {
+  margin-top: 0.875rem;
 }
 
 .flats-viewport {
@@ -2150,12 +2157,12 @@ form {
 
 .commercial-areas {
   min-height: 11.6875rem;
-}
-
-.commercial-areas label {
   font-size: 0.75rem;
   line-height: 1rem;
-  margin-bottom: 0.8125rem;
+}
+
+.commercial-areas ul {
+  margin-top: 0.8125rem;
 }
 
 .commercial-icon {

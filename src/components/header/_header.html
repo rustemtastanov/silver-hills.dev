@@ -7,9 +7,7 @@
 
 		<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset" :modify-url="false">
 			<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item hidden-xs" @click="closeDropMenu">
-				<span>
-					{% if lang == 'ru' %} выбрать квартиру {% endif %}
-				</span>
+				{% if lang == 'ru' %} выбрать квартиру {% endif %}
 			</a>
 			{% include "nav-lang/_nav-lang.html" %}
 			<button type="button" class="btn btn--top btn--call hidden-xs" @click="openForm" :class="{'toggled': ShowForm}">

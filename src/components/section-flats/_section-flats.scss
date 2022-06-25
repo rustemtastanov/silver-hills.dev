@@ -25,16 +25,16 @@
 .flats-rooms {
 	display: flex;
 	align-items: baseline;
-	label {
-		font-weight: bold;
-		font-style: italic;
-	}
+	font-weight: bold;
+	font-style: italic;
 	a {
 		line-height: 1;
 		color: black;
 		text-decoration: none;
 	}
 	ul {
+		font-weight: 300;
+		font-style: normal;
 		display: flex;
 		margin-bottom: 0;
 	}
@@ -114,10 +114,8 @@
 }
 
 .flats-areas {
-	label {
-		font-weight: bold;
-		font-style: italic;
-	}
+	font-weight: bold;
+	font-style: italic;
 	a {
 		display: flex;
 		flex-direction: column;
@@ -131,11 +129,9 @@
 		line-height: 1;
 		color: black;
 	}
-	span {
-		position: relative;
-		top: -1px;
-	}
 	ul {
+		font-weight: 300;
+		font-style: normal;
 		display: flex;
 		flex-wrap: wrap;
 		margin-bottom: 0;

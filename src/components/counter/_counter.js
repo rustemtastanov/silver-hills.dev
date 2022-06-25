@@ -7,7 +7,7 @@ function initCounters() {
 	Vue.component("app-counter", {
 		template: `<template>
 								<div class="counter hidden-xs">
-									<span class="orig">{{ Value }}</span>
+									{{ Value }}
 									<span class="coun">{{ Counter }}</span>
 								</div>
 							</template>`,

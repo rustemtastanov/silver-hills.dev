@@ -12,7 +12,7 @@
 .nav-social {
 	font-size: 15px;
 	line-height: 21px;
-	.icon {
+	a::before {
 		font-size: 87px;
 		margin-bottom: -17px;
 	}
@@ -20,10 +20,10 @@
 
 .drop-menu {
 	.nav-social {
-		.icon {
+		margin-bottom: 12px;
+		a::before {
 			left: 25px;
 		}
-		margin-bottom: -10px;
 	}
 }
 
@@ -31,7 +31,7 @@
 	.nav-social {
 		position: absolute;
 		bottom: 52px;
-		.icon {
+		a::before {
 			left: -25px;
 		}
 	}
