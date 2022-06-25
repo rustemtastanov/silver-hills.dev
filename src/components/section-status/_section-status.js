@@ -5,6 +5,9 @@
  	-------------------------------------- */
 function initStatus() {
 	Vue.component("app-status", {
+		props: {
+			inView: Boolean
+		},
 		data() {
 			return {
 				Slides: STATUS_DATA,
@@ -22,7 +25,13 @@ function initStatus() {
 				}
 			}
 		},
+		watch: {
+			inView() {
+				if (this.inView) this.init();
+			}
+		},
 		methods: {
+			init() {},
 			getPoster(url) {
 				let id = getYoutubeId(url);
 				return "https://i3.ytimg.com/vi/"+ id +"/hqdefault.jpg";

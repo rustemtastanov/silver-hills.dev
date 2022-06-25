@@ -1,5 +1,17 @@
 "use strict";
 
+function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
+
+function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _unsupportedIterableToArray(o, minLen) { if (!o) return; if (typeof o === "string") return _arrayLikeToArray(o, minLen); var n = Object.prototype.toString.call(o).slice(8, -1); if (n === "Object" && o.constructor) n = o.constructor.name; if (n === "Map" || n === "Set") return Array.from(o); if (n === "Arguments" || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(n)) return _arrayLikeToArray(o, minLen); }
+
+function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len = arr.length; for (var i = 0, arr2 = new Array(len); i < len; i++) { arr2[i] = arr[i]; } return arr2; }
+
+function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
+
+function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 /*
 	секция Заявка
 	--------------------------------------
@@ -26,6 +38,9 @@ function initOrder() {
 
 function initBenefits() {
   Vue.component("app-benefits", {
+    props: {
+      inView: Boolean
+    },
     data: function data() {
       return {
         Slides: BENEFITS_DATA,
@@ -69,22 +84,26 @@ function initBenefits() {
         }
       };
     },
-    computed: {
-      slider: function slider() {
-        return this.$refs.slider;
-      }
-    },
     watch: {
+      inView: function inView() {
+        if (this.inView) this.init();
+      },
       Selected: function Selected() {
         this.$refs.slider.swiper.slideTo(this.Selected);
       }
     },
-    mounted: function mounted() {
-      var vm = this;
-      vm.$refs.slider.swiper.on("slideChange", function () {
-        var index = this.realIndex;
-        vm.Selected = index;
-      });
+    methods: {
+      init: function init() {
+        var vm = this;
+        var Slider = vm.$refs.slider;
+
+        if (Slider) {
+          Slider.swiper.on("slideChange", function () {
+            var index = this.realIndex;
+            vm.Selected = index;
+          });
+        }
+      }
     }
   });
 }
@@ -170,7 +189,8 @@ function initPoints() {
 function initGallery() {
   Vue.component("app-gallery", {
     props: {
-      isPhone: Boolean
+      isPhone: Boolean,
+      inView: Boolean
     },
     data: function data() {
       return {
@@ -199,18 +219,11 @@ function initGallery() {
         }
       };
     },
-    mounted: function mounted() {
-      var vm = this;
-      vm.initLightbox();
-      vm.Slider.swiper.on("slideNextTransitionStart", function () {
-        vm.Direction = this.realIndex + 1 == vm.Slides.length ? "end" : "next";
-      }).on("slidePrevTransitionStart", function () {
-        vm.Direction = this.realIndex == 0 ? "start" : "prev";
-      }).on("reachBeginning", function () {
-        vm.Direction = "start";
-      }).on("reachEnd", function () {
-        vm.Direction = "end";
-      });
+    watch: {
+      inView: function inView() {
+        console.log(this.inView);
+        if (this.inView) this.init();
+      }
     },
     computed: {
       Slider: function Slider() {
@@ -218,6 +231,22 @@ function initGallery() {
       }
     },
     methods: {
+      init: function init() {
+        var vm = this;
+
+        if (vm.Slider) {
+          vm.initLightbox();
+          vm.Slider.swiper.on("slideNextTransitionStart", function () {
+            vm.Direction = this.realIndex + 1 == vm.Slides.length ? "end" : "next";
+          }).on("slidePrevTransitionStart", function () {
+            vm.Direction = this.realIndex == 0 ? "start" : "prev";
+          }).on("reachBeginning", function () {
+            vm.Direction = "start";
+          }).on("reachEnd", function () {
+            vm.Direction = "end";
+          });
+        }
+      },
       initLightbox: function initLightbox() {
         var vm = this;
         var lightBox = GLightbox({
@@ -267,6 +296,7 @@ function initFlats() {
     },
     watch: {
       inView: function inView() {
+        console.log(this.inView, "flats");
         if (this.inView) this.load();
       }
     },
@@ -454,6 +484,9 @@ function initDropTerms() {
 
 function initStatus() {
   Vue.component("app-status", {
+    props: {
+      inView: Boolean
+    },
     data: function data() {
       return {
         Slides: STATUS_DATA,
@@ -471,7 +504,13 @@ function initStatus() {
         }
       };
     },
+    watch: {
+      inView: function inView() {
+        if (this.inView) this.init();
+      }
+    },
     methods: {
+      init: function init() {},
       getPoster: function getPoster(url) {
         var id = getYoutubeId(url);
         return "https://i3.ytimg.com/vi/" + id + "/hqdefault.jpg";
@@ -1067,6 +1106,9 @@ function initApp() {
       UTM: {},
       lazyLoadInstance: null,
       inView: {
+        gallery: false,
+        status: false,
+        benefits: false,
         contacts: false,
         flats: false,
         commercial: false
@@ -1174,6 +1216,15 @@ function initApp() {
         this.ShowDropMenu = !this.ShowDropMenu;
       },
       closeDropMenu: function closeDropMenu() {
+        for (var _i = 0, _Object$entries = Object.entries(this.inView); _i < _Object$entries.length; _i++) {
+          var _Object$entries$_i = _slicedToArray(_Object$entries[_i], 2),
+              key = _Object$entries$_i[0],
+              value = _Object$entries$_i[1];
+
+          this.inView[key] = true;
+        }
+
+        ;
         this.ShowForm = false;
         this.ShowResponse = false;
         this.ShowDropMenu = false;
@@ -1256,6 +1307,9 @@ function initApp() {
               if (isEnter && !isEntered) {
                 isEntered = true;
                 vm.inView[section] = true;
+                setTimeout(function () {
+                  vm.updateLazy();
+                }, 200);
               }
             });
           });

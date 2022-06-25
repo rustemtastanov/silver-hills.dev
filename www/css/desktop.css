@@ -905,6 +905,7 @@ form {
  -------------------------------------------------------------------- */
 .s--benefits {
   border-bottom: 0;
+  min-height: 43.75rem;
 }
 
 .benefits-tabs {
@@ -999,7 +1000,7 @@ form {
 
 .benefits-slide .img {
   height: 28.625rem;
-  background: black;
+  background: #d4d9da;
 }
 
 .benefits-slide .title {
@@ -1329,6 +1330,11 @@ form {
 /*
 	styles for Desktop and Large Desktops
  -------------------------------------------------------------------- */
+.s--gallery {
+  height: 40.625rem;
+  background: #d4d9da;
+}
+
 .gallery-title {
   font-size: 6.375rem;
   top: 1.9375rem;
@@ -1955,6 +1961,7 @@ form {
   border: 1PX solid;
   margin-bottom: 3.125rem;
   font-weight: 300;
+  height: 41.125rem;
 }
 
 .status-title {

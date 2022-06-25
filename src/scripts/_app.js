@@ -59,6 +59,9 @@ function initApp() {
 			UTM: {},
 			lazyLoadInstance: null,
 			inView: {
+				gallery: false,
+				status: false,
+				benefits: false,
 				contacts: false,
 				flats: false,
 				commercial: false
@@ -164,6 +167,9 @@ function initApp() {
 				this.ShowDropMenu = !this.ShowDropMenu;
 			},
 			closeDropMenu() {
+				for (const [key, value] of Object.entries(this.inView)) {
+					this.inView[key] = true;
+				};
 				this.ShowForm = false;
 				this.ShowResponse = false;
 				this.ShowDropMenu = false;
@@ -243,6 +249,9 @@ function initApp() {
 							if (isEnter && !isEntered) {
 								isEntered = true;
 								vm.inView[section] = true;
+								setTimeout(function() {
+									vm.updateLazy();
+								}, 200);
 							}
 						});
 					});

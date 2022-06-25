@@ -13,6 +13,7 @@ $col-width: (100%/3);
 
 .s--benefits {
 	border-bottom: 0;
+	min-height: 700px;
 }
 
 .benefits-tabs {
@@ -89,7 +90,7 @@ $col-width: (100%/3);
 	overflow: hidden;
 	.img {
 		height: 458px;
-		background: black;
+		background: $gray;
 	}
 	.title {
 		font-size: 23px;

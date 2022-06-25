@@ -1,11 +1,11 @@
-<app-gallery inline-template :is-phone="isPhone">
-	<section class="section s--gallery" id="gallery">
+<app-gallery inline-template :is-phone="isPhone" :in-view="inView.gallery">
+	<section class="section s--gallery inview" data-inview="gallery" id="gallery">
 
 		<div class="gallery-title">
 			{% if lang == 'ru' %} Галерея {% endif %}
 		</div>
 
-		<swiper class="swiper gallery-items" ref="slider" :options="options">
+		<swiper class="swiper gallery-items" ref="slider" :options="options" v-if="inView">
 			<swiper-slide v-for="(Slide, index) in Slides" class="gallery-slide swiper-slide" :class="'gallery-slide-'+ (index+1)" :key="index">
 				<div class="img swiper-img">
 					<a href="#" :href="Slide.photo" class="link--block gallery-zoom" aria-label="zoom" data-gallery="photos">
@@ -20,7 +20,7 @@
 			</swiper-slide>
 		</swiper>
 
-		<div class="gallery-controls" :data-dir="Direction">
+		<div class="gallery-controls" :data-dir="Direction" v-if="inView">
 			<button type="button" class="btn--unstyled gallery-prev" aria-label="prev"></button>
 			<button type="button" class="btn--unstyled gallery-next" aria-label="next"></button>
 		</div>

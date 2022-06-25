@@ -6,7 +6,8 @@
 function initGallery() {
 	Vue.component("app-gallery", {
 		props: {
-			isPhone: Boolean
+			isPhone: Boolean,
+			inView: Boolean
 		},
 		data() {
 			return {
@@ -35,22 +36,10 @@ function initGallery() {
 				}
 			}
 		},
-		mounted() {
-			const vm = this;
-			vm.initLightbox();
-			vm.Slider.swiper
-				.on("slideNextTransitionStart", function() {
-					vm.Direction = this.realIndex+1==vm.Slides.length ? "end" : "next";
-				})
-				.on("slidePrevTransitionStart", function() {
-					vm.Direction = this.realIndex==0 ? "start" : "prev";
-				})
-				.on("reachBeginning", function() {
-					vm.Direction = "start";
-				})
-				.on("reachEnd", function() {
-					vm.Direction = "end";
-				});
+		watch: {
+			inView() {
+				if (this.inView) this.init();
+			}
 		},
 		computed: {
 			Slider() {
@@ -58,6 +47,25 @@ function initGallery() {
 			}
 		},
 		methods: {
+			init() {
+				const vm = this;
+				if (vm.Slider) {
+					vm.initLightbox();
+					vm.Slider.swiper
+						.on("slideNextTransitionStart", function() {
+							vm.Direction = this.realIndex+1==vm.Slides.length ? "end" : "next";
+						})
+						.on("slidePrevTransitionStart", function() {
+							vm.Direction = this.realIndex==0 ? "start" : "prev";
+						})
+						.on("reachBeginning", function() {
+							vm.Direction = "start";
+						})
+						.on("reachEnd", function() {
+							vm.Direction = "end";
+						});
+				}
+			},
 			initLightbox() {
 				const vm = this;
 				let lightBox = GLightbox({

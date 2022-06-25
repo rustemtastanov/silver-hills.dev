@@ -203,9 +203,9 @@
 			</section>
 		</app-order>
 
-		<app-benefits inline-template>
-			<section class="section s--benefits">
-				<div class="benefits-tabs hidden-xs">
+		<app-benefits inline-template :in-view="inView.benefits">
+			<section class="section s--benefits inview" data-inview="benefits">
+				<div class="benefits-tabs hidden-xs" v-if="inView">
 					<div class="benefits-tab" v-for="(Slide, index) in Slides" :key="index" :class="{'active': Selected==index}" @click.prevent="Selected=index">
 						<div class="value">
 							<app-counter :value="Slide.value"></app-counter>
@@ -215,7 +215,7 @@
 					</div>
 					<div class="line"></div>
 				</div>
-				<swiper class="swiper benefits-items hidden-xs" ref="slider" :options="options">
+				<swiper class="swiper benefits-items hidden-xs" ref="slider" :options="options" v-if="inView">
 					<swiper-slide v-for="(Slide, index) in Slides" class="benefits-slide swiper-slide" :key="index">
 						<picture class="img swiper-img">
 							<source :data-srcset="Slide.webp +' 1x, '+ Slide.webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp" />
@@ -227,7 +227,7 @@
 						</div>
 					</swiper-slide>
 				</swiper>
-				<div class="benefits-items visible-xs">
+				<div class="benefits-items visible-xs" v-if="inView">
 					<div class="benefits-slide" v-for="(Slide, index) in Slides" :key="index">
 						<picture class="img primary" data-role="lazy">
 							<source :data-srcset="Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x'" type="image/webp" />
@@ -316,10 +316,10 @@
 			</section>
 		</app-points>
 
-		<app-gallery inline-template :is-phone="isPhone">
-			<section class="section s--gallery" id="gallery">
+		<app-gallery inline-template :is-phone="isPhone" :in-view="inView.gallery">
+			<section class="section s--gallery inview" data-inview="gallery" id="gallery">
 				<div class="gallery-title">Галерея</div>
-				<swiper class="swiper gallery-items" ref="slider" :options="options">
+				<swiper class="swiper gallery-items" ref="slider" :options="options" v-if="inView">
 					<swiper-slide v-for="(Slide, index) in Slides" class="gallery-slide swiper-slide" :class="'gallery-slide-'+ (index+1)" :key="index">
 						<div class="img swiper-img">
 							<a href="#" :href="Slide.photo" class="link--block gallery-zoom" aria-label="zoom" data-gallery="photos">
@@ -333,7 +333,7 @@
 						<div class="text visible-xs" v-html="Slide.text_phone"></div>
 					</swiper-slide>
 				</swiper>
-				<div class="gallery-controls" :data-dir="Direction">
+				<div class="gallery-controls" :data-dir="Direction" v-if="inView">
 					<button type="button" class="btn--unstyled gallery-prev" aria-label="prev"></button>
 					<button type="button" class="btn--unstyled gallery-next" aria-label="next"></button>
 				</div>
@@ -941,10 +941,10 @@
 			</section>
 		</app-terms>
 
-		<app-status inline-template v-on:show-status="showStatus">
-			<section class="section s--status hidden-xs" id="status">
+		<app-status inline-template v-on:show-status="showStatus" :in-view="inView.status">
+			<section class="section s--status hidden-xs inview" data-inview="status" id="status">
 				<h3 class="status-title">Ход строительства</h3>
-				<swiper class="swiper status-items" ref="slider" :options="options">
+				<swiper class="swiper status-items" ref="slider" :options="options" v-if="inView">
 					<swiper-slide v-for="(Slide, index) in Slides" class="status-slide slide swiper-slide" :class="Slide.formfactor" :key="index">
 						<a href="#" class="link--block" aria-label="zoom" @click.prevent="$emit('show-status', Slide)">
 							<div class="img swiper-img">

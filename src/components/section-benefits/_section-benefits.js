@@ -5,6 +5,9 @@
  	-------------------------------------- */
 function initBenefits() {
 	Vue.component("app-benefits", {
+		props: {
+			inView: Boolean
+		},
 		data() {
 			return {
 				Slides: BENEFITS_DATA,
@@ -45,22 +48,25 @@ function initBenefits() {
 				}
 			}
 		},
-		computed: {
-			slider() {
-				return this.$refs.slider;
-			}
-		},
 		watch: {
+			inView() {
+				if (this.inView) this.init();
+			},
 			Selected() {
 				this.$refs.slider.swiper.slideTo(this.Selected);
 			}
 		},
-		mounted() {
-			const vm = this;
-			vm.$refs.slider.swiper.on("slideChange", function() {
-				let index = this.realIndex;
-				vm.Selected = index;
-			});
+		methods: {
+			init() {
+				const vm = this;
+				const Slider = vm.$refs.slider;
+				if (Slider) {
+					Slider.swiper.on("slideChange", function() {
+						let index = this.realIndex;
+						vm.Selected = index;
+					});
+				}
+			}
 		}
 	});
 }
