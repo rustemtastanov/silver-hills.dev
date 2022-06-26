@@ -38,7 +38,10 @@ function initGallery() {
 		},
 		watch: {
 			inView() {
-				if (this.inView) this.init();
+				const vm = this;
+				if (vm.inView) setTimeout(function() {
+					vm.init();
+				}, 400);
 			}
 		},
 		computed: {

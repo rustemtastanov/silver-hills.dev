@@ -20,6 +20,10 @@ function initBenefits() {
 					lazy: {
 						loadPrevNext: true
 					},
+					autoplay: {
+						delay: 5000,
+						disableOnInteraction: false
+					},
 					watchSlidesProgress: true,
 					on: {
 						progress: function() {
@@ -50,10 +54,18 @@ function initBenefits() {
 		},
 		watch: {
 			inView() {
-				if (this.inView) this.init();
+				const vm = this;
+				if (vm.inView) setTimeout(function() {
+					vm.init();
+				}, 400);
 			},
 			Selected() {
-				this.$refs.slider.swiper.slideTo(this.Selected);
+				const vm = this;
+				vm.$refs.slider.swiper.autoplay.stop();
+				vm.$refs.slider.swiper.slideTo(vm.Selected);
+				setTimeout(function() {
+					vm.$refs.slider.swiper.autoplay.start();
+				}, 5000);
 			}
 		},
 		methods: {

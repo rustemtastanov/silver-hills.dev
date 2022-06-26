@@ -179,7 +179,14 @@
 	flex-direction: column;
 	justify-content: center;
   align-items: center;
+	position: relative;
+	height: 500px;
   a {
+		height: 500px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	  align-items: center;
   	transition: opacity .3s;
   	&:hover {
   		opacity: .7;
