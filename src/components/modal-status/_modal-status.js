@@ -14,7 +14,7 @@ function initModalStatus() {
 				isLoaded: false,
 				options: {
 					direction: "horizontal",
-					speed: 600,
+					speed: 800,
 					lazy: {
 						loadPrevNext: true
 					},
@@ -76,7 +76,7 @@ function initModalStatus() {
 				let videoId 	= "video-" + id + "-" + index;
 				vm.checkPlayer();
 				if (typeof videoUrl!="undefined") {
-					let youtubeId = getYoutubeId(videoUrl);
+					let youtubeId = vm.getYoutubeId(videoUrl);
 					new YT.Player(videoId, {
 						videoId: youtubeId,
 						events: {
@@ -99,8 +99,12 @@ function initModalStatus() {
 					pager.swiper.slideTo(index);
 				});
 			},
+			getYoutubeId(url) {
+				url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+				return (url[2] !== undefined) ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[0];
+			},
 			getYoutubeSrc(url) {
-				return "https://www.youtube.com/embed/" + getYoutubeId(url);
+				return "https://www.youtube.com/embed/" + vm.getYoutubeId(url);
 			}
 		}
 	});

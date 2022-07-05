@@ -28,12 +28,13 @@ button {
 
 .btn {
   text-align: center;
-  border: 1px solid transparent;
+  border: 1PX solid transparent;
   font-weight: 300;
   font-style: italic;
-  transition-property: box-shadow, background, border-color;
-  transition-duration: .2s;
+  transition-property: box-shadow, background, border-color, color;
+  transition-duration: .3s;
   position: relative;
+  overflow: hidden;
 
   &:active,
   &.active {
@@ -52,6 +53,28 @@ a.btn {
   &.disabled,
   fieldset[disabled] & {
     pointer-events: none;
+  }
+}
+
+.btn--fill {
+	border: 0;
+  &::before {
+  	content: '';
+  	@include stretch;
+  	z-index: 0;
+  	transform: scaleX(0);
+  	transition: transform .5s ease;
+  	transform-origin: 0 0;
+  }
+  span {
+  	position: relative;
+  	z-index: 1;
+  }
+  &:hover,
+	&:focus {
+  	&::before {
+  		transform: scaleX(1);
+  	}
   }
 }
 
@@ -88,7 +111,9 @@ input[type="button"] {
     background-image: inline('#{$path-inline}/spinner-white.svg');
   }
   [data-loading="true"] & {
-  	color: transparent;
+  	span {
+  		visibility: hidden;
+  	}
     &::after {
       transform: translate(-50%, -50%) scale(1);
     }
@@ -99,15 +124,14 @@ input[type="button"] {
 	background: $brand-secondary;
 	border-color: $brand-secondary;
 	color: black;
+	&::before {
+		background: $red;
+	}
 	&:hover,
 	&:active,
 	&:focus {
-		background: $red;
 		border-color: $red;
 		color: white;
-	  [data-loading="true"] & {
-	  	color: transparent;
-	  }
 	}
 }
 
@@ -115,15 +139,14 @@ input[type="button"] {
 	background: white;
 	border-color: white;
 	color: black;
+	&::before {
+		background: $red;
+	}
 	&:hover,
 	&:active,
 	&:focus {
-		background: $red;
-		border-color: $red;
+		border-color: white;
 		color: white;
-	  [data-loading="true"] & {
-	  	color: transparent;
-	  }
 	}
 }
 
@@ -201,9 +224,17 @@ input[type="button"] {
 
 .btn--nav {
 	width: 50px;
+	.bg {
+		@include stretch;
+		z-index: 0;
+		background: black;
+		transform: scaleX(0);
+  	transition: transform .3s ease;
+  	transform-origin: 0 0;
+	}
 	&::before,
 	&::after,
-	span {
+	.line {
 		content: '';
 		position: absolute;
 		left: 50%;
@@ -212,8 +243,9 @@ input[type="button"] {
 		border-top: 1PX solid black;
 		transform-origin: 50% 50%;
 		transition: all .3s;
+		z-index: 1;
 	}
-	span {
+	.line {
 		transform: translate(-50%, -50%);
 	}
 	&::before {
@@ -228,10 +260,12 @@ input[type="button"] {
 	}
 	&.toggled,
 	&:hover {
-		background: black;
+		.bg {
+			transform: scaleX(1);
+		}
 		&::before,
 		&::after,
-		span {
+		.line {
 			border-top-color: white;
 		}
 	}
@@ -244,7 +278,7 @@ input[type="button"] {
 		}
 	}
 	&.toggled {
-		span {
+		.line {
 			transform: scaleX(0);
 		}
 		&::before,

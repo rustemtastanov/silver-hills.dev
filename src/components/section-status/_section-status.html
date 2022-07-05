@@ -9,17 +9,11 @@
 			<swiper-slide v-for="(Slide, index) in Slides" class="status-slide slide swiper-slide" :class="Slide.formfactor" :key="index">
 				<a href="#" class="link--block" aria-label="zoom" @click.prevent="$emit('show-status', Slide)">
 					<div class="img swiper-img">
-						<template v-if="Slide.photos[0].video">
-							<i class="icon icon-video"></i>
-							<img :width="Slide.formfactor=='album' ? 568 : 234" height="300" :data-src="getPoster(Slide.photos[0].video)" class="swiper-lazy img--cover" alt="thumb" />
-						</template>
-						<template v-else>
-							<picture>
-								<source :data-srcset="Slide.photos[0].webp +' 1x, '+ Slide.photos[0].webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp" />
-								<img :width="Slide.formfactor=='album' ? 568 : 234" height="300" :data-srcset="Slide.photos[0].thumb +' 1x, '+ Slide.photos[0].thumb2x +' 2x'" class="swiper-lazy img--cover" alt="thumb" />
-							</picture>
-							<i class="icon icon-zoom"></i>
-						</template>
+						<i class="icon icon-video" :class="Slide.photos[0].video ? 'icon-video' : 'icon-zoom'"></i>
+						<picture>
+							<source :data-srcset="Slide.photos[0].webp +' 1x, '+ Slide.photos[0].webp2x +' 2x'" class="swiper-lazy img--cover" type="image/webp" />
+							<img :width="Slide.formfactor=='album' ? 568 : 234" height="300" :data-srcset="Slide.photos[0].thumb +' 1x, '+ Slide.photos[0].thumb2x +' 2x'" class="swiper-lazy img--cover" alt="thumb" />
+						</picture>
 					</div>
 				</a>
 				<div class="date">

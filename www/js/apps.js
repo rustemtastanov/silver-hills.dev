@@ -219,10 +219,38 @@ function initGallery() {
             prevEl: ".gallery-prev",
             disabledClass: "disabled"
           },
+          watchSlidesProgress: true,
+          on: {
+            progress: function progress() {
+              var swiper = this;
+
+              for (var i = 0; i < swiper.slides.length; i++) {
+                var progress = swiper.slides[i].progress;
+                var offset = swiper.width * .7;
+                var pos = progress * offset;
+                swiper.slides[i].querySelector(".img").style.transform = "translate3d(" + pos + "px, 0, 0)";
+              }
+            },
+            touchStart: function touchStart() {
+              var swiper = this;
+
+              for (var i = 0; i < swiper.slides.length; i++) {
+                swiper.slides[i].style.transition = "";
+              }
+            },
+            setTransition: function setTransition(swiper, speed) {
+              var swiper = this;
+
+              for (var i = 0; i < swiper["slides"]["length"]; i++) {
+                swiper.slides[i].style.transition = speed + "ms";
+                swiper.slides[i].querySelector(".img").style.transition = speed + "ms";
+              }
+            }
+          },
           breakpointsInverse: true,
           breakpoints: {
             0: {
-              speed: 600
+              speed: 800
             },
             768: {
               speed: 1200
@@ -497,9 +525,6 @@ function initDropTerms() {
 
 function initStatus() {
   Vue.component("app-status", {
-    props: {
-      inView: Boolean
-    },
     data: function data() {
       return {
         Slides: STATUS_DATA,
@@ -516,18 +541,6 @@ function initStatus() {
           spaceBetween: 56
         }
       };
-    },
-    watch: {
-      inView: function inView() {
-        if (this.inView) this.init();
-      }
-    },
-    methods: {
-      init: function init() {},
-      getPoster: function getPoster(url) {
-        var id = getYoutubeId(url);
-        return "https://i3.ytimg.com/vi/" + id + "/hqdefault.jpg";
-      }
     }
   });
 }
@@ -549,7 +562,7 @@ function initModalStatus() {
         isLoaded: false,
         options: {
           direction: "horizontal",
-          speed: 600,
+          speed: 800,
           lazy: {
             loadPrevNext: true
           },
@@ -613,7 +626,7 @@ function initModalStatus() {
         vm.checkPlayer();
 
         if (typeof videoUrl != "undefined") {
-          var youtubeId = getYoutubeId(videoUrl);
+          var youtubeId = vm.getYoutubeId(videoUrl);
           new YT.Player(videoId, {
             videoId: youtubeId,
             events: {
@@ -636,8 +649,12 @@ function initModalStatus() {
           pager.swiper.slideTo(index);
         });
       },
+      getYoutubeId: function getYoutubeId(url) {
+        url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+        return url[2] !== undefined ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[0];
+      },
       getYoutubeSrc: function getYoutubeSrc(url) {
-        return "https://www.youtube.com/embed/" + getYoutubeId(url);
+        return "https://www.youtube.com/embed/" + vm.getYoutubeId(url);
       }
     }
   });
@@ -1076,11 +1093,6 @@ function sort(array, dir) {
   return array.sort(function (val1, val2) {
     return dir == "asc" ? val1 > val2 ? 1 : -1 : val1 < val2 ? 1 : -1;
   });
-}
-
-function getYoutubeId(url) {
-  url = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
-  return url[2] !== undefined ? url[2].split(/[^0-9a-z_\-]/i)[0] : url[0];
 }
 
 function initApp() {

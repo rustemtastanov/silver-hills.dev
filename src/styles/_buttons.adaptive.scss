@@ -4,6 +4,10 @@
   min-width: 228px;
 }
 
+.btn--fill {
+	padding: 15px 30px 19px;
+}
+
 .btn--block,
 .btn--close,
 .btn--top {
@@ -37,10 +41,22 @@
 
 .btn--call,
 .btn--contacts {
-	&:hover {
+	overflow: hidden;
+	&::before {
+		content: '';
+		@include stretch;
+		z-index: 0;
 		background: $brand-secondary;
+		transform-origin: 0 0;
+		transform: scaleX(0);
+		transition: transform .5s ease;
+	}
+	&:hover {
 		border-color: $brand-secondary;
 		border-bottom-color: black;
+		&::before {
+			transform: scaleX(1);
+		}
 	}
 }
 

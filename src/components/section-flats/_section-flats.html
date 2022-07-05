@@ -42,8 +42,10 @@
 				</ul>
 			</div>
 
-			<button type="button" class="btn btn--primary hidden-xs" @click="openForm()">
-				{% if lang == 'ru' %} отправить заявку {% endif %}
+			<button type="button" class="btn btn--fill btn--primary hidden-xs" @click="openForm()">
+				<span>
+					{% if lang == 'ru' %} отправить заявку {% endif %}
+				</span>
 			</button>
 
 		</div>
@@ -89,8 +91,10 @@
 				</span>
 			</div>
 
-			<button type="button" class="btn btn--primary visible-xs" @click="openForm()">
-				{% if lang == 'ru' %} отправить заявку {% endif %}
+			<button type="button" class="btn btn--fill btn--primary visible-xs" @click="openForm()">
+				<span>
+					{% if lang == 'ru' %} отправить заявку {% endif %}
+				</span>
 			</button>
 
 		</div>

@@ -24,7 +24,7 @@
 	left: 23px;
 	bottom: 43px;
 	path {
-		transition: all 1.5s;
+		transition: all 2s ease-out;
 	}
 	&.animated path {
 		stroke-dashoffset: 0;

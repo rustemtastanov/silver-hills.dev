@@ -1454,16 +1454,17 @@ button {
 
 .btn {
   text-align: center;
-  border: 0.0625rem solid transparent;
+  border: 1PX solid transparent;
   font-weight: 300;
   font-style: italic;
-  -webkit-transition-property: background, border-color, -webkit-box-shadow;
-  transition-property: background, border-color, -webkit-box-shadow;
-  transition-property: box-shadow, background, border-color;
-  transition-property: box-shadow, background, border-color, -webkit-box-shadow;
-  -webkit-transition-duration: .2s;
-          transition-duration: .2s;
+  -webkit-transition-property: background, border-color, color, -webkit-box-shadow;
+  transition-property: background, border-color, color, -webkit-box-shadow;
+  transition-property: box-shadow, background, border-color, color;
+  transition-property: box-shadow, background, border-color, color, -webkit-box-shadow;
+  -webkit-transition-duration: .3s;
+          transition-duration: .3s;
   position: relative;
+  overflow: hidden;
 }
 
 .btn:active, .btn.active {
@@ -1479,6 +1480,38 @@ fieldset[disabled] .btn {
 a.btn.disabled,
 fieldset[disabled] a.btn {
   pointer-events: none;
+}
+
+.btn--fill {
+  border: 0;
+}
+
+.btn--fill::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .5s ease;
+  transition: -webkit-transform .5s ease;
+  transition: transform .5s ease;
+  transition: transform .5s ease, -webkit-transform .5s ease;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+.btn--fill span {
+  position: relative;
+  z-index: 1;
+}
+
+.btn--fill:hover::before, .btn--fill:focus::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .btn--block {
@@ -1513,8 +1546,8 @@ input[type="button"].btn--block {
   background-image: url('data:image/svg+xml;charset=utf-8,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0A%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20xmlns%3Axlink%3D%22http%3A%2F%2Fwww.w3.org%2F1999%2Fxlink%22%20style%3D%22margin%3A%20auto%3B%20background%3A%20none%3B%20display%3A%20block%3B%20shape-rendering%3A%20auto%3B%22%20width%3D%22200px%22%20height%3D%22200px%22%20viewBox%3D%220%200%20100%20100%22%20preserveAspectRatio%3D%22xMidYMid%22%3E%0A%3Ccircle%20cx%3D%2250%22%20cy%3D%2250%22%20r%3D%2240%22%20stroke-width%3D%225%22%20stroke%3D%22%23ffffff%22%20stroke-dasharray%3D%2262.83185307179586%2062.83185307179586%22%20fill%3D%22none%22%20stroke-linecap%3D%22round%22%3E%0A%20%20%3CanimateTransform%20attributeName%3D%22transform%22%20type%3D%22rotate%22%20repeatCount%3D%22indefinite%22%20dur%3D%221s%22%20keyTimes%3D%220%3B1%22%20values%3D%220%2050%2050%3B360%2050%2050%22%3E%3C%2FanimateTransform%3E%0A%3C%2Fcircle%3E%0A%3C%2Fsvg%3E');
 }
 
-[data-loading="true"] .btn--submit {
-  color: transparent;
+[data-loading="true"] .btn--submit span {
+  visibility: hidden;
 }
 
 [data-loading="true"] .btn--submit::after {
@@ -1528,14 +1561,13 @@ input[type="button"].btn--block {
   color: black;
 }
 
-.btn--primary:hover, .btn--primary:active, .btn--primary:focus {
+.btn--primary::before {
   background: #d01b14;
-  border-color: #d01b14;
-  color: white;
 }
 
-[data-loading="true"] .btn--primary:hover, [data-loading="true"] .btn--primary:active, [data-loading="true"] .btn--primary:focus {
-  color: transparent;
+.btn--primary:hover, .btn--primary:active, .btn--primary:focus {
+  border-color: #d01b14;
+  color: white;
 }
 
 .btn--white {
@@ -1544,14 +1576,13 @@ input[type="button"].btn--block {
   color: black;
 }
 
-.btn--white:hover, .btn--white:active, .btn--white:focus {
+.btn--white::before {
   background: #d01b14;
-  border-color: #d01b14;
-  color: white;
 }
 
-[data-loading="true"] .btn--white:hover, [data-loading="true"] .btn--white:active, [data-loading="true"] .btn--white:focus {
-  color: transparent;
+.btn--white:hover, .btn--white:active, .btn--white:focus {
+  border-color: white;
+  color: white;
 }
 
 .btn--black {
@@ -1667,8 +1698,26 @@ input[type="button"].btn--block {
   width: 3.125rem;
 }
 
+.btn--nav .bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+  background: black;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
 .btn--nav::before, .btn--nav::after,
-.btn--nav span {
+.btn--nav .line {
   content: '';
   position: absolute;
   left: 50%;
@@ -1679,9 +1728,10 @@ input[type="button"].btn--block {
           transform-origin: 50% 50%;
   -webkit-transition: all .3s;
   transition: all .3s;
+  z-index: 1;
 }
 
-.btn--nav span {
+.btn--nav .line {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -1701,13 +1751,14 @@ input[type="button"].btn--block {
           transform-origin: 100% 50%;
 }
 
-.btn--nav.toggled, .btn--nav:hover {
-  background: black;
+.btn--nav.toggled .bg, .btn--nav:hover .bg {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .btn--nav.toggled::before, .btn--nav.toggled::after,
-.btn--nav.toggled span, .btn--nav:hover::before, .btn--nav:hover::after,
-.btn--nav:hover span {
+.btn--nav.toggled .line, .btn--nav:hover::before, .btn--nav:hover::after,
+.btn--nav:hover .line {
   border-top-color: white;
 }
 
@@ -1721,7 +1772,7 @@ input[type="button"].btn--block {
           transform: translate(-50%, calc(-50% + 0.375rem));
 }
 
-.btn--nav.toggled span {
+.btn--nav.toggled .line {
   -webkit-transform: scaleX(0);
           transform: scaleX(0);
 }
@@ -2352,6 +2403,10 @@ html.glightbox-open {
 
 .gallery-items {
   z-index: 0;
+}
+
+.gallery-slide {
+  overflow: hidden;
 }
 
 .gallery-slide .img {

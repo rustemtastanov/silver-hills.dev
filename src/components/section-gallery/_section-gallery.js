@@ -24,10 +24,35 @@ function initGallery() {
 						prevEl: ".gallery-prev",
 						disabledClass: "disabled"
 					},
+					watchSlidesProgress: true,
+					on: {
+						progress: function() {
+							var swiper = this;
+							for (let i=0; i<swiper.slides.length; i++) {
+								let progress 	= swiper.slides[i].progress;
+								let offset 		= swiper.width * .7;
+								let pos 			= progress * offset;
+								swiper.slides[i].querySelector(".img").style.transform = "translate3d(" + pos + "px, 0, 0)";
+							}      
+						},
+						touchStart: function() {
+							var swiper = this;
+							for (let i=0; i<swiper.slides.length; i++) {
+								swiper.slides[i].style.transition = "";
+							}
+						},
+						setTransition: function(swiper, speed) {
+							var swiper = this;
+							for (let i=0; i<swiper["slides"]["length"]; i++) {
+								swiper.slides[i].style.transition = speed + "ms";
+								swiper.slides[i].querySelector(".img").style.transition = speed + "ms";
+							}
+						}
+					},
 					breakpointsInverse: true,
 					breakpoints: {
 						0: {
-							speed: 600
+							speed: 800
 						},
 						768: {
 							speed: 1200

@@ -14,8 +14,10 @@
 						{% if lang == 'ru' %} подробнее {% endif %}
 					</a>
 				</div>
-				<button type="button" class="btn btn--primary btn--block hidden-xs" @click="openForm">
-					{% if lang == 'ru' %} отправить заявку {% endif %}
+				<button type="button" class="btn btn--fill btn--primary btn--block hidden-xs" @click="openForm">
+					<span>
+						{% if lang == 'ru' %} отправить заявку {% endif %}
+					</span>
 				</button>
 			</div>
 		</div>

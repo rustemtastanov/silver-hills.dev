@@ -17,6 +17,10 @@ html {
   padding: 1.0625rem 1.875rem 1.4375rem;
 }
 
+.btn--fill {
+  padding: 1.125rem 1.875rem 1.5rem;
+}
+
 .btn--contacts {
   width: 3.1875rem;
   background: #d01b14;

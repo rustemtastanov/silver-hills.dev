@@ -12,6 +12,7 @@
 }
 
 .gallery-slide {
+	overflow: hidden;
 	.img {
 		background: $gray;
 	}
