@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'tinymcerte',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e724c5cc9afac143cb78b89e69b88acd',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1a0c4bb967f1b53be2df23b927a2aee6',
+  'native_key' => 'tinymcerte.menubar',
+  'object' => '{"key":"tinymcerte.menubar","value":"file edit insert view format table tools","xtype":"textfield","namespace":"tinymcerte","area":"tinymcerte.default","editedon":null}',
+);

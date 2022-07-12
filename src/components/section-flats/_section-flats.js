@@ -55,7 +55,7 @@ function initFlats() {
 				this.ItemsAll.forEach(function(item) {
 					if (item.status==1) {
 						items.push(item);
-						if (item.type) {
+						if (item.type!=0) {
 							types.push(item.type);
 						} else {
 							rooms.push(item.rooms);

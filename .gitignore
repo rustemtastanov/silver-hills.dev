@@ -9,3 +9,6 @@ build/
 .Thumbs
 .tmp/
 .build/
+core/cache/
+assets/cache_image/
+backup/

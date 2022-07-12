@@ -18,7 +18,7 @@
 
 			<div class="flats-types" v-show="isLoaded">
 				<div v-for="(Type, index) in Types" :class="{active: SelectedType==Type}" @click.prevent="SelectTypes(Type)" :key="index">
-					{% if lang == 'ru' %} {{ Type=='penthouse' ? 'Пентхаус' : Type=='2x' ? 'Двухуровневая' : '' }} {% endif %}
+					{% if lang == 'ru' %} {{ Type==2 ? 'Пентхаус' : Type==1 ? 'Двухуровневая' : '' }} {% endif %}
 				</div>
 			</div>
 
@@ -54,7 +54,7 @@
 
 			<div class="flats-viewport" :class="{ active: ImageLoaded }">
 				<span v-show="!ImageLoaded" class="loader"></span>
-				<a href="#" :href="SelectedView=='default' ? Flat.img : Flat.socle" class="link--block flats-zoom" aria-label="zoom" v-show="ImageLoaded">
+				<a href="#" :href="Flat.img ? (SelectedView=='default' ? Flat.img : Flat.socle) : '{{{ path }}}img/logo.svg'" class="link--block flats-zoom" aria-label="zoom" v-show="ImageLoaded">
 					<img width="400" height="400" :src="SelectedView=='default' ? Flat.img : Flat.socle" alt="image" />
 				</a>
 			</div>

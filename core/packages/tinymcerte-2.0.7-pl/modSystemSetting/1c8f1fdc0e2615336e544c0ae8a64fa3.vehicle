@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'tinymcerte',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'eac5149255d21bcc6216c43389f9309a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '1c8f1fdc0e2615336e544c0ae8a64fa3',
+  'native_key' => 'tinymcerte.inline_format',
+  'object' => '{"key":"tinymcerte.inline_format","value":"[{\\"title\\": \\"Bold\\", \\"icon\\": \\"bold\\", \\"format\\": \\"bold\\"},{\\"title\\": \\"Italic\\", \\"icon\\": \\"italic\\", \\"format\\": \\"italic\\"},{\\"title\\": \\"Underline\\", \\"icon\\": \\"underline\\", \\"format\\": \\"underline\\"},{\\"title\\": \\"Strikethrough\\", \\"icon\\": \\"strike-through\\", \\"format\\": \\"strikethrough\\"},{\\"title\\": \\"Superscript\\", \\"icon\\": \\"superscript\\", \\"format\\": \\"superscript\\"},{\\"title\\": \\"Subscript\\", \\"icon\\": \\"subscript\\", \\"format\\": \\"subscript\\"},{\\"title\\": \\"Code\\", \\"icon\\": \\"sourcecode\\", \\"format\\": \\"code\\"}]","xtype":"textarea","namespace":"tinymcerte","area":"tinymcerte.style_formats","editedon":null}',
+);

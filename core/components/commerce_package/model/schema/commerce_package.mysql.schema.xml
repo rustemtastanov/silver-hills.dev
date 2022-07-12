@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model package="commerce_package" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="" phpdoc-subpackage="" version="1.1">
+
+  <object class="commerce_packageGroup" table="commerce_package_groups" extends="xPDOSimpleObject">
+    <field key="area" dbtype="text" phptype="string" null="false" />
+    <field key="block" dbtype="text" phptype="string" null="false" />
+    <field key="price" dbtype="integer" phptype="integer" null="false" />
+    <field key="status" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="img" dbtype="text" phptype="string" null="false" />
+    <field key="file" dbtype="text" phptype="string" null="false" />
+
+    <field key="group_id" dbtype="int" precision="10" phptype="integer" null="false" default="0" index="index" />
+
+    <composite alias="Item" class="commerce_packageItem" local="id" foreign="group_id" cardinality="many" owner="local" />
+  </object>
+
+  <object class="commerce_packageItem" table="commerce_package_items" extends="xPDOSimpleObject">
+    <field key="area" dbtype="text" phptype="string" null="false" />
+    <field key="block" dbtype="text" phptype="string" null="false" />
+    <field key="price" dbtype="integer" phptype="integer" null="false" />
+    <field key="status" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="img" dbtype="text" phptype="string" null="false" />
+    <field key="file" dbtype="text" phptype="string" null="false" />
+
+    <field key="group_id" dbtype="int" precision="10" phptype="integer" null="false" default="0" index="index" />
+
+    <aggregate alias="Group" class="commerce_packageGroup" local="group_id" foreign="id" cardinality="one" owner="foreign" />
+  </object>
+
+</model>

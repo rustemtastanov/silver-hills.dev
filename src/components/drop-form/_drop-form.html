@@ -11,7 +11,15 @@
 			<img width="8" height="150" data-src="{{{ path }}}img/text-vertical-{{{ lang }}}.svg" class="img--cover lazy drop-form-text hidden-xs" alt="text" data-role="lazyimg" />
 
 			<div v-show="!ShowResponse">
-				<app-form :form-class="'form-call'" :form-utm="UTM" :button="'white'" v-on:show-response="showResponse" v-on:hide-response="hideResponse" :action="'/'"></app-form>
+				{% for item in [
+					{
+						FormId: "call",
+						FormClass: "form-call",
+						Button: "white"
+					}
+				] -%}
+				{% include "form-order/_form-order.html" %}
+				{%- endfor %}
 			</div>
 
 			<div v-show="ShowResponse">

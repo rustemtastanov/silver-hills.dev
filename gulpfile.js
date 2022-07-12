@@ -348,7 +348,7 @@ exports.build = series(
 
 			//минификация JS
 			series(function(cb) {
-				return gulp.src([APP["dst"]["scripts"] + "/vendors.min.js", APP["dst"]["scripts"] + "/apps.min.js"])
+				return gulp.src([APP["dst"]["scripts"] + "/forms.min.js", APP["dst"]["scripts"] + "/vendors.min.js", APP["dst"]["scripts"] + "/apps.min.js"])
 					.pipe(babel({
 						presets: ["@babel/env"]
 					}))
@@ -360,7 +360,7 @@ exports.build = series(
 					.pipe(gulp.dest(APP["dst"]["scripts"]));
 				cb();
 			}, function(cb) {
-				return gulp.src([APP["dst"]["scripts"] + "/vendors.min.js", APP["dst"]["scripts"] + "/apps.min.js"])
+				return gulp.src([APP["dst"]["scripts"] + "/forms.min.js", APP["dst"]["scripts"] + "/vendors.min.js", APP["dst"]["scripts"] + "/apps.min.js"])
 					.pipe($.uglify())
 					// .pipe(uglify())
 					.pipe(gulp.dest(APP["dst"]["scripts"]));

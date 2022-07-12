@@ -1,0 +1,23 @@
+<app-gallery inline-template :is-phone="isPhone" :in-view="inView.gallery">
+	<section class="section s--gallery inview" data-inview="gallery" id="gallery">
+		<div class="gallery-title">Галерея</div>
+		<swiper class="swiper gallery-items" ref="slider" :options="options" v-if="inView">
+			<swiper-slide v-for="(Slide, index) in Slides" class="gallery-slide swiper-slide" :class="'gallery-slide-'+ (index+1)" :key="index">
+				<div class="img swiper-img">
+					<a href="#" :href="Slide.photo" class="link--block gallery-zoom" aria-label="zoom" data-gallery="photos">
+						<picture>
+							<source :data-srcset="isPhone ? (Slide.webp_phone +' 1x, '+ Slide.webp_phone2x +' 2x') : (Slide.webp +' 1x, '+ Slide.webp2x +' 2x')" class="swiper-lazy img--cover" type="image/webp" />
+							<img :width="isPhone ? 394 : 1326" :height="isPhone ? 528 : 650" :data-srcset="isPhone ? (Slide.thumb_phone +' 1x, '+ Slide.thumb_phone2x +' 2x') : (Slide.thumb +' 1x, '+ Slide.thumb2x +' 2x')" class="swiper-lazy img--cover" alt="photo" />
+						</picture>
+					</a>
+				</div>
+				<div class="text hidden-xs" :class="Slide.pos" v-html="Slide.text"></div>
+				<div class="text visible-xs" v-html="Slide.text_phone"></div>
+			</swiper-slide>
+		</swiper>
+		<div class="gallery-controls" :data-dir="Direction" v-if="inView">
+			<button type="button" class="btn--unstyled gallery-prev" aria-label="prev"></button>
+			<button type="button" class="btn--unstyled gallery-next" aria-label="next"></button>
+		</div>
+	</section>
+</app-gallery>

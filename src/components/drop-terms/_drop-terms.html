@@ -11,7 +11,15 @@
 
 				<div class="drop-terms-text" v-html="Terms.text"></div>
 
-				<app-form :form-class="'form-terms'" :form-utm="UTM" :button="'primary'" v-on:show-response="showResponse" v-on:hide-response="hideResponse" :action="'/'"></app-form>
+				{% for item in [
+					{
+						FormId: "terms",
+						FormClass: "form-terms",
+						Button: "primary"
+					}
+				] -%}
+				{% include "form-order/_form-order.html" %}
+				{%- endfor %}
 
 			</div>
 

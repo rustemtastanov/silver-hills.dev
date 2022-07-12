@@ -1,5 +1,5 @@
-<script type="text/html" id="form">
-	<form :action="Action" :class="FormClass" :data-loading="isLoading" @submit.prevent="submit()" novalidate>
+<app-form inline-template :form-utm="UTM" v-on:show-response="showResponse" v-on:hide-response="hideResponse">
+	<form action="/" class="{{{ item.FormClass }}}" :data-loading="isLoading" :data-error="hasError" @submit.prevent="submit()" novalidate>
 		<input type="hidden" name="utm_source" :value="FormUtm.source" />
 		<input type="hidden" name="utm_medium" :value="FormUtm.medium" />
 		<input type="hidden" name="utm_campaign" :value="FormUtm.campaign" />
@@ -17,7 +17,7 @@
 		</div>
 
 		<div class="form-controls">
-			<button type="submit" class="btn btn--fill btn--submit btn--block" :class="'btn--'+ Button">
+			<button type="submit" class="btn btn--fill btn--submit btn--block btn--{{{ item.Button }}}">
 				<span>
 					{% if lang == 'ru' %} отправить заявку {% endif %}
 				</span>
@@ -25,4 +25,4 @@
 		</div>
 		
 	</form>
-</script>
+</app-form>

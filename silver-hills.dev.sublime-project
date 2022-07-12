@@ -22,7 +22,15 @@
 		"folder_exclude_patterns": ["*"],
 		"path": "src\\views\\layouts"
 	}, {
+		"path": "api"
+	}, {
 		"path": "www"
+	}, {
+		"path": "core"
+	}, {
+		"path": "assets"
+	}, {
+		"path": "chunks"
 	}],
 	"settings": {
 		"tab_size": 2

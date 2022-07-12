@@ -122,14 +122,25 @@
   		"flats": "{{{ path }}}media/flats/flats.json",
   		"commerce": "{{{ path }}}media/commerce/commerce.json"
   	};
+  	const FORMIT = {
+  		actionUrl: "/assets/components/ajaxform/action.php",
+  		assetsUrl: "/assets/components/ajaxform/",
+  		formSelector: "form.ajax_form",
+  		pageId: 1
+  	};
   </script>
-	{% include "form-order/_form-order.html" %}
 	{% include "section-benefits/_scripts.html" %}
 	{% include "section-points/_scripts.html" %}
 	{% include "section-gallery/_scripts.html" %}
 	{% include "section-terms/_scripts.html" %}
 	{% include "section-status/_scripts.html" %}
 	{% include "section-contacts/_scripts.html" %}
+
+	<!-- build:js {{{ path }}}js/forms.min.js async defer -->
+	<script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.form.min.js"></script>
+  <script src="/js/_formajax.js"></script>
+	<!-- endbuild -->
 
 	<!-- build:js {{{ path }}}js/vendors.min.js async defer -->
 	<script src="/node_modules/vanilla-lazyload/dist/lazyload.js" defer></script>

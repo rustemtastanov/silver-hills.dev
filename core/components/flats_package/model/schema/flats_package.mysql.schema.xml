@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<model package="flats_package" baseClass="xPDOObject" platform="mysql" defaultEngine="InnoDB" phpdoc-package="" phpdoc-subpackage="" version="1.1">
+
+  <object class="flats_packageGroup" table="flats_package_groups" extends="xPDOSimpleObject">
+    <field key="area" dbtype="text" phptype="string" null="false" />
+    <field key="type" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="rooms" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="level" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="block" dbtype="text" phptype="string" null="false" />
+    <field key="price" dbtype="integer" phptype="integer" null="false" />
+    <field key="status" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="img" dbtype="text" phptype="string" null="false" />
+    <field key="file" dbtype="text" phptype="string" null="false" />
+    <field key="socle" dbtype="text" phptype="string" null="false" />
+
+    <field key="group_id" dbtype="int" precision="10" phptype="integer" null="false" default="0" index="index" />
+
+    <composite alias="Item" class="flats_packageItem" local="id" foreign="group_id" cardinality="many" owner="local" />
+	</object>
+
+  <object class="flats_packageItem" table="flats_package_items" extends="xPDOSimpleObject">
+    <field key="area" dbtype="text" phptype="string" null="false" />
+    <field key="type" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="rooms" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="level" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="block" dbtype="text" phptype="string" null="false" />
+    <field key="price" dbtype="integer" phptype="integer" null="false" />
+    <field key="status" dbtype="tinyint" precision="1" phptype="integer" null="false" />
+    <field key="img" dbtype="text" phptype="string" null="false" />
+    <field key="file" dbtype="text" phptype="string" null="false" />
+    <field key="socle" dbtype="text" phptype="string" null="false" />
+
+    <field key="group_id" dbtype="int" precision="10" phptype="integer" null="false" default="0" index="index" />
+
+    <aggregate alias="Group" class="flats_packageGroup" local="group_id" foreign="id" cardinality="one" owner="foreign" />
+  </object>
+
+</model>

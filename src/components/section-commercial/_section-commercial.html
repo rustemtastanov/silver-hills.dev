@@ -36,7 +36,7 @@
 
 			<div class="commercial-viewport" :class="{ active: ImageLoaded, 'ready': isLoaded }" v-show="isLoaded">
 				<span v-show="!ImageLoaded" class="loader"></span>
-				<a href="#" :href="Selected.img" class="link--block commercial-zoom" aria-label="zoom" v-show="ImageLoaded">
+				<a href="#" :href="Selected.img ? Selected.img : '{{{ path }}}img/logo.svg'" class="link--block commercial-zoom" aria-label="zoom" v-show="ImageLoaded">
 					<img width="400" height="400" :src="Selected.img" alt="image" />
 				</a>
 			</div>

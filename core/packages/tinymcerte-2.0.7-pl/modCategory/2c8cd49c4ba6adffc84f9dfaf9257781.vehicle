@@ -1,0 +1,207 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '84d192f2c41e3ee2aeac3f94ae3af6e7' => 
+      array (
+        'unique_key' => 'name',
+        'preserve_keys' => false,
+        'update_object' => true,
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'af57988317b52116d0a87f4ee127a81a' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnManagerPageBeforeRender","priority":0,"propertyset":0}',
+              'guid' => '26e6b6e9fab9704e0778e8e6634b621b',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnManagerPageBeforeRender',
+              ),
+              'signature' => 'babefbea65418a8f756c34a8c412985d',
+            ),
+            '39835ad71d3fb4a26160b757098e88d5' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnRichTextEditorRegister","priority":0,"propertyset":0}',
+              'guid' => '47e3b009f9093127144f74a1a93bc729',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnRichTextEditorRegister',
+              ),
+              'signature' => '5e0b0f349316f38d8f0ddac168dfe3b0',
+            ),
+            '6d2ee7dd94be3dc19fbd40ccc807189b' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnRichTextEditorInit","priority":0,"propertyset":0}',
+              'guid' => '8a9737117576fc35e5da38d76cf80f36',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnRichTextEditorInit',
+              ),
+              'signature' => 'e317fd3eb20c3fc256314af0e77df4ac',
+            ),
+            '6d39d168285e23b5b32dfe5aa1dbb675' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => false,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnRichTextBrowserInit","priority":0,"propertyset":0}',
+              'guid' => '8c9e5954f80ee874228046bde8627d51',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnRichTextBrowserInit',
+              ),
+              'signature' => '7ddb7a096c9599a224d01f673c47dc07',
+            ),
+          ),
+        ),
+        'related_object_attributes' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'preserve_keys' => true,
+            'update_object' => false,
+            'unique_key' => 
+            array (
+              0 => 'pluginid',
+              1 => 'event',
+            ),
+          ),
+        ),
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":0,"property_preprocess":0,"name":"TinyMCE Rich Text Editor","description":"TinyMCE Rich Text Editor runtime hooks - registers and includes javascripts on document edit pages","editor_type":0,"category":0,"cache_type":0,"plugincode":"\\/**\\n * TinyMCE Rich Tech Editor Plugin\\n *\\n * @package tinymcerte\\n * @subpackage plugin\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n\\n$className = \'TinyMCERTE\\\\Plugins\\\\Events\\\\\\\\\' . $modx->event->name;\\n\\n$corePath = $modx->getOption(\'tinymcerte.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/tinymcerte\\/\');\\n\\/** @var TinyMCERTE $tinymcerte *\\/\\n$tinymcerte = $modx->getService(\'tinymcerte\', \'TinyMCERTE\', $corePath . \'model\\/tinymcerte\\/\', [\\n    \'core_path\' => $corePath\\n]);\\n\\nif ($tinymcerte) {\\n    if (class_exists($className)) {\\n        $handler = new $className($modx, $scriptProperties);\\n        if (get_class($handler) == $className) {\\n            $handler->run();\\n        } else {\\n            $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' could not be initialized!\', \'\', \'TinyMCE RTE Plugin\');\\n        }\\n    } else {\\n        $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' was not found!\', \'\', \'TinyMCE RTE Plugin\');\\n    }\\n}\\n\\nreturn;","locked":0,"properties":"a:0:{}","disabled":0,"moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * TinyMCE Rich Tech Editor Plugin\\n *\\n * @package tinymcerte\\n * @subpackage plugin\\n *\\n * @var modX $modx\\n * @var array $scriptProperties\\n *\\/\\n\\n$className = \'TinyMCERTE\\\\Plugins\\\\Events\\\\\\\\\' . $modx->event->name;\\n\\n$corePath = $modx->getOption(\'tinymcerte.core_path\', null, $modx->getOption(\'core_path\') . \'components\\/tinymcerte\\/\');\\n\\/** @var TinyMCERTE $tinymcerte *\\/\\n$tinymcerte = $modx->getService(\'tinymcerte\', \'TinyMCERTE\', $corePath . \'model\\/tinymcerte\\/\', [\\n    \'core_path\' => $corePath\\n]);\\n\\nif ($tinymcerte) {\\n    if (class_exists($className)) {\\n        $handler = new $className($modx, $scriptProperties);\\n        if (get_class($handler) == $className) {\\n            $handler->run();\\n        } else {\\n            $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' could not be initialized!\', \'\', \'TinyMCE RTE Plugin\');\\n        }\\n    } else {\\n        $modx->log(xPDO::LOG_LEVEL_ERROR, $className. \' was not found!\', \'\', \'TinyMCE RTE Plugin\');\\n    }\\n}\\n\\nreturn;"}',
+        'guid' => '89bf2f34924a94dfe3eeffa3e013fb1e',
+        'native_key' => NULL,
+        'signature' => 'fb9de1ce178597333eef9ce6b01903d9',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Children' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'parent',
+        1 => 'category',
+      ),
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'unique_key' => 'name',
+      'preserve_keys' => false,
+      'update_object' => true,
+      'related_objects' => true,
+      'related_object_attributes' => 
+      array (
+        'PluginEvents' => 
+        array (
+          'preserve_keys' => true,
+          'update_object' => false,
+          'unique_key' => 
+          array (
+            0 => 'pluginid',
+            1 => 'event',
+          ),
+        ),
+      ),
+    ),
+  ),
+  'namespace' => 'tinymcerte',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tinymcerte-2.0.7-pl\\/modCategory\\/2c8cd49c4ba6adffc84f9dfaf9257781\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"tinymcerte"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tinymcerte-2.0.7-pl\\/modCategory\\/2c8cd49c4ba6adffc84f9dfaf9257781\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"tinymcerte"}',
+    ),
+    2 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"tinymcerte-2.0.7-pl\\/modCategory\\/2c8cd49c4ba6adffc84f9dfaf9257781.resolve.update.resolver","type":"php","name":"resolve.update"}',
+    ),
+    3 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"tinymcerte-2.0.7-pl\\/modCategory\\/2c8cd49c4ba6adffc84f9dfaf9257781.resolve.whicheditor.resolver","type":"php","name":"resolve.whicheditor"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'aff3067c502259ca1ac400687d3b1fd2',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '2c8cd49c4ba6adffc84f9dfaf9257781',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"TinyMCE Rich Text Editor","rank":0}',
+);
