@@ -8,7 +8,8 @@
 		<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset" :modify-url="false">
 			{% for item in [
 				{
-					notext: true
+					notext: true,
+					class: "hidden-xs"
 				}
 			] -%}
 			{% include "nav-social/_nav-social.html" %}
