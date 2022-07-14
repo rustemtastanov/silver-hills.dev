@@ -6,6 +6,13 @@
 		</scrollactive>
 
 		<scrollactive class="header-column header-right" tag="div" :offset="scrollTopOffset" :modify-url="false">
+			{% for item in [
+				{
+					notext: true
+				}
+			] -%}
+			{% include "nav-social/_nav-social.html" %}
+			{%- endfor %}
 			<a href="#flats" class="btn--unstyled btn--top btn--flats scrollactive-item hidden-xs" @click="closeDropMenu">
 				{% if lang == 'ru' %} выбрать квартиру {% endif %}
 			</a>

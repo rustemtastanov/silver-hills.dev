@@ -478,6 +478,16 @@ form {
   margin-bottom: -1.0625rem;
 }
 
+.header .nav-social {
+  margin: 0 1.25rem 0 0;
+}
+
+.header .nav-social a::before {
+  top: 0.5625rem;
+  font-size: 4.375rem;
+  margin-bottom: 0;
+}
+
 .drop-menu .nav-social {
   margin-bottom: 0.75rem;
 }

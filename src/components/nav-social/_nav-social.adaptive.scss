@@ -18,6 +18,17 @@
 	}
 }
 
+.header {
+	.nav-social {
+		margin: 0 20px 0 0;
+		a::before {
+			top: 9px;
+			font-size: 70px;
+			margin-bottom: 0;
+		}
+	}
+}
+
 .drop-menu {
 	.nav-social {
 		margin-bottom: 12px;
