@@ -359,7 +359,7 @@ function initFlats() {
           if (item.status == 1) {
             items.push(item);
 
-            if (item.type) {
+            if (item.type != 0) {
               types.push(item.type);
             } else {
               rooms.push(item.rooms);
@@ -871,12 +871,8 @@ function initContacts() {
 
 function initForms() {
   Vue.component("app-form", {
-    template: "#form",
     props: {
-      FormClass: String,
-      Action: String,
-      FormUtm: Object,
-      Button: String
+      FormUtm: Object
     },
     data: function data() {
       return {
@@ -885,7 +881,8 @@ function initForms() {
         ErrorName: false,
         ErrorPhone: false,
         isLoading: false,
-        timer: null
+        timer: null,
+        hasError: true
       };
     },
     mounted: function mounted() {
@@ -895,6 +892,9 @@ function initForms() {
           vm.ErrorPhone = false;
           vm.ErrorName = false;
         }
+      });
+      $(document).on("af_complete", function (e, response) {
+        if (response["success"]) vm.send();
       });
     },
     computed: {
@@ -911,36 +911,23 @@ function initForms() {
         var hasPhone = this.Phone && this.Phone.length == placeholder.length - 2;
         this.ErrorName = !this.Name;
         this.ErrorPhone = !hasPhone && this.Name;
+        this.hasError = !hasPhone || !this.Name;
       },
       send: function send() {
         var vm = this;
-        vm.isLoading = true;
-        var data = {
-          name: vm.Name,
-          phone: vm.Phone,
-          utm_source: vm.FormUtm.source,
-          utm_medium: vm.FormUtm.medium,
-          utm_campaign: vm.FormUtm.campaign,
-          utm_term: vm.FormUtm.term,
-          utm_content: vm.FormUtm.content
-        };
-        setTimeout(function () {
-          // $.post(vm.Action, data, function(response) {
-          vm.isLoading = false;
-          vm.Name = null;
-          vm.Phone = null;
-          vm.$emit("show-response");
-          vm.timer = setTimeout(function () {
-            vm.$emit("hide-response");
-          }, 5000);
+        vm.isLoading = false;
+        vm.Name = null;
+        vm.Phone = null;
+        vm.$emit("show-response");
+        vm.timer = setTimeout(function () {
+          vm.$emit("hide-response");
+        }, 5000);
 
-          if (typeof dataLayer != "undefined") {
-            dataLayer.push({
-              "event": "form_sent"
-            });
-          } // });
-
-        }, 500);
+        if (typeof dataLayer != "undefined") {
+          dataLayer.push({
+            "event": "form_sent"
+          });
+        }
       },
       submit: function submit(el) {
         this.checkErrors();
@@ -948,7 +935,7 @@ function initForms() {
         if (!this.ErrorName && !this.ErrorPhone) {
           this.nameEl.blur();
           this.phoneEl.blur();
-          this.send();
+          this.isLoading = true;
         }
       }
     }
