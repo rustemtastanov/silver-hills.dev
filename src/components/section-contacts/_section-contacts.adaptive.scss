@@ -14,7 +14,8 @@
 }
 
 .contacts-column {
-	height: 650px;
+	// height: 650px;
+	height: 720px;
 }
 
 .contacts-title {
@@ -70,6 +71,14 @@
 	bottom: 29px;
 }
 
+.contacts-disklaymer {
+	font-size: 10px;
+	line-height: 14px;
+	position: absolute;
+	z-index: 2;
+	bottom: 29px;
+}
+
 
 
 
@@ -104,6 +113,14 @@
 
 	.contacts-partner {
 		right: 62px;
+	}
+
+	.contacts-copyright {
+		bottom: 109px;
+	}
+
+	.contacts-disklaymer {
+		max-width: 460px;
 	}
 
 }
@@ -141,6 +158,14 @@
 
 	.contacts-partner {
 		right: 20px;
+	}
+
+	.contacts-copyright {
+		bottom: 137px;
+	}
+
+	.contacts-disklaymer {
+		max-width: 300px;
 	}
 
 }

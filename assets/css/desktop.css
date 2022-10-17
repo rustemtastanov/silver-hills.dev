@@ -498,7 +498,6 @@ form {
 
 .s--contacts .nav-social {
   position: absolute;
-  bottom: 3.25rem;
 }
 
 .s--contacts .nav-social a::before {
@@ -512,6 +511,9 @@ form {
   .s--contacts .nav-social {
     left: 3.75rem;
   }
+  .s--contacts .nav-social {
+    bottom: 8.25rem;
+  }
 }
 
 /*
@@ -520,6 +522,9 @@ form {
 @media (min-width: 768px) and (max-width: 1199px) {
   .s--contacts .nav-social {
     left: 2.5rem;
+  }
+  .s--contacts .nav-social {
+    bottom: 10rem;
   }
 }
 
@@ -2259,7 +2264,7 @@ form {
 }
 
 .contacts-column {
-  height: 40.625rem;
+  height: 45rem;
 }
 
 .contacts-title {
@@ -2322,6 +2327,14 @@ form {
   bottom: 1.8125rem;
 }
 
+.contacts-disklaymer {
+  font-size: 0.625rem;
+  line-height: 0.875rem;
+  position: absolute;
+  z-index: 2;
+  bottom: 1.8125rem;
+}
+
 /*
 	styles for Large Desktops
  -------------------------------------------------------------------- */
@@ -2344,6 +2357,12 @@ form {
   }
   .contacts-partner {
     right: 3.875rem;
+  }
+  .contacts-copyright {
+    bottom: 6.8125rem;
+  }
+  .contacts-disklaymer {
+    max-width: 28.75rem;
   }
 }
 
@@ -2369,6 +2388,12 @@ form {
   }
   .contacts-partner {
     right: 1.25rem;
+  }
+  .contacts-copyright {
+    bottom: 8.5625rem;
+  }
+  .contacts-disklaymer {
+    max-width: 18.75rem;
   }
 }
 

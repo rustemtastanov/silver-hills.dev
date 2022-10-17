@@ -41,7 +41,6 @@
 .s--contacts {
 	.nav-social {
 		position: absolute;
-		bottom: 52px;
 		a::before {
 			left: -25px;
 		}
@@ -62,6 +61,12 @@
 		}
 	}
 
+	.s--contacts {
+		.nav-social {
+			bottom: 132px;
+		}
+	}
+
 }
 
 
@@ -74,6 +79,12 @@
 	.s--contacts {
 		.nav-social {
 			left: 40px;
+		}
+	}
+
+	.s--contacts {
+		.nav-social {
+			bottom: 160px;
 		}
 	}
 

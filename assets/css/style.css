@@ -3066,7 +3066,8 @@ html.glightbox-open {
   white-space: pre-line;
 }
 
-.contacts-copyright {
+.contacts-copyright,
+.contacts-disklaymer {
   color: #787878;
 }
 
