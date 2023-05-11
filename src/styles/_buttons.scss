@@ -214,6 +214,16 @@ input[type="button"] {
 	}
 }
 
+.btn--contacts {
+	&.toggled,
+	&:hover {
+		.text-default {
+			transform: none;
+			opacity: 1;
+		}
+	}
+}
+
 .btn--nav,
 .btn--contacts,
 .btn--call {

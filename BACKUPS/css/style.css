@@ -1686,12 +1686,6 @@ input[type="button"].btn--block {
   opacity: 1;
 }
 
-.btn--contacts.toggled .text-default, .btn--contacts:hover .text-default {
-  -webkit-transform: none;
-          transform: none;
-  opacity: 1;
-}
-
 .btn--nav,
 .btn--contacts,
 .btn--call {
