@@ -908,7 +908,7 @@ function initForms() {
     methods: {
       checkErrors: function checkErrors() {
         var placeholder = this.phoneEl.getAttribute("placeholder");
-        var hasPhone = this.Phone && this.Phone.length == placeholder.length;
+        var hasPhone = this.Phone && this.Phone.length == placeholder.length - 2;
         this.ErrorName = !this.Name;
         this.ErrorPhone = !hasPhone && this.Name;
         this.hasError = !hasPhone || !this.Name;

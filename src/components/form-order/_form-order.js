@@ -44,7 +44,7 @@ function initForms() {
 		methods: {
 			checkErrors() {
 				let placeholder = this.phoneEl.getAttribute("placeholder");
-				let hasPhone    = this.Phone && this.Phone.length==placeholder.length-2;
+				let hasPhone    = this.Phone && this.Phone.length==placeholder.length;
 				this.ErrorName = !this.Name;
 				this.ErrorPhone = !hasPhone && this.Name;
 				this.hasError = !hasPhone || !this.Name;
