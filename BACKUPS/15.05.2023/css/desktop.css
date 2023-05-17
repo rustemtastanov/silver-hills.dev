@@ -1505,10 +1505,6 @@ form {
   border-bottom: 0;
 }
 
-.s--flats.no-terms {
-  border-bottom: 1px solid black;
-}
-
 .flats-column {
   height: 35.25rem;
   display: -webkit-box;

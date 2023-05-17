@@ -15,10 +15,20 @@
 }
 
 .header-logo {
-	width: 206px;
+	width: 163px;
 	height: 35px;
 	top: -11px;
-	background-image: url(#{$path-img}/logo-small-phone.png);
-	@include retina('#{$path-img}/logo-small-phone@2x.png');
+	overflow: hidden;
+	&::before {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 206px;
+		height: 100%;
+		background-image: url(#{$path-img}/logo-small-phone.png);
+		@include retina('#{$path-img}/logo-small-phone@2x.png');
+		background-size: 100% 100%;
+	}
 }
 

@@ -12,6 +12,9 @@
 .s--flats {
 	border: 1PX solid;
 	border-bottom: 0;
+	&.no-terms {
+		border-bottom: 1px solid black;
+	}
 }
 
 .flats-column {

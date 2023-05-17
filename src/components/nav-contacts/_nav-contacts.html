@@ -11,7 +11,11 @@
 	#}
 </div>
 
-<div class="btn btn--top btn--contacts hidden-sm hidden-md hidden-lg" @click.prevent="toggleForm" :class="{'toggled': ShowForm, 'hide': TermsDropShow || ShowPolicy}">
+<div class="btn--phone visible-xs">
+	<a href="#" :href="formatPhone('+7 (747) 095 05 03')">+7 (747) 095 05 03</a>
+</div>
+
+<div class="btn btn--top btn--contacts hidden-sm hidden-md hidden-lg" @click.prevent="toggleForm" :class="{'toggled': ShowForm, 'hide': TermsDropShow || ShowPolicy, 'mob-hide' : ShowDropMenu}">
 	<i class="icon icon-call"></i>
 	<i class="icon icon-close"></i>
 </div>

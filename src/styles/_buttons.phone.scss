@@ -15,10 +15,13 @@
 	background: $red;
 	color: white;
 	font-size: 20px;
-	border-top: 0;
-	border-right: 0;
 	padding: 0;
-	order: 2;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	border: 0;
+	z-index: 3;
+	transition: transform .3s;
 	.icon {
 		position: absolute;
 		left: 50%;
@@ -35,6 +38,7 @@
 	}
 	&.toggled {
 		background: black;
+		transform: translateY(-100%);
 		.icon-call {
 			opacity: 0;
 			transform: translate(-50%, -50%) rotate(360deg);
@@ -42,6 +46,10 @@
 		.icon-close {
 			opacity: 1;
 		}
+	}
+	&.mob-hide {
+		transform: translateY(-100%);
+		z-index: 0;
 	}
 	&.hide {
 		display: none;
@@ -53,12 +61,12 @@
 	z-index: 2;
 	transition-property: box-shadow, background, border-color, transform;
 	padding: 0;
-	&.toggled {
-		transform: translateX(100%);
-	}
-	&.hide {
-		display: none;
-	}
+	// &.toggled {
+	// 	transform: translateX(100%);
+	// }
+	// &.hide {
+	// 	display: none;
+	// }
 }
 
 .btn--close {
@@ -78,5 +86,19 @@
 	&.toggled {
 		visibility: visible;
 		pointer-events: all;
+	}
+}
+
+.btn--phone {
+	font-size: 15px;
+	line-height: 1;
+	font-weight: 300;
+	position: absolute;
+	white-space: nowrap;
+	right: 68px;
+	top: 25px;
+	a {
+		text-decoration: none;
+		color: $text-color;
 	}
 }

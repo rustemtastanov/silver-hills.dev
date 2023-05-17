@@ -26,16 +26,12 @@ html {
   background: #d01b14;
   color: white;
   font-size: 1.25rem;
+  border-top: 0;
+  border-right: 0;
   padding: 0;
-  position: absolute;
-  right: 0;
-  top: 100%;
-  border: 0;
-  z-index: 3;
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 
 .btn--contacts .icon {
@@ -62,8 +58,6 @@ html {
 
 .btn--contacts.toggled {
   background: black;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
 }
 
 .btn--contacts.toggled .icon-call {
@@ -74,12 +68,6 @@ html {
 
 .btn--contacts.toggled .icon-close {
   opacity: 1;
-}
-
-.btn--contacts.mob-hide {
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  z-index: 0;
 }
 
 .btn--contacts.hide {
@@ -96,6 +84,15 @@ html {
   transition-property: box-shadow, background, border-color, transform;
   transition-property: box-shadow, background, border-color, transform, -webkit-box-shadow, -webkit-transform;
   padding: 0;
+}
+
+.btn--nav.toggled {
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+}
+
+.btn--nav.hide {
+  display: none;
 }
 
 .btn--close {
@@ -118,21 +115,6 @@ html {
 .btn--close-terms.toggled {
   visibility: visible;
   pointer-events: all;
-}
-
-.btn--phone {
-  font-size: 0.9375rem;
-  line-height: 1;
-  font-weight: 300;
-  position: absolute;
-  white-space: nowrap;
-  right: 4.25rem;
-  top: 1.5625rem;
-}
-
-.btn--phone a {
-  text-decoration: none;
-  color: black;
 }
 
 /*
@@ -204,25 +186,14 @@ form {
 }
 
 .header-logo {
-  width: 10.1875rem;
+  width: 12.875rem;
   height: 2.1875rem;
   top: -0.6875rem;
-  overflow: hidden;
-}
-
-.header-logo::before {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 12.875rem;
-  height: 100%;
   background-image: url(../img/logo-small-phone.png);
-  background-size: 100% 100%;
 }
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5), all and (-o-min-device-pixel-ratio: 3 / 2), all and (min--moz-device-pixel-ratio: 1.5), all and (min-device-pixel-ratio: 1.5) {
-  .header-logo::before {
+  .header-logo {
     background-image: url(../img/logo-small-phone@2x.png);
   }
 }
